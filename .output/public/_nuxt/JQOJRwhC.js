@@ -1,0 +1,1 @@
+import{E as s,F as _,G as c,H as e,I as d,_ as l,K as t,a6 as r,a7 as u}from"./Dfo39llo.js";const i={},f={id:"slot"};function m(n,p){const o=r,a=l;return c(),_("div",null,[e(a,null,{default:d(()=>[e(o),t("div",null,[t("div",f,[u(n.$slots,"default",{},void 0,!0)])])]),_:3})])}const h=s(i,[["render",m],["__scopeId","data-v-5f68a29c"]]);export{h as default};
