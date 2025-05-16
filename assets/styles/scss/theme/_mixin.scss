@@ -1,0 +1,180 @@
+/* Medium Layout: 1280px */
+@mixin large {
+  @media (min-width: 992px) and (max-width: 1199.98px) {
+    @content;
+  }
+}
+
+/* Tablet Layout: 768px */
+@mixin medium {
+  @media (min-width: 768px) and (max-width: 991.98px) {
+    @content;
+  }
+}
+
+/* Mobile Layout: 320px */
+@mixin tablet {
+  @media (min-width: 576px) and (max-width: 767.98px) {
+    @content;
+  }
+}
+
+/* Wide Mobile Layout: 480px */
+@mixin wide-mobile {
+  @media (min-width: 480px) and (max-width: 767.98px) {
+    @content;
+  }
+}
+
+/* Thin Mobile Layout: 575px */
+@mixin sm-mobile {
+  @media (max-width: 575.98px) {
+    @content;
+  }
+}
+
+@mixin cmq($min, $max) {
+  @media (min-width: $min) and (max-width: $max) {
+    @content;
+  }
+}
+
+@mixin vertical-scrollbar($width, $bgTrack, $bgTumb, $bgHover) {
+  &::-webkit-scrollbar {
+    width: $width;
+  }
+  &::-webkit-scrollbar-track {
+    background: $bgTrack;
+  }
+  &::-webkit-scrollbar-thumb {
+    background: $bgTumb;
+    // border-radius: 10px;
+    border-radius: 0;
+  }
+  &::-webkit-scrollbar-thumb:hover {
+    background: $bgHover;
+  }
+}
+
+@mixin horizontal-scrollbar($height, $bgTrack, $bgTumb, $bgHover) {
+  &::-webkit-scrollbar {
+    height: $height;
+  }
+  &::-webkit-scrollbar-track {
+    background: $bgTrack;
+  }
+  &::-webkit-scrollbar-thumb {
+    background: $bgTumb;
+    border-radius: 10px;
+  }
+  &::-webkit-scrollbar-thumb:hover {
+    background: $bgHover;
+  }
+}
+
+
+
+//==================================================
+
+@mixin pcc(){
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@mixin pcb(){
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+@mixin pca(){
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+@mixin pcs(){
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+@mixin pce(){
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+@mixin dots(){
+  position: relative;
+  *{
+    display: block;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+  }
+
+  // &:focus::after, &:hover::after{
+  //   content:attr(data-text);
+  //   z-index: 100;
+  //   overflow: visible;
+  //   text-overflow: inherit;
+  //   background: #fff;
+  //   color: #000;
+  //   position: absolute;
+
+  //   left:0;
+  //   right: auto;
+  //   bottom:100%;
+  //   width: auto;
+  //   border: 1px solid #eaebec;
+  //   padding: 0 .5rem;
+  //   box-shadow: 0 2px 4px 0 rgba(0,0,0,.28);
+  //   white-space: normal;
+  //   // word-wrap: nowrap;
+  //   display:block;
+  // }
+  // &.rtl::after{
+  //   left: auto;
+  //   right: 0;
+  // }
+}
+
+@mixin dots2($num){
+  position: relative;
+  *{
+    line-height: 2rem;
+    overflow: hidden;
+    display: block;
+    height: calc($num *2rem);
+    -webkit-line-clamp: $num;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    text-overflow: ellipsis;
+    white-space: normal;
+  }
+
+  // &:focus::after, &:hover::after{
+  //   content:attr(data-text);
+  //   z-index: 100;
+  //   overflow: visible;
+  //   text-overflow: inherit;
+  //   background: #fff;
+  //   position: absolute;
+  //   color: #000;
+  //   left:0;
+  //   right: auto;
+  //   bottom: 100%;
+  //   width: auto;
+  //   border: 1px solid #eaebec;
+  //   padding: 0 .5rem;
+  //   box-shadow: 0 2px 4px 0 rgba(0,0,0,.28);
+  //   white-space: normal;
+  //   word-wrap: nowrap;
+  //   display:block;
+  // }
+  // &.rtl::after{
+  //   left: auto;
+  //   right: 0;
+  // }
+}

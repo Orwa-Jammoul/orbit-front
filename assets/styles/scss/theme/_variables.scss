@@ -1,0 +1,113 @@
+$black: #000;
+$light-black: #444343;
+$text-color: rgb(255 255 255 / 75%);
+$gold: #bf9e4b;
+$medium-gold: #b79a00;
+$light-gold-v1: #e1cc7b;
+$light-gold-v2: #f2d77d;
+$scroll-opacity-color: rgb(242 215 125 / 10%);
+$scroll-opacity-zero-color: rgb(242 215 125 / 0);
+$grey: #aaa;
+$light-grey: #e9ecef;
+$white: #fff;
+$blue: #45b2ef;
+$blue2: #e6effd;
+$green: #018144;
+$green2: #012c01;
+$DarkBlue: #2e2a7e;
+$red: #e42626;
+$transition: 0.5s;
+$rouze:#9661ca;
+$rouze2:#4d0496;
+
+:root {
+  --primary: #29abe2;
+  --secondary: #ececec;
+  --secondary2: #d9d9d9;
+  --background: #f2f2f2;
+  --text: #000000;
+}
+
+[data-theme="dark"] {
+  --primary: #fff;
+  --secondary: #424242;
+  --secondary2: #535353;
+  --background: #121417;
+  --text: #FFFFFF;
+}
+
+
+// ============= new =============
+$scroll-clr: #29abe2;
+$select-clr:white;
+$select-bg-clr: #29abe2;
+
+$primary:#29abe2;
+$primary1: #249acc;
+$primary1b:#1f80b0;
+$primary2: #8351e1;
+$primary2b:#663db3;
+$primary3: #ef4d52;
+$primary3b: #df373c;
+$primary3c: #DB252C;
+$primary3d: #5c1012;
+$primary4: white;
+$primary5: rgb(236, 236, 236);
+$primary6: white;
+
+$br0: hsl(0, 0%, 0%);
+$br10: hsl(0, 0%, 10%);
+$br20: hsl(0, 0%, 20%);
+$br30: hsl(0, 0%, 30%);
+$br40: hsl(0, 0%, 40%);
+$br50: hsl(0, 0%, 50%);
+$br60: hsl(0, 0%, 60%);
+$br70: hsl(0, 0%, 70%);
+$br80: hsl(0, 0%, 80%);
+$br90: hsl(0, 0%, 90%);
+$br100: hsl(0, 0%, 100%);
+
+
+$c1: #111313;
+$c2: #1d1f20;
+$c3: #2aa9df;
+
+$gr1:#D5B375;
+$gr2:#d84d1f;
+$gr3:#7c4d3c;
+
+$grey: #00000010; 
+$md-grey: #00000050; 
+$dark-grey: #00000060; 
+
+
+
+
+$shadow1: 0px 1px 4px 0px rgba(51, 43, 43, 0.2);
+
+
+
+/*
+  MIXIN 
+  -----------------------------------------
+*/
+@mixin defaultLinearGradient() {
+  background: -webkit-linear-gradient(to right, $primary);
+  background: -moz--linear-gradient(to right, $primary);
+  background: -o--linear-gradient(to right, $primary);
+  background: linear-gradient(to right, $primary);
+}
+
+@mixin linearGradient($color1, $color2) {
+  background: -webkit-linear-gradient(to right, $color1, $color2);
+  background: -moz--linear-gradient(to right, $color1, $color2);
+  background: -o--linear-gradient(to right, $color1, $color2);
+  background: linear-gradient(to right, $color1, $color2);
+}
+
+@mixin transition($all, $seconds, $pattern) {
+  -webkit-transition: $all $seconds $pattern;
+  -moz-transition: $all $seconds $pattern;
+  -o-transition: $all $seconds $pattern;
+  transition: $all $seconds $pattern;
+}
