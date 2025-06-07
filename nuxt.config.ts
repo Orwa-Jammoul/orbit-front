@@ -60,12 +60,12 @@ export default defineNuxtConfig({
     head: {
       title: "Orbit",
       htmlAttrs: {
-        lang: "ar"
+        lang: "en"
       },
       meta: [
           { charset: "utf-8" },
           { name: "viewport", content: "width=device-width, initial-scale=1" },
-          { name: "description", content: "Ecommerce Site" },
+          { name: "description", content: "Technology services website" },
         ],
         link: [
           {
@@ -157,7 +157,9 @@ export default defineNuxtConfig({
         productsByCategoryIdApi:'/api/v1/Products/GetAllPagedProductByCategoryId',
         recentProductsApi:"/api/v1/Products/GetAllRecentProducts",
         offersProductsApi:"/api/v1/Products/GetActiveProductOffers",
-
+        
+        productsSearchApi:'/api/v1/products/GetAllPagedSearchProduct',
+        
         getProductCategories:"/api/v1/ProductCategories/GetAllParentCategoriesByType",
         
         // GetByServiceTypeIdApi:'/api/v1/Products/GetByServiceTypeId',

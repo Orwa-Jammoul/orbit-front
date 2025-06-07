@@ -41,7 +41,7 @@
           }"
         >
           <SwiperSlide class=" pcc" v-for="(service, index) in services" :key="service.id">
-            <CardService :cardData="service" :num="index"/>
+            <CardCourse :cardData="service" :num="index"/>
           </SwiperSlide>
         </Swiper>
       </div>
@@ -73,7 +73,7 @@ const isLoading = ref(true);
 
 
 const { data:servicesData } = await useGetSiteApi().GetAll(
-  `${api.blocksApi}/GetMaster?categoryId=4`
+  `${api.blocksApi}/GetMaster?categoryId=5&pageNumber=0&pageSize=12`
 );
 
 
@@ -82,8 +82,8 @@ watchEffect(()=> {
     if(servicesData.value) {
       services.value = servicesData.value.items
       // console.log(services.value);
-      services.value = [...services.value, ...services.value]
-      services.value = [...services.value, ...services.value]
+      // services.value = [...services.value, ...services.value]
+      // services.value = [...services.value, ...services.value]
       isLoading.value = false
     }
   }

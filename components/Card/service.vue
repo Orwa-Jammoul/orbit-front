@@ -10,7 +10,7 @@
     <div class="service-card-frame">
       <div class="card-top">
         <div class="img-frame cover">
-          <img :src="cImg(cardData.image)" 
+          <img :src="cImg(cardData.productImageUrl1)" 
             :alt="useName(cardData)"
           >
         </div>

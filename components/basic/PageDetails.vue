@@ -8,8 +8,8 @@
           <span class="path-link">{{ useName(item) }}</span>
         </h5>
       </div>
-      <div class="title-formatting3 mb-10 px-0 " :class="isEn() ? 'title_en' : ''">
-        <h1 style="font-weight: var(--fw-9)" class="text-center color ">
+      <div class="mb-10 px-0 " :class="rtl()" dir="auto">
+        <h1 class="metal-text">
           <span >{{ useName(item) }}</span>
         </h1>
       </div>

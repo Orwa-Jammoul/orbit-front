@@ -813,65 +813,65 @@ const _routes = [
   {
     name: "about-us___en",
     path: "/about-us",
-    component: () => import('./index-CsEyxxKA.mjs')
+    component: () => import('./index-CD1w2HG1.mjs')
   },
   {
     name: "about-us___ar",
     path: "/ar/about-us",
-    component: () => import('./index-CsEyxxKA.mjs')
+    component: () => import('./index-CD1w2HG1.mjs')
   },
   {
     name: "about-us___de",
     path: "/de/about-us",
-    component: () => import('./index-CsEyxxKA.mjs')
+    component: () => import('./index-CD1w2HG1.mjs')
   },
   {
     name: "contact-us___en",
     path: "/contact-us",
-    component: () => import('./index-DNeqJ2aH.mjs')
+    component: () => import('./index-CYL_00WJ.mjs')
   },
   {
     name: "contact-us___ar",
     path: "/ar/contact-us",
-    component: () => import('./index-DNeqJ2aH.mjs')
+    component: () => import('./index-CYL_00WJ.mjs')
   },
   {
     name: "contact-us___de",
     path: "/de/contact-us",
-    component: () => import('./index-DNeqJ2aH.mjs')
+    component: () => import('./index-CYL_00WJ.mjs')
   },
   {
     name: "index___en",
     path: "/",
     meta: __nuxt_page_meta$1 || {},
-    component: () => import('./index-BMUCO3r1.mjs')
+    component: () => import('./index-BaFghNH2.mjs')
   },
   {
     name: "index___ar",
     path: "/ar",
     meta: __nuxt_page_meta$1 || {},
-    component: () => import('./index-BMUCO3r1.mjs')
+    component: () => import('./index-BaFghNH2.mjs')
   },
   {
     name: "index___de",
     path: "/de",
     meta: __nuxt_page_meta$1 || {},
-    component: () => import('./index-BMUCO3r1.mjs')
+    component: () => import('./index-BaFghNH2.mjs')
   },
   {
     name: "privacy-policy___en",
     path: "/privacy-policy",
-    component: () => import('./privacy-policy-BV1pltyW.mjs')
+    component: () => import('./privacy-policy-D1UIVbuT.mjs')
   },
   {
     name: "privacy-policy___ar",
     path: "/ar/privacy-policy",
-    component: () => import('./privacy-policy-BV1pltyW.mjs')
+    component: () => import('./privacy-policy-D1UIVbuT.mjs')
   },
   {
     name: "privacy-policy___de",
     path: "/de/privacy-policy",
-    component: () => import('./privacy-policy-BV1pltyW.mjs')
+    component: () => import('./privacy-policy-D1UIVbuT.mjs')
   },
   {
     name: "services-id___en",
@@ -891,32 +891,32 @@ const _routes = [
   {
     name: "services___en",
     path: "/services",
-    component: () => import('./index-T2yGf8d9.mjs')
+    component: () => import('./index-BIZg1gRh.mjs')
   },
   {
     name: "services___ar",
     path: "/ar/services",
-    component: () => import('./index-T2yGf8d9.mjs')
+    component: () => import('./index-BIZg1gRh.mjs')
   },
   {
     name: "services___de",
     path: "/de/services",
-    component: () => import('./index-T2yGf8d9.mjs')
+    component: () => import('./index-BIZg1gRh.mjs')
   },
   {
     name: "terms-and-conditions___en",
     path: "/terms-and-conditions",
-    component: () => import('./terms-and-conditions-FqFgwCUC.mjs')
+    component: () => import('./terms-and-conditions-uVWcPLdE.mjs')
   },
   {
     name: "terms-and-conditions___ar",
     path: "/ar/terms-and-conditions",
-    component: () => import('./terms-and-conditions-FqFgwCUC.mjs')
+    component: () => import('./terms-and-conditions-uVWcPLdE.mjs')
   },
   {
     name: "terms-and-conditions___de",
     path: "/de/terms-and-conditions",
-    component: () => import('./terms-and-conditions-FqFgwCUC.mjs')
+    component: () => import('./terms-and-conditions-uVWcPLdE.mjs')
   },
   {
     name: "test___en",
@@ -951,17 +951,17 @@ const _routes = [
   {
     name: "training___en",
     path: "/training",
-    component: () => import('./index-BAMnimlz.mjs')
+    component: () => import('./index-BM7hJ3WN.mjs')
   },
   {
     name: "training___ar",
     path: "/ar/training",
-    component: () => import('./index-BAMnimlz.mjs')
+    component: () => import('./index-BM7hJ3WN.mjs')
   },
   {
     name: "training___de",
     path: "/de/training",
-    component: () => import('./index-BAMnimlz.mjs')
+    component: () => import('./index-BM7hJ3WN.mjs')
   },
   {
     name: void 0 ,

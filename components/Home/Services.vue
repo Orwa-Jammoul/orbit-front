@@ -72,17 +72,17 @@ const isLoading = ref(true);
 
 
 const { data:servicesData } = await useGetSiteApi().GetAll(
-  `${api.blocksApi}/GetMaster?categoryId=4`
+  `${api.productsSearchApi}?pageNumber=1&pageSize=12`
 );
 
 
 watchEffect(()=> {
   if(process.client) {
     if(servicesData.value) {
-      services.value = servicesData.value.items
+      services.value = servicesData.value.data
       // console.log(services.value);
-      services.value = [...services.value, ...services.value]
-      services.value = [...services.value, ...services.value]
+      // services.value = [...services.value, ...services.value]
+      // services.value = [...services.value, ...services.value]
       isLoading.value = false
     }
   }
