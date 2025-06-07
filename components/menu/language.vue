@@ -1,19 +1,31 @@
 <template>
-  <div class="navbar-item pcc" >
-    <div class="top-section" >
+  <div ref="langMenu" class="navbar-item pcc">
+    <div class="top-section" @mouseenter="reselect" @click="reselect">
       <nuxt-link class="main-link d-flex align-items-center">
         {{ siteLanguages().value[useLang().value] }}
         <Icon name="ion:earth" size="20px" />
       </nuxt-link>
     </div>
-    <div class="bottom-section" :class="rtl()">
-      <MenuDropLanguages class="nav-drop-down" /> 
+    <div class="bottom-section" :class="rtl()" >
+      <MenuDropLanguages class="nav-drop-down" @selected="selected" /> 
     </div>
   </div>
 </template>
 
 <script setup>
-
+const langMenu = ref(null)
+const selected = ()=>{
+  if (langMenu.value) {
+    langMenu.value.classList.remove('show');
+    console.log('selected');
+  }
+}
+const reselect = ()=>{
+  if (langMenu.value) {
+    langMenu.value.classList.add('show');
+    console.log('reselect');
+  }
+}
 </script>
 
 <style lang="scss" scoped>
@@ -26,7 +38,7 @@
   .top-section{
     color: $primary1;
     width: auto ;
-    height: 100%;
+    height: 2rem;
     
     // padding: .5rem 0;
     .main-link{
@@ -96,11 +108,23 @@
       width: auto;
       
     }
+    // &.hide{
+    //   opacity: 0 !important;
+    //   transform: translateY(-8px);
+    //   pointer-events: none;
+    // }
+    // &.show{
+    //   opacity: 1;
+    //   transform: translateY(0);
+    //   pointer-events: auto;
+    // }
 
   }
 
-  &:hover,&:focus{
+  // &:hover,&:focus{
+  &.show{
     .top-section{
+      pointer-events: none;
       .main-link{
         color: $primary1;
         // background-color: $c1;
@@ -130,12 +154,16 @@
       transform: translateY(0);
       pointer-events: auto;
     }
-    .bottom-section-custom{
-      opacity: 1;
-      transform: translateY(0);
-      pointer-events: auto;
-    }
   }
+
+  // &.no-hover {
+  //   pointer-events: none;
+  //   .bottom-section{
+  //     opacity: 0;
+  //     transform: translateY(-8px);
+  //     pointer-events: none;
+  //   }
+  // }
 
 }
 

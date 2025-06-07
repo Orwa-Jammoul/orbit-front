@@ -356,7 +356,7 @@ export const useIcon = (name) => {
   return icon;
 };
 export const goto=(link="/")=>{
-  return navigateTo(link) 
+  return navigateTo(localePath(link)) 
 };
 export const addToCart = (item,qty=null, typeId=0) => {
   cartEvent().value +=1

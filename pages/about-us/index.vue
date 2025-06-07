@@ -1,6 +1,6 @@
 <template>
    <div v-if="!isLoading">
-    <!-- <HomeHeaderDesign1/>     -->
+    <HomeHeaderDesign1/>    
     <!-- <ElementsHeaderImage 
       title="" 
       :imgUrl="`/page-headers/privacy-policy-header.jpg`"

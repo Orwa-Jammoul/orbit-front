@@ -59,7 +59,7 @@ watchEffect(()=> {
 .header-main{
   overflow: hidden;
   .mainheaderslider{
-    height: 100vh;
+    height: 100svh;
     background-color: $primary4;
   }
 }

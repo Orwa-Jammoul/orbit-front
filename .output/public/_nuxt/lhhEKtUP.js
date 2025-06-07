@@ -1,0 +1,1 @@
+import{d as e,n as a}from"./DN8Wmb0v.js";import"./VpZgReoT.js";const n=e((d,r)=>{if(d.params.id!==void 0&&!/^\d+$/.test(d.params.id))return a("/404",{});if(d.params.productId!==void 0&&!/^\d+$/.test(d.params.productId))return a("/404",{})});export{n as default};

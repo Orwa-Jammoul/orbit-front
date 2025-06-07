@@ -21,11 +21,14 @@
 </template>
 
 <script setup>
+const emit = defineEmits(["selected"]);
+
 const {locales, locale, setLocale } = useI18n()
 const switchLanguage =(lang)=> {
   setLocale(lang)
   useLang().value = lang
   localStorage.setItem('lang', lang)
+  emit('selected')
 }
 </script>
 

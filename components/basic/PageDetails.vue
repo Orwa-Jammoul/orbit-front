@@ -118,7 +118,10 @@
 <style lang="scss" scoped>
   @import "~/assets/styles/scss/theme/theme";
   .page-details-root{
+    width: 100svw;
     margin-bottom: 3rem;
+    padding: 0 1rem;
+    // overflow: hidden;
   }
   .section-title {
     // padding: 0;

@@ -813,65 +813,65 @@ const _routes = [
   {
     name: "about-us___en",
     path: "/about-us",
-    component: () => import('./index-DlQ0nYO_.mjs')
+    component: () => import('./index-CsEyxxKA.mjs')
   },
   {
     name: "about-us___ar",
     path: "/ar/about-us",
-    component: () => import('./index-DlQ0nYO_.mjs')
+    component: () => import('./index-CsEyxxKA.mjs')
   },
   {
     name: "about-us___de",
     path: "/de/about-us",
-    component: () => import('./index-DlQ0nYO_.mjs')
+    component: () => import('./index-CsEyxxKA.mjs')
   },
   {
     name: "contact-us___en",
     path: "/contact-us",
-    component: () => import('./index-D1ueNQjF.mjs')
+    component: () => import('./index-DNeqJ2aH.mjs')
   },
   {
     name: "contact-us___ar",
     path: "/ar/contact-us",
-    component: () => import('./index-D1ueNQjF.mjs')
+    component: () => import('./index-DNeqJ2aH.mjs')
   },
   {
     name: "contact-us___de",
     path: "/de/contact-us",
-    component: () => import('./index-D1ueNQjF.mjs')
+    component: () => import('./index-DNeqJ2aH.mjs')
   },
   {
     name: "index___en",
     path: "/",
     meta: __nuxt_page_meta$1 || {},
-    component: () => import('./index-CWRKtvAh.mjs')
+    component: () => import('./index-BMUCO3r1.mjs')
   },
   {
     name: "index___ar",
     path: "/ar",
     meta: __nuxt_page_meta$1 || {},
-    component: () => import('./index-CWRKtvAh.mjs')
+    component: () => import('./index-BMUCO3r1.mjs')
   },
   {
     name: "index___de",
     path: "/de",
     meta: __nuxt_page_meta$1 || {},
-    component: () => import('./index-CWRKtvAh.mjs')
+    component: () => import('./index-BMUCO3r1.mjs')
   },
   {
     name: "privacy-policy___en",
     path: "/privacy-policy",
-    component: () => import('./privacy-policy-DmFU-_Vb.mjs')
+    component: () => import('./privacy-policy-BV1pltyW.mjs')
   },
   {
     name: "privacy-policy___ar",
     path: "/ar/privacy-policy",
-    component: () => import('./privacy-policy-DmFU-_Vb.mjs')
+    component: () => import('./privacy-policy-BV1pltyW.mjs')
   },
   {
     name: "privacy-policy___de",
     path: "/de/privacy-policy",
-    component: () => import('./privacy-policy-DmFU-_Vb.mjs')
+    component: () => import('./privacy-policy-BV1pltyW.mjs')
   },
   {
     name: "services-id___en",
@@ -906,17 +906,17 @@ const _routes = [
   {
     name: "terms-and-conditions___en",
     path: "/terms-and-conditions",
-    component: () => import('./terms-and-conditions-CRMeF6t0.mjs')
+    component: () => import('./terms-and-conditions-FqFgwCUC.mjs')
   },
   {
     name: "terms-and-conditions___ar",
     path: "/ar/terms-and-conditions",
-    component: () => import('./terms-and-conditions-CRMeF6t0.mjs')
+    component: () => import('./terms-and-conditions-FqFgwCUC.mjs')
   },
   {
     name: "terms-and-conditions___de",
     path: "/de/terms-and-conditions",
-    component: () => import('./terms-and-conditions-CRMeF6t0.mjs')
+    component: () => import('./terms-and-conditions-FqFgwCUC.mjs')
   },
   {
     name: "test___en",

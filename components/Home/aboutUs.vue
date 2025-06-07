@@ -9,7 +9,6 @@
           {{ useName(about) }}
         </h1>
         <p>{{ getInnerText(useDes(about)) }}</p>
-        <!-- <EffectWords :text="getInnerText(useDes(about))"/> -->
         <div class="go-to pcs">
           <p class="m-0">
             {{ $t('read-more') }}
@@ -27,7 +26,6 @@
           {{ useName(about) }}
         </h1>
         <p>{{ getInnerText(useDes(about)) }}</p>
-        <!-- <EffectWords :text="getInnerText(useDes(about))"/> -->
          <div class="go-to pcs">
           <p class="m-0">
             {{ $t('read-more') }}
@@ -71,6 +69,8 @@ watchEffect(()=> {
 @import "~/assets/styles/scss/theme/theme";
 .section-root{
   position: relative;
+  width: 100svw;
+  overflow: hidden;
   // background-image: url('/svg/grid-vector.svg');
   // background-size: 100%;
   // background-repeat: repeat;
@@ -105,8 +105,8 @@ watchEffect(()=> {
     .about-box1{
       position: relative;
       z-index: 10;
-      width: 30%;
-      min-width: 25rem;
+      width: 100%;
+      // min-width: 25rem;
       // height: 40%;
       background-color: black;
       border-radius: .5rem;
@@ -131,8 +131,8 @@ watchEffect(()=> {
     .about-box2{
       position: relative;
       z-index: 10;
-      width: 30%;
-      min-width: 25rem;
+      width: 100%;
+      // min-width: 25rem;
       // height: 40%;
       background-color: black;
       border-radius: .5rem;

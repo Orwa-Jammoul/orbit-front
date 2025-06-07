@@ -68,16 +68,22 @@ const showNav = () => {
     display: flex;
     flex-direction: column;
     // background-color: rgba(0, 0, 0, 0.6);
-    background-color: rgba(255, 255, 255, 0.6);
+    background-color: rgba(41, 170, 226, 0.3);
+    // background-color: transparent;
     transition: all 0.5s cubic-bezier(0.19, 1, 0.22, 1);
+    backdrop-filter: blur(5px);
+    // mix-blend-mode: overlay;
     cursor: pointer;
   }
   .nav-toggler-frame{
     // margin-right: 0.5rem;
     margin-inline-start: 5px;
     .nav-toggler{
-      padding: 2px 5px ;
-      border-radius: 2px;
+      width: 30px;
+      height: 30px;
+      // aspect-ratio: 1;
+      padding: 5px ;
+      border-radius: 50%;
       transition: all 100ms ease-in-out;
       cursor: pointer;
       font-size: 14px;

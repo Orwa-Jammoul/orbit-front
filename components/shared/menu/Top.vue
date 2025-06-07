@@ -60,6 +60,36 @@ watch(useLang(),()=>{
   current.value = useLang().value
 })
 
+const country = ref(null);
+const useCountry = async () => {
+  let userCountry = null
+  try {
+    const response = await fetch('https://ipapi.co/json/');
+    const data = await response.json();
+    userCountry = data.country;
+  } catch (error) {
+    console.error('Error detecting country:', error);
+  }
+  
+  return userCountry;
+}
+country.value = await useCountry();
+// console.log(country.value);
+
+// const getClientIp = async () => {
+//   try {
+//     const response = await fetch('https://api.ipify.org?format=json');
+//     const data = await response.json();
+//     return data.ip;
+//   } catch (error) {
+//     console.error('Error fetching IP:', error);
+//     return null;
+//   }
+// }
+
+// // Usage
+// const clientIp = await getClientIp();
+// console.log('Client IP:', clientIp);
 </script>
 
 <style lang="scss" scoped>

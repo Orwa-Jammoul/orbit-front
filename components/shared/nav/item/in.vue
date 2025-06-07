@@ -33,7 +33,8 @@ const hideNav = (subPages,url) => {
     showSubs.value= !showSubs.value
   }
   else{
-    navigateTo(url);
+    goto(url)
+    // navigateTo(url);
     useShowNavVer().value.show = false;
   }
   
