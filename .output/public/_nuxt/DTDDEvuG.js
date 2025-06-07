@@ -1,1 +1,0 @@
-import{c as e}from"./DfwStRkz.js";import{ab as a,ac as o,$ as r,u as s}from"./Dpv0vDyQ.js";const _={__name:"[id]",setup(c){const t=e().params.id;return(u,i)=>(o(),a("div",null,r(s(t)),1))}};export{_ as default};

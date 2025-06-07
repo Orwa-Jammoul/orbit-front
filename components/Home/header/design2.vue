@@ -28,9 +28,9 @@
 // import { ref, onMounted, nextTick } from 'vue';
 
 const videoSources = [
-  { src: '/videos/blackhole-02.mp4', type: 'video/mp4' },
+  // { src: '/videos/blackhole-02.mp4', type: 'video/mp4' },
   { src: '/videos/Orbit_Eng-01.mp4', type: 'video/mp4' },
-  { src: '/videos/blackhole-03.mp4', type: 'video/mp4' }
+  // { src: '/videos/blackhole-03.mp4', type: 'video/mp4' }
 ];
 
 const videoRefs = ref([]);
@@ -83,6 +83,15 @@ onBeforeUnmount(() => {
   width: 100%;
   height: 100%;
 
+  .loading-placeholder {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: red;
+    z-index: 10;
+  }
   .bg-section {
     position: absolute;
     top: 0;

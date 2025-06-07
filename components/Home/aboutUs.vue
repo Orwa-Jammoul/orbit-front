@@ -105,7 +105,7 @@ watchEffect(()=> {
     .about-box1{
       position: relative;
       z-index: 10;
-      width: 50%;
+      width: 30%;
       min-width: 25rem;
       // height: 40%;
       background-color: black;
@@ -131,7 +131,7 @@ watchEffect(()=> {
     .about-box2{
       position: relative;
       z-index: 10;
-      width: 50%;
+      width: 30%;
       min-width: 25rem;
       // height: 40%;
       background-color: black;

@@ -844,19 +844,19 @@ const _routes = [
     name: "index___en",
     path: "/",
     meta: __nuxt_page_meta$1 || {},
-    component: () => import('./index-BQ5i9O7C.mjs')
+    component: () => import('./index-CWRKtvAh.mjs')
   },
   {
     name: "index___ar",
     path: "/ar",
     meta: __nuxt_page_meta$1 || {},
-    component: () => import('./index-BQ5i9O7C.mjs')
+    component: () => import('./index-CWRKtvAh.mjs')
   },
   {
     name: "index___de",
     path: "/de",
     meta: __nuxt_page_meta$1 || {},
-    component: () => import('./index-BQ5i9O7C.mjs')
+    component: () => import('./index-CWRKtvAh.mjs')
   },
   {
     name: "privacy-policy___en",
