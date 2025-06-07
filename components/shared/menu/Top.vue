@@ -1,112 +1,137 @@
 <template>
-  <div class="nav-bottom-main pcs"  :dir="rtl()">
-    <div class="center d-flex">
-      <SharedNavItemUp
-        class="bottom-nav-item"
-        v-for="page in pages"
-        :page="page"
-        :key="page.id" 
-      />
-    </div>
+  <div class="nav-main"  :dir="rtl()">
 
-    <!-- <div class="vertical-nav">
-      <SharedNavVertical :pages="allPages"/>
-    </div> -->
+    <div class="nav-main-ribbon pcb rp">
+      
+      <nuxt-link class="logo-frame contain" :class="rtl()" :to="localePath('/')" >
+        <img :src="!isAr()?`/logo/Orbit-logo-side-01-left.svg`:`/logo/Orbit-logo-side-01-s.svg`" alt="logo">
+      </nuxt-link>
+      <div class="nav-links-side pce">
+        <MenuLanguage/>
+        <div class="vertical-nav">
+          <SharedNavVertical :pages="allPages"/>
+        </div>
+      </div>
+      <div class="center">
+        <div class="center-inside-frame">
+          <!-- <div class="spark"></div> -->
+          <div class="h-100" v-for="page,index in pages" :key="page.id" >
+            <SharedNavItemUp
+              class="bottom-nav-item"
+              :page="page"
+              :data-aos-duration="500"
+              data-aos-offset="0"
+              :data-aos-delay="100*index"
+              :data-aos="`fade-up`"
+              data-aos-once="true"
+            />
+          </div> 
+        </div>
+      </div>
+    </div>
   </div>
 </template>
 
 <script setup>
 
-const pages = ref(useMenu().value.top);
-// console.log(pages.value);
-// const allPages = ref([...useMenu().value.top,...useMenu().value.bottom]);
-// const allPages = useMenu().value.top
+const {locale} = useI18n()
+useLang().value = locale.value;
 
+const pages = ref(useMenu().value.navbar);
+// const contacts = ref(useContactsMenus().value.filter(item=>item.englishName.toLowerCase()!='whatsapp').sort((a,b)=>{a.order - b.order}));
+// const whatsapp = useContactsMenus().value.find(item=>item.englishName.toLowerCase()!='whatsapp')
+// console.log(contacts.value);
+// console.log(pages.value);
+// console.log(useMenu().value);
+const allPages = ref(pages);
+// const allPages = useMenu().value.home
+const isAuth =  ref(useAuth().value.isAuthenticated)
+
+watch(useAuth().value,()=>{
+  isAuth.value =  useAuth().value.isAuthenticated
+})
 // console.log(useMenu().value);
 
+import { useLocale } from 'vuetify'
+const { current } = useLocale()
+
+current.value = useLang().value
+watch(useLang(),()=>{
+  current.value = useLang().value
+})
 
 </script>
 
 <style lang="scss" scoped>
-@use "~/assets/styles/scss/theme/theme";
+@import "~/assets/styles/scss/theme/theme";
 
-.nav-bottom-main{
-  z-index: 999;
+.nav-main{
   width: 100%;
   height: 100%;
-  // background-color: $br20;
-  // padding: 0 2rem;
+  .nav-main-ribbon{
+    position: relative;
+    height: 5.2rem;
+    background-color: none;
 
-  .left{
-    height: 100%;
-    // min-width: 11rem;
-    // max-width: 22rem;
-  }
-
-  .center{
-    height: 100%;
-    .bottom-nav-item{
-      height: 100% ;
-    }
-    .switch-lang{
-      position: relative;
-      margin: 0 5px;
-      .lang-name{
-        color: white;
-        margin: 0;
-      }
-      &::after{
-        content: '';
-        position: absolute;
-        height: 5px;
-        width: 0;
-        bottom: 0;
-        opacity: 0;
-        background-color: $primary1;
-        transition: all 250ms ease-in-out, width 350ms ease-in-out;
-
+    // background: linear-gradient(to right, $primary2 0%, $primary2 30%, $primary2b 80%, $primary2c 100% );
+    .logo-frame{
+      width: 10rem;
+      height: 100%;
+      padding: 10px 0;
+      background: none !important;
+      img{
+        object-position: right center;
+        background: none;
       }
       &.rtl{
-        &::after{
-          right: -100%;
+        img{
+          object-position: left center;
         }
       }
-      &.ltr{
-        &::after{
-          left: -100%;
-        }
-      }
-      &:hover{
-        
-        &::after{
-          left: 0;
-          right: 0;
-          opacity: 1;
-          width: 100%;
+    }
+    .nav-links-side{
+      height: 100%;
+      
+    }
+
+    .center{
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      top: 0;
+      left: 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      pointer-events: none;
+      .center-inside-frame{
+        position: relative;
+        // z-index: 10;
+        pointer-events: all;
+        width: 50%;
+        height: 3rem;
+        // background-color: #00000016;
+        // backdrop-filter: blur(5px);
+        // background-color: $primary4;
+        background-color: rgba($color:$primary4, $alpha: 0.5 ) ;
+        border-radius: 1.5rem;
+        border: solid 1px rgba(255, 255, 255, 0.1);
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        @media (max-width: 920px) {
+          display: none;
         }
       }
     }
   }
-  .right{
-    height: 100%;
-    .media-list{
-      .media-item{
-        a{
-          color: white;
-        }
-        margin-right: 5px;
-      }
-    }
-  }
+
 
   .vertical-nav, .lang-small{
     height: 100%;
     width: 100%;
     display: none;
-
-    // width: 25rem;
-    // width: 42%;
-
 
     @media (max-width: 920px) {
       // display: block;
@@ -123,26 +148,9 @@ const pages = ref(useMenu().value.top);
     //   width: 20%;
     // }
   }
-
-  @media (max-width: 1080px) {
-    .left{
-      max-width: 14rem;
-    }
-    .right{
-      max-width: 14rem;
-    }
-
-  }
-  @media (max-width: 920px) {
-    .center{
-      display: none !important;
-    }
-    .right{
-      display: none !important;
-    }
-  }
-
 }
 
-
+[data-aos="fade-up"] {
+  transform: translateY(10px); /* Default is 100px - adjust as needed */
+}
 </style>

@@ -6,12 +6,11 @@ export const useGetSiteApi = () => {
     const GetAll = async (endpoint, isServer = true, isLazy = false, isCached=true) => {
         return useFetch(() => `${endpoint}`, {
             key: `${endpoint}`,
-            baseURL: apiBase,
+            baseURL: apiBase ?? 'https://adminpanel.orbit-eng.net',
             server: isServer,
             lazy: isLazy,
             headers: {
                 'Accept-Language': 'en-US',
-                'Accept': 'application/json',
                 'Authorization': `Bearer ${useMainToken().value}`
             },
             transform(input) {
@@ -30,7 +29,7 @@ export const useGetSiteApi = () => {
     const GetById = async (endpointWithoutId, id, isServer = true, isLazy = false) => {
         return useFetch(() => `${endpointWithoutId}${id}`, {
             key: `${endpointWithoutId}${id}`,
-            baseURL: apiBase,
+            baseURL: apiBase ?? 'https://adminpanel.orbit-eng.net',
             server: isServer,
             lazy: isLazy,
             headers: {

@@ -32,13 +32,13 @@ export const filterAndSort = (menu) => {
   return menuResult
 };
 
-export const arrangeMenus = (topMenu, bottomMenu, footerMenu) => {
+export const arrangeMenus = (navbarMenu) => {
   
   let all = filterAndSort(useDataAllMenu().value)
-  let navTop = filterAndSort(topMenu)
-  let navBottom = filterAndSort(bottomMenu)
-  let footer = filterAndSort(footerMenu)
-  let contact = useSocialMenu().value
+  let navbar = filterAndSort(navbarMenu)
+  let footer = filterAndSort(navbarMenu)
+  let social = useSocialMenu().value
+  let contact = useContactsMenus().value
   
   // console.log(all);
   // let navTop = ''
@@ -51,9 +51,9 @@ export const arrangeMenus = (topMenu, bottomMenu, footerMenu) => {
 
   return {
     "home" : all,
-    "top" :navTop,
-    "bottom": navBottom,
-    "contact":contact,
+    "navbar" :navbar,
     "footer":footer,
+    "social":social,
+    "contact":contact,
   };
 };

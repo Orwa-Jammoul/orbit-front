@@ -66,10 +66,6 @@
       let reader = new FileReader();
       reader.readAsDataURL(file)
       reader.onload = (e) => {
-
-        console.log(file);
-        console.log(reader);
-        console.log(props.uploadRequest);
         // this.urls.push({ 'url': reader.result, "name": file.name, "lastModified": file.lastModified });
         emit('fileUploaded', { 'url': reader.result, file: file, 'nameUrl': props.nameUrl, 'uploadRequest': props.uploadRequest })
       }
@@ -123,7 +119,7 @@
 
 .file-upload{
   &.contain-img{
-    background-color: $br70;
+    background-color: $br2;
     padding: 5px;
     border-radius: 10px;
   }

@@ -7,7 +7,7 @@ export const useGetUserApi = () => {
     const GetAll = async (endpoint, isServer = true, isLazy = false, isCached=true) => {
         const data = await useFetch(() => `${endpoint}`, {
             key: `${endpoint}`,
-            baseURL: apiBase,
+            baseURL: apiBase ?? 'https://adminpanel.orbit-eng.net',
             server: isServer,
             lazy: isLazy,
             headers: {
@@ -41,7 +41,7 @@ export const useGetUserApi = () => {
     const GetById = async (endpointWithoutId, id, isServer = true, isLazy = false) => {
         const data = useFetch(() => `${endpointWithoutId}${id}`, {
             key: `${endpointWithoutId}${id}`,
-            baseURL: apiBase,
+            baseURL: apiBase ?? 'https://adminpanel.orbit-eng.net',
             server: isServer,
             lazy: isLazy,
             headers: {

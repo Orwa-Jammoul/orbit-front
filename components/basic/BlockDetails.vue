@@ -149,7 +149,7 @@
 </script>
   
 <style lang="scss" scoped>
-  @use "~/assets/styles/scss/theme/theme";
+  @import "~/assets/styles/scss/theme/theme";
   .block-root{
     margin-bottom: 3rem;
   }

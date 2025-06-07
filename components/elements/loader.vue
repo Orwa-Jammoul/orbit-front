@@ -7,12 +7,17 @@
             <div class="logo-frame contain">
               <img
                 class="logoLoader"
-                :src="`/logos/logo-blue-with-name.svg`"
+                :src="`/logo/logo-01.png`"
                 alt="logo"
               />
             </div>
-            
-            <icon class="Loader" name="svg-spinners:dot-revolve" size="35px"/>
+            <div class="loading-bar" :style="`--progress:${data.percent}%`"></div>
+            <div class="progress-percent">{{ data.percent }}%</div>
+            <!-- {{ data.percent }} -->
+            <!-- <icon class="LoaderSVG" name="eos-icons:bubble-loading" color="#fff" size="50px"/> -->
+            <!-- <img class="Loader" src="/loading/loading1.svg" alt="" /> -->
+            <!-- <icon class="Loader" name="svg-spinners:6-dots-scale" size="40px"/> -->
+            <!-- <icon class="Loader" name="svg-spinners:6-dots-scale-middle" size="35px"/> -->
           </div>
         </div>
       </div>
@@ -105,6 +110,19 @@ const nuxtApp = useNuxtApp();
 nuxtApp.hook("page:start", start);
 nuxtApp.hook("page:finish", finish);
 
+// Provide a loader utility
+  // nuxtApp.provide('loader', {
+  //   start: () => {
+  //     // Your start logic
+  //   },
+  //   finish: () => {
+  //     // Your finish logic
+  //   },
+  //   setProgress: (percent) => {
+  //     // Your progress update logic
+  //   }
+  // });
+
 // watchEffect(() => {
 //   isLoaded.value = useImageLoaded().value.loaded
 //   console.log('loader check 1', isLoaded.value);
@@ -112,7 +130,7 @@ nuxtApp.hook("page:finish", finish);
 onBeforeUnmount(() => clear);
 </script>
 <style lang="scss" scoped>
-@use "~/assets/styles/scss/theme/theme";
+@import "~/assets/styles/scss/theme/theme";
 
 .main-loader-overlay{
   .preloader-bg{
@@ -123,20 +141,43 @@ onBeforeUnmount(() => clear);
     bottom: 0;
     z-index: 9999;
     overflow: hidden;
-    background: #000;
+    background: black;
+    // background: linear-gradient(45deg, $primary1 0%, $primary1 30%, black 80%, black 100% );
     .preloader{
       .logoLoader {
         width: 200px;
       }
-      .iconify{
+      .icon{
         margin-top: 2rem;
-        color: $br70 !important;
+        color: white !important;
       }
     }
   }
 }
 
+.loading-bar{
+  position: relative;
+  margin-top: 2rem;
+  background-color: rgb(28, 28, 28);
+  height: 2px;
+  width: 200px;
+  &::after{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    background-color: white;
+    width: var(--progress);
+    transition: all 100ms ease-in-out;
+  }
+}
 
+.progress-percent{
+  margin-top: 1rem;
+  color: white;
+  font-size: .8rem;
+}
 
 // @-webkit-keyframes animate-preloader {
 //   0% {

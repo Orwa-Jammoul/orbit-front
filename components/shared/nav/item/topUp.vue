@@ -22,13 +22,13 @@
 </template>
 
 <script setup>
-const { api, apiBase } = useRuntimeConfig();
+// const { public:{api, apiBase} } = useRuntimeConfig();
 const { page, iconName } = defineProps(["page","iconName"]);
 
 </script>
 
 <style lang="scss" scoped>
-@use "~/assets/styles/scss/theme/theme";
+@import "~/assets/styles/scss/theme/theme";
 
 .navbar-item{
   position: relative;
@@ -49,9 +49,9 @@ const { page, iconName } = defineProps(["page","iconName"]);
       width: auto ;
       display: block;
       // border-left: none;
-      // border-right: solid 1px $br20;
+      // border-right: solid 1px $br4;
       // &.rtl{
-      //   border-left: solid 1px $br20;
+      //   border-left: solid 1px $br4;
       //   border-right: none;
       // }
       font-size: min(.9vw , 14px);
@@ -117,11 +117,11 @@ const { page, iconName } = defineProps(["page","iconName"]);
   &:hover,&:focus{
     .top-section{
       .main-link{
-        color: $primary3;
+        color: $primary1;
         // background-color: $c1;
         
         .icon{
-          color: $primary3;
+          color: $primary1;
         }
         // text-decoration: underline;
         // &:not(.router-link-active){
@@ -159,7 +159,7 @@ const { page, iconName } = defineProps(["page","iconName"]);
     width: 100%;
     bottom: 0;
     left: 0;
-    background-color: $primary3 ;
+    background-color: $primary1 ;
   }
 }
 </style>

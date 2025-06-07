@@ -2,7 +2,7 @@
   <div class="navbar-item pcc">
     <div class="top-section" >
       <nuxt-link class="main-link d-flex align-items-center" :key="page.id"
-        :to="page.subPages.length>0?'':page.pageUrl" :class="rtl()"
+        :to="page.subPages.length>0?'':localePath(page.pageUrl)" :class="rtl()"
       >
         {{ useName(page,0,0,1) }}
         <Icon
@@ -18,25 +18,26 @@
 </template>
 
 <script setup>
-const { api, apiBase } = useRuntimeConfig();
+// const { public:{api, apiBase } } = useRuntimeConfig();
 const { page } = defineProps(["page"]);
-
+// const localePath = useLocalePath()
 </script>
 
 <style lang="scss" scoped>
-@use "~/assets/styles/scss/theme/theme";
+@import "~/assets/styles/scss/theme/theme";
 
 .navbar-item{
   position: relative;
   width: auto ;
-  // height: 100%;
+  height: 100%;
   .top-section{
-    color: $primary4;
+    color: $primary1;
     width: auto ;
     height: 100%;
     
     // padding: .5rem 0;
     .main-link{
+      color: white;
       position: relative;
       height: 100%;
       // z-index: 20;
@@ -45,17 +46,16 @@ const { page } = defineProps(["page"]);
       width: auto ;
       display: block;
       // border-left: none;
-      // border-right: solid 1px $br20;
+      // border-right: solid 1px $br4;
       // &.rtl{
-      //   border-left: solid 1px $br20;
+      //   border-left: solid 1px $br4;
       //   border-right: none;
       // }
-      font-size: min(1vw , 14px);
-      font-weight: 500;
+      font-size:  14px;
+      font-weight: 700;
       // font-size: 14px;
 
       user-select: none;
-      color: black;
       cursor: pointer !important;
       .icon{
         color: black;
@@ -65,11 +65,11 @@ const { page } = defineProps(["page"]);
       content: '';
       position: absolute;
       z-index: 0;
-      height: 5px;
+      height: 2px;
       width: 0;
       bottom: 0;
       opacity: 0;
-      background-color: $primary3 ;
+      background-color: $primary1 ;
       transition: all 250ms ease-in-out, width 350ms ease-in-out;
     }
     &.rtl{
@@ -111,7 +111,7 @@ const { page } = defineProps(["page"]);
   .bottom-section{
     z-index: 200;
     position: absolute;
-    background-color: rgba(0, 0, 0, 0.7);
+    background-color: white;
     width: auto;
     top: 100% ;
     left: 0;
@@ -137,11 +137,11 @@ const { page } = defineProps(["page"]);
   &:hover,&:focus{
     .top-section{
       .main-link{
-        color: red;
+        color: $primary1;
         // background-color: $c1;
         
         .icon{
-          color: red;
+          color: $primary1;
         }
         // text-decoration: underline;
         // &:not(.router-link-active){
@@ -174,17 +174,17 @@ const { page } = defineProps(["page"]);
 
 }
 .router-link-active{
-  // color: $primary2 !important;
+  color: $primary1 !important;
   // background-color: $c1 !important;
   &::before{
     content: '';
     position: absolute;
     z-index: 0;
-    height: 5px;
+    height: 2px;
     width: 100%;
     bottom: 0;
     left: 0;
-    background-color: $primary3 ;
+    background-color: $primary1 ;
   }
 }
 </style>

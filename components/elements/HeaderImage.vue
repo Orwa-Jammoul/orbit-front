@@ -38,7 +38,7 @@
 </script>
 
 <style lang="scss" scoped>
-@use "~/assets/styles/scss/theme/theme";
+@import "~/assets/styles/scss/theme/theme";
 
 .header-image{
   position: relative;
@@ -46,7 +46,7 @@
   aspect-ratio: 4.85/1;
 
   // height: 300px;
-  background-color: $br90;
+  background-color: $br1;
   .content{
     position: absolute;
     display: flex;

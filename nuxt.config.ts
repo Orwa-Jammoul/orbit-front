@@ -1,77 +1,61 @@
 // https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
-  compatibilityDate: '2024-11-01',
   devtools: { enabled: false },
+
   modules: [
     '@nuxtjs/i18n',
-    '@nuxt/icon',
-    'nuxt-swiper',
-    'vuetify-nuxt-module',
-    '@vee-validate/nuxt',
     '@vesp/nuxt-fontawesome',
+    "nuxt-swiper", 
+    "@invictus.codes/nuxt-vuetify",
+    '@nuxt/image',
+    'nuxt-icon',
     'nuxt-aos',
-    'nuxt-tiptap-editor',
+    '@vee-validate/nuxt',
+    '@hypernym/nuxt-anime'
   ],
-  veeValidate: {
-    // disable or enable auto imports
-    autoImports: true,
-    // Use different names for components
-    componentNames: {
-      Form: 'VeeForm',
-      Field: 'VeeField',
-      FieldArray: 'VeeFieldArray',
-      ErrorMessage: 'VeeErrorMessage',
-    },
-  },
+  // vuetify: {
+  //   vuetifyOptions: {
+  //     // Disable Vuetify logs
+  //     defaults: { global: { ripple: false } },
+  //     blueprint: { defaults: false },
+  //   },
+  // },
+  // veeValidate: {
+  //   // disable or enable auto imports
+  //   autoImports: true,
+  //   // Use different names for components
+  //   componentNames: {
+  //     Form: 'VeeForm',
+  //     Field: 'VeeField',
+  //     FieldArray: 'VeeFieldArray',
+  //     ErrorMessage: 'VeeErrorMessage',
+  //   },
+  // },
+
   i18n: {
-    vueI18n: './i18n.config.ts'
+    locales: [
+      { code: 'en', language: 'en-US' },
+      { code: 'ar', language: 'ar-AE' },
+      { code: 'de', language: 'de-DE' },
+    ],
+    defaultLocale: 'en',
+    // vueI18n: './i18n.config.ts'
   },
-  tiptap: {
-    prefix: 'Tiptap', //prefix for Tiptap imports, composables not included
+
+  fontawesome: {
+    icons: {
+      regular :[],
+      solid: []
+    }
   },
+
   css: [
     "@/assets/styles/scss/custom.scss",
+    "@/assets/styles/scss/animate/animate.min.css",
     "@fortawesome/fontawesome-svg-core/styles.css",
     'awesome-notifications/dist/style.css'
   ],
-  vuetifyOptions: {
-    // Vuetify configuration
-    theme: {
-      defaultTheme: 'dark', // light or 'dark'
-      themes: {
-        light: {
-          dark: false,
-          colors: {
-            primary: '#29abe2', // Your primary color
-            secondary: '#424242', // Your secondary color
-            accent: '#82B1FF', // Your accent color
-            error: '#FF5252',
-            info: '#2196F3',
-            success: '#4CAF50',
-            warning: '#FFC107',
-          },
-        },
-        dark: {
-          dark: true,
-          colors: {
-            primary: '#ffffff', // Your primary color for dark mode
-            secondary: '#424242',
-            accent: '#FF4081',
-            error: '#FF5252',
-            info: '#2196F3',
-            success: '#4CAF50',
-            warning: '#FB8C00',
-          },
-        },
-      },
-    },
-    defaults: {
-      VBtn: {
-        rounded: 'xs',
-        variant: 'tonal',
-      },
-    },
-  },
+
   app: {
     head: {
       title: "Orbit",
@@ -79,70 +63,135 @@ export default defineNuxtConfig({
         lang: "ar"
       },
       meta: [
-        { charset: "utf-8" },
-        { name: "viewport", content: "width=device-width, initial-scale=1" },
-        { name: "description", content: "Ecommerce Site" },
-      ],
-      link: [
-        {
-          rel: "stylesheet",
-          href: "https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css",
-        },
-        {
-          rel: "stylesheet",
-          href: "https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"            
-        },
-        { 
-          rel: 'icon', 
-          href: "/logos/logo-blue.svg",
-          type: "image/x-icon" 
-        }
-      ],
-      script: [        
-        {
-          src: "https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js",
-        },
-        // {
-        //   src: "https://cdnjs.cloudflare.com/ajax/libs/animejs/2.0.2/anime.min.js",
-        // },
-      ],
+          { charset: "utf-8" },
+          { name: "viewport", content: "width=device-width, initial-scale=1" },
+          { name: "description", content: "Ecommerce Site" },
+        ],
+        link: [
+          {
+            rel: "stylesheet",
+            href: "https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css",
+          },
+          {
+            rel: "stylesheet",
+            href: "https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"            
+          },
+          { 
+            rel: 'icon', 
+            href: "/logo/web-title-icon.ico",
+            type: "image/x-icon" 
+          }
+        ],
+        script: [        
+          {
+            src: "https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js",
+          },
+          {
+            src: "https://cdnjs.cloudflare.com/ajax/libs/animejs/2.0.2/anime.min.js",
+          },
+          {
+            src: "https://cdnjs.cloudflare.com/ajax/libs/pdf.js/2.10.377/pdf.min.js",
+          },
+        ],
     }
   },
+
   runtimeConfig: {
-    // serverApiBase: 'https://orbit-eng.com',
-    serverApiBase: 'http://localhost:8000',
+    adminEmail: process.env.ADMIN_EMAIL,
+    adminPassword: process.env.ADMIN_PASSWORD,
+    serverApiBase: 'https://adminpanel.orbit-eng.net',
     serverApi: {
       AuthLoginApi: '/api/identity/token',
+      CurrencyGetDefaultApi: '/api/v1/Currencies/Defualt',
+      CountriesGetAllApi: '/api/v1/Countries',
+      NationalityGetAllApi: 'api/v1/nations',
+      GetPrincedoms:'api/v1/Princedoms'
+
 
     },
     public: {
-      // apiBase: 'https://orbit-eng.com',
-      apiBase: 'http://localhost:8000',
+      
+      apiBase: 'https://adminpanel.orbit-eng.net',
       api: {
-        authLoginApi: '/api/auth/login',
-        authLogoutApi: '/api/auth/logout',
-        langsApi: '/api/langs',
-        usersApi: '/api/auth/users',
-        userApi: '/api/auth/user',
+        // Auth
+        RegisterNewEmail: "/api/identity/user",
+        AuthLoginApi: "/api/identity/token",
+        AuthRefreshTokenApi: "/api/identity/token/refresh",
+        PersonClientsEditProfileApi: "/api/identity/account/UpdateProfile",
+        ChangePasswordAdminApi: "/api/identity/account/ChangePassword",
+        forgotPasswordApi: "/api/identity/user/forgot-password",
 
-        titleTypesApi: '/api/title-types',
-        noteTypesApi: '/api/note-types',
-        attachmentTypesApi: '/api/attachment-types',
-        blocksApi: '/api/blocks',
+
+        PersonClientsApi : "/api/v1/Persons",
+        CompanyClientsApi : "/api/v1/Companies",
+
+        // Guest
+        activityTypesApi: "/api/v1/activityTypes",
+
+
+        // Menus
+        MenusApi: "/api/v1/menus",
+        MenusGetAllApi: "/api/v1/menus/All",
+        
+        //pages
+        PagesApi: "/api/Pages",
+
+        // Blocks
+        blocksApi: "/api/blocks",
+        Blocks: "/api/Blocks",
+        BlocksCategories: "/api/blockcategories",
+
+        // Countries
+        NationsApi: "/api/v1/nations",
+        CitiesApi: "/api/Cities",
+        CountriesGetAllApi: "/api/v1/Countries",
+        princedomsApi:'/api/v1/Princedoms',
+        FeesApi:'/api/v1/Fees',
+        
+        // services
+        ServiceTypesApi:'/api/v1/ServiceTypes',
+
+        // products
+        productsApi:'/api/v1/Products',
+        allProductsApi:'/api/v1/Products/GetAllPaged',
+        productsByCategoryIdApi:'/api/v1/Products/GetAllPagedProductByCategoryId',
+        recentProductsApi:"/api/v1/Products/GetAllRecentProducts",
+        offersProductsApi:"/api/v1/Products/GetActiveProductOffers",
+
+        getProductCategories:"/api/v1/ProductCategories/GetAllParentCategoriesByType",
+        
+        // GetByServiceTypeIdApi:'/api/v1/Products/GetByServiceTypeId',
+
+        //order
+        FinalOrdinaryOrdersApi:"/api/v1/FinalOrdinaryOrders",
+        PayTypesApi:"/api/v1/PayTypes",
+        CurrenciesApi:"/api/v1/Currencies",
+        CheckCouponsApi:"/api/v1/Coupons/IsValid",
+        GetFinalOrdinaryOrdersApi:"/api/v1/FinalOrdinaryOrders/GetAllPagedFinalOrdinaryOrdersByClientId",
+
+        // Invoices
+        userInvoices:"/api/v1/Invoices/GetAllPaged",
+        
+        MessagingApi:"/api/v1/Suggestions",
       },
-      globalDefaultImage: '/logos/logo-blue.svg',
+
+      globalDefaultImage: '/images/parfume-2.jpg',
       cachedTime: 60 * 60 * 2 * 1000,   // 60: second(1 minutes), 60: minutes(1 hours), 2 hours, 1000: milliseconds 
     }
   },
+
   vite: {
     css: {
       preprocessorOptions: {
         scss: {
-          api: "modern",
           additionalData: '@use "~/assets/styles/scss/theme/_variables.scss" as *;'
         }
       }
     }
-  }
+  },
+  routeRules: {
+    '/.well-known/**': { redirect: '/' }, // Redirects all /.well-known paths to home
+  },
 
+  compatibilityDate: "2025-02-11"
 })

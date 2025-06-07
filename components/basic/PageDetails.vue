@@ -2,75 +2,75 @@
   <div class="page-details-root">
     <div class="container">
       <div class="row path-links text-start pt-4">
-        <h5 class="links-frame" dir="auto" style="color: #000">
-          <nuxt-link class="path-link" to="/">{{ t("home") }}</nuxt-link>
+        <h5 class="links-frame" dir="auto" >
+          <nuxt-link class="path-link" :to="localePath('/')">{{ $t("Home") }}</nuxt-link>
           /
           <span class="path-link">{{ useName(item) }}</span>
         </h5>
       </div>
-      <!-- <div class="title-formatting3 mb-10 px-0 " :class="isEn() ? 'title_en' : ''">
+      <div class="title-formatting3 mb-10 px-0 " :class="isEn() ? 'title_en' : ''">
         <h1 style="font-weight: var(--fw-9)" class="text-center color ">
           <span >{{ useName(item) }}</span>
         </h1>
-      </div> -->
+      </div>
     </div>
   
-    <div v-if="item" class="container">
+    <div v-if="item" class="container" dir="auto">
       <!-- section for page description -->
       <div class="row description">
-        <div class="section">
+        <div v-if="item.descriptionEn" class="section">
 
-          <div class="title-formatting3 mb-10 px-0 " :class="{'title_en':isEn(), 'ltr':isEn(), 'rtl':!isEn()}">
-            <div class="logo-frame pcc">
-              <img :src="`/logo/logo-sm-01.png`" alt="logo">
-            </div>
-            <h1 style="font-weight: var(--fw-9)" class="text-center color ">
-              <span >{{ useName(item) }}</span>
-            </h1>
-          </div>
-          <div v-if="item?.image" class="img-frame contain" :class="rtl()">
-            <img :src="`${apiBase}/${item.image}`" alt=" Photo">
+          <div v-if="item.image" class="img-frame contain" :class="rtl()">
+            <img :src="cImg(item.image)" alt=" Photo">
           </div>
           <div v-html="useDes(item)"></div>
 
         </div>
-        <div class="section">
-          <div v-if="item?.image1" class="img-frame contain" :class="rtl()">
+        <div v-if="item.descriptionEn1" class="section">
+
+          <div v-if="item.image1" class="img-frame contain" :class="rtl()">
             <img :src="cImg(item.image1)" alt=" Photo">
           </div>
-          <div  v-html="useDes1(item)"></div>
+          <div v-html="useDes1(item)"></div>
 
         </div>
-        <div class="section">
+        <div v-if="item.descriptionEn2" class="section">
           <div v-if="item?.image2" class="img-frame contain" :class="rtl()">
             <img :src="cImg(item.image2)" alt=" Photo">
           </div>
           <div  v-html="useDes2(item)"></div>
 
         </div>
-        <div class="section">
+        <div v-if="item.descriptionEn3" class="section">
           <div v-if="item?.image3" class="img-frame contain" :class="rtl()">
             <img :src="cImg(item.image3)" alt=" Photo">
           </div>
           <div  v-html="useDes3(item)"></div>
+
         </div>
+        <!-- <div class="section">
+          <div v-if="item?.image3" class="img-frame contain" :class="rtl()">
+            <img :src="cImg(item.image3)" alt=" Photo">
+          </div>
+          <div  v-html="useDes3(item)"></div>
+        </div> -->
       </div>
     
       <!-- section for page attachments -->
       <div v-if="item.pageAttachements?.length >0" class="row attachments-section pt-1">
-        <h2 class="section-title">{{ t('Attachments')}}</h2>
+        <h2 class="section-title">{{ $t('Attachments')}}</h2>
         <ol class="page-attachments px-0 ps-10">
           <li v-for="attachment in item?.pageAttachements" :key="attachment.id">
             <a :href="`${apiBase}/${attachment.file}`" target="_blank" class="attachment-link">
               <icon name="majesticons:attachment" size="18px"/>
-              {{ t('downloadFile') }}
+              {{ $t('downloadFile') }}
             </a>
           </li>
         </ol>
       </div>
       <!-- section for page photos -->
       <div v-if="item.pagePhotos?.length > 0" class="row page-photos">
-        <h2 class="section-title">{{ t('photos') }}</h2>
+        <h2 class="section-title">{{ $t('photos') }}</h2>
         <div class="row">
           <div v-for="photo in item?.pagePhotos" :key="photo.id" class="col-md-3 mb-5" >
             <div class="card photo-card contain">
@@ -82,7 +82,7 @@
       </div>
       <!-- Video Section -->
       <div v-if="item.pageVideos?.length >0" class="row video-section pt-5">
-        <h2 class="section-title">{{ t('Videos') }}</h2>
+        <h2 class="section-title">{{ $t('Videos') }}</h2>
         <div class="video-list">
           <div v-for="video in item.pageVideos" :key="video.id" class="video-item">
             <video controls :src="`${apiBase}/${video.file}`" class="video-player">
@@ -94,21 +94,6 @@
 
     </div>
     <ModalImgs/>
-    <!-- <div v-if="showImageModal" class="modal fade show" tabindex="-1" role="dialog" style="display: block;">
-      <div class="modal-dialog modal-dialog-centered" role="document">
-        <div class="modal-content">
-          <div class="modal-header">
-            <button type="button" class="close" @click="closeModal" aria-label="Close">
-              <span aria-hidden="true">&times;</span>
-            </button>
-          </div>
-          <div class="modal-body">
-            <img :src="`${apiBase}/${selectedPhoto.image}`" class="img-fluid" alt="Large Photo">
-          </div>
-        </div>
-      </div>
-    </div>
-    <div v-if="showImageModal" class="modal-backdrop fade show" @click="closeModal"></div> -->
   </div>
 </template>
   
@@ -131,7 +116,7 @@
 </script>
   
 <style lang="scss" scoped>
-  @use "~/assets/styles/scss/theme/theme";
+  @import "~/assets/styles/scss/theme/theme";
   .page-details-root{
     margin-bottom: 3rem;
   }

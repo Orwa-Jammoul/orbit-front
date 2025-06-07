@@ -1,1 +1,0 @@
-import{d as p,u as r,h as e,_ as s,a as i}from"./Dfo39llo.js";const c=o=>{const n=i(o);return p({inheritAttrs:!1,setup(u,{attrs:t}){return r().isHydrating?()=>e("div",[e(s,void 0,{default:()=>e(n,t)})]):()=>e(n,t)}})};export{c as createClientPage};

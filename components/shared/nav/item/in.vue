@@ -42,12 +42,12 @@ const { page } = defineProps(["page"]);
 </script>
 
 <style lang="scss" scoped>
-@use "~/assets/styles/scss/theme/theme";
+@import "~/assets/styles/scss/theme/theme";
 
 .navbar-item{
   position: relative;
   width: auto ;
-  border-bottom: solid 1px $grey;
+  border-bottom: solid 1px rgba(255, 255, 255, 0.3);
   // min-height: 1rem;
   .top-section{
     color: $primary1;
@@ -62,11 +62,10 @@ const { page } = defineProps(["page"]);
         padding-left: 0;
         padding-right: 1rem;
       }
-      color: rgb(44, 44, 44);
       font-size: .8rem;
       user-select: none;
       font-weight: bold;
-      color: black;
+      color: white;
       cursor: pointer;
     }
   }
@@ -87,7 +86,7 @@ const { page } = defineProps(["page"]);
   &:hover,&:focus{
     .top-section{
       .main-link{
-        color: $primary3;
+        color: $primary1;
       }
     }
     .bottom-section{
@@ -100,6 +99,6 @@ const { page } = defineProps(["page"]);
 }
 
 .router-link-active{
-  color: $primary3 !important;
+  color: $primary1 !important;
 }
 </style>

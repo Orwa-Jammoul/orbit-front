@@ -11,7 +11,6 @@ export const useHttpForUserApi = () => {
     lazy: isLazy,
     headers: {
       'Accept-Language': 'en-US',
-      'Accept': 'application/json',
       'Authorization': `Bearer ${useToken().value}`
     },
     onRequest({ request, options }) {
@@ -27,7 +26,6 @@ export const useHttpForUserApi = () => {
     lazy: isLazy,
     headers: {
       'Accept-Language': 'en-US',
-      'Accept': 'application/json',
       'Authorization': `Bearer ${useToken().value}`
     },
     onRequest({ request, options }) {
@@ -44,8 +42,6 @@ export const useHttpForUserApi = () => {
     method: 'put',
     body: data,
     headers: {
-      'Accept-Language': 'en-US',
-      'Accept': 'application/json',
       'Authorization': `Bearer ${useToken().value}`
     },
     onRequest({ request, options }) {

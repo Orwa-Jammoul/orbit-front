@@ -18,7 +18,7 @@ const hideNav = (url) => {
 </script>
 
 <style lang="scss" scoped>
-@use "~/assets/styles/scss/theme/theme";
+@import "~/assets/styles/scss/theme/theme";
 .main-menu{
   display: flex;
   flex-direction: column;
@@ -28,8 +28,8 @@ const hideNav = (url) => {
 
     width: 15rem;
     font-weight: 600;
-    color: white;
-    font-size: 11px;
+    color: black;
+    font-size: 13px;
     display: block;
     padding: .75em 1em .75em 1em;
     cursor: pointer;
@@ -38,8 +38,8 @@ const hideNav = (url) => {
       border-bottom: none;
     }
     &:hover{
-      background-color: $br20 !important;
-      color: white;
+      background-color: $br1 !important;
+      // color: white;
     }
     // &:hover:not(.router-link-active){
     //   background-color: $primary6 !important;
@@ -51,6 +51,6 @@ const hideNav = (url) => {
 
 .router-link-active{
   // color: $primary1 !important;
-  background-color: $br20 !important;
+  background-color: $br1 !important;
 }
 </style>

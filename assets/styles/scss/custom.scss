@@ -1,5 +1,5 @@
-@use "@/assets/styles/scss/theme/variables" as *;
-@use "@/assets/styles/scss/theme/mixin"  as *;
+@import "@/assets/styles/scss/theme/variables";
+@import "@/assets/styles/scss/theme/mixin";
 
 /////////* debug style */////////
 // *{
@@ -8,13 +8,42 @@
 // }
 
 
-// @media (prefers-color-scheme: dark) {
-//   :root{
-//     --primary: #fff;
-//     --secondary: #424242;
-//     --background: #121212;
-//     --text: #FFFFFF;
-//   }
+/* 
+  Global Classes
+  --------------------------------------------
+*/
+
+// @font-face {
+//   font-family: '29LTZawi';
+//   src: url("../font/ar/29LTZawi-Black.otf");
+//   src: url("../font/ar/29LTZawi-Bold.otf");
+//   src: url("../font/ar/29LTZawi-ExtraBold.otf");
+//   src: url("../font/ar/29LTZawi-ExtraLight.otf");
+//   src: url("../font/ar/29LTZawi-Light.otf");
+//   src: url("../font/ar/29LTZawi-Medium.otf");
+//   src: url("../font/ar/29LTZawi-Regular.otf");
+//   src: url("../font/ar/29LTZawi-Thin.otf");
+//   // src: url("../font/ar/29LTZawi-Black.ttf");
+//   // src: url("../font/ar/29LTZawi-Bold.ttf");
+//   // src: url("../font/ar/29LTZawi-ExtraBold.ttf");
+//   // src: url("../font/ar/29LTZawi-ExtraLight.ttf");
+//   // src: url("../font/ar/29LTZawi-Light.ttf");
+//   // src: url("../font/ar/29LTZawi-Medium.ttf");
+//   // src: url("../font/ar/29LTZawi-Regular.ttf");
+//   // src: url("../font/ar/29LTZawi-Thin.ttf");
+//   unicode-range: U+0600-06FF;
+  
+// }
+
+// @font-face {
+//   src: url("../font/en/Roboto-Black.ttf");
+//   src: url("../font/en/Roboto-Bold.ttf");
+//   src: url("../font/en/Roboto-Light.ttf");
+//   src: url("../font/en/Roboto-Medium.ttf");
+//   src: url("../font/en/Roboto-MediumItalic.ttf");
+//   src: url("../font/en/Roboto-Regular.ttf");
+//   font-family: Roboto;
+//   unicode-range: U+0020-007F;
 // }
 
 // @import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Arabic:wght@100;200;300;400;500;600;700&family=Rubik:ital,wght@0,300..900;1,300..900&family=Tajawal:wght@200;300;400;500;700;800;900&family=Vazirmatn:wght@100..900&family=Zain:wght@200;300;400;700;800;900&display=swap');
@@ -25,13 +54,14 @@
 
 //subset=latin // Roboto just for latin chars
 // @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap&subset=latin');
-// @import url('https://fonts.googleapis.com/css2?family=Alexandria:wght@100..900&family=Cormorant:ital,wght@0,300..700;1,300..700&family=IBM+Plex+Sans+Arabic:wght@100;200;300;400;500;600;700&family=Jost:ital,wght@0,100..900;1,100..900&family=Rubik:ital,wght@0,300..900;1,300..900&family=Tajawal:wght@200;300;400;500;700;800;900&family=Vazirmatn:wght@100..900&family=Zain:wght@200;300;400;700;800;900&display=swap');
-// @import url('https://fonts.googleapis.com/css2?family=Alexandria:wght@100..900&family=Cormorant:ital,wght@0,300..700;1,300..700&family=IBM+Plex+Sans+Arabic:wght@100;200;300;400;500;600;700&family=Jost:ital,wght@0,100..900;1,100..900&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Readex+Pro:wght@160..700&family=Rubik:ital,wght@0,300..900;1,300..900&family=Tajawal:wght@200;300;400;500;700;800;900&family=Vazirmatn:wght@100..900&family=Zain:wght@200;300;400;700;800;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Alexandria:wght@100..900&family=Cormorant:ital,wght@0,300..700;1,300..700&family=IBM+Plex+Sans+Arabic:wght@100;200;300;400;500;600;700&family=Jost:ital,wght@0,100..900;1,100..900&family=Rubik:ital,wght@0,300..900;1,300..900&family=Tajawal:wght@200;300;400;500;700;800;900&family=Vazirmatn:wght@100..900&family=Orbitron:wght@400..900&family=Zain:wght@200;300;400;700;800;900&display=swap');
+
 
 html{
   margin: 0;
   padding: 0;
   width: 100%;
+  scroll-behavior: smooth;
 }
 body {
 
@@ -39,8 +69,12 @@ body {
   padding: 0;
 
   box-sizing: border-box;
-  font-family:   'Lato', 'Vazirmatn', 'Rubik', 'Poppins', 'sans-serif';
-  background-color: var(--background) ;
+  font-family: 'Vazirmatn', 'Jost', 'sans-serif' !important;
+  // font-family:  'Orbitron', 'Vazirmatn', 'Jost', 'sans-serif' !important;
+
+  background-color: $primary4;
+  color: white;
+
   // font-family:   'Roboto', 'Rubik', 'Cairo', 'Baloo',sans-serif;
   // font-family:   'Roboto', 'IBM Plex Sans Arabic' ,'Rubik', 'Cairo', 'Baloo',sans-serif;
   // font-family:   'Roboto', 'Vazirmatn' ,'Rubik', 'Cairo', 'Baloo',sans-serif;
@@ -50,7 +84,7 @@ body {
   // &::-webkit-scrollbar-track { background: #f1f1f1; }
   // &::-webkit-scrollbar-thumb { background: $gold; border-radius: 10px; }
   // &::-webkit-scrollbar-thumb:hover { background: #555; }
-  @include vertical-scrollbar(8px, "#f1f1f1", $scroll-clr, "#555");
+  @include vertical-scrollbar(3px, "#f1f1f1", $scroll-clr, "#555");
   *::selection {
     color: $select-clr;
     background: $select-bg-clr;
@@ -145,12 +179,12 @@ body {
 }
 
 a {
-  text-decoration: none;
+  text-decoration: none !important;
 }
 
-ul {
-  list-style: none;
-}
+// ul {
+//   list-style: none;
+// }
 
 .alert {
   position: fixed !important;
@@ -161,7 +195,9 @@ ul {
 }
 
 .btn-main {
-  background-color: $gold;
+  background-color: $primary;
+  // background: linear-gradient(to right, $primary2 0%, $primary2 30%, $primary2b 80%, $primary2c 100% );
+  // background-color: $gold;
   color: #fff;
   padding: 8px 30px;
   text-align: center;
@@ -173,9 +209,12 @@ ul {
   border-radius: 7px;
   &:hover {
     opacity: 0.9;
-    color: #000000;
+    color: $primary;
     // border-color: $green;
-    background-color: $medium-gold;
+    background-color: white;
+  }
+  &:disabled{
+    color: #484848 !important;
   }
 }
 .btn-main2 {
@@ -282,6 +321,19 @@ ul {
   }
 }
 
+.rp{
+  padding-left: 3rem;
+  padding-right: 3rem;
+  @media (max-width: 767.98px) {
+    padding-left: 2.5rem;
+    padding-right: 2.5rem;
+  }
+  @media (max-width: 400.98px) {
+    padding-left: 2rem;
+    padding-right: 2rem;
+  }
+}
+
 .gradient {
   background: linear-gradient(to left, red, darkred);
 }
@@ -307,7 +359,7 @@ ul {
     -moz-border-radius: 35px;
     -ms-border-radius: 35px;
     -o-border-radius: 35px;
-}
+  }
   .swiper-pagination-bullet,
   .swiper-pagination-bullet-active {
     width: 16px !important;
@@ -373,7 +425,7 @@ ul {
   height: 100%;
   overflow: hidden;
   position: relative;
-  img, .svg{
+  img{
     position: relative;
     z-index: 4;
     width: 100%;
@@ -394,7 +446,7 @@ ul {
   width: 100%;
   height: 100%;
   overflow: hidden;
-  img, .svg{
+  img{
     width: 100%;
     height: 100%;
     object-fit: cover;
@@ -415,7 +467,7 @@ ul {
   width: 100%;
   height: 2.5rem;
   border-radius: 4px;
-  background-color: $br50;
+  background-color: $br3;
   color: white;
   font-size: 13px;
   font-weight: 500;
@@ -423,64 +475,17 @@ ul {
 
   transition: all 300ms ease-in-out;
   &:hover{
-    background-color: $br20;
+    background-color: $br4;
     color: white;
   }
 }
 
-// .title-formatting{
-//   position: relative;
-//   font-size: 20px;
-//   display: flex;
-//   // border-bottom: solid 2px black;
-//   margin-bottom: 1rem;
-//   margin-inline-start: 3rem;
-//   // padding-inline-start: 3rem;
-//   // background-image: ;
-//   *{
-//     position: relative;
-//     width: auto;
-//     padding-bottom: 1rem;
-//     margin: 0;
-//     color: black;
-//     &::after{
-//       content: '';
-//       position: absolute;
-//       bottom: -2px;
-//       left: 0;
-//       width: 100%;
-//       height: 2px;
-//       background-color: $primary3;
-//     }
-//   }
+.title-formatting{
+  font-size: 20px;
+  margin-bottom: 1rem;
+}
 
-//   &.rtl{
-//     &::after{
-//       content: '';
-//       position: absolute;
-//       right: -3rem;
-//       left: auto;
-//       top: 0;
-//       height: 100%;
-//       width: 2.5rem;
-//       background-image: url('/public/logo/logo-sm-02.png');
-//       background-size: 100%;
-//     }
-//   }
-//   &.ltr{
-//     &::after{
-//       content: '';
-//       position: absolute;
-//       left: -3rem;
-//       right: auto;
-//       top: 0;
-//       height: 100%;
-//       width: 2.5rem;
-//       background-image: url('/public/logo/logo-sm-02.png');
-//       background-size: 100%;
-//     }
-//   }
-// }
+
 // .title-formatting2{
 //   font-size: 20px;
 //   display: flex;
@@ -537,15 +542,12 @@ ul {
 //     }
 //   }
 // }
-
-
-
 .main-btn{
-  width: auto;
+  width: auto !important;
   margin: 2rem;
   padding: .5rem 2rem;
   color: white;
-  background-color: $primary1;
+  background-color: $primary2;
   border-radius: 5px;
   transition: all 200ms ease-out;
   &:hover:not(.disabled){
@@ -553,11 +555,11 @@ ul {
     box-shadow: 0 2px 5px 0 rgb(0, 0, 0,0.3);
   }
   &.disabled{
-    background-color: color-mix(in srgb, $primary1 50%, white 50%) ;
+    background-color: color-mix(in srgb, $primary2 50%, white 50%) ;
     box-shadow: none !important;
   }
   &:disabled{
-    background-color: color-mix(in srgb, $primary1 50%, white 50%) ;
+    background-color: color-mix(in srgb, $primary2 50%, white 50%) ;
     box-shadow: none !important;
   }
 }
@@ -651,22 +653,24 @@ ul {
   .links-frame{
     // border-bottom: solid 1px rgb(219, 219, 219);
     padding-bottom: .75rem;
+    color: $br2;
+    font-size: 12px;
     .path-link{
       // margin: 0 0.25rem;
       padding-inline-start: 0.5rem;
       padding-inline-end: 0.5rem;
-      padding-top: .5rem;
-      padding-bottom: .5rem;
+      padding-top: .3rem;
+      padding-bottom: .3rem;
       border-radius: 5px;
-      color: $br20;
-      font-size: 1rem;
+      color: $br2;
+      font-size: 12px;
       font-weight: 500;
       // background-color: $primary1;
       cursor: pointer;
       transition: all 200ms ease-in-out;
       &:hover{
-        color: $br20;
-        background-color: $br70;
+        color: $br5;
+        background-color: $br2;
       }
     }
   }
@@ -719,16 +723,92 @@ ul {
   }
 }
 
-.o-btn{
-  font-size: .9rem;
-  padding: 5px 1rem;
-  border-radius: .5rem;
-  margin-inline-end: 5px;
-  // background-color: $c1;
-  border: solid 1px $br30;
-  color: white;
-  transition: all 200ms ease-in-out;
-  &:hover{
-    background-color: $c3;
-  }
+.to-down-shadow{
+  position: absolute;
+  top: -1rem;
+  left: 0;
+  width: 100%;
+  height: 4rem;
+  background: linear-gradient(180deg, rgba(0, 0, 0, 0.8) 0%, rgba(0, 0, 0, 0) 50%, rgba(0, 0, 0, 0) 100%);
+}
+.to-up-shadow{
+  position: absolute;
+  bottom: -1rem;
+  left: 0;
+  width: 100%;
+  height: 4rem;
+  background: linear-gradient(0deg, rgba(0, 0, 0, 0.8) 0%, rgba(0, 0, 0, 0) 50%, rgba(0, 0, 0, 0) 100%);
+}
+
+.metal-text {
+  font-size: 48px;
+  font-weight: bold;
+  background: linear-gradient(
+    to bottom,
+    #e4e4e4 0%,
+    #e4e4e4 25%,
+    #b7b7b7 50%,
+    #8f8f8f 75%,
+    #717171 100%
+  );
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+.grid-bg1{
+  background-image: url('/svg/grid-vector.svg');
+  background-size: 100vw;
+  background-repeat: repeat;
+}
+.grid-bg2{
+  background-image: url('/svg/bg-pattern.svg');
+  background-size: 100vw;
+  background-repeat: repeat;
+  // filter: brightness(2);
+}
+
+.gr-circle1{
+  position: absolute;
+  left: 10%;
+  top: 0;
+  width: 80%;
+  aspect-ratio: 1;
+  translate: -50% -50%;
+  border-radius: 50%;
+  background: radial-gradient($primary, transparent 50%);
+  filter: blur(5px);
+  // mix-blend-mode: color;
+  opacity: .2;
+  pointer-events: none;
+  z-index: 0;
+}
+.gr-circle2{
+  position: absolute;
+  left: 100%;
+  top: 50%;
+  width: 50%;
+  aspect-ratio: 1;
+  translate: -50% -50%;
+  border-radius: 50%;
+  background: radial-gradient(rgb(255, 0, 204), transparent 50%);
+  filter: blur(5px);
+  // mix-blend-mode: color;
+  opacity: .2;
+  pointer-events: none;
+  z-index: 0;
+}
+.gr-circle3{
+  position: absolute;
+  left: 100%;
+  top: 100%;
+  width: 180%;
+  aspect-ratio: 1;
+  translate: -50% -50%;
+  border-radius: 50%;
+  background: radial-gradient(rgb(255, 0, 204), transparent 50%);
+  filter: blur(5px);
+  // mix-blend-mode: color;
+  opacity: .2;
+  pointer-events: none;
+  z-index: 0;
 }

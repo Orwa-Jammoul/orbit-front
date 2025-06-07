@@ -19,7 +19,7 @@ const { pages } = defineProps(["pages"]);
 </script>
 
 <style lang="scss" scoped>
-@use "~/assets/styles/scss/theme/theme";
+@import "~/assets/styles/scss/theme/theme";
 .dropdown-main-menu{
   display: flex;
   flex-direction: column;
@@ -34,17 +34,17 @@ const { pages } = defineProps(["pages"]);
     font-size: 12px;
     display: block;
     padding: .75em 1em .75em 1em;
-    // border-bottom: solid 1px $br50;
+    // border-bottom: solid 1px $br3;
       
     &:hover{
       // background-color: $primary6;
-      color: $primary3;
+      color: $primary1;
     }
   }
 }
 
 .router-link-active{
   background-color: $primary6 !important;
-  color: $primary3 !important;
+  color: $primary1 !important;
 }
 </style>

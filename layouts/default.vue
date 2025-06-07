@@ -1,34 +1,42 @@
 <template>
   <div>
     <ClientOnly>
-      <ElementsLoader/>
-      <div>
-        <!-- <SharedNavbar class="nav-bar-main" /> -->
+      <div :class=" isEn() ? 'bodyEN' : 'bodyAR'">
+        <SharedNavbar class="nav-bar-main"/>
+        <SharedMenuContact/>
         <div id="slot">
           <slot />
         </div>
-        <!-- <SharedFooter /> -->
+        <SharedFooter />
       </div>
     </ClientOnly>
   </div>
 </template>
 
 <script setup>
- const { locale } = useI18n()
-//  console.log(locale.value);
+
+  const {locales, locale, setLocale } = useI18n()
+  // useLang().value = locale
+
+  onMounted(()=>{
+    const lang = locale ?? localStorage.getItem("lang") ?? "en";
+    // setLocale(lang)
+    useLang().value = lang
+  })
+
 </script>
 <style lang="scss" scoped>
-// @use "~/assets/styles/scss/theme/theme";
+// @import "~/assets/styles/theme/theme1.scss";
 .nav-bar-main {
-  // position: fixed;
   position: sticky;
-  // position: absolute;
   z-index: 999;
   width: 100%;
   top: 0;
+  left: 0;
+  background-color: black;
 }
 #slot{
-  min-height: calc(100vh - 6rem);
+  min-height: calc(100vh - 5rem);
 }
 // .whatsApp{
 //   z-index: 800;

@@ -48,7 +48,7 @@ async function pdfToImage (pdfUrl){
 }
 
 // Example usage
-// const pdfUrl = 'https://admin.uaesports.me/Files/Images/EmployeeORequests/P-0 (199).pdf'; // Replace with your PDF URL
+// const pdfUrl = 'https://adminpanel.orbit-eng.net/Files/Images/EmployeeORequests/P-0 (199).pdf'; // Replace with your PDF URL
 imgSrc.value = await pdfToImage(pdfUrl);
 </script>
 

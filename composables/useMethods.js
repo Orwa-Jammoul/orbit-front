@@ -1,37 +1,39 @@
-// import en from '../locales/en.json'
-// import ar from '../locales/ar.json'
-const vNotFound = 'v/not-found' // v/not-found
-const dNotFound = 'd/not-found' // d/not-found
+
+const vNotFound = '' // v/not-found
+const dNotFound = '' // d/not-found
 export const useModalImgs= () => useState(() => []);
 export const useCapitalize= () => useState(() => false);
 
-export const switchL= ()=>{
-  const lang = localStorage.getItem('lang') ?? 'ar';
-  useLang().value = lang==='en' ? 'ar' : 'en';
-  // console.log(useI18n().locale.value);
-  // console.log(useI18n());
-  // useI18n().locale.value = lang==='en' ? 'ar' : 'en';
-  // const c1 = useCookie('lang')
-  // c1.value= useLang().value
-  // const c2 = useCookie('i18n_redirected')
-  // c2.value= useLang().value
-  localStorage.setItem("lang", String(useLang().value));
-  useCookie('lang').value= String(useLang().value)
-  useCookie('i18n_redirected').value= String(useLang().value)
-  // console.log(useCookie('lang').value);
-  // useCookie().value //setCookie("lang", String(useLang().value));
+export const localePath = (path)=>{
+  // const localePath = useLocalePath()
+  return isEn()? path : `/${useLang().value}${path}`
+}
+
+export const useTr = (english, arabic, germany) =>  {
+  const lang = useLang().value ?? 'en';
+  if(lang=='en'){
+    return english
+  }else if(lang=='ar'){
+    return arabic
+  }else{
+    return germany
+  }
 }
 export const isEn = () =>  {
   const lang = useLang().value ?? 'en';
   return lang==='en'
 }
-export const isDark = () =>  {
-  const theme = oTheme().value ?? 'dark';
-  return theme=='dark'
+export const isAr = () =>  {
+  const lang = useLang().value ?? 'en';
+  return lang==='ar'
+}
+export const isDe = () =>  {
+  const lang = useLang().value ?? 'en';
+  return lang==='de'
 }
 export const rtl = () => {
   const lang = useLang().value ?? 'en';
-  return lang==='en'?'ltr':'rtl';
+  return lang==='en' || lang==='de'?'ltr':'rtl';
 };
 export const capitalize = (value) =>  {
   if(useCapitalize().value){
@@ -40,7 +42,8 @@ export const capitalize = (value) =>  {
   return value
 }
 export const capitalizeFirsts= (sentence)=> {
-  let words = sentence.split(' ');
+  let sentenceTemp = sentence.toLowerCase()
+  let words = sentenceTemp.split(' ');
   let capitalizedWords = words.map(word => {
       return word.charAt(0).toUpperCase() + word.slice(1);
   });
@@ -63,6 +66,15 @@ export const useName = (data, firstCapital=false, allCapital=false, firsts=false
       value = value.charAt(0).toUpperCase() + value.slice(1);
     }
 
+  }else if(lang==='de'){
+    value= data.nameGe ?? data.geName ?? data.fullNameGe ?? data.ge_title ?? vNotFound;
+    if(allCapital){
+      value = value.toUpperCase();
+    }else if(firsts){
+      value = capitalizeFirsts(value);
+    }else if(firstCapital){
+      value = value.charAt(0).toUpperCase() + value.slice(1);
+    }
   }else{
     value= data.fullName ?? data.nameAr ?? data.arabicName ?? data.nameArabic ??  data.fullNameAr ?? data.ar_title ?? data.name ?? data.productNameAr ?? data.firstName ??  vNotFound;
   }
@@ -75,7 +87,16 @@ export const useDes = (data, firstCapital=false, allCapital=false, firsts=false)
   const lang = useLang().value ? useLang().value : 'en';
   let value;
   if(lang==='en'){
-    value= data.descriptionEnglish ?? data.descriptionEn ?? data.englishDescription ?? data.descriptionAboutEn ?? data.description ?? '';
+    value= data.descriptionEnglish ?? data.descriptionEn ?? data.englishDescription ?? data.descriptionAboutEn ?? data.description ?? vNotFound;
+    if(allCapital){
+      value = value.toUpperCase();
+    }else if(firsts){
+      value = capitalizeFirsts(value);
+    }else if(firstCapital){
+      value = value.charAt(0).toUpperCase() + value.slice(1);
+    }
+  }else if(lang==='de'){
+    value= data.descriptionGe ?? vNotFound;
     if(allCapital){
       value = value.toUpperCase();
     }else if(firsts){
@@ -84,7 +105,7 @@ export const useDes = (data, firstCapital=false, allCapital=false, firsts=false)
       value = value.charAt(0).toUpperCase() + value.slice(1);
     }
   }else{
-    value= data.descriptionArabic ?? data.descriptionAr ?? data.description ?? data.descriptionAboutAr ?? '';
+    value= data.descriptionArabic ?? data.descriptionAr ?? data.description ?? data.descriptionAboutAr ?? vNotFound;
   }
   return value;
 };
@@ -94,54 +115,50 @@ export const useDes1 = (data) => {
   }
   const lang = useLang().value ? useLang().value : 'en';
   if(lang==='en'){
-    return data.englishDescription1
+    return data.englishDescription1 ?? vNotFound;
+  }else if(lang==='de'){
+    return data.descriptionGe1 ?? vNotFound;
   }else{
-    if(data.description1){
-      return data.description1
-    }
-    return data.arabicDescription1
+    return data.description1 ?? data.arabicDescription1 ?? vNotFound;
   }
 };
 export const useDes2 = (data) => {
   if(!data){
-    return "not-found";
+    return dNotFound;
   }
   const lang = useLang().value ? useLang().value : 'en';
   if(lang==='en'){
-    return data.englishDescription2
+    return data.englishDescription2 ?? vNotFound;
+  }else if(lang==='de'){
+    return data.descriptionGe2 ?? vNotFound;
   }else{
-    if(data.description2){
-      return data.description2
-    }
-    return data.arabicDescription2
+    return data.description2 ?? data.arabicDescription2 ?? vNotFound;
   }
 };
 export const useDes3 = (data) => {
   if(!data){
-    return "not-found";
+    return dNotFound;
   }
   const lang = useLang().value ? useLang().value : 'en';
   if(lang==='en'){
-    return data.englishDescription3
+    return data.englishDescription3 ?? vNotFound;
+  }else if(lang==='de'){
+    return data.descriptionGe3 ?? vNotFound;
   }else{
-    if(data.description3){
-      return data.description3
-    }
-    return data.arabicDescription3
+    return data.description3 ?? data.arabicDescription3 ?? vNotFound;
   }
 };
 export const useDes4 = (data) => {
   if(!data){
-    return "not-found";
+    return dNotFound;
   }
   const lang = useLang().value ? useLang().value : 'en';
   if(lang==='en'){
-    return data.englishDescription4
+    return data.englishDescription4 ?? vNotFound;
+  }else if(lang==='de'){
+    return data.descriptionGe4 ?? vNotFound;
   }else{
-    if(data.description4){
-      return data.description4
-    }
-    return data.arabicDescription4
+    return data.description4 ?? data.arabicDescription4 ?? vNotFound;
   }
 };
 export const productCategory = (data) => {
@@ -186,8 +203,17 @@ export const t = ((key, firstCapital=false, allCapital=false, firsts=false) => {
     }else if(firstCapital){
       value = value.charAt(0).toUpperCase() + value.slice(1);
     }
-  }else{
+  }else if(lang==='ar'){
     value= useAr().value[key] ?? key ;
+  }else{
+    value= useDe().value[key] ?? key ;
+    if(allCapital){
+      value = value.toUpperCase();
+    }else if(firsts){
+      value = capitalizeFirsts(value);
+    }else if(firstCapital){
+      value = value.charAt(0).toUpperCase() + value.slice(1);
+    }
   }
 
   return value;
@@ -208,14 +234,39 @@ export const useClasses = (enClasses,arClasses) => {
   }
   return value;
 };
-export const usePrice = ((product, withCurrency=false) => {
+export const useFormatPrice = ((price, withCurrency=false, withCommas=true) => {
+  if(!price &&  price!=0){
+    return dNotFound;
+  }
+  if(withCommas){
+    price = price.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+  }
+  if(withCurrency){
+    price =  price || price==0? (t(useCurrency().value) +" "+ price) : vNotFound;
+  }else{
+    price = price || price==0? price : vNotFound;
+  }
+  return price
+})
+
+export const usePrice = ((product, withCurrency=false, withCommas=true) => {
   if(!product){
     return dNotFound;
   }
-  const type = useRole().value ?? "Person"
-  let price= product.newPrice ?? product.price ;
+  // const type = useAccountType().value ?? "Person"
+  let price= product.price ;
+  if(product.newPrice && product.newPrice>0){
+    price= product.newPrice;
+  }
+  if(!price &&  price!=0){
+    return dNotFound;
+  }
+  if(withCommas){
+    price = price.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+  }
+  // let price= product.newPrice ?? product.price ;
   if(withCurrency){
-    price =  price || price===0? (price +" "+ t(useCurrency().value)) : vNotFound;
+    price =  price || price===0? (t(useCurrency().value) +" "+ price) : vNotFound;
   }else{
     price = price || price===0? price : vNotFound;
   }
@@ -230,7 +281,7 @@ export const useOldPrice = ((product, withCurrency=false) => {
   if(!product){
     return dNotFound;
   }
-  const type = useRole().value ?? "Person"
+  const type = useAccountType().value ?? "Person"
   let price = product.price;
   if(withCurrency){
     price = price? (price +" "+ t(useCurrency().value)) : vNotFound;
@@ -246,12 +297,14 @@ export const useOldPrice = ((product, withCurrency=false) => {
 });
 export const useLogout = (() => {
   // localStorage.removeItem("accountType")
+  localStorage.removeItem("UserId")
+  localStorage.removeItem("clientId")
   localStorage.removeItem("userInfo")
-  localStorage.removeItem("isAdmin")
   localStorage.removeItem("token")
-  useAuth().value.isAuth = false
-  isAdmin().value = null
+  useAuth().value.isAuthenticated = false
   useUserInfo().value = null
+  useUserId().value = null
+  useClientId().value = null
   useToken().value = null
 
   location.assign("/");
@@ -273,11 +326,11 @@ export const getProductsGroup = async (endpoint, arr)=>{
 };
 export const useIcon = (name) => {
   const icons=  {
-    "facebook":"carbon:logo-facebook",
-    "instagram":"streamline:instagram-solid",
+    "facebook":"iconoir:facebook",
+    "instagram":"ant-design:instagram-outlined",
     "youtube":"bi:youtube",
     "youtube-play":"bi:youtube",
-    "whatsapp":"formkit:whatsapp",
+    "whatsapp":"ri:whatsapp-line",
     "wechat":"ic:baseline-wechat",
     "telegram":"bx:bxl-telegram",
     "pinterest":"mdi:pinterest",
@@ -289,8 +342,13 @@ export const useIcon = (name) => {
     "github":"mdi:github",
     "behance":"akar-icons:behance-fill",
     "tiktok":"ic:baseline-tiktok",
-    "twitter":"ri:twitter-x-line",
+    "twitter":"ri:twitter-x-fill",
+    "x":"ri:twitter-x-fill",
     "snapchat":"ph:snapchat-logo-fill",
+    "linkedin":"basil:linkedin-outline",
+    "location":"tdesign:location",
+    "phone":"material-symbols:call",
+    "email":"material-symbols:mail-outline",
     "unknown":"pajamas:severity-unknown",
   }
   const isKnown = icons[name.toLowerCase()]
@@ -301,6 +359,7 @@ export const goto=(link="/")=>{
   return navigateTo(link) 
 };
 export const addToCart = (item,qty=null, typeId=0) => {
+  cartEvent().value +=1
   if(qty){
     useShoppingCartComposable().addToCartWithQty(item, qty, typeId);
   }else{
@@ -308,9 +367,11 @@ export const addToCart = (item,qty=null, typeId=0) => {
   }
 };
 export const removeFromCart = (id, typeId=0) => {
+  cartEvent().value +=1
   useShoppingCartComposable().removeItemFromCart(id, typeId);
 };
 export const emptyCart = () => {
+  cartEvent().value +=1
   useShoppingCartComposable().emptyCart();
 };
 export const useRememberMe = (remember) => {
@@ -415,9 +476,3 @@ export const isPdf = (imgUrl)=>{
   const isPdf_ = imgUrl.toLowerCase().endsWith('.pdf');
   return isPdf_
 }
-
-export const convertToArray = (obj) => {
-  return Object.entries(obj)
-      .filter(([key]) => key !== 'fetchedAt') 
-      .map(([, value]) => value); 
-};

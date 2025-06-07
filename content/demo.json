@@ -1,0 +1,276 @@
+// {
+//   "countAdult": 0,
+//   "countChild": 0,
+//   "countBaby": 0,
+//   "clientGeoLocation": "string", 
+//   "companyId": 0, // static
+//   "status": "string", // static
+//   "clientId": 0, // static
+//   "clientType": "string", // static
+//   "paymentStatus": "string", // static
+//   "address": "string",
+//   "payTypeId": 0, // static
+//   "currencyId": 0,  // static
+//   "couponCode": "string", 
+//   "clientPoints": 0,  // static
+//   "ordinaryOrders": [
+//     {
+//       "id": 0,
+//       "productId": 0,
+//       "product": {
+//         "id": 0,
+//         "createdBy": "string",
+//         "createdOn": "2025-03-07T10:50:18.539Z",
+//         "lastModifiedBy": "string",
+//         "lastModifiedOn": "2025-03-07T10:50:18.539Z",
+//         "isDeleted": true,
+//         "serviceTypeId": 0,
+//         "companyId": 0,
+//         "name": "string",
+//         "nameEn": "string",
+//         "tourDuration": 0,
+//         "datefrom": "2025-03-07T10:50:18.539Z",
+//         "dateto": "2025-03-07T10:50:18.539Z",
+//         "pickTime": {},
+//         "dropOffTime": {},
+//         "perAdult": 0,
+//         "perChild": 0,
+//         "perBaby": 0,
+//         "location": "string",
+//         "price": 0,
+//         "order": 0,
+//         "isVisible": true,
+//         "isFavorite": true,
+//         "points": 0,
+//         "tourService": "string",
+//         "tourServiceEn": "string",
+//         "descriptionAboutEn": "string",
+//         "descriptionAboutAr": "string",
+//         "descriptionAboutEn1": "string",
+//         "descriptionAboutAr1": "string",
+//         "descriptionAboutEn2": "string",
+//         "descriptionAboutAr2": "string",
+//         "descriptionAboutEn3": "string",
+//         "descriptionAboutAr3": "string",
+//         "productImageUrl": "string",
+//         "productAlbum": [
+//           {
+//             "id": 0,
+//             "createdBy": "string",
+//             "createdOn": "2025-03-07T10:50:18.539Z",
+//             "lastModifiedBy": "string",
+//             "lastModifiedOn": "2025-03-07T10:50:18.539Z",
+//             "isDeleted": true,
+//             "productId": 0,
+//             "product": "string",
+//             "imageUrl": "string"
+//           }
+//         ],
+//         "productOffers": [
+//           {
+//             "id": 0,
+//             "createdBy": "string",
+//             "createdOn": "2025-03-07T10:50:18.539Z",
+//             "lastModifiedBy": "string",
+//             "lastModifiedOn": "2025-03-07T10:50:18.539Z",
+//             "isDeleted": true,
+//             "productId": 0,
+//             "product": "string",
+//             "discountRatio": 0,
+//             "newPrice": 0,
+//             "startDate": "2025-03-07T10:50:18.539Z",
+//             "endDate": "2025-03-07T10:50:18.539Z"
+//           }
+//         ],
+//         "productRatings": [
+//           {
+//             "id": 0,
+//             "createdBy": "string",
+//             "createdOn": "2025-03-07T10:50:18.539Z",
+//             "lastModifiedBy": "string",
+//             "lastModifiedOn": "2025-03-07T10:50:18.539Z",
+//             "isDeleted": true,
+//             "productId": 0,
+//             "product": "string",
+//             "clientId": 0,
+//             "client": {
+//               "id": 0,
+//               "createdBy": "string",
+//               "createdOn": "2025-03-07T10:50:18.539Z",
+//               "lastModifiedBy": "string",
+//               "lastModifiedOn": "2025-03-07T10:50:18.539Z",
+//               "isDeleted": true,
+//               "type": "string",
+//               "status": "string",
+//               "userId": "string",
+//               "discountRatio": 0,
+//               "isActive": true
+//             },
+//             "rating": 5
+//           }
+//         ],
+//         "productComments": [
+//           {
+//             "id": 0,
+//             "createdBy": "string",
+//             "createdOn": "2025-03-07T10:50:18.539Z",
+//             "lastModifiedBy": "string",
+//             "lastModifiedOn": "2025-03-07T10:50:18.539Z",
+//             "isDeleted": true,
+//             "productId": 0,
+//             "product": "string",
+//             "clientId": 0,
+//             "client": {
+//               "id": 0,
+//               "createdBy": "string",
+//               "createdOn": "2025-03-07T10:50:18.539Z",
+//               "lastModifiedBy": "string",
+//               "lastModifiedOn": "2025-03-07T10:50:18.539Z",
+//               "isDeleted": true,
+//               "type": "string",
+//               "status": "string",
+//               "userId": "string",
+//               "discountRatio": 0,
+//               "isActive": true
+//             },
+//             "comment": "string"
+//           }
+//         ],
+//         "productOptions": [
+//           {
+//             "id": 0,
+//             "createdBy": "string",
+//             "createdOn": "2025-03-07T10:50:18.539Z",
+//             "lastModifiedBy": "string",
+//             "lastModifiedOn": "2025-03-07T10:50:18.539Z",
+//             "isDeleted": true,
+//             "productId": 0,
+//             "product": "string",
+//             "nameAr": "string",
+//             "nameEn": "string",
+//             "image": "string",
+//             "price": 0,
+//             "isSelected": true,
+//             "productDetailsOptions": [
+//               {
+//                 "id": 0,
+//                 "createdBy": "string",
+//                 "createdOn": "2025-03-07T10:50:18.539Z",
+//                 "lastModifiedBy": "string",
+//                 "lastModifiedOn": "2025-03-07T10:50:18.539Z",
+//                 "isDeleted": true,
+//                 "productId": 0,
+//                 "optionId": 0,
+//                 "nameAr": "string",
+//                 "nameEn": "string",
+//                 "image": "string",
+//                 "price": 0,
+//                 "isSelected": true
+//               }
+//             ]
+//           }
+//         ]
+//       },
+//       "productName": "string",
+//       "companyId": 0,
+//       "quantity": 0,
+//       "singleOffer": 0,
+//       "singlePrice": 0,
+//       "countAdult": 0,
+//       "costAdult": 0,
+//       "countChild": 0,
+//       "costChild": 0,
+//       "countBaby": 0,
+//       "costBaby": 0,
+//       "costoptions": 0,
+//       "isOffer": true,
+//       "totalPrice": 0,
+//       "createdOn": "2025-03-07T10:50:18.539Z",
+//       "notes": "string",
+//       "shortProductDetailsList": [
+//         0
+//       ]
+//     }
+//   ]
+// }
+
+// {
+//   "countAdult": 2,
+//   "countChild": 1,
+//   "countBaby": 1,
+//   "companyId": 7,
+//   "clientGeoLocation": null,
+//   "status": "Accepted",
+//   "clientId": 18,
+//   "clientType": "Person",
+//   "paymentStatus": "Pending",
+//   "address": null,
+//   "payTypeId": 4,
+//   "currencyId": 3,
+//   "couponCode": "",
+//   "clientPoints": 0,
+//   "ordinaryOrders": [
+//       {
+//           "id": 0,
+//           "productId": 4,
+//           "product": null,
+//           "productName": "رحلة سفاري عائلية ",
+//           "companyId": 7,
+//           "quantity": 0,
+//           "singleOffer": 5700,
+//           "singlePrice": 6000,
+//           "countAdult": 2,
+//           "costAdult": 10000,
+//           "countChild": 1,
+//           "costChild": 10000,
+//           "countBaby": 1,
+//           "costBaby": 100,
+//           "costoptions": 0,
+//           "isOffer": false,
+//           "totalPrice": 25800,
+//           "createdOn": null,
+//           "notes": "dddd",
+//           "shortProductDetailsList": []
+//       }
+//   ]
+// }
+
+{
+  "payTypeId": 4,
+  "currencyId": 3,
+  "address": "ggggggg",
+  "couponCode": "",
+  "countAdult": 0,
+  "countChild": 0,
+  "countBaby": 0,
+  "companyId": 0,
+  "clientGeoLocation": null,
+  "status": "Pending",
+  "clientId": 18,
+  "clientType": "Person",
+  "clientPoints": 0,
+  "ordinaryOrders": [
+      {
+          "id": 0,
+          "productId": 7,
+          "product": null,
+          "productName": " Sailing trip in Dubai Marina",
+          "companyId": 7,
+          "quantity": 0,
+          "singleOffer": 0,
+          "singlePrice": 600,
+          "countAdult": 3,
+          "costAdult": 500,
+          "countChild": 2,
+          "costChild": 50,
+          "countBaby": 1,
+          "costBaby": 50,
+          "costoptions": 0,
+          "isOffer": false,
+          "totalPrice": 2250,
+          "createdOn": null,
+          "notes": "",
+          "shortProductDetailsList": []
+      }
+  ]
+}

@@ -1,0 +1,28 @@
+// my form
+{
+  "id": 3505,
+  "note": "",
+  "passport": "",
+  "membershipStartDate": "2025-11-22T13:58:06.762Z",
+  "endDate": "2025-11-22T13:58:06.762Z",
+  "playerClassificationId": 2,
+  "playerNumber": null,
+  "nationalTeam": null,
+  "teamId": 139,
+  "clubId": 28,
+  "userId": "",
+  "userEmail": null,
+  "approved": 1,
+  "name": "خليفة عبد الله محمد فقير",
+  "englishName": "khalifa",
+  "ageCategorytblId": 1,
+  "birthDate": "1997-07-20T00:00:00",
+  "nationId": 1,
+  "sexId": 1,
+  "email": "khalifa@gmail.com",
+  "officialNum": "5/8",
+  "identityNum": "784-1997-0393940-7",
+  "passportNum": "",
+  "localClassification": "",
+  "internatClassification": ""
+}

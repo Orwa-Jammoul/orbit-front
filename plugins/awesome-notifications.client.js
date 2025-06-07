@@ -1,7 +1,7 @@
 import AWN from 'awesome-notifications';
 export default defineNuxtPlugin((nuxtApp) => {
     const options = {
-        position: 'bottom-right',
+        position: 'top-right',
         durations: { global: 2000 },
     }
 

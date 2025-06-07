@@ -10,7 +10,7 @@
 </script>
 
 <style lang="scss" scoped>
-// @use "~/assets/styles/scss/theme/theme";
+// @import "~/assets/styles/scss/theme/theme";
 
 .loading{
   min-height: 10rem;

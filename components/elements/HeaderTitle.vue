@@ -2,9 +2,9 @@
   <section class="header text-center">
     <h2 class="fw-bold mb-0 title position-relative">
       {{ title }}
-      <div class="mt-1 div position-relative">
-        <img class="image" src="/logo/icontitle.png" width="30" alt="">
-      </div>
+      <!-- <div class="mt-1 div position-relative">
+        <img class="image" :src="`/logo/logo-01.png`" width="30" alt="">
+      </div> -->
     </h2>
   </section>
 </template>

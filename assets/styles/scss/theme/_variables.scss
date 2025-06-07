@@ -20,57 +20,39 @@ $transition: 0.5s;
 $rouze:#9661ca;
 $rouze2:#4d0496;
 
-:root {
-  --primary: #29abe2;
-  --secondary: #ececec;
-  --secondary2: #d9d9d9;
-  --background: #f2f2f2;
-  --text: #000000;
-}
-
-[data-theme="dark"] {
-  --primary: #fff;
-  --secondary: #424242;
-  --secondary2: #535353;
-  --background: #121417;
-  --text: #FFFFFF;
-}
 
 
 // ============= new =============
 $scroll-clr: #29abe2;
 $select-clr:white;
-$select-bg-clr: #29abe2;
+$select-bg-clr: #E3010C;
 
-$primary:#29abe2;
-$primary1: #249acc;
-$primary1b:#1f80b0;
-$primary2: #8351e1;
-$primary2b:#663db3;
-$primary3: #ef4d52;
-$primary3b: #df373c;
-$primary3c: #DB252C;
-$primary3d: #5c1012;
-$primary4: white;
+$primary: #29abe2;
+$primary1: #29abe2;
+$primary1b: #29abe2;
+$primary2: #4d0496;
+$primary2b:#389EC1;
+$primary2c: #07B3B4;
+$primary3:#E3010C;
+$primary3a: #29abe2;
+$primary3b: #4b4f58;
+$primary3c: #62615c;
+$primary3d: #1E1810;
+$primary4: #131313;
 $primary5: rgb(236, 236, 236);
 $primary6: white;
 
-$br0: hsl(0, 0%, 0%);
-$br10: hsl(0, 0%, 10%);
-$br20: hsl(0, 0%, 20%);
-$br30: hsl(0, 0%, 30%);
-$br40: hsl(0, 0%, 40%);
-$br50: hsl(0, 0%, 50%);
-$br60: hsl(0, 0%, 60%);
-$br70: hsl(0, 0%, 70%);
-$br80: hsl(0, 0%, 80%);
-$br90: hsl(0, 0%, 90%);
-$br100: hsl(0, 0%, 100%);
+$br0: #ffffff;
+$br1: #F3F3F3;
+$br2: #e6e6e6;
+$br3: #9E9E9E;
+$br4: #616161;
+$br5: #1a1a1a;
+$br6: #000000;
 
 
-$c1: #111313;
-$c2: #1d1f20;
-$c3: #2aa9df;
+$c1: #292627;
+
 
 $gr1:#D5B375;
 $gr2:#d84d1f;
@@ -82,8 +64,33 @@ $dark-grey: #00000060;
 
 
 
-
+$line: #0B5285;
 $shadow1: 0px 1px 4px 0px rgba(51, 43, 43, 0.2);
+
+
+:root {
+  // --color-bg1: rgb(108, 0, 162);
+  --color-bg1: rgb(0, 0, 0);
+  --color-bg2: rgb(0, 17, 82);
+  --color1: 18, 113, 255;
+  --color2: 221, 74, 255;
+  --color3: 100, 220, 255;
+  --color4: 200, 50, 50;
+  --color5: 18, 113, 255;
+  --color-interactive: 140, 100, 255;
+  --circle-size: 80%;
+  --blending: hard-light;
+
+
+  // --angle: 0s;
+  --spark: 5s;
+}
+
+@property --angle {
+  syntax: "<angle>";
+  initial-value: 0deg;
+  inherits: false;
+}
 
 
 

@@ -1,5 +1,5 @@
 import process from 'node:process';globalThis._importMeta_=globalThis._importMeta_||{url:"file:///_entry.js",env:process.env};import { getRequestDependencies, getPreloadLinks, getPrefetchLinks, createRenderer } from 'vue-bundle-renderer/runtime';
-import { c as defineRenderHandler, e as buildAssetsURL, p as publicAssetsURL, g as getQuery, f as createError, h as getRouteRules, u as useRuntimeConfig, b as useNitroApp, i as getResponseStatusText, j as getResponseStatus } from '../_/nitro.mjs';
+import { h as defineRenderHandler, i as buildAssetsURL, p as publicAssetsURL, j as getQuery, f as createError, k as getRouteRules, u as useRuntimeConfig, b as useNitroApp, l as getResponseStatusText, m as getResponseStatus } from '../_/nitro.mjs';
 import { stringify, uneval } from 'devalue';
 import { renderToString } from 'vue/server-renderer';
 import { propsToString, renderSSRHead } from '@unhead/ssr';
@@ -10,8 +10,7 @@ import 'node:http';
 import 'node:https';
 import 'node:fs';
 import 'node:url';
-import '@iconify/utils';
-import 'consola/core';
+import 'ipx';
 import 'node:path';
 
 const Vue3 = version[0] === "3";
@@ -77,7 +76,7 @@ const unheadPlugins = true ? [CapoPlugin({ track: true })] : [];
 
 const renderSSRHeadOptions = {"omitLineBreaks":false};
 
-const appHead = {"meta":[{"charset":"utf-8"},{"name":"viewport","content":"width=device-width, initial-scale=1"},{"name":"description","content":"Ecommerce Site"}],"link":[{"rel":"stylesheet","href":"https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"},{"rel":"stylesheet","href":"https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"},{"rel":"icon","href":"/logos/logo-blue.svg","type":"image/x-icon"},{"key":"mdi","rel":"stylesheet","href":"https://cdn.jsdelivr.net/npm/@mdi/font@5.x/css/materialdesignicons.min.css","type":"text/css","crossorigin":"anonymous"}],"style":[],"script":[{"src":"https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"}],"noscript":[],"title":"Orbit","htmlAttrs":{"lang":"ar"}};
+const appHead = {"meta":[{"charset":"utf-8"},{"name":"viewport","content":"width=device-width, initial-scale=1"},{"name":"description","content":"Ecommerce Site"}],"link":[{"rel":"stylesheet","href":"https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"},{"rel":"stylesheet","href":"https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"},{"rel":"icon","href":"/logo/web-title-icon.ico","type":"image/x-icon"},{"rel":"stylesheet","type":"text/css","href":"https://cdn.jsdelivr.net/npm/@mdi/font@latest/css/materialdesignicons.min.css"}],"style":[],"script":[{"src":"https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"},{"src":"https://cdnjs.cloudflare.com/ajax/libs/animejs/2.0.2/anime.min.js"},{"src":"https://cdnjs.cloudflare.com/ajax/libs/pdf.js/2.10.377/pdf.min.js"}],"noscript":[],"title":"Orbit","htmlAttrs":{"lang":"ar"}};
 
 const appRootTag = "div";
 

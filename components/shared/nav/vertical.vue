@@ -9,20 +9,26 @@
       </div>
     </div>
 
-    <div class="nav-ver" :class="{'rtl': !isEn(), 'show': showNavVer.show}" >
+    <div class="nav-ver" :class="{'rtl': isAr(), 'show': showNavVer.show}" >
       <div class="header">
-        <div class="nav-close" @click="hideNav" :class="{'rtl': !isEn(), 'show': showNavVer.show}">
-          <icon name="ic:baseline-cancel" color="#2a2a2a" size="25px"/>
+        <div class="nav-close" @click="hideNav" :class="{'rtl': isAr(), 'show': showNavVer.show}">
+          <icon name="ic:baseline-cancel" size="25px"/>
         </div>
         <nuxt-link class="logo-frame" to="/">
-          <img class="logo" :src="`/logo/logo-01.png`" 
-          alt="logo">
+          <img class="logo" 
+            :src="!isAr()?`/logo/Orbit-logo-side-01-left.svg`:`/logo/Orbit-logo-side-01-s.svg`"
+            alt="logo"
+          >
         </nuxt-link>
       </div>
       <div class="nav-items">
         <div class="p-0 m-0" v-for="page in pages" :key="page.id">
           <SharedNavItemIn  v-if="page.pageUrl!='/meetings'" :key="page" :page="page"/>
-          <SharedNavItemIn v-else-if="isAdmin().value"  :page="page"/>
+          <SharedNavItemIn v-else-if="page.subPages.length==0 && 
+                                  page.pageUrl=='/meetings' &&
+                                  useAuth().value.isAuthenticated &&
+                                  (useAccountType().value=='Member' || useAccountType().value=='AdministrationMember') &&
+                                  useUserInfo().value.isAdmin"  :page="page"/>
         </div>
         <!-- <button class="switch-lang" :class="rtl()" @click="switchL">
           <p class="lang-name">{{ isEn()?'عربي':'En' }}</p>
@@ -51,20 +57,21 @@ const showNav = () => {
 
 .main-nav-ver{
  
-.overlay {
-  position: fixed;
-  width: 100%;
-  height: 100%;
-  top: 0;
-  bottom: 0;
-  left: 0;
-  z-index: 99;
-  display: flex;
-  flex-direction: column;
-  background-color: rgba(0, 0, 0, 0.6);
-  transition: all 0.5s cubic-bezier(0.19, 1, 0.22, 1);
-  cursor: pointer;
-}
+  .overlay {
+    position: fixed;
+    width: 100%;
+    height: 100vh;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 99;
+    display: flex;
+    flex-direction: column;
+    // background-color: rgba(0, 0, 0, 0.6);
+    background-color: rgba(255, 255, 255, 0.6);
+    transition: all 0.5s cubic-bezier(0.19, 1, 0.22, 1);
+    cursor: pointer;
+  }
   .nav-toggler-frame{
     // margin-right: 0.5rem;
     margin-inline-start: 5px;
@@ -76,7 +83,7 @@ const showNav = () => {
       font-size: 14px;
       // border: solid 1px $primary1;
       transition: background-color 200ms ease-in-out;
-      background-color: $br20;
+      // background-color: $primary;
       color: white;
       margin-top: 5px; 
       margin-bottom: 5px; 
@@ -93,7 +100,7 @@ const showNav = () => {
       // }
 
       &:hover{
-        background-color: $primary3;
+        background-color: $primary1;
         // .icon{
         //   color: $primary1 !important;
         // }
@@ -107,25 +114,23 @@ const showNav = () => {
     flex-direction: column;
     position: fixed;
     z-index: 100;
-    height: 100%;
-    width: 60%;
+    height: 100vh;
+    width: 65%;
     top: 0;
-    left: 0;
-    right: auto;
+    inset-inline-start: 0;
     transform: translateX(-100%);
     &.rtl{
-      left: auto;
-      right: 0;
       transform: translateX(100%);
     }
     visibility: hidden;
-    padding: 1rem;
-    background-color: $br90;
+    padding: 0 1rem ;
+    background-color: black;
     pointer-events: none;
     
     transition: all 200ms ease-in-out;
-    overflow-y: scroll;
-    @include vertical-scrollbar(8px, "#f1f1f1", black, "#555");
+    overflow-y: auto;
+    overflow-x: hidden;
+    @include vertical-scrollbar(8px, "#f1f1f1", $primary, "#555");
   
     &.show{
       visibility: visible;
@@ -135,10 +140,12 @@ const showNav = () => {
 
     .header{
       display: flex;
-      justify-content: center;
-      padding-bottom: 1rem;
+      justify-content: flex-start;
+      padding: 1rem;
+      // padding-top: 1rem;
+      // padding-bottom: 1rem;
       border-bottom: solid 1px $grey;
-      height: 8rem;
+      height: 5rem;
       position: relative;
 
       .nav-close{
@@ -148,13 +155,9 @@ const showNav = () => {
         padding: 0 1rem;
         cursor: pointer;
         position: absolute;
-        top:-10px;
-        left: -20px;
-        right: auto;
-        &.rtl{
-          left: auto;
-          right: -20px;
-        }
+        top: 27px;
+        inset-inline-end: -20px;
+        color: white;
       }
 
       .logo-frame{
@@ -164,6 +167,7 @@ const showNav = () => {
         .logo{
           width: 100%;
           height: 100%;
+          max-width: 10rem;
           object-fit: contain;
         }
       }

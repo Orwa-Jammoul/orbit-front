@@ -35,11 +35,11 @@ import 'swiper/css/pagination';
 </script>
 
 <style lang="scss" scoped>
-  @use "~/assets/styles/scss/theme/theme";
+  @import "~/assets/styles/scss/theme/theme";
   .mainheaderslider{
     // height: 100vh !important;
     // height: calc(100vh - 11rem) !important;
-    height: calc(100vh - 6rem);
+    height: calc(100vh - 8rem);
     // aspect-ratio: 2.5/1;
     // height: 50vw;
     // max-height: 50vw;

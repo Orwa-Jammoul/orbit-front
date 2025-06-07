@@ -46,7 +46,7 @@ const {data} = defineProps(["data"])
 </style>
 
 <style lang="scss" scoped>
-@use "~/assets/styles/scss/theme/theme";
+@import "~/assets/styles/scss/theme/theme";
 .main-slide{
   position: relative;
   height: 100%;

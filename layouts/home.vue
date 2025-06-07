@@ -1,13 +1,13 @@
 <template>
   <div>
     <ClientOnly>
-      <ElementsLoader/>
-      <div>
-        <!-- <SharedNavbar class="nav-bar-main" /> -->
+      <div :class=" isEn() ? 'bodyEN' : 'bodyAR'">
+        <SharedNavbar class="nav-bar-main" :class="{'bg':showBg}" />
+        <SharedMenuContact/>
         <div id="slot">
           <slot />
         </div>
-        <!-- <SharedFooter /> -->
+        <SharedFooter />
       </div>
     </ClientOnly>
   </div>
@@ -15,20 +15,46 @@
 
 <script setup>
 
+  const {locales, locale, setLocale } = useI18n()
+  // useLang().value = locale
+  const showBg = ref(false)
+
+  onMounted(()=>{
+    const lang = locale ?? localStorage.getItem("lang") ?? "en";
+    // setLocale(lang)
+    useLang().value = lang
+
+    window.addEventListener('scroll', () => {
+      const verticalScroll = window.scrollY;
+      showBg.value = verticalScroll>10
+      // console.log('Vertical Scroll Value:', verticalScroll);
+    });
+
+    // useToken().value = localStorage.getItem("token")
+    // if(useToken().value){
+    //   useAuth().value.isAuthenticated = true
+    //   useUserId().value = localStorage.getItem("UserId")
+    //   useClientId().value = localStorage.getItem("clientId")
+    //   useUserInfo().value= JSON.parse(localStorage.getItem("userInfo"))
+    // }
+  })
+
 </script>
 <style lang="scss" scoped>
-@use "~/assets/styles/scss/theme/theme";
+@import "~/assets/styles/scss/theme/theme";
 .nav-bar-main {
-  background: var(--secondary);
   position: fixed;
-  // position: sticky;
-  // position: absolute;
   z-index: 999;
   width: 100%;
   top: 0;
+  left: 0;
+  &.bg{
+    background-color: rgba(0, 0, 0, 0.3);
+    backdrop-filter: blur(5px);
+  }
 }
 #slot{
-  min-height: calc(100vh - 6rem);
+  min-height: calc(80vh - 6rem);
 }
 // .whatsApp{
 //   z-index: 800;

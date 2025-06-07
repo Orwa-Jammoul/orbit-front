@@ -1,13 +1,14 @@
-import en from "./locales/en.json"
-import ar from "./locales/ar.json"
+import en from "./locales/en-US.json"
+import ar from "./locales/ar-AE.json"
+import de from "./locales/de-DE.json"
+
 
 export default defineI18nConfig(() => ({
     legacy: true,
-    // defaultLocale: 'ar',
-    locale: useCookie('lang').value ?? 'en',
-    // locale: localStorage.getItem('lang') ?? 'ar',
+    // locale: localStorage.getItem('lang') ?? 'en',
     messages: {
         en: en,
-        ar: ar
+        ar: ar,
+        de: de
     }
 }))
