@@ -96,7 +96,7 @@ export const useDes = (data, firstCapital=false, allCapital=false, firsts=false)
       value = value.charAt(0).toUpperCase() + value.slice(1);
     }
   }else if(lang==='de'){
-    value= data.descriptionGe ?? vNotFound;
+    value= data.descriptionGe ?? vNotFound; 
     if(allCapital){
       value = value.toUpperCase();
     }else if(firsts){
@@ -115,11 +115,11 @@ export const useDes1 = (data) => {
   }
   const lang = useLang().value ? useLang().value : 'en';
   if(lang==='en'){
-    return data.englishDescription1 ?? vNotFound;
+    return data.englishDescription1 ?? data.descriptionEn1 ?? vNotFound;
   }else if(lang==='de'){
     return data.descriptionGe1 ?? vNotFound;
   }else{
-    return data.description1 ?? data.arabicDescription1 ?? vNotFound;
+    return data.description1 ?? data.arabicDescription1 ?? data.descriptionAr1 ?? vNotFound;
   }
 };
 export const useDes2 = (data) => {
@@ -128,11 +128,11 @@ export const useDes2 = (data) => {
   }
   const lang = useLang().value ? useLang().value : 'en';
   if(lang==='en'){
-    return data.englishDescription2 ?? vNotFound;
+    return data.englishDescription2 ?? data.descriptionEn2 ?? vNotFound;
   }else if(lang==='de'){
     return data.descriptionGe2 ?? vNotFound;
   }else{
-    return data.description2 ?? data.arabicDescription2 ?? vNotFound;
+    return data.description2 ?? data.arabicDescription2 ?? data.descriptionAr2 ?? vNotFound;
   }
 };
 export const useDes3 = (data) => {
@@ -141,11 +141,11 @@ export const useDes3 = (data) => {
   }
   const lang = useLang().value ? useLang().value : 'en';
   if(lang==='en'){
-    return data.englishDescription3 ?? vNotFound;
+    return data.englishDescription3 ?? data.descriptionEn3 ?? vNotFound;
   }else if(lang==='de'){
     return data.descriptionGe3 ?? vNotFound;
   }else{
-    return data.description3 ?? data.arabicDescription3 ?? vNotFound;
+    return data.description3 ?? data.arabicDescription3 ?? data.descriptionAr3 ?? vNotFound;
   }
 };
 export const useDes4 = (data) => {
@@ -154,11 +154,11 @@ export const useDes4 = (data) => {
   }
   const lang = useLang().value ? useLang().value : 'en';
   if(lang==='en'){
-    return data.englishDescription4 ?? vNotFound;
+    return data.englishDescription4 ?? data.descriptionEn4 ?? vNotFound;
   }else if(lang==='de'){
     return data.descriptionGe4 ?? vNotFound;
   }else{
-    return data.description4 ?? data.arabicDescription4 ?? vNotFound;
+    return data.description4 ?? data.arabicDescription4 ?? data.descriptionAr4 ?? vNotFound;
   }
 };
 export const productCategory = (data) => {

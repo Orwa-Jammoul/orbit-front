@@ -5,8 +5,8 @@
       <iframe :src="item.pageUrl" width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
     </div> -->
     <div class="container">
-      <div class="title-formatting3 mb-10 px-0 " :class="isEn() ? 'title_en ltr' : 'rtl'">
-        <h1 style="font-weight: var(--fw-9)" class="">
+      <div class="mb-10 px-0 " :class="rtl()" dir="auto">
+        <h1 class="metal-text">
           <span >{{ useName(item) }}</span>
         </h1>
       </div>
@@ -133,6 +133,7 @@
   const { public: { api, apiBase } } = useRuntimeConfig();
   const {item} = defineProps(['item']);
 
+  console.log(item);
   // loading.value = !item
 
   const showImageModal = ref(false);
