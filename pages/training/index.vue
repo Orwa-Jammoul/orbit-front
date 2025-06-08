@@ -42,8 +42,8 @@ watchEffect(()=> {
     if(servicesData.value) {
       services.value = servicesData.value.items
       // console.log(services.value);
-      services.value = [...services.value, ...services.value]
-      services.value = [...services.value, ...services.value]
+      // services.value = [...services.value, ...services.value]
+      // services.value = [...services.value, ...services.value]
       isLoading.value = false
     }
   }

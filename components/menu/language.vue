@@ -1,6 +1,6 @@
 <template>
-  <div ref="langMenu" class="navbar-item pcc">
-    <div class="top-section" @mouseenter="reselect" @click="reselect">
+  <div ref="langMenu" class="navbar-item pcc" @mouseleave="selected">
+    <div class="top-section" @mouseenter="reselect" @click="toggle">
       <nuxt-link class="main-link d-flex align-items-center">
         {{ siteLanguages().value[useLang().value] }}
         <Icon name="ion:earth" size="20px" />
@@ -14,16 +14,19 @@
 
 <script setup>
 const langMenu = ref(null)
+const toggle = ()=>{
+  langMenu.value.classList.toggle('show');
+}
 const selected = ()=>{
   if (langMenu.value) {
     langMenu.value.classList.remove('show');
-    console.log('selected');
+    // console.log('selected');
   }
 }
 const reselect = ()=>{
   if (langMenu.value) {
     langMenu.value.classList.add('show');
-    console.log('reselect');
+    // console.log('reselect');
   }
 }
 </script>

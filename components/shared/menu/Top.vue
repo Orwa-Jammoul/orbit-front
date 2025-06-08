@@ -60,20 +60,20 @@ watch(useLang(),()=>{
   current.value = useLang().value
 })
 
-const country = ref(null);
-const useCountry = async () => {
-  let userCountry = null
-  try {
-    const response = await fetch('https://ipapi.co/json/');
-    const data = await response.json();
-    userCountry = data.country;
-  } catch (error) {
-    console.error('Error detecting country:', error);
-  }
+// const country = ref(null);
+// const useCountry = async () => {
+//   let userCountry = null
+//   try {
+//     const response = await fetch('https://ipapi.co/json/');
+//     const data = await response.json();
+//     userCountry = data.country;
+//   } catch (error) {
+//     console.error('Error detecting country:', error);
+//   }
   
-  return userCountry;
-}
-country.value = await useCountry();
+//   return userCountry;
+// }
+// country.value = await useCountry();
 // console.log(country.value);
 
 // const getClientIp = async () => {

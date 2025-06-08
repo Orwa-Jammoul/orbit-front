@@ -15,10 +15,13 @@
       </div>
     </div>
     <div class="container">
-      <div class="row">
+      <div class="row" v-if="!isLoading">
         <div class="col-12 col-lg-4 col-md-6" v-for="service in services" :key="service.id">
           <CardService :cardData="service" :num="0"/>
         </div>
+      </div>
+      <div class="loading" v-else>
+        <icon name="svg-spinners:6-dots-rotate" size="25px"/>
       </div>
     </div>
   </div>

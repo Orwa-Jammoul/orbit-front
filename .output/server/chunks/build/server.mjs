@@ -813,110 +813,110 @@ const _routes = [
   {
     name: "about-us___en",
     path: "/about-us",
-    component: () => import('./index-BrKsXBfL.mjs')
+    component: () => import('./index--GHe11DL.mjs')
   },
   {
     name: "about-us___ar",
     path: "/ar/about-us",
-    component: () => import('./index-BrKsXBfL.mjs')
+    component: () => import('./index--GHe11DL.mjs')
   },
   {
     name: "about-us___de",
     path: "/de/about-us",
-    component: () => import('./index-BrKsXBfL.mjs')
+    component: () => import('./index--GHe11DL.mjs')
   },
   {
     name: "contact-us___en",
     path: "/contact-us",
-    component: () => import('./index-SyGZuA-3.mjs')
+    component: () => import('./index-DhWkKzJi.mjs')
   },
   {
     name: "contact-us___ar",
     path: "/ar/contact-us",
-    component: () => import('./index-SyGZuA-3.mjs')
+    component: () => import('./index-DhWkKzJi.mjs')
   },
   {
     name: "contact-us___de",
     path: "/de/contact-us",
-    component: () => import('./index-SyGZuA-3.mjs')
+    component: () => import('./index-DhWkKzJi.mjs')
   },
   {
     name: "index___en",
     path: "/",
     meta: __nuxt_page_meta$1 || {},
-    component: () => import('./index-CZphqv5W.mjs')
+    component: () => import('./index-6mk3LxP4.mjs')
   },
   {
     name: "index___ar",
     path: "/ar",
     meta: __nuxt_page_meta$1 || {},
-    component: () => import('./index-CZphqv5W.mjs')
+    component: () => import('./index-6mk3LxP4.mjs')
   },
   {
     name: "index___de",
     path: "/de",
     meta: __nuxt_page_meta$1 || {},
-    component: () => import('./index-CZphqv5W.mjs')
+    component: () => import('./index-6mk3LxP4.mjs')
   },
   {
     name: "privacy-policy___en",
     path: "/privacy-policy",
-    component: () => import('./privacy-policy-B3QDxRGG.mjs')
+    component: () => import('./privacy-policy-0M2rumuw.mjs')
   },
   {
     name: "privacy-policy___ar",
     path: "/ar/privacy-policy",
-    component: () => import('./privacy-policy-B3QDxRGG.mjs')
+    component: () => import('./privacy-policy-0M2rumuw.mjs')
   },
   {
     name: "privacy-policy___de",
     path: "/de/privacy-policy",
-    component: () => import('./privacy-policy-B3QDxRGG.mjs')
+    component: () => import('./privacy-policy-0M2rumuw.mjs')
   },
   {
     name: "services-id___en",
     path: "/services/:id()",
-    component: () => import('./_id_-DqHB5ezM.mjs')
+    component: () => import('./_id_-DXMCgFCm.mjs')
   },
   {
     name: "services-id___ar",
     path: "/ar/services/:id()",
-    component: () => import('./_id_-DqHB5ezM.mjs')
+    component: () => import('./_id_-DXMCgFCm.mjs')
   },
   {
     name: "services-id___de",
     path: "/de/services/:id()",
-    component: () => import('./_id_-DqHB5ezM.mjs')
+    component: () => import('./_id_-DXMCgFCm.mjs')
   },
   {
     name: "services___en",
     path: "/services",
-    component: () => import('./index-Dkb_onb9.mjs')
+    component: () => import('./index-BdCIl0Th.mjs')
   },
   {
     name: "services___ar",
     path: "/ar/services",
-    component: () => import('./index-Dkb_onb9.mjs')
+    component: () => import('./index-BdCIl0Th.mjs')
   },
   {
     name: "services___de",
     path: "/de/services",
-    component: () => import('./index-Dkb_onb9.mjs')
+    component: () => import('./index-BdCIl0Th.mjs')
   },
   {
     name: "terms-and-conditions___en",
     path: "/terms-and-conditions",
-    component: () => import('./terms-and-conditions-SRFb3i2l.mjs')
+    component: () => import('./terms-and-conditions-DsPELEx9.mjs')
   },
   {
     name: "terms-and-conditions___ar",
     path: "/ar/terms-and-conditions",
-    component: () => import('./terms-and-conditions-SRFb3i2l.mjs')
+    component: () => import('./terms-and-conditions-DsPELEx9.mjs')
   },
   {
     name: "terms-and-conditions___de",
     path: "/de/terms-and-conditions",
-    component: () => import('./terms-and-conditions-SRFb3i2l.mjs')
+    component: () => import('./terms-and-conditions-DsPELEx9.mjs')
   },
   {
     name: "test___en",
@@ -936,32 +936,32 @@ const _routes = [
   {
     name: "training-id___en",
     path: "/training/:id()",
-    component: () => import('./_id_-ByJaSYsx.mjs')
+    component: () => import('./_id_-BxOrpwlV.mjs')
   },
   {
     name: "training-id___ar",
     path: "/ar/training/:id()",
-    component: () => import('./_id_-ByJaSYsx.mjs')
+    component: () => import('./_id_-BxOrpwlV.mjs')
   },
   {
     name: "training-id___de",
     path: "/de/training/:id()",
-    component: () => import('./_id_-ByJaSYsx.mjs')
+    component: () => import('./_id_-BxOrpwlV.mjs')
   },
   {
     name: "training___en",
     path: "/training",
-    component: () => import('./index-DbD4lYHW.mjs')
+    component: () => import('./index-CTpXHPQs.mjs')
   },
   {
     name: "training___ar",
     path: "/ar/training",
-    component: () => import('./index-DbD4lYHW.mjs')
+    component: () => import('./index-CTpXHPQs.mjs')
   },
   {
     name: "training___de",
     path: "/de/training",
-    component: () => import('./index-DbD4lYHW.mjs')
+    component: () => import('./index-CTpXHPQs.mjs')
   },
   {
     name: void 0 ,
@@ -1307,7 +1307,7 @@ const revive_payload_server_eJ33V7gbc6 = /* @__PURE__ */ defineNuxtPlugin({
     }
   }
 });
-const LazyIcon = defineAsyncComponent(() => import('./Icon-BQJZeqX5.mjs').then((r) => r["default"] || r.default || r));
+const LazyIcon = defineAsyncComponent(() => import('./Icon-CBg3hLjd.mjs').then((r) => r["default"] || r.default || r));
 const LazyIconCSS = defineAsyncComponent(() => import('./IconCSS-CZiduyo2.mjs').then((r) => r["default"] || r.default || r));
 const lazyGlobalComponents = [
   ["Icon", LazyIcon],

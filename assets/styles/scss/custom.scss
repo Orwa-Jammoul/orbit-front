@@ -648,6 +648,8 @@ a {
   cursor: not-allowed!important;
 }
 .path-links{
+  // position: sticky;
+  // top: 5rem;
   // padding: 0 2rem;
   margin-bottom: 1rem;
   .links-frame{
@@ -754,6 +756,7 @@ a {
   -webkit-background-clip: text;
   background-clip: text;
   color: transparent;
+  line-height: normal;
 }
 .grid-bg1{
   background-image: url('/svg/grid-vector.svg');

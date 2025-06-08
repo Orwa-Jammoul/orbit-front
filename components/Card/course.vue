@@ -1,6 +1,6 @@
 <template>
   <nuxt-link class="service-card" :dir="rtl()" 
-    :to="`/training/${cardData.id}`" 
+    :to="localePath(`/training/${cardData.id}`)" 
     data-aos-duration="1000"
     :data-aos-delay="`${num*100}`"
     data-aos="slide-up"
