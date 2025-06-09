@@ -22,26 +22,26 @@
           </div>
           <div class="description">
             <div class="section">
-              <div v-if="dataResult?.image" class="img-frame contain" :class="rtl()">
-                <img :src="cImg(dataResult.image)" alt=" Photo">
+              <div v-if="dataResult?.productImageUrl" class="img-frame contain" :class="rtl()">
+                <img :src="cImg(dataResult.productImageUrl)" alt=" Photo">
               </div>
-            <div class="des" v-html="useDes(dataResult)"></div>
-          </div>
+              <div class="des" v-html="useDes(dataResult)"></div>
+            </div>
             <div class="section">
-              <div v-if="dataResult?.image1" class="img-frame contain" :class="rtl()">
-                <img :src="cImg(dataResult.image1)" alt=" Photo">
+              <div v-if="dataResult?.productImageUrl1" class="img-frame contain" :class="rtl()">
+                <img :src="cImg(dataResult.productImageUrl1)" alt=" Photo">
               </div>
               <div class="des" v-html="useDes1(dataResult)"></div>
             </div>
             <div class="section">
-              <div v-if="dataResult?.image2" class="img-frame contain" :class="rtl()">
-                <img :src="cImg(dataResult.image2)" alt=" Photo">
+              <div v-if="dataResult?.productImageUrl2" class="img-frame contain" :class="rtl()">
+                <img :src="cImg(dataResult.productImageUrl2)" alt=" Photo">
               </div>
               <div class="des" v-html="useDes2(dataResult)"></div>
             </div>
             <div class="section">
-              <div v-if="dataResult?.image3" class="img-frame contain" :class="rtl()">
-                <img :src="cImg(dataResult.image3)" alt=" Photo">
+              <div v-if="dataResult?.productImageUrl3" class="img-frame contain" :class="rtl()">
+                <img :src="cImg(dataResult.productImageUrl3)" alt=" Photo">
               </div>
               <div class="des" v-html="useDes3(dataResult)"></div>
             </div>
@@ -83,8 +83,8 @@ watchEffect(async () => {
       const { data:similarData } = await useGetSiteApi().GetAll(
         `${api.productsSearchApi}?propductcategoryid=${dataResult.value.productParentCategoryId}&pageNumber=0&pageSize=12`
       );
-      // similarItems.value = similarData.value.data.filter(item=>item.id != dataResult.value.id)
-      similarItems.value = similarData.value.data
+      similarItems.value = similarData.value.data.filter(item=>item.id != dataResult.value.id)
+      // similarItems.value = similarData.value.data
       isLoading.value= false
     }
   }

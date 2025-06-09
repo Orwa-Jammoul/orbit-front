@@ -876,17 +876,17 @@ const _routes = [
   {
     name: "services-id___en",
     path: "/services/:id()",
-    component: () => import('./_id_-DXMCgFCm.mjs')
+    component: () => import('./_id_-CPAkKftL.mjs')
   },
   {
     name: "services-id___ar",
     path: "/ar/services/:id()",
-    component: () => import('./_id_-DXMCgFCm.mjs')
+    component: () => import('./_id_-CPAkKftL.mjs')
   },
   {
     name: "services-id___de",
     path: "/de/services/:id()",
-    component: () => import('./_id_-DXMCgFCm.mjs')
+    component: () => import('./_id_-CPAkKftL.mjs')
   },
   {
     name: "services___en",
