@@ -1,70 +1,115 @@
 // https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
-  devtools: { enabled: false },
-
+  ssr: true,
   modules: [
-    '@nuxtjs/i18n',
-    '@vesp/nuxt-fontawesome',
-    "nuxt-swiper", 
-    "@invictus.codes/nuxt-vuetify",
-    '@nuxt/image',
-    'nuxt-icon',
-    'nuxt-aos',
-    '@vee-validate/nuxt',
-    '@hypernym/nuxt-anime'
+    "@nuxtjs/seo",
+    "@nuxtjs/i18n",
+    "@nuxt/icon",
+    "@vesp/nuxt-fontawesome",
+    "nuxt-swiper",
+    "nuxt-aos",
+    "@vee-validate/nuxt",
   ],
-  // vuetify: {
-  //   vuetifyOptions: {
-  //     // Disable Vuetify logs
-  //     defaults: { global: { ripple: false } },
-  //     blueprint: { defaults: false },
-  //   },
-  // },
-  // veeValidate: {
-  //   // disable or enable auto imports
-  //   autoImports: true,
-  //   // Use different names for components
-  //   componentNames: {
-  //     Form: 'VeeForm',
-  //     Field: 'VeeField',
-  //     FieldArray: 'VeeFieldArray',
-  //     ErrorMessage: 'VeeErrorMessage',
-  //   },
-  // },
 
   i18n: {
+    baseUrl: "https://orbit-eng.net",
     locales: [
-      { code: 'en', language: 'en-US' },
-      { code: 'ar', language: 'ar-AE' },
-      { code: 'de', language: 'de-DE' },
+      { code: 'en', iso: 'en-US', file: 'en-US.json' },
+      { code: 'ar', iso: 'ar-AE', file: 'ar-AE.json', dir: 'rtl' },
+      { code: 'de', iso: 'de-DE', file: 'de-DE.json' }
     ],
-    defaultLocale: 'en',
-    // vueI18n: './i18n.config.ts'
+    defaultLocale: "en",
+    langDir: '../locales',
+    bundle: {
+      optimizeTranslationDirective: false
+    },
+    strategy: 'prefix_except_default', //prefix
+    customRoutes: 'config',
+    pages: {
+      // sitemap: false, // explicitly disable i18n for sitemap
+      'index': {
+        en: '/',
+        ar: '/',
+        de: '/'
+      },
+      'about-us': {
+        en: '/about-us',
+        ar: '/من-نحن',
+        de: '/Über-Uns'
+      },
+      'services': {
+        en: '/services',
+        ar: '/الخدمات',
+        de: '/Dienstleistungen'
+      },
+      'services-name': {
+        en: '/services/[name]',
+        ar: '/الخدمات/[name]',
+        de: '/Dienstleistungen/[name]'
+      },
+      'training': {
+        en: '/training',
+        ar: '/تدريب',
+        de: '/Ausbildung'
+      },
+      'training-name': {
+        en: '/training/[name]',
+        ar: '/تدريب/[name]',
+        de: '/Ausbildung/[name]'
+      },
+      'contact-us': {
+        en: '/contact-us',
+        ar: '/تواصل-معنا',
+        de: '/Kontakt'
+      },
+      '.well-known/[pathMatch(.*)]': {
+        en: '/.well-known/:pathMatch(.*)',
+        ar: '/.well-known/:pathMatch(.*)',
+        de: '/.well-known/:pathMatch(.*)'
+      }
+
+    }
+  },
+  veeValidate: {
+    // disable or enable auto imports
+    autoImports: true,
+    // Use different names for components
+    componentNames: {
+      Form: "VeeForm",
+      Field: "VeeField",
+      FieldArray: "VeeFieldArray",
+      ErrorMessage: "VeeErrorMessage",
+    },
   },
 
   fontawesome: {
     icons: {
-      regular :[],
-      solid: []
-    }
+      solid: ["faHome", "faUser", "faSearch"], // Add the icons you need
+    },
   },
 
   css: [
+    "vuetify/lib/styles/main.sass",
     "@/assets/styles/scss/custom.scss",
     "@/assets/styles/scss/animate/animate.min.css",
     "@fortawesome/fontawesome-svg-core/styles.css",
-    'awesome-notifications/dist/style.css'
+    // 'awesome-notifications/dist/style.css'
+    // '@mdi/font/css/materialdesignicons.min.css'
   ],
+
+  build: {
+    transpile: ["vuetify"],
+  },
 
   app: {
     head: {
-      title: "Orbit",
-      htmlAttrs: {
-        lang: "en"
-      },
+      // title: "Orbit Engineering Office",
+      // htmlAttrs: {
+      //   lang: "en"
+      // },
       meta: [
-          { charset: "utf-8" },
-          { name: "viewport", content: "width=device-width, initial-scale=1" },
+          // { charset: "utf-8" },
+          // { name: "viewport", content: "width=device-width, initial-scale=1" },
           { name: "description", content: "Technology services website" },
         ],
         link: [
@@ -191,9 +236,11 @@ export default defineNuxtConfig({
       }
     }
   },
-  routeRules: {
-    '/.well-known/**': { redirect: '/' }, // Redirects all /.well-known paths to home
-  },
 
-  compatibilityDate: "2025-02-11"
-})
+  compatibilityDate: "2025-05-15",
+  devtools: { enabled: false },
+
+  routeRules: {
+    "/.well-known/**": { redirect: "/" }, // Redirects all /.well-known paths to home
+  },
+});

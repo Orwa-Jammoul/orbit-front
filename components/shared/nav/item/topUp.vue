@@ -28,7 +28,7 @@ const { page, iconName } = defineProps(["page","iconName"]);
 </script>
 
 <style lang="scss" scoped>
-@import "~/assets/styles/scss/theme/theme";
+@use"~/assets/styles/scss/theme/theme" as *;
 
 .navbar-item{
   position: relative;
@@ -61,7 +61,7 @@ const { page, iconName } = defineProps(["page","iconName"]);
       font-weight: 400;
       color: black;
       cursor: pointer !important;
-      .icon{
+      .iconify{
         color: black;
       }
     }
@@ -120,7 +120,7 @@ const { page, iconName } = defineProps(["page","iconName"]);
         color: $primary1;
         // background-color: $c1;
         
-        .icon{
+        .iconify{
           color: $primary1;
         }
         // text-decoration: underline;

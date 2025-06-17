@@ -60,7 +60,7 @@ const type = ref(useAccountType().value)
 </script>
 
 <style lang="scss" scoped>
-  @import "~/assets/styles/scss/theme/theme";
+  @use"~/assets/styles/scss/theme/theme" as *;
 
   .nav-pills {
     padding: 0 1rem;

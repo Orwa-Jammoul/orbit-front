@@ -137,7 +137,7 @@
 </script>
 
 <style lang="scss" scoped>
-  @import "~/assets/styles/scss/theme/theme";
+  @use"~/assets/styles/scss/theme/theme" as *;
   .table-responsive {
     // &::-webkit-scrollbar { height: 6px; }
     // &::-webkit-scrollbar-track { background: #2e2b2b; }

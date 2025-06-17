@@ -3,11 +3,13 @@
 
     <div class="nav-main-ribbon pcb rp">
       
-      <nuxt-link class="logo-frame contain" :class="rtl()" :to="localePath('/')" >
+      <nuxt-link class="logo-frame contain" :class="rtl()" :to="langPath('/')" >
         <img :src="!isAr()?`/logo/Orbit-logo-side-01-left.svg`:`/logo/Orbit-logo-side-01-s.svg`" alt="logo">
       </nuxt-link>
       <div class="nav-links-side pce">
         <MenuLanguage/>
+        <MenuCart/>
+        <MenuAccount/>
         <div class="vertical-nav">
           <SharedNavVertical :pages="allPages"/>
         </div>
@@ -90,10 +92,36 @@ watch(useLang(),()=>{
 // // Usage
 // const clientIp = await getClientIp();
 // console.log('Client IP:', clientIp);
+
+
+
+// const {locales, locale, setLocale } = useI18n()
+  // useLang().value = locale
+  const showBg = ref(false)
+
+  onMounted(()=>{
+    const lang = locale ?? localStorage.getItem("lang") ?? "en";
+    // setLocale(lang)
+    useLang().value = lang
+
+    window.addEventListener('scroll', () => {
+      const verticalScroll = window.scrollY;
+      showBg.value = verticalScroll>10
+      // console.log('Vertical Scroll Value:', verticalScroll);
+    });
+
+    // useToken().value = localStorage.getItem("token")
+    // if(useToken().value){
+    //   useAuth().value.isAuthenticated = true
+    //   useUserId().value = localStorage.getItem("UserId")
+    //   useClientId().value = localStorage.getItem("clientId")
+    //   useUserInfo().value= JSON.parse(localStorage.getItem("userInfo"))
+    // }
+  })
 </script>
 
 <style lang="scss" scoped>
-@import "~/assets/styles/scss/theme/theme";
+@use"~/assets/styles/scss/theme/theme" as *;
 
 .nav-main{
   width: 100%;

@@ -2,7 +2,7 @@
   <div ref="langMenu" class="navbar-item pcc" @mouseleave="selected">
     <div class="top-section" @mouseenter="reselect" @click="toggle">
       <nuxt-link class="main-link d-flex align-items-center">
-        {{ siteLanguages().value[useLang().value] }}
+        <!-- {{ siteLanguages().value[useLang().value] }} -->
         <Icon name="ion:earth" size="20px" />
       </nuxt-link>
     </div>
@@ -32,17 +32,17 @@ const reselect = ()=>{
 </script>
 
 <style lang="scss" scoped>
-@import "~/assets/styles/scss/theme/theme";
+@use"~/assets/styles/scss/theme/theme" as *;
 
 .navbar-item{
   position: relative;
   width: auto ;
   height: 100%;
+  cursor: pointer !important;
   .top-section{
     color: $primary1;
     width: auto ;
     height: 2rem;
-    
     // padding: .5rem 0;
     .main-link{
       color: white;
@@ -65,7 +65,7 @@ const reselect = ()=>{
 
       user-select: none;
       cursor: pointer !important;
-      .icon{
+      .iconify{
         margin-inline-start: 5px;
       }
     }
@@ -132,7 +132,7 @@ const reselect = ()=>{
         color: $primary1;
         // background-color: $c1;
         
-        .icon{
+        .iconify{
           color: $primary1;
         }
         // text-decoration: underline;

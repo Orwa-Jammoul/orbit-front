@@ -229,7 +229,7 @@ const submit = handleSubmit((values) => {
 </style>
 
 <style lang="scss" scoped>
-@import "~/assets/styles/scss/theme/theme";
+@use"~/assets/styles/scss/theme/theme" as *;
 
 
 
@@ -298,7 +298,7 @@ const submit = handleSubmit((values) => {
         }
         .info-row{
           margin-bottom: 1rem;
-          .icon{
+          .iconify{
             margin: 2px 5px;
             color: $primary2;
           }

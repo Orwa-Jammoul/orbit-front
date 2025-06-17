@@ -4,12 +4,12 @@
       <!-- <div class="top-shape" :class="rtl()" /> -->
       <h1 class="pt-5">{{ title }}</h1>
     </div>
-    <div class="img-frame noselect" :class="cover?'cover':'contain'">
+    <div class="cover noselect" :class="cover?'cover':'contain'">
       <img :src="`${imgUrl}`" :alt="imgAlt">
     </div>
-    <div class="blur-img cover noselect">
+    <!-- <div class="blur-img cover noselect">
       <img :src="`${imgUrl}`" :alt="imgAlt">
-    </div>
+    </div> -->
   </section>
 </template>
 
@@ -38,15 +38,15 @@
 </script>
 
 <style lang="scss" scoped>
-@import "~/assets/styles/scss/theme/theme";
+@use"~/assets/styles/scss/theme/theme" as *;
 
 .header-image{
   position: relative;
   width: 100%;
-  aspect-ratio: 4.85/1;
+  aspect-ratio: 3.5/1;
 
   // height: 300px;
-  background-color: $br1;
+  background-color: black;
   .content{
     position: absolute;
     display: flex;
@@ -84,20 +84,7 @@
       color: white;
     }
   }
-  .img-frame{
-    position: relative;
-    z-index: 6;
-    // filter: saturate(0);
-    // &::after{
-    //   content: '';
-    //   position: absolute;
-    //   width: 100%;
-    //   height: 100%;
-    //   top: 0;
-    //   left: 0;
-    //   background: linear-gradient(180deg, #000000aa,#00000000,#00000000);
-    // }
-  }
+  
   .blur-img{
     position: absolute;
     z-index: 2;

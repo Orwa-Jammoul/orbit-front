@@ -96,7 +96,7 @@ const { public : {api, apiBase} } = useRuntimeConfig();
 </script>
 
 <style lang="scss" scoped>
-@import "~/assets/styles/scss/theme/theme";
+@use"~/assets/styles/scss/theme/theme" as *;
 .main-dialog{
   width: 100%;
   height: 100%;

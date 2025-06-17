@@ -10,11 +10,10 @@
         </p>
       </div>
 
-      <div v-if="!isLoading" class="training-section row">
-        <Swiper
+      <div class="training-section row">
+        <swiper-container
           class="mySwiper"
           :dir="rtl()"
-          :modules="[SwiperAutoplay, SwiperPagination, SwiperNavigation]"
           :navigation="false"
           :space-between="40"
           :autoplay="{ delay: 15000 }"
@@ -40,10 +39,10 @@
             },
           }"
         >
-          <SwiperSlide class=" pcc" v-for="(service, index) in services" :key="service.id">
+          <swiper-slide class=" pcc" v-for="(service, index) in services" :key="service.id">
             <CardCourse :cardData="service" :num="index"/>
-          </SwiperSlide>
-        </Swiper>
+          </swiper-slide>
+        </swiper-container>
       </div>
       
       
@@ -69,25 +68,25 @@ import 'swiper/css/pagination';
 
 const { public: {api, apiBase} } = useRuntimeConfig();
 const services = ref([]);
-const isLoading = ref(true);
+// const isLoading = ref(true);
 
 
 const { data:servicesData } = await useGetSiteApi().GetAll(
   `${api.blocksApi}/GetMaster?categoryId=5&pageNumber=0&pageSize=12`
 );
+services.value = servicesData.value.items
 
-
-watchEffect(()=> {
-  if(process.client) {
-    if(servicesData.value) {
-      services.value = servicesData.value.items
-      // console.log(services.value);
-      // services.value = [...services.value, ...services.value]
-      // services.value = [...services.value, ...services.value]
-      isLoading.value = false
-    }
-  }
-})
+// watchEffect(()=> {
+//   if(process.client) {
+//     if(servicesData.value) {
+//       services.value = servicesData.value.items
+//       // console.log(services.value);
+//       // services.value = [...services.value, ...services.value]
+//       // services.value = [...services.value, ...services.value]
+//       isLoading.value = false
+//     }
+//   }
+// })
 </script>
 
 <style lang="scss">
@@ -118,7 +117,7 @@ watchEffect(()=> {
 </style>
 
 <style lang="scss" scoped>
-@import "~/assets/styles/scss/theme/theme";
+@use"~/assets/styles/scss/theme/theme" as *;
 
 .section-root{
   position: relative;

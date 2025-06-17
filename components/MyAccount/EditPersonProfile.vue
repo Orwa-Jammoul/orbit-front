@@ -19,7 +19,7 @@ const emit = defineEmits(["toggle", "cancel"]);
 </script>
 
 <style lang="scss" scoped>
-@import "~/assets/styles/scss/theme/theme";
+@use"~/assets/styles/scss/theme/theme" as *;
 
 .login_box_area {
   padding: 10px 0 !important;

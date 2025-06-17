@@ -80,7 +80,7 @@ const handleSearch = ()=>{
 
 </script>
 <style lang="scss" scoped>
-@import "~/assets/styles/scss/theme/theme";
+@use"~/assets/styles/scss/theme/theme" as *;
 .main-dialog{
   position: relative;
   // width: 100%;
@@ -155,7 +155,7 @@ const handleSearch = ()=>{
       .select-frame{
         position: relative;
         // padding: 0 1rem;
-        .icon{
+        .iconify{
           pointer-events: none;
           position: absolute;
           top: 18px;

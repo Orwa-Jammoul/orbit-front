@@ -3,7 +3,7 @@
     <div class="dropdown-main-menu ">
       <nuxt-link 
         class="menu-item px-0 ps-10" 
-        :to="page.pageUrl" 
+        :to="localePath(page.pageUrl)" 
         @click="useShowNavVer().value.show = false" 
         v-for="page in pages" :key="page" >
         <icon :name="isEn()?`material-symbols-light:subdirectory-arrow-right-rounded`:`material-symbols-light:subdirectory-arrow-left-rounded`" size="20px"/>
@@ -15,11 +15,11 @@
 
 <script setup>
 const { pages } = defineProps(["pages"]);
-
+const localePath = useLocalePath()
 </script>
 
 <style lang="scss" scoped>
-@import "~/assets/styles/scss/theme/theme";
+@use"~/assets/styles/scss/theme/theme" as *;
 .dropdown-main-menu{
   display: flex;
   flex-direction: column;

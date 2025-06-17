@@ -197,7 +197,7 @@ const checkCoupon = async (values) => {
 }
 </style>
 <style lang="scss" scoped>
-@import "~/assets/styles/scss/theme/theme";
+@use"~/assets/styles/scss/theme/theme" as *;
 
 // .coupon-contain {
 //   position: relative;

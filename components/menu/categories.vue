@@ -30,7 +30,7 @@ watchEffect(()=>{
 </script>
 
 <style lang="scss" scoped>
-@import "~/assets/styles/scss/theme/theme";
+@use"~/assets/styles/scss/theme/theme" as *;
 
 .navbar-item{
   position: relative;
@@ -63,7 +63,7 @@ watchEffect(()=>{
 
       user-select: none;
       cursor: pointer !important;
-      .icon{
+      .iconify{
         color: black;
       }
     }
@@ -146,7 +146,7 @@ watchEffect(()=>{
         color: $primary1;
         // background-color: $c1;
         
-        .icon{
+        .iconify{
           color: $primary1;
         }
         // text-decoration: underline;

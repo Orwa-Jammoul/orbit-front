@@ -33,7 +33,7 @@ const switchLanguage =(lang)=> {
 </script>
 
 <style lang="scss" scoped>
-@import "~/assets/styles/scss/theme/theme";
+@use"~/assets/styles/scss/theme/theme" as *;
 .main-menu{
   display: flex;
   flex-direction: column;
@@ -50,7 +50,6 @@ const switchLanguage =(lang)=> {
     font-weight: 600;
     color: white;
     font-size: 13px;
-    display: block;
     padding: .4em 1.3em ;
     cursor: pointer;
     // line-height: 1rem;
@@ -64,7 +63,7 @@ const switchLanguage =(lang)=> {
       background-color: #1c1c1c !important;
       // color: white;
     }
-    .icon{
+    .iconify{
       margin-inline-end: 5px;
     }
     // &:hover:not(.router-link-active){

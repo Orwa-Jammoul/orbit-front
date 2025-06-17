@@ -14,7 +14,7 @@
         <div class="nav-close" @click="hideNav" :class="{'rtl': isAr(), 'show': showNavVer.show}">
           <icon name="ic:baseline-cancel" size="25px"/>
         </div>
-        <nuxt-link class="logo-frame" to="/">
+        <nuxt-link class="logo-frame" :to="localePath('/')">
           <img class="logo" 
             :src="!isAr()?`/logo/Orbit-logo-side-01-left.svg`:`/logo/Orbit-logo-side-01-s.svg`"
             alt="logo"
@@ -41,7 +41,7 @@
 <script setup>
 const { pages } = defineProps(["pages"]);
 // console.log(pages);
-
+const localePath = useLocalePath()
 const showNavVer = useShowNavVer().value;
 const hideNav = () => {
   useShowNavVer().value.show = false;
@@ -53,7 +53,8 @@ const showNav = () => {
 </script>
 
 <style lang="scss" scoped>
-@import "~/assets/styles/scss/custom";
+@use "~/assets/styles/scss/theme/theme" as *;
+@use "@/assets/styles/scss/theme/mixin" as *;
 
 .main-nav-ver{
  
@@ -101,13 +102,13 @@ const showNav = () => {
 
       // }
 
-      // .icon{
+      // .iconify{
       //   transition: background-color 200ms ease-in-out;
       // }
 
       &:hover{
         background-color: $primary1;
-        // .icon{
+        // .iconify{
         //   color: $primary1 !important;
         // }
       }

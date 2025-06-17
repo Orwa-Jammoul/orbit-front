@@ -102,7 +102,7 @@
 </script>
 
 <style lang="scss">
-  @import "~/assets/styles/scss/theme/theme";
+  @use"~/assets/styles/scss/theme/theme" as *;
   .change-password {
     padding: 0 15rem;
     h5 {

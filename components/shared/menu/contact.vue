@@ -3,7 +3,7 @@
     <div class="social-media-bar" :class="rtl()">
       
       <a v-for="page, index in socialPages" 
-        class="social-media-item" 
+        class="social-media-item pcc" 
         :href="page.url" target="_blank" 
         :data-aos-duration="1000"
         :data-aos-delay="500*index"
@@ -24,7 +24,7 @@
     </div>
     <div class="messaging pcc" :class="rtl()" @click="showContacts=!showContacts">
       <div class="circle"></div>
-      <button class="messaging-btn" >
+      <button class="messaging-btn pcc" >
         <Icon v-if="!showContacts" name="material-symbols:chat-add-on" size="20px"/>
         <Icon v-else name="material-symbols:chat-apps-script" size="20px"/>
       </button>
@@ -43,7 +43,7 @@
     >
       <div class="spark"></div>
       <a v-for="page,index in contacts" 
-        class="social-media-item" 
+        class="social-media-item pcc" 
         :href="page.url" target="_blank"  
         :key="page.id"
         :data-aos-duration="500"
@@ -68,7 +68,7 @@ const showContacts= ref(false)
 </script>
 
 <style lang="scss" scoped>
-@import "~/assets/styles/scss/theme/theme";
+@use"~/assets/styles/scss/theme/theme" as *;
 .contacts-menus{
   position: relative;
   // top: 0;
@@ -132,7 +132,7 @@ const showContacts= ref(false)
     }
     .messaging-btn{
       z-index: 4;
-      .icon{
+      .iconify{
         color: white;
       }
     }
@@ -168,7 +168,7 @@ const showContacts= ref(false)
       &:last-child{
         margin-inline-end: 0;
       }
-      .icon{
+      .iconify{
         color: white;
       }
     }
@@ -206,7 +206,7 @@ const showContacts= ref(false)
       &:last-child{
         margin-bottom: 0;
       }
-      .icon{
+      .iconify{
         color: white;
       }
     }

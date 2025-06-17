@@ -1,28 +1,32 @@
 <template>
   <div>
-    <ClientOnly>
-      <div :class=" isEn() ? 'bodyEN' : 'bodyAR'">
-        <SharedNavbar class="nav-bar-main"/>
-        <SharedMenuContact/>
-        <div id="slot">
-          <slot />
-        </div>
-        <SharedFooter />
+    <div>
+      <SharedNavbar class="nav-bar-main"/>
+      <SharedMenuContact/>
+      <div id="slot">
+        <slot />
       </div>
-    </ClientOnly>
+      <SharedFooter />
+    </div>
   </div>
 </template>
 
 <script setup>
+const { locale } = useI18n()
+useHead({
+  htmlAttrs: {
+    lang: locale.value 
+  }
+})
 
-  const {locales, locale, setLocale } = useI18n()
-  // useLang().value = locale
+  // const {locales, locale, setLocale } = useI18n()
+  // // useLang().value = locale
 
-  onMounted(()=>{
-    const lang = locale ?? localStorage.getItem("lang") ?? "en";
-    // setLocale(lang)
-    useLang().value = lang
-  })
+  // onMounted(()=>{
+  //   const lang = locale ?? localStorage.getItem("lang") ?? "en";
+  //   // setLocale(lang)
+  //   useLang().value = lang
+  // })
 
 </script>
 <style lang="scss" scoped>

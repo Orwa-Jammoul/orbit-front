@@ -1,16 +1,17 @@
 <template>
   <div class="navbar-item">
     <div class="top-section pcc">
-      <div class="btns-frame">
-        <icon class="icon-btn cart-icon" name="material-symbols:shopping-cart-outline" size="25px" />
+      <div class="btns-frame pcc">
+        <!-- <icon class="icon-btn cart-icon" name="solar:folder-open-outline" size="23px" /> -->
+        <icon class="icon-btn cart-icon" name="proicons:folder" size="23px" />
         <div class="effect" ref="effect"></div>
-        <div class="cart-items-num pcc" v-if="cart.totalQty > 0">
+        <!-- <div class="cart-items-num pcc" v-if="cart.totalQty > 0">
           <p class="items-num">{{cart.totalQty}}</p>
-        </div>
+        </div> -->
       </div>
     </div>
     <div  class="bottom-section" :class="isEn()?'':'rtl'">
-      <MenuDropCart class="msg" :class="isEn()?'':'rtl'"/>
+      <!-- <MenuDropCart class="msg" :class="isEn()?'':'rtl'"/> -->
     </div>
 
   </div>
@@ -19,37 +20,37 @@
 <script setup>
 const { public: {api, apiBase} } = useRuntimeConfig();
 
-const effect = ref(null)
+// const effect = ref(null)
 
-// const cart =ref({
-//   items: [],
-//   totalItems: 0,
-//   totalQty: 0,
-//   totalPrice: 0
+// // const cart =ref({
+// //   items: [],
+// //   totalItems: 0,
+// //   totalQty: 0,
+// //   totalPrice: 0
+// // })
+// const cart =ref(useCart().value)
+
+// const cartItemsNo=ref('')
+// watch(cartEvent(),()=>{
+//   cart.value=useCart().value
+//   cartItemsNo.value=useCart().value.totalQty
+//   effect.value.classList.add('animate');
+//   setTimeout(() => {
+//     effect.value.classList.remove('animate');
+//   }, 300);
+// });
+
+// onMounted(()=>{
+//   if(localStorage.getItem('cart')){
+//     useCart().value = JSON.parse( localStorage.getItem('cart'));
+//     cart.value = useCart().value
+//   }
 // })
-const cart =ref(useCart().value)
-
-const cartItemsNo=ref('')
-watch(cartEvent(),()=>{
-  cart.value=useCart().value
-  cartItemsNo.value=useCart().value.totalQty
-  effect.value.classList.add('animate');
-  setTimeout(() => {
-    effect.value.classList.remove('animate');
-  }, 300);
-});
-
-onMounted(()=>{
-  if(localStorage.getItem('cart')){
-    useCart().value = JSON.parse( localStorage.getItem('cart'));
-    cart.value = useCart().value
-  }
-})
 
 </script>
 
 <style lang="scss" scoped>
-@import "~/assets/styles/scss/theme/theme";
+@use"~/assets/styles/scss/theme/theme" as *;
 
 .navbar-item{
   position: relative;
@@ -58,6 +59,7 @@ onMounted(()=>{
     color: $primary1;
     width: auto ;
     height: 100%;
+    margin-inline-end: 2px;
     // padding: .5rem 0;
     .btns-frame{
       position: relative;
@@ -67,18 +69,18 @@ onMounted(()=>{
       // display: flex;
       // justify-content: center;
       // align-items: center;
-      display: block;
+      // display: block;
       color: rgb(44, 44, 44);
       font-size: .8rem;
       user-select: none;
       font-weight: bold;
-      color: $primary1;
+      color: white;
       cursor: pointer;
-      .icon{
-        color: black;
+      .iconify{
+        color: white;
         transition: .5s;
         &:hover{
-          color: $primary1;
+          color: $primary;
         }
       }
       // svg{

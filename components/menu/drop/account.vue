@@ -1,113 +1,77 @@
 <template>
-  <div class="Account-msg">
-    <div class="account-frame pcc" @click="goto('/account')">
-      <h5 class="account-name text-center">
-        {{ user?useName(user):t("my-account",1) }}
-      </h5>
+  <div>
+    <div class="main-menu ">
+      <!-- <div class="menu-item" v-for="lang,index in locales" :key="index" @click="switchLanguage(lang.code)">
+        {{ siteLanguages().value[lang.code] }}
+      </div> -->
+      <div class="menu-item" @click="switchLanguage('en')">
+        <Icon name="openmoji:flag-us-outlying-islands" size="20px"/>
+        <span>English</span>
+      </div>
+      <div class="menu-item" @click="switchLanguage('ar')">
+        <Icon name="openmoji:flag-united-arab-emirates" size="20px"/>
+        <span>عربي</span>
+      </div>
+      <div class="menu-item" @click="switchLanguage('de')">
+        <Icon name="openmoji:flag-germany" size="20px"/>
+        <span>Deutsch</span>
+      </div>
     </div>
-    <button class="log-btns logout-btn" @click="logout">
-      <h5>{{t('logout')}}</h5>
-      <icon name="mdi:account-cancel" size="16px" />
-    </button>
   </div>
 </template>
 
 <script setup>
+const emit = defineEmits(["selected"]);
 
-  const {isAuth}= defineProps(["isAuth"])
-  const { public: { api, apiBase } } = useRuntimeConfig();
-  // const accountType = ref(useAccountType());
-  const user = ref(useUserInfo().value);
-  const auth = ref(useAuth().value.isAuthenticated);
-
-  watch(useAuth().value,()=>{
-    auth.value = useAuth().value.isAuthenticated;
-    user.value = useUserInfo().value;
-    // accountType.value = useAccountType();
-  })
-
-  const logout=()=>{
-    useLogout()
-    console.log("logout");
-  }
+const {locales, locale, setLocale } = useI18n()
+const switchLanguage =(lang)=> {
+  setLocale(lang)
+  useLang().value = lang
+  localStorage.setItem('lang', lang)
+  emit('selected')
+}
 </script>
 
 <style lang="scss" scoped>
-  @import "~/assets/styles/scss/theme/theme";
+@use"~/assets/styles/scss/theme/theme" as *;
+.main-menu{
+  display: flex;
+  flex-direction: column;
+  // padding: 0 1rem;
+  width: auto;
+  .menu-item{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
 
-  .Account-msg{
-    position: relative;
-    width: 12rem;
-    height: auto;
-    background: none;
-    // border-radius: 1rem;
-    overflow: hidden;
-    box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.1);
-    .account-frame{
-      width: 100%;
-      height: 3rem;
-      // padding: 0 1rem;
-      // background-color: $grey;
-      background-color: black;
-      cursor: pointer;
-      .account-name{
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        width: 100%;
-        height: 100%;
-        // text-align: center;
-        padding: 1rem;
-        color: white;
-        font-weight: 600;
-        padding: 0;
-        margin: 0;
-        font-size: 1rem;
-        &:hover{
-          color: $br0;
-          background-color: $br5;
-        }
-      }
+    // width: 15rem;
+    background-color: black;
+    width: 100%;
+    font-weight: 600;
+    color: white;
+    font-size: 13px;
+    padding: .4em 1.3em ;
+    cursor: pointer;
+    // line-height: 1rem;
+    border-radius: 5px;
+    // border-bottom: solid 1px white;
+    
+    &:last-child{
+      border-bottom: none;
     }
-    .log-btns{
-      display: flex;
-      align-items: center;
-      
-      justify-content: space-between;
-      width: 100%;
-      height: 2rem;
-      padding: 1rem;
-      color: $br3;
-      background-color: black;
-      h5{
-        margin: 0;
-        font-size: 14px;
-        font-weight: 600;
-        // color: $br3;
-      }
-      a{
-          color: $br3;
-      }
-      &:hover{
-        background-color: $br5;
-        color: $br0;
-        a{
-          color: $br0;
-        }
-        // svg{
-        //   color: $primary3 !important;
-        // }
-      }
+    &:hover{
+      background-color: #1c1c1c !important;
+      // color: white;
     }
-
-    .logout-btn{
-      // border-radius: 0 0 1rem 1rem ;
-      border-top: solid 1px $dark-grey;
-      svg{
-        color: $primary3 !important;
-      }
+    .iconify{
+      margin-inline-end: 5px;
     }
-
-
+    // &:hover:not(.router-link-active){
+    //   background-color: $primary6 !important;
+    //   // color: $primary2b;
+    //   color: red;
+    // }
   }
+}
+
 </style>

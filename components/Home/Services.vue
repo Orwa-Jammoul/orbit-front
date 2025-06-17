@@ -10,11 +10,10 @@
         </p>
       </div>
 
-      <div v-if="!isLoading" class="services-section row px-3">
-        <Swiper
+      <div class="services-section row px-3">
+        <swiper-container
           class="mySwiper"
           :dir="rtl()"
-          :modules="[SwiperAutoplay, SwiperPagination, SwiperNavigation]"
           :navigation="false"
           :space-between="40"
           :autoplay="{ delay: 15000 }"
@@ -39,10 +38,10 @@
             },
           }"
         >
-          <SwiperSlide class=" pcc" v-for="(service, index) in services" :key="service.id">
+          <swiper-slide class=" pcc" v-for="(service, index) in services.data" :key="service.id">
             <CardService :cardData="service" :num="index"/>
-          </SwiperSlide>
-        </Swiper>
+          </swiper-slide>
+        </swiper-container>
       </div>
       
       
@@ -67,26 +66,26 @@ import 'swiper/css/pagination';
 
 
 const { public: {api, apiBase} } = useRuntimeConfig();
-const services = ref([]);
-const isLoading = ref(true);
+// const services = ref([]);
+// const isLoading = ref(true);
 
 
-const { data:servicesData } = await useGetSiteApi().GetAll(
+const { data:services } = await useGetSiteApi().GetAll(
   `${api.productsSearchApi}?pageNumber=1&pageSize=12`
 );
 
 
-watchEffect(()=> {
-  if(process.client) {
-    if(servicesData.value) {
-      services.value = servicesData.value.data
-      // console.log(services.value);
-      // services.value = [...services.value, ...services.value]
-      // services.value = [...services.value, ...services.value]
-      isLoading.value = false
-    }
-  }
-})
+// watchEffect(()=> {
+//   if(process.client) {
+//     if(servicesData.value) {
+//       services.value = servicesData.value.data
+//       // console.log(services.value);
+//       // services.value = [...services.value, ...services.value]
+//       // services.value = [...services.value, ...services.value]
+//       isLoading.value = false
+//     }
+//   }
+// })
 </script>
 
 <style lang="scss">
@@ -119,7 +118,7 @@ watchEffect(()=> {
 </style>
 
 <style lang="scss" scoped>
-@import "~/assets/styles/scss/theme/theme";
+@use"~/assets/styles/scss/theme/theme" as *;
 
 .section-root{
   position: relative;

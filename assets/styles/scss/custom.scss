@@ -1,5 +1,5 @@
-@import "@/assets/styles/scss/theme/variables";
-@import "@/assets/styles/scss/theme/mixin";
+@use "~/assets/styles/scss/theme/variables" as *;
+@use "~/assets/styles/scss/theme/mixin" as *;
 
 /////////* debug style */////////
 // *{

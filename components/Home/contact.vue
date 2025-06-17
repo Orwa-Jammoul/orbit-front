@@ -10,7 +10,7 @@ const someText = "Lorem, ipsum dolor sit amet consectetur adipisicing elit. A op
 
 
 <style lang="scss" scoped>
-@import "~/assets/styles/scss/theme/theme";
+@use"~/assets/styles/scss/theme/theme" as *;
 
 .section-root{
   position: relative;

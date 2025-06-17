@@ -1,3 +1,6 @@
-@import "@/assets/styles/scss/theme/variables";
-@import "@/assets/styles/scss/theme/mixin";
-@import "@/assets/styles/scss/theme/animations";
+@use "@/assets/styles/scss/theme/variables" as *;
+@use "@/assets/styles/scss/theme/mixin" as *;
+@use "@/assets/styles/scss/theme/animations" as *;
+// @import "@/assets/styles/scss/theme/variables";
+// @import "@/assets/styles/scss/theme/mixin";
+// @import "@/assets/styles/scss/theme/animations";

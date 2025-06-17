@@ -11,14 +11,14 @@
 <script setup>
 const { pages } = defineProps(["pages"]);
 const showNavVer = useShowNavVer().value;
-const hideNav = (url) => {
-   navigateTo(url);
-  useShowNavVer().value.show = false;
-};
+// const hideNav = (url) => {
+//    navigateTo(url);
+//   useShowNavVer().value.show = false;
+// };
 </script>
 
 <style lang="scss" scoped>
-@import "~/assets/styles/scss/theme/theme";
+@use"~/assets/styles/scss/theme/theme" as *;
 .main-menu{
   display: flex;
   flex-direction: column;

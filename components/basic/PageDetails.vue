@@ -98,6 +98,7 @@
 </template>
   
 <script setup>
+  const localePath = useLocalePath()
   const { public: { api, apiBase } } = useRuntimeConfig();
   const {item} = defineProps(['item']);
   // console.log(item);
@@ -116,7 +117,7 @@
 </script>
   
 <style lang="scss" scoped>
-  @import "~/assets/styles/scss/theme/theme";
+  @use"~/assets/styles/scss/theme/theme" as *;
   .page-details-root{
     width: 100svw;
     margin-bottom: 3rem;

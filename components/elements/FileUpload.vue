@@ -187,7 +187,7 @@
         padding-inline-end: 1rem;
         margin: 0px;
        }
-      .icon{
+      .iconify{
         width: 2rem;
       }
     }

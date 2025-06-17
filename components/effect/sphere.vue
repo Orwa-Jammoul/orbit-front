@@ -93,7 +93,7 @@ onMounted(() => {
 
 
 <style lang="scss" scoped>
-@import "~/assets/styles/scss/theme/theme";
+@use"~/assets/styles/scss/theme/theme" as *;
 canvas {
   background-color: black;
   // position: fixed;

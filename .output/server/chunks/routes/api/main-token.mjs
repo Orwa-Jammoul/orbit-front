@@ -1,9 +1,24 @@
 import { c as defineEventHandler, u as useRuntimeConfig, e as useStorage, f as createError, g as errorOptions } from '../../_/nitro.mjs';
+import 'lru-cache';
+import '@unocss/core';
+import '@unocss/preset-wind3';
+import 'devalue';
+import 'consola';
+import 'unhead';
 import 'node:http';
 import 'node:https';
+import 'node:events';
+import 'node:buffer';
+import 'vue';
 import 'node:fs';
 import 'node:url';
-import 'ipx';
+import '@iconify/utils';
+import 'node:crypto';
+import 'unhead/server';
+import 'unhead/plugins';
+import 'unhead/utils';
+import 'vue-bundle-renderer/runtime';
+import 'vue/server-renderer';
 import 'node:path';
 
 const mainToken = defineEventHandler(async () => {

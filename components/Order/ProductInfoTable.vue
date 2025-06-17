@@ -123,7 +123,7 @@ watch(cartEvent(),()=>{
 </script>
 
 <style lang="scss" scoped>
-@import "~/assets/styles/scss/theme/theme";
+@use"~/assets/styles/scss/theme/theme" as *;
 
 .table-responsive {
   @include horizontal-scrollbar(6px, "#2e2b2b", $blue, "#555");

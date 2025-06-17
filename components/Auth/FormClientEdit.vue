@@ -385,7 +385,7 @@ const initialValues = {
 </script>
 
 <style scoped lang="scss">
-@import "~/assets/styles/scss/theme/theme";
+@use"~/assets/styles/scss/theme/theme" as *;
 .register_form {
   width: 100%;
   margin: 0;

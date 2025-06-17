@@ -2,7 +2,7 @@
   <div class="navbar-item pcc">
     <div class="top-section" >
       <nuxt-link class="main-link d-flex align-items-center" :key="page.id"
-        :to="page.subPages.length>0?'':localePath(page.pageUrl)" :class="rtl()"
+        :to="page.subPages.length>0?'':localePath( page.pageUrl )" :class="rtl()"
       >
         {{ useName(page,0,0,1) }}
         <Icon
@@ -18,13 +18,15 @@
 </template>
 
 <script setup>
+const localePath = useLocalePath()
+// localePath({ name: 'products-type', params: { type: 'all' } }
 // const { public:{api, apiBase } } = useRuntimeConfig();
 const { page } = defineProps(["page"]);
-// const localePath = useLocalePath()
+// const langPath = useLocalePath()
 </script>
 
 <style lang="scss" scoped>
-@import "~/assets/styles/scss/theme/theme";
+@use"~/assets/styles/scss/theme/theme" as *;
 
 .navbar-item{
   position: relative;
@@ -57,7 +59,7 @@ const { page } = defineProps(["page"]);
 
       user-select: none;
       cursor: pointer !important;
-      .icon{
+      .iconify{
         color: black;
       }
     }
@@ -140,7 +142,7 @@ const { page } = defineProps(["page"]);
         color: $primary1;
         // background-color: $c1;
         
-        .icon{
+        .iconify{
           color: $primary1;
         }
         // text-decoration: underline;

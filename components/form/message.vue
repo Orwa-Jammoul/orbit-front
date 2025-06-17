@@ -268,7 +268,7 @@ const initialValues = {
 </script>
 
 <style scoped lang="scss">
-@import "~/assets/styles/scss/theme/theme";
+@use"~/assets/styles/scss/theme/theme" as *;
 .message_form {
   position: relative;
   width: 100%;

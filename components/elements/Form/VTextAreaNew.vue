@@ -21,7 +21,7 @@
 
 
 <script setup>
-import { integer } from '@vee-validate/rules';
+// import { integer } from '@vee-validate/rules';
 import { Field, ErrorMessage } from 'vee-validate';
 const props = defineProps({
   type: {

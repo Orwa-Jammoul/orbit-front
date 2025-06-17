@@ -1,7 +1,7 @@
 <template>
   <section class="section-root grid-bg2" dir="auto">
     <div class="img-frame contain">
-      <img src="/imgs/spaceship.png" alt="image">
+      <img src="/imgs/spaceship.png" alt="image about us">
     </div>
     <div class="about-frame">
       <div class="about-box1 grid-bg1">
@@ -13,7 +13,7 @@
           <p class="m-0">
             {{ $t('read-more') }}
           </p>
-          <nuxt-link class="icon-frame pcc mx-0 ms-2" :to="localePath('/about-us')">
+          <nuxt-link class="icon-frame pcc mx-0 ms-2" :to="langPath('/about-us')">
             <icon v-if="!isAr()" name="material-symbols:arrow-forward-rounded" size="20px"/>
             <icon v-else name="material-symbols:arrow-back-rounded" size="20px"/>
           </nuxt-link>
@@ -30,7 +30,7 @@
           <p class="m-0">
             {{ $t('read-more') }}
           </p>
-          <nuxt-link class="icon-frame pcc mx-0 ms-2" :to="localePath('/about-us')">
+          <nuxt-link class="icon-frame pcc mx-0 ms-2" :to="langPath('/about-us')">
             <icon v-if="!isAr()" name="material-symbols:arrow-forward-rounded" size="20px"/>
             <icon v-else name="material-symbols:arrow-back-rounded" size="20px"/>
           </nuxt-link>
@@ -38,10 +38,6 @@
         <div class="gr-circle1"/>
         <div class="gr-circle3"/>
       </div>
-      <!-- <div class="about-fields grid-bg1">
-        <img class="w-100 h-100" src="/svg/chart-01.svg" alt="chart">
-        <p class=" position-absolute bottom-0 start-0 text-white px-5">hello</p>
-      </div> -->
     </div>
     <div class="gr-circle1"/>
     <div class="gr-circle2"/>
@@ -50,23 +46,14 @@
 
 <script setup>
 const { public: {api, apiBase} } = useRuntimeConfig();
-const about = ref([]);
-const isLoading = ref(true);
-const { data:aboutData } = await useGetSiteApi().GetAll(
+const { data:about } = await useGetSiteApi().GetAll(
   `${api.Blocks}/1`
 );
 
-
-watchEffect(()=> {
-  if(aboutData.value ) {
-    about.value = aboutData.value;
-    isLoading.value = false
-  }
-})
 </script>
 
 <style lang="scss" scoped>
-@import "~/assets/styles/scss/theme/theme";
+@use"~/assets/styles/scss/theme/theme" as *;
 .section-root{
   position: relative;
   width: 100svw;

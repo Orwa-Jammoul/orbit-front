@@ -299,7 +299,7 @@ const getItemName = (event) => {
 </script>
 
 <style lang="scss">
-@import "~/assets/styles/scss/theme/theme";
+@use"~/assets/styles/scss/theme/theme" as *;
 
 .login_box_area {
   // padding: 100px 0;

@@ -29,25 +29,25 @@
 
 const { public: {api, apiBase} } = useRuntimeConfig();
 const services = ref([]);
-const isLoading = ref(true);
+// const isLoading = ref(true);
 
-
+const localePath = useLocalePath()
 const { data:servicesData } = await useGetSiteApi().GetAll(
   `${api.blocksApi}/GetMaster?categoryId=5`
 );
+services.value = servicesData.value.items
 
 
-watchEffect(()=> {
-  if(process.client) {
-    if(servicesData.value) {
-      services.value = servicesData.value.items
-      // console.log(services.value);
-      // services.value = [...services.value, ...services.value]
-      // services.value = [...services.value, ...services.value]
-      isLoading.value = false
-    }
-  }
-})
+// watchEffect(()=> {
+//   if(process.client) {
+//     if(servicesData.value) {
+//       // console.log(services.value);
+//       // services.value = [...services.value, ...services.value]
+//       // services.value = [...services.value, ...services.value]
+//       isLoading.value = false
+//     }
+//   }
+// })
 </script>
 
 <style lang="scss" scoped>

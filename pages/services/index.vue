@@ -15,21 +15,23 @@
       </div>
     </div>
     <div class="container">
-      <div class="row" v-if="!isLoading">
+      <div class="row">
         <div class="col-12 col-lg-4 col-md-6" v-for="service in services" :key="service.id">
           <CardService :cardData="service" :num="0"/>
         </div>
       </div>
-      <div class="loading" v-else>
+      <!-- <div class="loading" v-else>
         <icon name="svg-spinners:6-dots-rotate" size="25px"/>
-      </div>
+      </div> -->
     </div>
   </div>
 </template>
 
 <script setup>
-
+const localePath = useLocalePath()
 const { public: {api, apiBase} } = useRuntimeConfig();
+
+const { t } = useI18n()
 const services = ref([]);
 const isLoading = ref(true);
 
@@ -37,19 +39,33 @@ const isLoading = ref(true);
 const { data:servicesData } = await useGetSiteApi().GetAll(
   `${api.productsSearchApi}?pageNumber=1&pageSize=1000`
 );
+services.value = servicesData.value.data
 
 
-watchEffect(()=> {
-  if(process.client) {
-    if(servicesData.value) {
-      services.value = servicesData.value.data
-      // console.log(services.value);
-      // services.value = [...services.value, ...services.value]
-      // services.value = [...services.value, ...services.value]
-      isLoading.value = false
-    }
-  }
-})
+// useHead({
+//   title: t('services')
+// })
+
+
+// useSeoMeta({
+//   title: t('page.title'),
+//   ogTitle: t('page.title'),
+//   description: t('page.description'),
+//   ogDescription: t('page.description'),
+//   ogImage: 'https://yourdomain.com/image.png',
+//   twitterCard: 'summary_large_image',
+// })
+
+// watchEffect(()=> {
+//   if(process.client) {
+//     if(servicesData.value) {
+//       // console.log(services.value);
+//       // services.value = [...services.value, ...services.value]
+//       // services.value = [...services.value, ...services.value]
+//       isLoading.value = false
+//     }
+//   }
+// })
 </script>
 
 <style lang="scss" scoped>

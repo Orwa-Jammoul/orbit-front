@@ -53,7 +53,7 @@ const {cardData} = defineProps(["cardData"])
 </script>
 
 <style lang="scss" scoped>
-@import "~/assets/styles/scss/theme/theme";
+@use"~/assets/styles/scss/theme/theme" as *;
 .product-card{
   position: relative;
   display: flex;
@@ -92,7 +92,7 @@ const {cardData} = defineProps(["cardData"])
         padding-left: 1rem;
         padding-right: 1rem;
         border-radius: 5px 0 0 0 ;
-        .icon{
+        .iconify{
           color: $primary1;
           margin-inline-end: 5px;
         }
@@ -129,7 +129,7 @@ const {cardData} = defineProps(["cardData"])
         font-weight: 400;
         text-align: end;
         margin: 0;
-        .icon{
+        .iconify{
           margin-inline-start: .6rem;
           margin-inline-end: 5px;
         }

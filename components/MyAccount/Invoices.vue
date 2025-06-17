@@ -202,7 +202,7 @@ const Print= () => {
 </script>
 
 <style lang="scss" scoped>
-@import "~/assets/styles/scss/theme/theme";
+@use"~/assets/styles/scss/theme/theme" as *;
 .user-invoices{
   .orders-data{
     // .table{

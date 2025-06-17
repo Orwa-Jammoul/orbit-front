@@ -3,7 +3,7 @@
   <div>
     <ElementsLoader />
     <NuxtLayout>
-        <NuxtPage />
+      <NuxtPage />
     </NuxtLayout>
   </div>
 </template>

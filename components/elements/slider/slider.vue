@@ -1,5 +1,5 @@
 <template>
-  <Swiper
+  <swiper-container
     class="mainheaderslider"
     :modules="[SwiperAutoplay,SwiperEffectFade, SwiperPagination]"
     :slides-per-view="1"
@@ -15,11 +15,11 @@
       crossFade: true
     }"
   >
-    <SwiperSlide class="item-slide" v-for="item in sliders" :key="item.id">
+    <swiper-slide class="item-slide" v-for="item in sliders" :key="item.id">
       <ElementsSliderSlide :data="item" />
-    </SwiperSlide>
+    </swiper-slide>
 
-  </Swiper>
+  </swiper-container>
 </template>
 
 <script setup>
@@ -35,7 +35,7 @@ import 'swiper/css/pagination';
 </script>
 
 <style lang="scss" scoped>
-  @import "~/assets/styles/scss/theme/theme";
+  @use"~/assets/styles/scss/theme/theme" as *;
   .mainheaderslider{
     // height: 100vh !important;
     // height: calc(100vh - 11rem) !important;

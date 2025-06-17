@@ -2,8 +2,10 @@
   <div class="home-page">
     <HomeMainHeader/>
     <HomeAboutUs/>
-    <HomeServices/>
-    <HomeExperiences/>
+    <HomeServices/> 
+    <!-- 
+    -->
+    <!-- <HomeExperiences/> -->
     <HomeTraining/>
     <!-- <HomeContact/> -->
 

@@ -104,8 +104,8 @@ onBeforeUnmount(() => clear);
 </script>
 
 <style lang="scss" scoped>
-@import "@/assets/styles/scss/theme/variables";
-@import "@/assets/styles/scss/theme/mixin";
+@use "@/assets/styles/scss/theme/variables" as *;
+@use "@/assets/styles/scss/theme/mixin" as *;
 
 // .image {
 //   width: 450px;

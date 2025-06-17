@@ -1,11 +1,11 @@
 
 const vNotFound = '' // v/not-found
 const dNotFound = '' // d/not-found
+const defaultLang = 'en' // en, ar, de
 export const useModalImgs= () => useState(() => []);
 export const useCapitalize= () => useState(() => false);
 
-export const localePath = (path)=>{
-  // const localePath = useLocalePath()
+export const langPath = (path)=>{
   return isEn()? path : `/${useLang().value}${path}`
 }
 
@@ -20,19 +20,23 @@ export const useTr = (english, arabic, germany) =>  {
   }
 }
 export const isEn = () =>  {
-  const lang = useLang().value ?? 'en';
+  const { locale } = useI18n()
+  const lang = locale.value ?? defaultLang;
   return lang==='en'
 }
 export const isAr = () =>  {
-  const lang = useLang().value ?? 'en';
+  const { locale } = useI18n()
+  const lang = locale.value ?? defaultLang;
   return lang==='ar'
 }
 export const isDe = () =>  {
-  const lang = useLang().value ?? 'en';
+  const { locale } = useI18n()
+  const lang = locale.value ?? defaultLang;
   return lang==='de'
 }
 export const rtl = () => {
-  const lang = useLang().value ?? 'en';
+  const { locale } = useI18n()
+  const lang = locale.value ?? defaultLang;
   return lang==='en' || lang==='de'?'ltr':'rtl';
 };
 export const capitalize = (value) =>  {
@@ -54,8 +58,12 @@ export const useName = (data, firstCapital=false, allCapital=false, firsts=false
   if(!data){
     return dNotFound;
   }
-  const lang = useLang().value ? useLang().value : 'en';
+  const { locale, locales } = useI18n()
+  // const lang = useLang().value ? useLang().value : 'en';
+  const lang = locale.value;
+
   let value;
+
   if(lang==='en'){
     value=  data.englishName ?? data.nameEnglish ?? data.nameEn ?? data.enName ?? data.fullNameEn ?? data.name ?? data.fullName ?? data.productNameEn ?? data.arabicName ?? data.en_title ?? data.firstName ?? vNotFound;
     if(allCapital){
@@ -80,11 +88,17 @@ export const useName = (data, firstCapital=false, allCapital=false, firsts=false
   }
   return value;
 };
+
+
+
 export const useDes = (data, firstCapital=false, allCapital=false, firsts=false) => {
   if(!data){
     return dNotFound;
   }
-  const lang = useLang().value ? useLang().value : 'en';
+  const { locale, locales } = useI18n()
+  // const lang = useLang().value ? useLang().value : 'en';
+  const lang = locale.value;
+
   let value;
   if(lang==='en'){
     value= data.descriptionEnglish ?? data.descriptionEn ?? data.englishDescription ?? data.descriptionAboutEn ?? data.description ?? vNotFound;
@@ -105,7 +119,7 @@ export const useDes = (data, firstCapital=false, allCapital=false, firsts=false)
       value = value.charAt(0).toUpperCase() + value.slice(1);
     }
   }else{
-    value= data.descriptionArabic ?? data.descriptionAr ?? data.description ?? data.descriptionAboutAr ?? vNotFound;
+    value= data.descriptionAr ?? data.descriptionArabic ?? data.description ?? data.descriptionAboutAr ?? vNotFound;
   }
   return value;
 };
@@ -113,52 +127,60 @@ export const useDes1 = (data) => {
   if(!data){
     return dNotFound;
   }
-  const lang = useLang().value ? useLang().value : 'en';
+  const { locale, locales } = useI18n()
+  // const lang = useLang().value ? useLang().value : 'en';
+  const lang = locale.value;
   if(lang==='en'){
     return data.englishDescription1 ?? data.descriptionEn1 ?? vNotFound;
   }else if(lang==='de'){
     return data.descriptionGe1 ?? vNotFound;
   }else{
-    return data.description1 ?? data.arabicDescription1 ?? data.descriptionAr1 ?? vNotFound;
+    return data.descriptionAr1 ?? data.description1 ?? data.arabicDescription1 ?? vNotFound;
   }
 };
 export const useDes2 = (data) => {
   if(!data){
     return dNotFound;
   }
-  const lang = useLang().value ? useLang().value : 'en';
+  const { locale, locales } = useI18n()
+  // const lang = useLang().value ? useLang().value : 'en';
+  const lang = locale.value;
   if(lang==='en'){
     return data.englishDescription2 ?? data.descriptionEn2 ?? vNotFound;
   }else if(lang==='de'){
     return data.descriptionGe2 ?? vNotFound;
   }else{
-    return data.description2 ?? data.arabicDescription2 ?? data.descriptionAr2 ?? vNotFound;
+    return data.descriptionAr2 ?? data.description2 ?? data.arabicDescription2 ?? vNotFound;
   }
 };
 export const useDes3 = (data) => {
   if(!data){
     return dNotFound;
   }
-  const lang = useLang().value ? useLang().value : 'en';
+  const { locale, locales } = useI18n()
+  // const lang = useLang().value ? useLang().value : 'en';
+  const lang = locale.value;
   if(lang==='en'){
     return data.englishDescription3 ?? data.descriptionEn3 ?? vNotFound;
   }else if(lang==='de'){
     return data.descriptionGe3 ?? vNotFound;
   }else{
-    return data.description3 ?? data.arabicDescription3 ?? data.descriptionAr3 ?? vNotFound;
+    return data.descriptionAr3 ?? data.description3 ?? data.arabicDescription3 ?? vNotFound;
   }
 };
 export const useDes4 = (data) => {
   if(!data){
     return dNotFound;
   }
-  const lang = useLang().value ? useLang().value : 'en';
+  const { locale, locales } = useI18n()
+  // const lang = useLang().value ? useLang().value : 'en';
+  const lang = locale.value;
   if(lang==='en'){
     return data.englishDescription4 ?? data.descriptionEn4 ?? vNotFound;
   }else if(lang==='de'){
     return data.descriptionGe4 ?? vNotFound;
   }else{
-    return data.description4 ?? data.arabicDescription4 ?? data.descriptionAr4 ?? vNotFound;
+    return data.descriptionAr4 ?? data.description4 ?? data.arabicDescription4 ?? vNotFound;
   }
 };
 export const productCategory = (data) => {
@@ -356,6 +378,7 @@ export const useIcon = (name) => {
   return icon;
 };
 export const goto=(link="/")=>{
+  const localePath = useLocalePath()
   return navigateTo(localePath(link)) 
 };
 export const addToCart = (item,qty=null, typeId=0) => {
@@ -408,11 +431,28 @@ export const cImg = (imgUrl,useDefault=true) => {
 }
 
 export const getInnerText = (strHtmlElement) => {
-  const htmlElement = document.createElement('div');
-  htmlElement.innerHTML = strHtmlElement;
+  return strHtmlElement.replace(/<[^>]*>/g, '');
+  // if (process.client) {
+  //   const htmlElement = document.createElement('div');
+  //   htmlElement.innerHTML = strHtmlElement;
+    
+  //   const innerText = htmlElement.innerText;
+  //   return innerText;
+  // }
+  // return ""
+
+  // // Client-side
+  // if (typeof document !== 'undefined') {
+  //   const htmlElement = document.createElement('div');
+  //   htmlElement.innerHTML = strHtmlElement;
+  //   return htmlElement.textContent || htmlElement.innerText || '';
+  // }
   
-  const innerText = htmlElement.innerText;
-  return innerText;
+  // // Server-side with JSDOM
+  // const { window } = new JSDOM();
+  // const htmlElement = window.document.createElement('div');
+  // htmlElement.innerHTML = strHtmlElement;
+  // return htmlElement.textContent || '';
 }
 export const openAlbum = (album, defaultId=-1) => {
   // console.log(album);
@@ -475,4 +515,10 @@ export const isPdf = (imgUrl)=>{
   }
   const isPdf_ = imgUrl.toLowerCase().endsWith('.pdf');
   return isPdf_
+}
+export const dashed = (sentence)=>{
+  if(!sentence){
+    return false
+  }
+  return sentence.replace(/ /g, '-');
 }

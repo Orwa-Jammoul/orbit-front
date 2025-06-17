@@ -160,7 +160,7 @@ const toggle = () => {
 </script>
 
 <style lang="scss" scoped>
-@import "~/assets/styles/scss/theme/theme";
+@use"~/assets/styles/scss/theme/theme" as *;
 div {
   color: #000;
 }

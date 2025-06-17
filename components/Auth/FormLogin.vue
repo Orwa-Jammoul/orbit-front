@@ -210,7 +210,7 @@ const initialValues = { email: "", password: "" };
 </script>
 
 <style scoped lang="scss">
-@import "~/assets/styles/scss/theme/theme";
+@use"~/assets/styles/scss/theme/theme" as *;
 // .main-login{
 //   background-color: $primary1;
 // }
@@ -235,7 +235,7 @@ a{
 
 .title-frame{
   // padding-top: 2rem;
-  .icon{
+  .iconify{
     margin-right: 1rem;
   }
   .title {

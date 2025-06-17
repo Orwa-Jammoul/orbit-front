@@ -1,6 +1,6 @@
 <template>
   <nuxt-link class="service-card" :dir="rtl()" 
-    :to="localePath(`/services/${cardData.id}`)" 
+    :to="localePath(`/services/${dashed(useName(cardData))}?id=${cardData.id}`)" 
     data-aos-duration="1000"
     :data-aos-delay="`${100}`"
     data-aos="slide-up"
@@ -33,11 +33,11 @@
 const { public: {api, apiBase} } = useRuntimeConfig();
 const {cardData} = defineProps(["cardData"])
 // console.log(cardData);
-
+const localePath = useLocalePath()
 </script>
 
 <style lang="scss" scoped>
-@import "~/assets/styles/scss/theme/theme";
+@use"~/assets/styles/scss/theme/theme" as *;
 .service-card{
   position: relative;
   display: flex;
