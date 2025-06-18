@@ -1,10 +1,15 @@
 <template>
     <div>
-      <h1>HOME</h1>
+      <Home />
     </div>
 </template>
 
 <script setup>
+definePageMeta({
+  layout: 'home' 
+});
+
+
 </script>
 
 <style lang="scss" scoped>

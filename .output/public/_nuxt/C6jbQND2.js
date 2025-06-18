@@ -1,0 +1,1 @@
+import{V as e,Y as d}from"./5cuUzJcY.js";const i=e((a,r)=>{if(a.params.id!==void 0&&!/^\d+$/.test(a.params.id))return d("/404",{});if(a.params.productId!==void 0&&!/^\d+$/.test(a.params.productId))return d("/404",{})});export{i as default};

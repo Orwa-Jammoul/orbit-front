@@ -1,0 +1,1 @@
+import{V as a,W as s,X as u,Y as o,Z as i}from"./5cuUzJcY.js";const n=a(()=>{{const e=s(),t=u().value;if(!e.value.isAuthenticated)return o("/newsite/auth/login",{});if(!t.items.length&&t.totalQty<0||t.totalQty==0)return i().back()}});export{n as default};
