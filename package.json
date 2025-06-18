@@ -19,6 +19,7 @@
     "@vee-validate/nuxt": "^4.15.1",
     "@vee-validate/yup": "^4.15.1",
     "@vesp/nuxt-fontawesome": "^1.2.1",
+    "lru-cache": "^11.1.0",
     "nuxt": "^3.17.5",
     "nuxt-aos": "^1.2.5",
     "nuxt-swiper": "^2.0.1",
