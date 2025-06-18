@@ -1,12 +1,13 @@
 <template>
   <div class="home-page">
-    <HomeMainHeader/>
-    <HomeAboutUs/>
-    <HomeServices/> 
+    <h1>home</h1>
+    <!-- <HomeMainHeader/> -->
+    <!-- <HomeAboutUs/> -->
+    <!-- <HomeServices/>  -->
     <!-- 
     -->
     <!-- <HomeExperiences/> -->
-    <HomeTraining/>
+    <!-- <HomeTraining/> -->
     <!-- <HomeContact/> -->
 
     <!-- <EffectAnimatedGrid2 /> -->
