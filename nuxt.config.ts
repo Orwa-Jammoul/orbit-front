@@ -32,36 +32,36 @@ export default defineNuxtConfig({
         ar: '/',
         de: '/'
       },
-      'about-us': {
-        en: '/about-us',
-        ar: '/من-نحن',
-        de: '/Über-Uns'
-      },
-      'services': {
-        en: '/services',
-        ar: '/الخدمات',
-        de: '/Dienstleistungen'
-      },
-      'services-name': {
-        en: '/services/[name]',
-        ar: '/الخدمات/[name]',
-        de: '/Dienstleistungen/[name]'
-      },
-      'training': {
-        en: '/training',
-        ar: '/تدريب',
-        de: '/Ausbildung'
-      },
-      'training-name': {
-        en: '/training/[name]',
-        ar: '/تدريب/[name]',
-        de: '/Ausbildung/[name]'
-      },
-      'contact-us': {
-        en: '/contact-us',
-        ar: '/تواصل-معنا',
-        de: '/Kontakt'
-      },
+      // 'about-us': {
+      //   en: '/about-us',
+      //   ar: '/من-نحن',
+      //   de: '/Über-Uns'
+      // },
+      // 'services': {
+      //   en: '/services',
+      //   ar: '/الخدمات',
+      //   de: '/Dienstleistungen'
+      // },
+      // 'services-name': {
+      //   en: '/services/[name]',
+      //   ar: '/الخدمات/[name]',
+      //   de: '/Dienstleistungen/[name]'
+      // },
+      // 'training': {
+      //   en: '/training',
+      //   ar: '/تدريب',
+      //   de: '/Ausbildung'
+      // },
+      // 'training-name': {
+      //   en: '/training/[name]',
+      //   ar: '/تدريب/[name]',
+      //   de: '/Ausbildung/[name]'
+      // },
+      // 'contact-us': {
+      //   en: '/contact-us',
+      //   ar: '/تواصل-معنا',
+      //   de: '/Kontakt'
+      // },
       '.well-known/[pathMatch(.*)]': {
         en: '/.well-known/:pathMatch(.*)',
         ar: '/.well-known/:pathMatch(.*)',
