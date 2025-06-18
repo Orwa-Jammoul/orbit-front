@@ -1,25 +1,23 @@
-import { c as defineEventHandler, u as useRuntimeConfig, e as useStorage, f as createError, g as errorOptions } from '../../_/nitro.mjs';
-import 'lru-cache';
-import '@unocss/core';
-import '@unocss/preset-wind3';
-import 'devalue';
-import 'consola';
-import 'unhead';
+import { c as defineEventHandler, u as useRuntimeConfig, e as useStorage, f as createError } from '../../_/nitro.mjs';
 import 'node:http';
 import 'node:https';
 import 'node:events';
 import 'node:buffer';
-import 'vue';
 import 'node:fs';
-import 'node:url';
-import '@iconify/utils';
-import 'node:crypto';
-import 'unhead/server';
-import 'unhead/plugins';
-import 'unhead/utils';
-import 'vue-bundle-renderer/runtime';
-import 'vue/server-renderer';
 import 'node:path';
+import 'node:crypto';
+import 'node:url';
+
+function errorOptions(error) {
+  var _a, _b, _c;
+  return {
+    statusCode: (_b = (_a = error == null ? void 0 : error.response) == null ? void 0 : _a.status) != null ? _b : 444,
+    message: (_c = error == null ? void 0 : error.message) != null ? _c : "Error ::::: ",
+    data: {
+      responseBody: error.stack
+    }
+  };
+}
 
 const mainToken = defineEventHandler(async () => {
   const { serverApi, serverApiBase } = useRuntimeConfig();

@@ -1,25 +1,12 @@
 import process from 'node:process';globalThis._importMeta_={url:import.meta.url,env:process.env};import { Server as Server$1 } from 'node:http';
 import { Server } from 'node:https';
 import { t as toNodeListener, d as destr, u as useRuntimeConfig, a as trapUnhandledNodeErrors, s as setupGracefulShutdown, b as useNitroApp } from './chunks/_/nitro.mjs';
-import 'lru-cache';
-import '@unocss/core';
-import '@unocss/preset-wind3';
-import 'devalue';
-import 'consola';
-import 'unhead';
 import 'node:events';
 import 'node:buffer';
-import 'vue';
 import 'node:fs';
-import 'node:url';
-import '@iconify/utils';
-import 'node:crypto';
-import 'unhead/server';
-import 'unhead/plugins';
-import 'unhead/utils';
-import 'vue-bundle-renderer/runtime';
-import 'vue/server-renderer';
 import 'node:path';
+import 'node:crypto';
+import 'node:url';
 
 const cert = process.env.NITRO_SSL_CERT;
 const key = process.env.NITRO_SSL_KEY;

@@ -2,13 +2,13 @@
 export default defineNuxtConfig({
   ssr: true,
   modules: [
-    "@nuxtjs/seo",
+    // "@nuxtjs/seo",
     "@nuxtjs/i18n",
-    "@nuxt/icon",
-    "@vesp/nuxt-fontawesome",
-    "nuxt-swiper",
-    "nuxt-aos",
-    "@vee-validate/nuxt",
+    // "@nuxt/icon",
+    // "@vesp/nuxt-fontawesome",
+    // "nuxt-swiper",
+    // "nuxt-aos",
+    // "@vee-validate/nuxt",
   ],
 
   i18n: {
@@ -70,23 +70,23 @@ export default defineNuxtConfig({
 
     }
   },
-  veeValidate: {
-    // disable or enable auto imports
-    autoImports: true,
-    // Use different names for components
-    componentNames: {
-      Form: "VeeForm",
-      Field: "VeeField",
-      FieldArray: "VeeFieldArray",
-      ErrorMessage: "VeeErrorMessage",
-    },
-  },
+  // veeValidate: {
+  //   // disable or enable auto imports
+  //   autoImports: true,
+  //   // Use different names for components
+  //   componentNames: {
+  //     Form: "VeeForm",
+  //     Field: "VeeField",
+  //     FieldArray: "VeeFieldArray",
+  //     ErrorMessage: "VeeErrorMessage",
+  //   },
+  // },
 
-  fontawesome: {
-    icons: {
-      solid: ["faHome", "faUser", "faSearch"], // Add the icons you need
-    },
-  },
+  // fontawesome: {
+  //   icons: {
+  //     solid: ["faHome", "faUser", "faSearch"], // Add the icons you need
+  //   },
+  // },
 
   css: [
     "vuetify/lib/styles/main.sass",
