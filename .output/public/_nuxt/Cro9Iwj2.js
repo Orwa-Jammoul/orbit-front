@@ -1,0 +1,1 @@
+import{_ as t,x as a,y as r,z as s,K as n}from"./CenBvQX2.js";const o={};function c(e,l){return r(),a("div",null,[s("div",null,[n(e.$slots,"default")])])}const _=t(o,[["render",c]]);export{_ as default};

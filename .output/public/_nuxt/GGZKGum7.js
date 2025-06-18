@@ -1,0 +1,1 @@
+import{J as a,q as u,u as s}from"./CenBvQX2.js";const i=a(()=>{{const e=useAuth(),t=useCart().value;if(!e.value.isAuthenticated)return u("/newsite/auth/login",{});if(!t.items.length&&t.totalQty<0||t.totalQty==0)return s().back()}});export{i as default};
