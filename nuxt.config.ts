@@ -234,7 +234,12 @@ export default defineNuxtConfig({
           additionalData: '@use "~/assets/styles/scss/theme/_variables.scss" as *;'
         }
       }
-    }
+    },
+    // esbuild: {
+    //   supported: {
+    //     'top-level-await': true
+    //   }
+    // }
   },
 
   compatibilityDate: "2025-05-15",
