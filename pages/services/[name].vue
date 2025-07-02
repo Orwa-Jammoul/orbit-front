@@ -94,7 +94,7 @@ const isLoading = ref(true)
 
 const { data: serviceData } = await useGetSiteApi().GetAll(`${api.productsApi}/${id}`);
 dataResult.value = serviceData.value.data
-
+// console.log(dataResult.value);
 // if (process.client) {
 if (serviceData.value) {
   // console.log(dataResult.value);

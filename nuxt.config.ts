@@ -62,6 +62,16 @@ export default defineNuxtConfig({
         ar: '/تواصل-معنا',
         de: '/Kontakt'
       },
+      'privacy-policy': {
+        en: '/privacy-policy',
+        ar: '/سياسة-الخصوصية',
+        de: '/Datenschutzrichtlinie'
+      },
+      'terms-and-conditions': {
+        en: '/terms-and-conditions',
+        ar: '/الشروط-والأحكام',
+        de: '/Geschäftsbedingungen'
+      },
       '.well-known/[pathMatch(.*)]': {
         en: '/.well-known/:pathMatch(.*)',
         ar: '/.well-known/:pathMatch(.*)',

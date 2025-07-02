@@ -1,6 +1,6 @@
 <template>
-  <div>
-    <h1>{{$t('test')}}</h1>
+  <div> 
+    <ThreeSphereLines/>
   </div>
 </template>
 

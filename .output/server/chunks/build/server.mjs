@@ -1322,158 +1322,158 @@ const _routes = [
   {
     name: "test___en",
     path: "/test",
-    component: () => import('./test-BOhFJevY.mjs')
+    component: () => import('./test-eciE_zY4.mjs')
   },
   {
     name: "test___ar",
     path: "/ar/test",
-    component: () => import('./test-BOhFJevY.mjs')
+    component: () => import('./test-eciE_zY4.mjs')
   },
   {
     name: "test___de",
     path: "/de/test",
-    component: () => import('./test-BOhFJevY.mjs')
+    component: () => import('./test-eciE_zY4.mjs')
   },
   {
     name: "index___en",
     path: "/",
     meta: __nuxt_page_meta$2 || {},
-    component: () => import('./index-A6BWwuAQ.mjs')
+    component: () => import('./index-D4pV5xSi.mjs')
   },
   {
     name: "index___ar",
     path: "/ar",
     meta: __nuxt_page_meta$2 || {},
-    component: () => import('./index-A6BWwuAQ.mjs')
+    component: () => import('./index-D4pV5xSi.mjs')
   },
   {
     name: "index___de",
     path: "/de",
     meta: __nuxt_page_meta$2 || {},
-    component: () => import('./index-A6BWwuAQ.mjs')
+    component: () => import('./index-D4pV5xSi.mjs')
   },
   {
     name: "about-us___en",
     path: "/about-us",
     meta: __nuxt_page_meta$1 || {},
-    component: () => import('./index-BhdTi_N8.mjs')
+    component: () => import('./index-BQDxKkpz.mjs')
   },
   {
     name: "about-us___ar",
     path: "/ar/%D9%85%D9%86-%D9%86%D8%AD%D9%86",
     meta: __nuxt_page_meta$1 || {},
-    component: () => import('./index-BhdTi_N8.mjs')
+    component: () => import('./index-BQDxKkpz.mjs')
   },
   {
     name: "about-us___de",
     path: "/de/%C3%9Cber-Uns",
     meta: __nuxt_page_meta$1 || {},
-    component: () => import('./index-BhdTi_N8.mjs')
+    component: () => import('./index-BQDxKkpz.mjs')
   },
   {
     name: "privacy-policy___en",
     path: "/privacy-policy",
-    component: () => import('./privacy-policy-CuA6U-NE.mjs')
+    component: () => import('./privacy-policy-B2ppMrZZ.mjs')
   },
   {
     name: "privacy-policy___ar",
-    path: "/ar/privacy-policy",
-    component: () => import('./privacy-policy-CuA6U-NE.mjs')
+    path: "/ar/%D8%B3%D9%8A%D8%A7%D8%B3%D8%A9-%D8%A7%D9%84%D8%AE%D8%B5%D9%88%D8%B5%D9%8A%D8%A9",
+    component: () => import('./privacy-policy-B2ppMrZZ.mjs')
   },
   {
     name: "privacy-policy___de",
-    path: "/de/privacy-policy",
-    component: () => import('./privacy-policy-CuA6U-NE.mjs')
+    path: "/de/Datenschutzrichtlinie",
+    component: () => import('./privacy-policy-B2ppMrZZ.mjs')
   },
   {
     name: "services___en",
     path: "/services",
-    component: () => import('./index-BNTYl9aF.mjs')
+    component: () => import('./index-Dr_soLte.mjs')
   },
   {
     name: "services___ar",
     path: "/ar/%D8%A7%D9%84%D8%AE%D8%AF%D9%85%D8%A7%D8%AA",
-    component: () => import('./index-BNTYl9aF.mjs')
+    component: () => import('./index-Dr_soLte.mjs')
   },
   {
     name: "services___de",
     path: "/de/Dienstleistungen",
-    component: () => import('./index-BNTYl9aF.mjs')
+    component: () => import('./index-Dr_soLte.mjs')
   },
   {
     name: "training___en",
     path: "/training",
-    component: () => import('./index-BpRTyVSR.mjs')
+    component: () => import('./index-yJWfMQuF.mjs')
   },
   {
     name: "training___ar",
     path: "/ar/%D8%AA%D8%AF%D8%B1%D9%8A%D8%A8",
-    component: () => import('./index-BpRTyVSR.mjs')
+    component: () => import('./index-yJWfMQuF.mjs')
   },
   {
     name: "training___de",
     path: "/de/Ausbildung",
-    component: () => import('./index-BpRTyVSR.mjs')
+    component: () => import('./index-yJWfMQuF.mjs')
   },
   {
     name: "services-name___en",
     path: "/services/:name()",
-    component: () => import('./_name_-2kFqp4ru.mjs')
+    component: () => import('./_name_-Bfp-1oRu.mjs')
   },
   {
     name: "services-name___ar",
     path: "/ar/%D8%A7%D9%84%D8%AE%D8%AF%D9%85%D8%A7%D8%AA/:name()",
-    component: () => import('./_name_-2kFqp4ru.mjs')
+    component: () => import('./_name_-Bfp-1oRu.mjs')
   },
   {
     name: "services-name___de",
     path: "/de/Dienstleistungen/:name()",
-    component: () => import('./_name_-2kFqp4ru.mjs')
+    component: () => import('./_name_-Bfp-1oRu.mjs')
   },
   {
     name: "training-name___en",
     path: "/training/:name()",
-    component: () => import('./_name_-CAgc-3IB.mjs')
+    component: () => import('./_name_-CbarFGD7.mjs')
   },
   {
     name: "training-name___ar",
     path: "/ar/%D8%AA%D8%AF%D8%B1%D9%8A%D8%A8/:name()",
-    component: () => import('./_name_-CAgc-3IB.mjs')
+    component: () => import('./_name_-CbarFGD7.mjs')
   },
   {
     name: "training-name___de",
     path: "/de/Ausbildung/:name()",
-    component: () => import('./_name_-CAgc-3IB.mjs')
+    component: () => import('./_name_-CbarFGD7.mjs')
   },
   {
     name: "contact-us___en",
     path: "/contact-us",
-    component: () => import('./index-BAgUwzHq.mjs')
+    component: () => import('./index-CkeXAfgg.mjs')
   },
   {
     name: "contact-us___ar",
     path: "/ar/%D8%AA%D9%88%D8%A7%D8%B5%D9%84-%D9%85%D8%B9%D9%86%D8%A7",
-    component: () => import('./index-BAgUwzHq.mjs')
+    component: () => import('./index-CkeXAfgg.mjs')
   },
   {
     name: "contact-us___de",
     path: "/de/Kontakt",
-    component: () => import('./index-BAgUwzHq.mjs')
+    component: () => import('./index-CkeXAfgg.mjs')
   },
   {
     name: "terms-and-conditions___en",
     path: "/terms-and-conditions",
-    component: () => import('./terms-and-conditions-DfQdiS50.mjs')
+    component: () => import('./terms-and-conditions-LS4szMto.mjs')
   },
   {
     name: "terms-and-conditions___ar",
-    path: "/ar/terms-and-conditions",
-    component: () => import('./terms-and-conditions-DfQdiS50.mjs')
+    path: "/ar/%D8%A7%D9%84%D8%B4%D8%B1%D9%88%D8%B7-%D9%88%D8%A7%D9%84%D8%A3%D8%AD%D9%83%D8%A7%D9%85",
+    component: () => import('./terms-and-conditions-LS4szMto.mjs')
   },
   {
     name: "terms-and-conditions___de",
-    path: "/de/terms-and-conditions",
-    component: () => import('./terms-and-conditions-DfQdiS50.mjs')
+    path: "/de/Gesch%C3%A4ftsbedingungen",
+    component: () => import('./terms-and-conditions-LS4szMto.mjs')
   },
   {
     name: void 0 ,
@@ -39041,8 +39041,8 @@ const plugins = [
   init_IycSiUTa0ooOjNElHE0EG94Rz0cZb4_bKuXwa_4z9aY
 ];
 const layouts = {
-  default: defineAsyncComponent(() => import('./default-Mx5yXS3Y.mjs').then((m) => m.default || m)),
-  home: defineAsyncComponent(() => import('./home-8g_3jaN2.mjs').then((m) => m.default || m))
+  default: defineAsyncComponent(() => import('./default-C76Xwc81.mjs').then((m) => m.default || m)),
+  home: defineAsyncComponent(() => import('./home-Bk7uZ6Ae.mjs').then((m) => m.default || m))
 };
 const LayoutLoader = defineComponent$1({
   name: "LayoutLoader",

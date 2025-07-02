@@ -73,6 +73,7 @@ const similarItems = ref(null)
 const isLoading = ref(true)
 
 const { data: courseData } = await useGetSiteApi().GetAll(`${api.blocksApi}/${id}`);
+// console.log(courseData.value);
 // console.log(useMenu().value);
 // watchEffect(async () => {
 //   if (process.client) {

@@ -1,10 +1,10 @@
 <template>
   <div ref="langMenu" class="navbar-item pcc" @mouseleave="selected">
     <div class="top-section" @mouseenter="reselect" @click="toggle">
-      <nuxt-link class="main-link d-flex align-items-center">
+      <button class="main-link d-flex align-items-center">
         <!-- {{ siteLanguages().value[useLang().value] }} -->
         <Icon name="ion:earth" size="20px" />
-      </nuxt-link>
+      </button>
     </div>
     <div class="bottom-section" :class="rtl()" >
       <MenuDropLanguages class="nav-drop-down" @selected="selected" /> 

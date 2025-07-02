@@ -2,12 +2,13 @@
    <div class="page-root">
 
     <!-- <HomeHeaderDesign1/>     -->
-    <ElementsHeaderImage 
+    <!-- <ElementsHeaderImage 
       title="" 
       :imgUrl="cImg(dataResult.image)"
       imgAlt="Orbit Engineering Office - header"
       contain
-    />
+    /> -->
+    <ThreeSphere1/>
     <div class="container">
       <div class="path-links text-start pt-4">
         <h5 class="links-frame" dir="auto">

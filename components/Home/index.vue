@@ -3,9 +3,9 @@
     <HomeMainHeader/>
     <HomeAboutUs/>
     <HomeServices/> 
-    <!-- 
-    -->
-    <!-- <HomeExperiences/> -->
+    <HomeTest/>
+    <!-- <HomeTest2/> -->
+    <HomeExperiences/>
     <HomeTraining/>
     <!-- <HomeContact/> -->
 

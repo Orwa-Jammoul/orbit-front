@@ -1,6 +1,7 @@
 <template>
   <div class="design-root">
     <div class="bg-section">
+      
       <!-- Red loading div - shown while videos load -->
       <div v-if="!videosLoaded" class="loading-placeholder pcc">
         <div class="loading-frame">

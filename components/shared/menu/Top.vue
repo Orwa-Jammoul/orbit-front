@@ -8,8 +8,8 @@
       </nuxt-link>
       <div class="nav-links-side pce">
         <MenuLanguage/>
-        <MenuCart/>
-        <MenuAccount/>
+        <!-- <MenuCart/>
+        <MenuAccount/> -->
         <div class="vertical-nav">
           <SharedNavVertical :pages="allPages"/>
         </div>

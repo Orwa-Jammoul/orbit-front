@@ -1,7 +1,7 @@
 <template>
   <div>
     <div>
-      <SharedNavbar class="nav-bar-main"/>
+      <SharedNavbar class="nav-bar-main" :class="{'bg': showBg}"/>
       <SharedMenuContact/>
       <div id="slot">
         <slot />
@@ -18,7 +18,12 @@ useHead({
     lang: locale.value 
   }
 })
-  
+
+const showBg = ref(false);
+
+if(process.client){
+  showBg.value = true;
+}
 
 </script>
 <style lang="scss" scoped>
@@ -30,7 +35,7 @@ useHead({
   top: 0;
   left: 0;
   &.bg{
-    background-color: rgba(0, 0, 0, 0.3);
+    background-color: rgba(0, 0, 0, 0.4);
     backdrop-filter: blur(5px);
   }
 }

@@ -348,6 +348,138 @@ const sources = [
             },
             {
                 "_sitemap": "en-US",
+                "loc": "/privacy-policy",
+                "alternatives": [
+                    {
+                        "hreflang": "en-US",
+                        "href": "/privacy-policy"
+                    },
+                    {
+                        "hreflang": "ar-AE",
+                        "href": "ar/سياسة-الخصوصية"
+                    },
+                    {
+                        "hreflang": "de-DE",
+                        "href": "de/Datenschutzrichtlinie"
+                    },
+                    {
+                        "hreflang": "x-default",
+                        "href": "/privacy-policy"
+                    }
+                ]
+            },
+            {
+                "_sitemap": "ar-AE",
+                "loc": "ar/سياسة-الخصوصية",
+                "alternatives": [
+                    {
+                        "hreflang": "en-US",
+                        "href": "/privacy-policy"
+                    },
+                    {
+                        "hreflang": "ar-AE",
+                        "href": "ar/سياسة-الخصوصية"
+                    },
+                    {
+                        "hreflang": "de-DE",
+                        "href": "de/Datenschutzrichtlinie"
+                    },
+                    {
+                        "hreflang": "x-default",
+                        "href": "/privacy-policy"
+                    }
+                ]
+            },
+            {
+                "_sitemap": "de-DE",
+                "loc": "de/Datenschutzrichtlinie",
+                "alternatives": [
+                    {
+                        "hreflang": "en-US",
+                        "href": "/privacy-policy"
+                    },
+                    {
+                        "hreflang": "ar-AE",
+                        "href": "ar/سياسة-الخصوصية"
+                    },
+                    {
+                        "hreflang": "de-DE",
+                        "href": "de/Datenschutzrichtlinie"
+                    },
+                    {
+                        "hreflang": "x-default",
+                        "href": "/privacy-policy"
+                    }
+                ]
+            },
+            {
+                "_sitemap": "en-US",
+                "loc": "/terms-and-conditions",
+                "alternatives": [
+                    {
+                        "hreflang": "en-US",
+                        "href": "/terms-and-conditions"
+                    },
+                    {
+                        "hreflang": "ar-AE",
+                        "href": "ar/الشروط-والأحكام"
+                    },
+                    {
+                        "hreflang": "de-DE",
+                        "href": "de/Geschäftsbedingungen"
+                    },
+                    {
+                        "hreflang": "x-default",
+                        "href": "/terms-and-conditions"
+                    }
+                ]
+            },
+            {
+                "_sitemap": "ar-AE",
+                "loc": "ar/الشروط-والأحكام",
+                "alternatives": [
+                    {
+                        "hreflang": "en-US",
+                        "href": "/terms-and-conditions"
+                    },
+                    {
+                        "hreflang": "ar-AE",
+                        "href": "ar/الشروط-والأحكام"
+                    },
+                    {
+                        "hreflang": "de-DE",
+                        "href": "de/Geschäftsbedingungen"
+                    },
+                    {
+                        "hreflang": "x-default",
+                        "href": "/terms-and-conditions"
+                    }
+                ]
+            },
+            {
+                "_sitemap": "de-DE",
+                "loc": "de/Geschäftsbedingungen",
+                "alternatives": [
+                    {
+                        "hreflang": "en-US",
+                        "href": "/terms-and-conditions"
+                    },
+                    {
+                        "hreflang": "ar-AE",
+                        "href": "ar/الشروط-والأحكام"
+                    },
+                    {
+                        "hreflang": "de-DE",
+                        "href": "de/Geschäftsbedingungen"
+                    },
+                    {
+                        "hreflang": "x-default",
+                        "href": "/terms-and-conditions"
+                    }
+                ]
+            },
+            {
+                "_sitemap": "en-US",
                 "loc": "/.well-known/:pathMatch(.*)",
                 "alternatives": [
                     {

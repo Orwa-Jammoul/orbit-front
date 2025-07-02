@@ -22,10 +22,10 @@
     </div>
     <div class="bottom-section rp">
       <div class="footer-links pcs">
-        <nuxt-link class="footer-link" :to="langPath('/privacy-policy')">
+        <nuxt-link class="footer-link" :to="localePath('/privacy-policy')">
           {{ $t('privacy-policy') }}
         </nuxt-link>
-        <nuxt-link class="footer-link" :to="langPath('/terms-and-conditions')">
+        <nuxt-link class="footer-link" :to="localePath('/terms-and-conditions')">
           {{ $t('terms-and-conditions') }}
         </nuxt-link>
       </div>
@@ -39,6 +39,7 @@
 </template>
 
 <script setup>
+const localePath = useLocalePath()
 const pages = ref(useMenu().value.navbar);
 // const pages = ref(useMenu().value.footer);
 // const allSocialMedia = ref(useMenu().value.social);
