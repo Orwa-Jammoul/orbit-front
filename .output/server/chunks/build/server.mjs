@@ -1338,19 +1338,19 @@ const _routes = [
     name: "index___en",
     path: "/",
     meta: __nuxt_page_meta$2 || {},
-    component: () => import('./index-D4pV5xSi.mjs')
+    component: () => import('./index-D8mIJIzZ.mjs')
   },
   {
     name: "index___ar",
     path: "/ar",
     meta: __nuxt_page_meta$2 || {},
-    component: () => import('./index-D4pV5xSi.mjs')
+    component: () => import('./index-D8mIJIzZ.mjs')
   },
   {
     name: "index___de",
     path: "/de",
     meta: __nuxt_page_meta$2 || {},
-    component: () => import('./index-D4pV5xSi.mjs')
+    component: () => import('./index-D8mIJIzZ.mjs')
   },
   {
     name: "about-us___en",
@@ -1403,47 +1403,47 @@ const _routes = [
   {
     name: "training___en",
     path: "/training",
-    component: () => import('./index-yJWfMQuF.mjs')
+    component: () => import('./index-DLjh2wTp.mjs')
   },
   {
     name: "training___ar",
     path: "/ar/%D8%AA%D8%AF%D8%B1%D9%8A%D8%A8",
-    component: () => import('./index-yJWfMQuF.mjs')
+    component: () => import('./index-DLjh2wTp.mjs')
   },
   {
     name: "training___de",
     path: "/de/Ausbildung",
-    component: () => import('./index-yJWfMQuF.mjs')
+    component: () => import('./index-DLjh2wTp.mjs')
   },
   {
     name: "services-name___en",
     path: "/services/:name()",
-    component: () => import('./_name_-Bfp-1oRu.mjs')
+    component: () => import('./_name_-S0Rp2Ooo.mjs')
   },
   {
     name: "services-name___ar",
     path: "/ar/%D8%A7%D9%84%D8%AE%D8%AF%D9%85%D8%A7%D8%AA/:name()",
-    component: () => import('./_name_-Bfp-1oRu.mjs')
+    component: () => import('./_name_-S0Rp2Ooo.mjs')
   },
   {
     name: "services-name___de",
     path: "/de/Dienstleistungen/:name()",
-    component: () => import('./_name_-Bfp-1oRu.mjs')
+    component: () => import('./_name_-S0Rp2Ooo.mjs')
   },
   {
     name: "training-name___en",
     path: "/training/:name()",
-    component: () => import('./_name_-CbarFGD7.mjs')
+    component: () => import('./_name_-CDFrLixj.mjs')
   },
   {
     name: "training-name___ar",
     path: "/ar/%D8%AA%D8%AF%D8%B1%D9%8A%D8%A8/:name()",
-    component: () => import('./_name_-CbarFGD7.mjs')
+    component: () => import('./_name_-CDFrLixj.mjs')
   },
   {
     name: "training-name___de",
     path: "/de/Ausbildung/:name()",
-    component: () => import('./_name_-CbarFGD7.mjs')
+    component: () => import('./_name_-CDFrLixj.mjs')
   },
   {
     name: "contact-us___en",

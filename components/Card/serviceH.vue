@@ -91,6 +91,7 @@ const localePath = useLocalePath()
       }
       .card-des{
         margin: 0;
+        margin-bottom: .5rem;
         font-size: 12px;
         width: 100%;
         color: rgb(186, 186, 186);
@@ -98,7 +99,7 @@ const localePath = useLocalePath()
         overflow: hidden;
         text-wrap: nowrap;
         text-overflow: ellipsis;
-        line-height: 2rem;
+        line-height: 1rem;
       }
       .buttons{
         width: 100%;

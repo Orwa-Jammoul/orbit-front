@@ -5,7 +5,7 @@
     <HomeServices/> 
     <HomeTest/>
     <!-- <HomeTest2/> -->
-    <HomeExperiences/>
+    <!-- <HomeExperiences/> -->
     <HomeTraining/>
     <!-- <HomeContact/> -->
 

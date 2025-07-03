@@ -33,9 +33,9 @@ const services = ref([]);
 const { t } = useI18n()
 const localePath = useLocalePath()
 const { data:servicesData } = await useGetSiteApi().GetAll(
-  `${api.blocksApi}/GetMaster?categoryId=5`
+  `${api.coursesApi}/GetAllPagedSearchCourse?Coursename=&propductcategoryid=0&propductSubcategoryid=0&propductSubSubcategoryid=0&propductSubSubSubcategoryid=0&fromprice=0&toprice=0&pageNumber=0&pageSize=12`
 );
-services.value = servicesData.value.items
+services.value = servicesData.value.data
 
 useSeoMeta({
   // Basic SEO

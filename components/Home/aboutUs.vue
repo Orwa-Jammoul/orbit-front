@@ -22,10 +22,10 @@
         <div class="gr-circle3"/>
       </div>
       <div class="about-box2 grid-bg1">
-        <h1 class="metal-text">
+        <!-- <h1 class="metal-text">
           {{ useName(about) }}
-        </h1>
-        <p>{{ getInnerText(useDes(about)) }}</p>
+        </h1> -->
+        <p>{{ getInnerText(useDes1(about)) }}</p>
          <div class="go-to pcs">
           <p class="m-0">
             {{ $t('read-more') }}

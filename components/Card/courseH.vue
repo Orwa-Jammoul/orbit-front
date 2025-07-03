@@ -10,7 +10,7 @@
     <div class="service-card-frame">
       <div class="card-left">
         <div class="img-frame cover">
-          <img :src="cImg(cardData.image)" 
+          <img :src="cImg(cardData.courseImageUrl1)" 
             :alt="useName(cardData)"
           >
         </div>
@@ -19,7 +19,7 @@
         <h5 class="card-title" :title="useName(cardData)">
           {{ useName(cardData) }}
         </h5>
-        <p class="card-des">{{ getInnerText(useDes(cardData)) }}</p>
+        <p class="card-des">{{ getInnerText(useDes1(cardData)) }}</p>
         <div class="buttons">
           <button class="details-btn">{{ $t('details') }}</button>
         </div>

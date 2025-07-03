@@ -22,26 +22,26 @@
           </div>
           <div class="description">
             <div class="section">
-              <div v-if="dataResult?.image" class="img-frame contain" :class="rtl()">
-                <img :src="cImg(dataResult.image)" alt=" Photo">
+              <div v-if="dataResult?.courseImageUrl1" class="img-frame contain" :class="rtl()">
+                <img :src="cImg(dataResult.courseImageUrl1)" alt=" Photo">
               </div>
             <div class="des" v-html="useDes(dataResult)"></div>
           </div>
             <div class="section">
-              <div v-if="dataResult?.image1" class="img-frame contain" :class="rtl()">
-                <img :src="cImg(dataResult.image1)" alt=" Photo">
+              <div v-if="dataResult?.courseImageUrl2" class="img-frame contain" :class="rtl()">
+                <img :src="cImg(dataResult.courseImageUrl2)" alt=" Photo">
               </div>
               <div class="des" v-html="useDes1(dataResult)"></div>
             </div>
             <div class="section">
-              <div v-if="dataResult?.image2" class="img-frame contain" :class="rtl()">
-                <img :src="cImg(dataResult.image2)" alt=" Photo">
+              <div v-if="dataResult?.courseImageUrl3" class="img-frame contain" :class="rtl()">
+                <img :src="cImg(dataResult.courseImageUrl3)" alt=" Photo">
               </div>
               <div class="des" v-html="useDes2(dataResult)"></div>
             </div>
             <div class="section">
-              <div v-if="dataResult?.image3" class="img-frame contain" :class="rtl()">
-                <img :src="cImg(dataResult.image3)" alt=" Photo">
+              <div v-if="dataResult?.courseImageUrl4" class="img-frame contain" :class="rtl()">
+                <img :src="cImg(dataResult.courseImageUrl4)" alt=" Photo">
               </div>
               <div class="des" v-html="useDes3(dataResult)"></div>
             </div>
@@ -72,17 +72,17 @@ const dataResult = ref(null)
 const similarItems = ref(null)
 const isLoading = ref(true)
 
-const { data: courseData } = await useGetSiteApi().GetAll(`${api.blocksApi}/${id}`);
+const { data: courseData } = await useGetSiteApi().GetAll(`${api.coursesApi}/${id}`);
 // console.log(courseData.value);
 // console.log(useMenu().value);
 // watchEffect(async () => {
 //   if (process.client) {
 if (courseData.value) {
-  dataResult.value = courseData.value
+  dataResult.value = courseData.value.data
   const { data:similarData } = await useGetSiteApi().GetAll(
-    `${api.blocksApi}?categoryId=${dataResult.value.categoryId}&pageNumber=0&pageSize=12`
+    `${api.coursesApi}/GetAllPagedSearchCourse?Coursename=&propductcategoryid=0&propductSubcategoryid=0&propductSubSubcategoryid=0&propductSubSubSubcategoryid=0&fromprice=0&toprice=0&pageNumber=0&pageSize=12`
   );
-  similarItems.value = similarData.value.items.filter(item=>item.id != dataResult.value.id)
+  similarItems.value = similarData.value.data.filter(item=>item.id != dataResult.value.id)
   isLoading.value= false
 }
 //   }
@@ -121,7 +121,7 @@ useSeoMeta({
               // position:absolute;
               // display: flex;
               // height: 50vh;
-              width: 40%;
+              width: 100%;
               height: auto;
               // height: 100%;
               margin-bottom: 2rem;

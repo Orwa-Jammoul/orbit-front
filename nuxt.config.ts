@@ -217,6 +217,7 @@ export default defineNuxtConfig({
         
         getProductCategories:"/api/v1/ProductCategories/GetAllParentCategoriesByType",
         
+        coursesApi:'/api/v1/Courses',
         // GetByServiceTypeIdApi:'/api/v1/Products/GetByServiceTypeId',
 
         //order

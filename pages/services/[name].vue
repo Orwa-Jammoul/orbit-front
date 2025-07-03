@@ -190,7 +190,7 @@ useSeoMeta({
               // position:absolute;
               // display: flex;
               // height: 50vh;
-              width: 40%;
+              width: 100%;
               height: auto;
               // height: 100%;
               margin-bottom: 2rem;

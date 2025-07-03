@@ -71,10 +71,13 @@ const services = ref([]);
 // const isLoading = ref(true);
 
 
+// const { data:servicesData } = await useGetSiteApi().GetAll(
+//   `${api.blocksApi}/GetMaster?categoryId=5&pageNumber=0&pageSize=12`
+// );
 const { data:servicesData } = await useGetSiteApi().GetAll(
-  `${api.blocksApi}/GetMaster?categoryId=5&pageNumber=0&pageSize=12`
+  `${api.coursesApi}/GetAllPagedSearchCourse?Coursename=&propductcategoryid=0&propductSubcategoryid=0&propductSubSubcategoryid=0&propductSubSubSubcategoryid=0&fromprice=0&toprice=0&pageNumber=0&pageSize=12`
 );
-services.value = servicesData.value.items
+services.value = servicesData.value.data
 
 // watchEffect(()=> {
 //   if(process.client) {
