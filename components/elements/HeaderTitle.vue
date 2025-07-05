@@ -3,7 +3,7 @@
     <h2 class="fw-bold mb-0 title position-relative">
       {{ title }}
       <!-- <div class="mt-1 div position-relative">
-        <img class="image" :src="`/logo/logo-01.png`" width="30" alt="">
+        <img class="image" :src="`/logo/Orbit_company-logo-en-white-01.png`" width="30" alt="">
       </div> -->
     </h2>
   </section>

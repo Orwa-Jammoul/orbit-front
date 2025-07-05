@@ -30,9 +30,19 @@ const { data:termsData } = await useGetSiteApi().GetAll(
 //   }
 // })
 
+
 useSeoMeta({
   // Basic SEO
   title: useName(termsData.value),
+  description: useName(termsData.value),
+  keywords: useName(termsData.value),
+
+  ogType: useI18n().t('ogType'),
+  ogLocale: useI18n().t('ogLocale'),
+  ogSiteName: useI18n().t('ogSiteName'),
+  robots: 'index, follow',
+  author: useI18n().t('ogSiteName'),
+  canonical: 'https://orbit-eng.net'+ useRoute().fullPath,
 })
 
 </script>

@@ -421,7 +421,7 @@ export const longDate = (date) => {
 export const cImg = (imgUrl,useDefault=true) => {
   const { public: { api, apiBase }, } = useRuntimeConfig();
   if(!imgUrl || imgUrl==''){
-    return useDefault?`/logo/logo-01.png`: null
+    return useDefault?`/logo/Orbit_company-logo-en-white-01.png`: null
   }
   if(imgUrl.startsWith('data:image')){
     return imgUrl;
@@ -521,4 +521,14 @@ export const dashed = (sentence)=>{
     return false
   }
   return sentence.replace(/ /g, '-');
+}
+export const replaceDashes = (input)=>{
+  // Step 1: Replace the middle dash with '@'
+  const withMiddleReplaced = input.replace(/---/, '-@@@-');
+  
+  // Step 2: Replace all remaining dashes with spaces
+  const withSpaces = withMiddleReplaced.replace(/-/g, ' ');
+  
+  // Step 3: Replace '@' back to a dash
+  return withSpaces.replace(/@@@/g, '-');
 }

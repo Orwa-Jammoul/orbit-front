@@ -31,19 +31,19 @@ dataResult.value = pageData.value
 // })
 
 
-useHead({
+
+useSeoMeta({
+  // Basic SEO
   title: useI18n().t('contact-us'),
-  meta: [
-    { 
-      name: 'keywords', 
-      content: useI18n().t('contact-us'),
-    },
-    {
-      name: 'description',
-      content: useI18n().t('contact-us'),
-      // content: 'Contact our team - تواصل مع فريقنا'
-    }
-  ]
+  description: useI18n().t('contact-us'),
+  keywords: useI18n().t('contact-us'),
+
+  ogType: useI18n().t('ogType'),
+  ogLocale: useI18n().t('ogLocale'),
+  ogSiteName: useI18n().t('ogSiteName'),
+  robots: 'index, follow',
+  author: useI18n().t('ogSiteName'),
+  canonical: 'https://orbit-eng.net'+ useRoute().fullPath,
 })
 
 
@@ -51,7 +51,7 @@ useHead({
 </script>
 
 <style lang="scss" scoped>
-.google-map{
-  filter: invert(1);
-}
+// .google-map{
+//   filter: invert(1);
+// }
 </style>

@@ -13,7 +13,7 @@
                 </button>
             </div>
             <footer class="footer text-center">Copyright @ {{ new Date().getFullYear() }} 
-            <span class="fw-bold">Orbit Engineering Office</span>
+            <span class="fw-bold">Orbit Technology and Design Company</span>
             </footer>
         </div>
 

@@ -1,5 +1,5 @@
-import { defineComponent as defineComponent$1, toRef, isRef, resolveDynamicComponent, h, inject as inject$1, computed, createElementBlock, hasInjectionContext, toValue, getCurrentInstance as getCurrentInstance$1, onServerPrefetch, reactive, watch, ref, unref, provide, readonly, shallowRef, nextTick, watchEffect, cloneVNode, defineAsyncComponent, createVNode, Transition, mergeProps, toRefs, useId, onScopeDispose, withDirectives, vShow, Fragment, toDisplayString as toDisplayString$1, resolveDirective, toRaw, createTextVNode, capitalize as capitalize$1, shallowReactive, Suspense, createApp, Text, TransitionGroup, camelize, markRaw, resolveComponent, render, onErrorCaptured, effectScope, isReadonly, isShallow, isReactive, warn as warn$1, getCurrentScope, withCtx, vModelText, Teleport, withModifiers, isVNode as isVNode$1, Comment, useSSRContext } from 'vue';
-import { G as defu, f as createError$1, ab as headSymbol, ac as klona$1, ad as defuFn, ae as useHead$1, a4 as hash, af as sanitizeStatusCode, ag as getContext, ah as $fetch$1, ai as baseURL, p as publicAssetsURL, aj as createHooks, ak as executeAsync, al as titleCase, am as toRouteMatcher, an as createRouter$1, ao as camelCase, ap as useSeoMeta$1, aq as getRequestProtocol, d as destr, ar as getRequestHeaders, as as parse$3, at as getRequestHeader, au as isEqual$3, av as setCookie, aw as getCookie, ax as deleteCookie, ay as resolveUnrefHeadInput } from '../_/nitro.mjs';
+import { defineComponent as defineComponent$1, toRef, isRef, resolveDynamicComponent, h, inject as inject$1, computed, createElementBlock, getCurrentInstance as getCurrentInstance$1, hasInjectionContext, toValue, onServerPrefetch, reactive, watch, ref, unref, provide, readonly, shallowRef, nextTick, watchEffect, cloneVNode, defineAsyncComponent, createVNode, Transition, mergeProps, toRefs, useId, onScopeDispose, withDirectives, vShow, Fragment, toDisplayString as toDisplayString$1, resolveDirective, toRaw, createTextVNode, capitalize as capitalize$1, shallowReactive, Suspense, createApp, Text, TransitionGroup, camelize, markRaw, resolveComponent, render, onErrorCaptured, effectScope, isReadonly, isShallow, isReactive, warn as warn$1, getCurrentScope, withCtx, vModelText, Teleport, withModifiers, isVNode as isVNode$1, Comment, useSSRContext } from 'vue';
+import { G as defu, f as createError$1, ab as useHead$1, ac as headSymbol, ad as klona$1, ae as defuFn, a4 as hash, af as sanitizeStatusCode, ag as getContext, ah as $fetch$1, ai as baseURL, p as publicAssetsURL, aj as createHooks, ak as executeAsync, al as titleCase, am as toRouteMatcher, an as createRouter$1, ao as camelCase, ap as useSeoMeta$1, aq as getRequestProtocol, d as destr, ar as getRequestHeaders, as as parse$3, at as getRequestHeader, au as isEqual$3, av as setCookie, aw as getCookie, ax as deleteCookie, ay as resolveUnrefHeadInput } from '../_/nitro.mjs';
 import { useRoute as useRoute$2, RouterView, createMemoryHistory, createRouter, START_LOCATION, isNavigationFailure } from 'vue-router';
 import { config, library } from '@fortawesome/fontawesome-svg-core';
 import { faSearch, faUser, faHome } from '@fortawesome/free-solid-svg-icons';
@@ -1338,142 +1338,142 @@ const _routes = [
     name: "index___en",
     path: "/",
     meta: __nuxt_page_meta$2 || {},
-    component: () => import('./index-D8mIJIzZ.mjs')
+    component: () => import('./index-CU3aG8xy.mjs')
   },
   {
     name: "index___ar",
     path: "/ar",
     meta: __nuxt_page_meta$2 || {},
-    component: () => import('./index-D8mIJIzZ.mjs')
+    component: () => import('./index-CU3aG8xy.mjs')
   },
   {
     name: "index___de",
     path: "/de",
     meta: __nuxt_page_meta$2 || {},
-    component: () => import('./index-D8mIJIzZ.mjs')
+    component: () => import('./index-CU3aG8xy.mjs')
   },
   {
     name: "about-us___en",
     path: "/about-us",
     meta: __nuxt_page_meta$1 || {},
-    component: () => import('./index-BQDxKkpz.mjs')
+    component: () => import('./index-a2wbr5fn.mjs')
   },
   {
     name: "about-us___ar",
     path: "/ar/%D9%85%D9%86-%D9%86%D8%AD%D9%86",
     meta: __nuxt_page_meta$1 || {},
-    component: () => import('./index-BQDxKkpz.mjs')
+    component: () => import('./index-a2wbr5fn.mjs')
   },
   {
     name: "about-us___de",
     path: "/de/%C3%9Cber-Uns",
     meta: __nuxt_page_meta$1 || {},
-    component: () => import('./index-BQDxKkpz.mjs')
+    component: () => import('./index-a2wbr5fn.mjs')
   },
   {
     name: "privacy-policy___en",
     path: "/privacy-policy",
-    component: () => import('./privacy-policy-B2ppMrZZ.mjs')
+    component: () => import('./privacy-policy-BdJPqqKy.mjs')
   },
   {
     name: "privacy-policy___ar",
     path: "/ar/%D8%B3%D9%8A%D8%A7%D8%B3%D8%A9-%D8%A7%D9%84%D8%AE%D8%B5%D9%88%D8%B5%D9%8A%D8%A9",
-    component: () => import('./privacy-policy-B2ppMrZZ.mjs')
+    component: () => import('./privacy-policy-BdJPqqKy.mjs')
   },
   {
     name: "privacy-policy___de",
     path: "/de/Datenschutzrichtlinie",
-    component: () => import('./privacy-policy-B2ppMrZZ.mjs')
+    component: () => import('./privacy-policy-BdJPqqKy.mjs')
   },
   {
     name: "services___en",
     path: "/services",
-    component: () => import('./index-Dr_soLte.mjs')
+    component: () => import('./index-560ymV27.mjs')
   },
   {
     name: "services___ar",
     path: "/ar/%D8%A7%D9%84%D8%AE%D8%AF%D9%85%D8%A7%D8%AA",
-    component: () => import('./index-Dr_soLte.mjs')
+    component: () => import('./index-560ymV27.mjs')
   },
   {
     name: "services___de",
     path: "/de/Dienstleistungen",
-    component: () => import('./index-Dr_soLte.mjs')
+    component: () => import('./index-560ymV27.mjs')
   },
   {
     name: "training___en",
     path: "/training",
-    component: () => import('./index-DLjh2wTp.mjs')
+    component: () => import('./index-Dk4YbYtV.mjs')
   },
   {
     name: "training___ar",
     path: "/ar/%D8%AA%D8%AF%D8%B1%D9%8A%D8%A8",
-    component: () => import('./index-DLjh2wTp.mjs')
+    component: () => import('./index-Dk4YbYtV.mjs')
   },
   {
     name: "training___de",
     path: "/de/Ausbildung",
-    component: () => import('./index-DLjh2wTp.mjs')
+    component: () => import('./index-Dk4YbYtV.mjs')
   },
   {
     name: "services-name___en",
     path: "/services/:name()",
-    component: () => import('./_name_-S0Rp2Ooo.mjs')
+    component: () => import('./_name_-DmDFlJtO.mjs')
   },
   {
     name: "services-name___ar",
     path: "/ar/%D8%A7%D9%84%D8%AE%D8%AF%D9%85%D8%A7%D8%AA/:name()",
-    component: () => import('./_name_-S0Rp2Ooo.mjs')
+    component: () => import('./_name_-DmDFlJtO.mjs')
   },
   {
     name: "services-name___de",
     path: "/de/Dienstleistungen/:name()",
-    component: () => import('./_name_-S0Rp2Ooo.mjs')
+    component: () => import('./_name_-DmDFlJtO.mjs')
   },
   {
     name: "training-name___en",
     path: "/training/:name()",
-    component: () => import('./_name_-CDFrLixj.mjs')
+    component: () => import('./_name_-C4briEpj.mjs')
   },
   {
     name: "training-name___ar",
     path: "/ar/%D8%AA%D8%AF%D8%B1%D9%8A%D8%A8/:name()",
-    component: () => import('./_name_-CDFrLixj.mjs')
+    component: () => import('./_name_-C4briEpj.mjs')
   },
   {
     name: "training-name___de",
     path: "/de/Ausbildung/:name()",
-    component: () => import('./_name_-CDFrLixj.mjs')
+    component: () => import('./_name_-C4briEpj.mjs')
   },
   {
     name: "contact-us___en",
     path: "/contact-us",
-    component: () => import('./index-CkeXAfgg.mjs')
+    component: () => import('./index-DA67kJqh.mjs')
   },
   {
     name: "contact-us___ar",
     path: "/ar/%D8%AA%D9%88%D8%A7%D8%B5%D9%84-%D9%85%D8%B9%D9%86%D8%A7",
-    component: () => import('./index-CkeXAfgg.mjs')
+    component: () => import('./index-DA67kJqh.mjs')
   },
   {
     name: "contact-us___de",
     path: "/de/Kontakt",
-    component: () => import('./index-CkeXAfgg.mjs')
+    component: () => import('./index-DA67kJqh.mjs')
   },
   {
     name: "terms-and-conditions___en",
     path: "/terms-and-conditions",
-    component: () => import('./terms-and-conditions-LS4szMto.mjs')
+    component: () => import('./terms-and-conditions-BNhnpWIV.mjs')
   },
   {
     name: "terms-and-conditions___ar",
     path: "/ar/%D8%A7%D9%84%D8%B4%D8%B1%D9%88%D8%B7-%D9%88%D8%A7%D9%84%D8%A3%D8%AD%D9%83%D8%A7%D9%85",
-    component: () => import('./terms-and-conditions-LS4szMto.mjs')
+    component: () => import('./terms-and-conditions-BNhnpWIV.mjs')
   },
   {
     name: "terms-and-conditions___de",
     path: "/de/Gesch%C3%A4ftsbedingungen",
-    component: () => import('./terms-and-conditions-LS4szMto.mjs')
+    component: () => import('./terms-and-conditions-BNhnpWIV.mjs')
   },
   {
     name: void 0 ,
@@ -1638,7 +1638,7 @@ const namedMiddleware = {
   "auth-product-exists": () => import('./auth-product-exists-CEeB4PDx.mjs'),
   auth: () => import('./auth-DyVkDI7F.mjs'),
   "not-authorize": () => import('./not-authorize-RcZZEUTM.mjs'),
-  "supplier-company": () => import('./supplierCompany-VaiTuia9.mjs'),
+  "supplier-company": () => import('./supplierCompany-DdjSNWcA.mjs'),
   "validate-id-digital": () => import('./validate-id-digital-mYdQL5uK.mjs')
 };
 const plugin = /* @__PURE__ */ defineNuxtPlugin({
@@ -2677,11 +2677,11 @@ function deepCopy(src, des) {
   }
 }
 const resource$2 = {
-  "ogTitle": { "t": 0, "b": { "t": 2, "i": [{ "t": 3 }], "s": "Orbit Engineering Office" } },
+  "ogTitle": { "t": 0, "b": { "t": 2, "i": [{ "t": 3 }], "s": "Orbit Technology and Design Company" } },
   "ogDescription": { "t": 0, "b": { "t": 2, "i": [{ "t": 3 }], "s": "Technology services website" } },
   "ogType": { "t": 0, "b": { "t": 2, "i": [{ "t": 3 }], "s": "Technology services website" } },
   "ogLocale": { "t": 0, "b": { "t": 2, "i": [{ "t": 3 }], "s": "en_US" } },
-  "ogSiteName": { "t": 0, "b": { "t": 2, "i": [{ "t": 3 }], "s": "Orbit Engineering Office" } },
+  "ogSiteName": { "t": 0, "b": { "t": 2, "i": [{ "t": 3 }], "s": "Orbit Technology and Design Company" } },
   "more": { "t": 0, "b": { "t": 2, "i": [{ "t": 3 }], "s": "More" } },
   "scroll": { "t": 0, "b": { "t": 2, "i": [{ "t": 3 }], "s": "scroll" } },
   "terms-and-conditions": { "t": 0, "b": { "t": 2, "i": [{ "t": 3 }], "s": "Terms and Conditions" } },
@@ -2911,11 +2911,11 @@ const resource$2 = {
   "Discount": { "t": 0, "b": { "t": 2, "i": [{ "t": 3 }], "s": "Discount" } }
 };
 const resource$1 = {
-  "ogTitle": { "t": 0, "b": { "t": 2, "i": [{ "t": 3 }], "s": "مكتب أوربيت الهندسي" } },
+  "ogTitle": { "t": 0, "b": { "t": 2, "i": [{ "t": 3 }], "s": "شركة أوربيت للتقانة والتصميم" } },
   "ogDescription": { "t": 0, "b": { "t": 2, "i": [{ "t": 3 }], "s": "موقع خدمات التكنولوجيا" } },
   "ogType": { "t": 0, "b": { "t": 2, "i": [{ "t": 3 }], "s": "موقع خدمات التكنولوجيا" } },
   "ogLocale": { "t": 0, "b": { "t": 2, "i": [{ "t": 3 }], "s": "ar_AE" } },
-  "ogSiteName": { "t": 0, "b": { "t": 2, "i": [{ "t": 3 }], "s": "مكتب أوربيت الهندسي" } },
+  "ogSiteName": { "t": 0, "b": { "t": 2, "i": [{ "t": 3 }], "s": "شركة أوربيت للتقانة والتصميم" } },
   "more": { "t": 0, "b": { "t": 2, "i": [{ "t": 3 }], "s": "المزيد" } },
   "scroll": { "t": 0, "b": { "t": 2, "i": [{ "t": 3 }], "s": "مرر للأسفل" } },
   "terms-and-conditions": { "t": 0, "b": { "t": 2, "i": [{ "t": 3 }], "s": "الأحكام والشروط" } },
@@ -3145,11 +3145,11 @@ const resource$1 = {
   "Discount": { "t": 0, "b": { "t": 2, "i": [{ "t": 3 }], "s": "العرض" } }
 };
 const resource = {
-  "ogTitle": { "t": 0, "b": { "t": 2, "i": [{ "t": 3 }], "s": "Orbit Engineering Office" } },
+  "ogTitle": { "t": 0, "b": { "t": 2, "i": [{ "t": 3 }], "s": "Orbit Technologie und Design Firma" } },
   "ogDescription": { "t": 0, "b": { "t": 2, "i": [{ "t": 3 }], "s": "Technology services website" } },
   "ogType": { "t": 0, "b": { "t": 2, "i": [{ "t": 3 }], "s": "Technology services website" } },
   "ogLocale": { "t": 0, "b": { "t": 2, "i": [{ "t": 3 }], "s": "de_DE" } },
-  "ogSiteName": { "t": 0, "b": { "t": 2, "i": [{ "t": 3 }], "s": "Orbit Engineering Office" } },
+  "ogSiteName": { "t": 0, "b": { "t": 2, "i": [{ "t": 3 }], "s": "Orbit Technologie und Design Firma" } },
   "more": { "t": 0, "b": { "t": 2, "i": [{ "t": 3 }], "s": "Mehr" } },
   "scroll": { "t": 0, "b": { "t": 2, "i": [{ "t": 3 }], "s": "scrollen" } },
   "terms-and-conditions": { "t": 0, "b": { "t": 2, "i": [{ "t": 3 }], "s": "Geschäftsbedingungen" } },
@@ -8291,7 +8291,7 @@ const i18n_EI7LsD1KYQADczz5hrChviGQCdVM8yUkvFEZLJpmnvM = /* @__PURE__ */ defineN
     };
   }
 });
-const LazyIcon = defineAsyncComponent(() => import('./index-kF6d73p1.mjs').then((r) => r["default"] || r.default || r));
+const LazyIcon = defineAsyncComponent(() => import('./index-BTm6J6dD.mjs').then((r) => r["default"] || r.default || r));
 const lazyGlobalComponents = [
   ["Icon", LazyIcon]
 ];
@@ -39041,8 +39041,8 @@ const plugins = [
   init_IycSiUTa0ooOjNElHE0EG94Rz0cZb4_bKuXwa_4z9aY
 ];
 const layouts = {
-  default: defineAsyncComponent(() => import('./default-C76Xwc81.mjs').then((m) => m.default || m)),
-  home: defineAsyncComponent(() => import('./home-Bk7uZ6Ae.mjs').then((m) => m.default || m))
+  default: defineAsyncComponent(() => import('./default-BQVjzdy7.mjs').then((m) => m.default || m)),
+  home: defineAsyncComponent(() => import('./home-xvHL5saE.mjs').then((m) => m.default || m))
 };
 const LayoutLoader = defineComponent$1({
   name: "LayoutLoader",
@@ -39313,7 +39313,7 @@ const _sfc_main$1 = {
       _push(`<section${ssrRenderAttrs(mergeProps({
         id: "wrapper",
         class: "error-page"
-      }, _attrs))} data-v-d22f35fb><div class="img-frame" data-v-d22f35fb><img${ssrRenderAttr("src", _imports_0)} alt="error image" data-v-d22f35fb></div><div class="error-box" data-v-d22f35fb><div class="error-body text-center" data-v-d22f35fb><h1 class="error-code mb-2 mb-dmd-3 mb-xl-5" data-v-d22f35fb>${ssrInterpolate((_a2 = unref(error)) == null ? void 0 : _a2.statusCode)}</h1><h3 class="text-uppercase" data-v-d22f35fb>${ssrInterpolate(unref(heading))}</h3><p class="m-t-30 m-b-30" data-v-d22f35fb>${ssrInterpolate(unref(description))}</p><button class="btn background text-white px-15 btn-rounded waves-effect waves-light" data-v-d22f35fb>${ssrInterpolate(unref(i18e).t("back-to-home"))}</button></div><footer class="footer text-center" data-v-d22f35fb>Copyright @ ${ssrInterpolate((/* @__PURE__ */ new Date()).getFullYear())} <span class="fw-bold" data-v-d22f35fb>Orbit Engineering Office</span></footer></div></section>`);
+      }, _attrs))} data-v-20155806><div class="img-frame" data-v-20155806><img${ssrRenderAttr("src", _imports_0)} alt="error image" data-v-20155806></div><div class="error-box" data-v-20155806><div class="error-body text-center" data-v-20155806><h1 class="error-code mb-2 mb-dmd-3 mb-xl-5" data-v-20155806>${ssrInterpolate((_a2 = unref(error)) == null ? void 0 : _a2.statusCode)}</h1><h3 class="text-uppercase" data-v-20155806>${ssrInterpolate(unref(heading))}</h3><p class="m-t-30 m-b-30" data-v-20155806>${ssrInterpolate(unref(description))}</p><button class="btn background text-white px-15 btn-rounded waves-effect waves-light" data-v-20155806>${ssrInterpolate(unref(i18e).t("back-to-home"))}</button></div><footer class="footer text-center" data-v-20155806>Copyright @ ${ssrInterpolate((/* @__PURE__ */ new Date()).getFullYear())} <span class="fw-bold" data-v-20155806>Orbit Technology and Design Company</span></footer></div></section>`);
     };
   }
 };
@@ -39323,12 +39323,12 @@ _sfc_main$1.setup = (props, ctx) => {
   (ssrContext.modules || (ssrContext.modules = /* @__PURE__ */ new Set())).add("error.vue");
   return _sfc_setup$1 ? _sfc_setup$1(props, ctx) : void 0;
 };
-const ErrorComponent = /* @__PURE__ */ _export_sfc(_sfc_main$1, [["__scopeId", "data-v-d22f35fb"]]);
+const ErrorComponent = /* @__PURE__ */ _export_sfc(_sfc_main$1, [["__scopeId", "data-v-20155806"]]);
 const _sfc_main = {
   __name: "nuxt-root",
   __ssrInlineRender: true,
   setup(__props) {
-    const IslandRenderer = defineAsyncComponent(() => import('./island-renderer-CMBhKiCt.mjs').then((r) => r.default || r));
+    const IslandRenderer = defineAsyncComponent(() => import('./island-renderer-CgT8IWsH.mjs').then((r) => r.default || r));
     const nuxtApp = useNuxtApp();
     nuxtApp.deferHydration();
     nuxtApp.ssrContext.url;
@@ -39393,5 +39393,5 @@ let entry;
 }
 const entry$1 = (ssrContext) => entry(ssrContext);
 
-export { useMainToken as A, configure as B, Form as C, useMenu as D, ErrorMessage as E, Field as F, useOgImageRuntimeConfig as G, useSiteConfig as H, parseURL as I, _export_sfc as _, useGetSiteApi as a, __nuxt_component_2$1 as b, createError as c, useRouter$1 as d, entry$1 as default, useNuxtApp as e, withoutTrailingSlash as f, nuxtLinkDefaults as g, hasProtocol as h, injectHead as i, joinURL as j, useAppConfig as k, useHead as l, useAsyncData as m, navigateTo as n, useI18n as o, parseQuery as p, useLang as q, resolveRouteObject$1 as r, useLocalePath as s, modalData as t, useRuntimeConfig as u, showModal as v, withTrailingSlash as w, useRoute$1 as x, defineNuxtRouteMiddleware as y, useFetch as z };
+export { useMainToken as A, configure as B, Form as C, useMenu as D, ErrorMessage as E, Field as F, useOgImageRuntimeConfig as G, useSiteConfig as H, parseURL as I, _export_sfc as _, useGetSiteApi as a, __nuxt_component_2$1 as b, createError as c, useHead as d, entry$1 as default, useI18n as e, useRoute$1 as f, useRouter$1 as g, useNuxtApp as h, injectHead as i, hasProtocol as j, joinURL as k, withoutTrailingSlash as l, nuxtLinkDefaults as m, navigateTo as n, useAppConfig as o, parseQuery as p, useAsyncData as q, resolveRouteObject$1 as r, useLang as s, useLocalePath as t, useRuntimeConfig as u, modalData as v, withTrailingSlash as w, showModal as x, defineNuxtRouteMiddleware as y, useFetch as z };
 //# sourceMappingURL=server.mjs.map

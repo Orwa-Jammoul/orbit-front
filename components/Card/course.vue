@@ -1,6 +1,6 @@
 <template>
   <nuxt-link class="service-card" :dir="rtl()" 
-    :to="localePath(`/training/${dashed(useName(cardData))}?id=${cardData.id}`)" 
+    :to="localePath(`/training/${useName(cardData)}`)" 
     data-aos-duration="1000"
     :data-aos-delay="`${num*100}`"
     data-aos="slide-up"
@@ -19,6 +19,8 @@
         <h5 class="card-title">
           {{ useName(cardData) }}
         </h5>
+        <p class="card-cat">{{ useTr(cardData.courseParentCategoryNameEn, cardData.courseParentCategoryNameAr, cardData.courseParentCategoryNameGe) }}</p>
+        <p class="card-cat">{{ useName(cardData.courseDefaultCategory) }}</p>
       </div>
       <div class="buttons pcc">
         <button class="details-btn">{{ $t('details') }}</button>
@@ -88,6 +90,11 @@ const localePath = useLocalePath()
         text-wrap: nowrap;
         text-overflow: ellipsis;
         line-height: 2rem;
+        height: 2rem;
+      }
+      .card-cat{
+        color: rgb(218, 218, 218);
+        margin-bottom: 0;
       }
     }
     .buttons{

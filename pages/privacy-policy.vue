@@ -31,6 +31,15 @@ isLoading.value = false
 useSeoMeta({
   // Basic SEO
   title: useName(dataResult.value),
+  description: useName(dataResult.value),
+  keywords: useName(dataResult.value),
+
+  ogType: useI18n().t('ogType'),
+  ogLocale: useI18n().t('ogLocale'),
+  ogSiteName: useI18n().t('ogSiteName'),
+  robots: 'index, follow',
+  author: useI18n().t('ogSiteName'),
+  canonical: 'https://orbit-eng.net'+ useRoute().fullPath,
 })
 
 

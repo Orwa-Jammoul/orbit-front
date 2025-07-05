@@ -4,7 +4,7 @@
     <div class="nav-main-ribbon pcb rp">
       
       <nuxt-link class="logo-frame contain" :class="rtl()" :to="langPath('/')" >
-        <img :src="!isAr()?`/logo/Orbit-logo-side-01-left.svg`:`/logo/Orbit-logo-side-01-s.svg`" alt="logo">
+        <img :src="!isAr()?`/logo/Orbit_company-logo-side-white-en.svg`:`/logo/Orbit_company-logo-side-white-ar.svg`" alt="logo">
       </nuxt-link>
       <div class="nav-links-side pce">
         <MenuLanguage/>

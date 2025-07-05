@@ -5,7 +5,7 @@
     <!-- <ElementsHeaderImage 
       title="" 
       :imgUrl="cImg(dataResult.image)"
-      imgAlt="Orbit Engineering Office - header"
+      imgAlt="Orbit Technology and Design Company - header"
       contain
     /> -->
     <ThreeSphere1/>
@@ -93,7 +93,16 @@ dataResult.value = pageData.value
 
 useSeoMeta({
   // Basic SEO
-  title: t('About Us'),
+  title: useI18n().t('About Us'),
+  description: useI18n().t('About Us'),
+  keywords: useI18n().t('About Us'),
+
+  ogType: useI18n().t('ogType'),
+  ogLocale: useI18n().t('ogLocale'),
+  ogSiteName: useI18n().t('ogSiteName'),
+  robots: 'index, follow',
+  author: useI18n().t('ogSiteName'),
+  canonical: 'https://orbit-eng.net'+ useRoute().fullPath,
 })
 
 </script>

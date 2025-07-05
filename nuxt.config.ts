@@ -113,7 +113,7 @@ export default defineNuxtConfig({
 
   app: {
     head: {
-      // title: "Orbit Engineering Office",
+      // title: "Orbit Technology and Design Company",
       // htmlAttrs: {
       //   lang: "en"
       // },

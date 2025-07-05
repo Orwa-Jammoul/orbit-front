@@ -40,6 +40,15 @@ services.value = servicesData.value.data
 useSeoMeta({
   // Basic SEO
   title: t('training'),
+  description: t('training'),
+  keywords: useI18n().t('training'),
+
+  ogType: t('ogType'),
+  ogLocale: t('ogLocale'),
+  ogSiteName: t('ogSiteName'),
+  robots: 'index, follow',
+  author: t('ogSiteName'),
+  canonical: 'https://orbit-eng.net'+ useRoute().fullPath,
 })
 // watchEffect(()=> {
 //   if(process.client) {

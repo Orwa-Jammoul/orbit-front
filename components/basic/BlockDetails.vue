@@ -133,7 +133,7 @@
   const { public: { api, apiBase } } = useRuntimeConfig();
   const {item} = defineProps(['item']);
 
-  console.log(item);
+  // console.log(item);
   // loading.value = !item
 
   const showImageModal = ref(false);

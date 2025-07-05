@@ -1,6 +1,6 @@
 <template>
   <nuxt-link class="service-card" :dir="rtl()" 
-    :to="localePath(`/services/${dashed(useName(cardData))}?id=${cardData.id}`)" 
+    :to="localePath(`/services/${useName(cardData)}`)" 
     data-aos-duration="1000"
     :data-aos-delay="`${100}`"
     data-aos="slide-up"
@@ -19,7 +19,8 @@
         <h5 class="card-title">
           {{ useName(cardData) }}
         </h5>
-        <p class="card-des">{{ getInnerText(useDes1(cardData)) }}</p>
+        <p class="card-des">{{ useName(cardData.productDefaultCategory) }}</p>
+        <!-- <p class="card-des">{{ getInnerText(useDes1(cardData)) }}</p> -->
         <div class="buttons">
           <button class="details-btn">{{ $t('details') }}</button>
         </div>

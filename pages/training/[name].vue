@@ -66,13 +66,16 @@
 const localePath = useLocalePath()
 const { public: { api, apiBase } } = useRuntimeConfig();
 const route = useRoute()
+const { t } = useI18n()
 const id = route.query.id
+const courseName = route.params.name
 
 const dataResult = ref(null)
 const similarItems = ref(null)
 const isLoading = ref(true)
 
-const { data: courseData } = await useGetSiteApi().GetAll(`${api.coursesApi}/${id}`);
+// const { data: courseData } = await useGetSiteApi().GetAll(`${api.coursesApi}/${id}`);
+const { data: courseData } = await useGetSiteApi().GetAll(`${api.coursesApi}/GetByName/${courseName}`);
 // console.log(courseData.value);
 // console.log(useMenu().value);
 // watchEffect(async () => {
@@ -90,8 +93,56 @@ if (courseData.value) {
 
 useSeoMeta({
   // Basic SEO
-  title: useName(courseData.value),
-})
+  title: useName(courseData.value.data),
+  description: t('ogDescription'),
+  
+  // Open Graph / Facebook
+  ogTitle: useName(courseData.value.data),
+  ogDescription: courseData.value.data.seoDescription,
+  ogImage: 'https://orbit-eng.net/SEO/imgs/Orbit_company-logo-en-white-01.png',
+  ogUrl: 'https://orbit-eng.net'+ route.fullPath,
+  ogType: t('ogType'),
+  ogLocale: t('ogLocale'),
+  ogSiteName: t('ogSiteName'),
+  
+  // Twitter Card
+  twitterCard: 'summary_large_image',
+  twitterTitle: useName(courseData.value.data),
+  twitterDescription: t('ogDescription'),
+  twitterImage: 'https://orbit-eng.net/SEO/imgs/Orbit_company-logo-en-white-01.png',
+  twitterSite: '@yourtwitterhandle',
+  twitterCreator: '@contentcreator',
+  
+  // Additional SEO
+  robots: 'index, follow',
+  keywords: courseData.value.data.keywords, // If you have keywords translation
+  author: t('ogSiteName'),
+  canonical: 'https://orbit-eng.net'+ route.fullPath,
+  
+  // Mobile & IE
+  // viewport: 'width=device-width, initial-scale=1',
+  // mobileAlternate: 'https://m.orbit-eng.net'+ route.fullPath,
+  // themeColor: '#ffffff',
+  
+  // App Links
+  appleMobileWebAppTitle: useName(courseData.value.data),
+  applicationName: t('ogTitle'),
+  
+  // FB App Links
+  fbAppId: 'your-facebook-app-id',
+  
+  // iOS
+  appleTouchIcon: '/icons/apple-touch-icon.png',
+  appleTouchStartupImage: '/splash/launch-640x1136.png',
+  
+  // Windows
+  msapplicationTileImage: '/icons/mstile-150x150.png',
+  msapplicationTileColor: '#ffffff',
+  msapplicationConfig: '/browserconfig.xml',
+  
+  // PWA
+  manifest: '/manifest.webmanifest'
+});
 
 </script>
 

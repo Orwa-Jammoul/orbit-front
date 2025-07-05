@@ -294,7 +294,7 @@ const inputUpdated = async (values) =>{
   if(values.target.name=='nationId'){
     const selectedCountryId = values.target._value
     const selectedCountry = countries.value.find(item=>item.id==selectedCountryId)
-    console.log(selectedCountry);
+    // console.log(selectedCountry);
     showPrincedoms.value = selectedCountry.nameEn.toLowerCase()=="syria"
   }
 }

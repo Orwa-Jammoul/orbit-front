@@ -1,0 +1,191 @@
+import { d as useHead, e as useI18n, f as useRoute$1, _ as _export_sfc, b as __nuxt_component_2$1, u as useRuntimeConfig, a as useGetSiteApi } from './server.mjs';
+import { _ as __nuxt_component_0$1 } from './nuxt-link-DUYpBQb1.mjs';
+import __nuxt_component_0$2 from './index-BTm6J6dD.mjs';
+import { u as useName, g as getInnerText, a as useDes, l as langPath, i as isAr, b as useDes1 } from './useMethods-DM7phY2b.mjs';
+import { mergeProps, withAsyncContext, unref, withCtx, createBlock, openBlock, useSSRContext } from 'vue';
+import { ssrRenderAttrs, ssrRenderComponent, ssrRenderAttr, ssrInterpolate } from 'vue/server-renderer';
+import { p as publicAssetsURL } from '../_/nitro.mjs';
+import { _ as __nuxt_component_2 } from './Services-CF8MkHu8.mjs';
+import { _ as __nuxt_component_2$2 } from './training-D0llETjD.mjs';
+import 'vue-router';
+import '@fortawesome/fontawesome-svg-core';
+import '@fortawesome/free-solid-svg-icons';
+import '@iconify/vue';
+import '@unhead/addons';
+import 'unhead/plugins';
+import '@unhead/schema-org/vue';
+import '@vue/shared';
+import 'yup';
+import 'lru-cache';
+import '@unocss/core';
+import '@unocss/preset-wind3';
+import 'devalue';
+import 'consola';
+import 'unhead';
+import 'node:http';
+import 'node:https';
+import 'node:events';
+import 'node:buffer';
+import 'node:fs';
+import 'node:url';
+import '@iconify/utils';
+import 'node:crypto';
+import 'unhead/server';
+import 'unhead/utils';
+import 'vue-bundle-renderer/runtime';
+import 'node:path';
+import '@iconify/utils/lib/css/icon';
+import './service-Bj1f4coU.mjs';
+import './course-RuyXOtpW.mjs';
+
+const _imports_0 = publicAssetsURL("/imgs/spaceship.png");
+const _sfc_main$2 = {
+  __name: "aboutUs",
+  __ssrInlineRender: true,
+  async setup(__props) {
+    let __temp, __restore;
+    const { public: { api, apiBase } } = useRuntimeConfig();
+    const { data: about } = ([__temp, __restore] = withAsyncContext(() => useGetSiteApi().GetAll(
+      `${api.Blocks}/1`
+    )), __temp = await __temp, __restore(), __temp);
+    return (_ctx, _push, _parent, _attrs) => {
+      const _component_nuxt_link = __nuxt_component_0$1;
+      const _component_icon = __nuxt_component_0$2;
+      _push(`<section${ssrRenderAttrs(mergeProps({
+        class: "section-root grid-bg2",
+        dir: "auto"
+      }, _attrs))} data-v-816b747e><div class="img-frame contain" data-v-816b747e><img${ssrRenderAttr("src", _imports_0)} alt="image about us" data-v-816b747e></div><div class="about-frame" data-v-816b747e><div class="about-box1 grid-bg1" data-v-816b747e><h1 class="metal-text" data-v-816b747e>${ssrInterpolate(("useName" in _ctx ? _ctx.useName : unref(useName))(unref(about)))}</h1><p data-v-816b747e>${ssrInterpolate(("getInnerText" in _ctx ? _ctx.getInnerText : unref(getInnerText))(("useDes" in _ctx ? _ctx.useDes : unref(useDes))(unref(about))))}</p><div class="go-to pcs" data-v-816b747e><p class="m-0" data-v-816b747e>${ssrInterpolate(_ctx.$t("read-more"))}</p>`);
+      _push(ssrRenderComponent(_component_nuxt_link, {
+        class: "icon-frame pcc mx-0 ms-2",
+        to: ("langPath" in _ctx ? _ctx.langPath : unref(langPath))("/about-us")
+      }, {
+        default: withCtx((_, _push2, _parent2, _scopeId) => {
+          if (_push2) {
+            if (!("isAr" in _ctx ? _ctx.isAr : unref(isAr))()) {
+              _push2(ssrRenderComponent(_component_icon, {
+                name: "material-symbols:arrow-forward-rounded",
+                size: "20px"
+              }, null, _parent2, _scopeId));
+            } else {
+              _push2(ssrRenderComponent(_component_icon, {
+                name: "material-symbols:arrow-back-rounded",
+                size: "20px"
+              }, null, _parent2, _scopeId));
+            }
+          } else {
+            return [
+              !("isAr" in _ctx ? _ctx.isAr : unref(isAr))() ? (openBlock(), createBlock(_component_icon, {
+                key: 0,
+                name: "material-symbols:arrow-forward-rounded",
+                size: "20px"
+              })) : (openBlock(), createBlock(_component_icon, {
+                key: 1,
+                name: "material-symbols:arrow-back-rounded",
+                size: "20px"
+              }))
+            ];
+          }
+        }),
+        _: 1
+      }, _parent));
+      _push(`</div><div class="gr-circle1" data-v-816b747e></div><div class="gr-circle3" data-v-816b747e></div></div><div class="about-box2 grid-bg1" data-v-816b747e><p data-v-816b747e>${ssrInterpolate(("getInnerText" in _ctx ? _ctx.getInnerText : unref(getInnerText))(("useDes1" in _ctx ? _ctx.useDes1 : unref(useDes1))(unref(about))))}</p><div class="go-to pcs" data-v-816b747e><p class="m-0" data-v-816b747e>${ssrInterpolate(_ctx.$t("read-more"))}</p>`);
+      _push(ssrRenderComponent(_component_nuxt_link, {
+        class: "icon-frame pcc mx-0 ms-2",
+        to: ("langPath" in _ctx ? _ctx.langPath : unref(langPath))("/about-us")
+      }, {
+        default: withCtx((_, _push2, _parent2, _scopeId) => {
+          if (_push2) {
+            if (!("isAr" in _ctx ? _ctx.isAr : unref(isAr))()) {
+              _push2(ssrRenderComponent(_component_icon, {
+                name: "material-symbols:arrow-forward-rounded",
+                size: "20px"
+              }, null, _parent2, _scopeId));
+            } else {
+              _push2(ssrRenderComponent(_component_icon, {
+                name: "material-symbols:arrow-back-rounded",
+                size: "20px"
+              }, null, _parent2, _scopeId));
+            }
+          } else {
+            return [
+              !("isAr" in _ctx ? _ctx.isAr : unref(isAr))() ? (openBlock(), createBlock(_component_icon, {
+                key: 0,
+                name: "material-symbols:arrow-forward-rounded",
+                size: "20px"
+              })) : (openBlock(), createBlock(_component_icon, {
+                key: 1,
+                name: "material-symbols:arrow-back-rounded",
+                size: "20px"
+              }))
+            ];
+          }
+        }),
+        _: 1
+      }, _parent));
+      _push(`</div><div class="gr-circle1" data-v-816b747e></div><div class="gr-circle3" data-v-816b747e></div></div></div><div class="gr-circle1" data-v-816b747e></div><div class="gr-circle2" data-v-816b747e></div></section>`);
+    };
+  }
+};
+const _sfc_setup$2 = _sfc_main$2.setup;
+_sfc_main$2.setup = (props, ctx) => {
+  const ssrContext = useSSRContext();
+  (ssrContext.modules || (ssrContext.modules = /* @__PURE__ */ new Set())).add("components/Home/aboutUs.vue");
+  return _sfc_setup$2 ? _sfc_setup$2(props, ctx) : void 0;
+};
+const __nuxt_component_1 = /* @__PURE__ */ _export_sfc(_sfc_main$2, [["__scopeId", "data-v-816b747e"]]);
+const _sfc_main$1 = {};
+function _sfc_ssrRender(_ctx, _push, _parent, _attrs) {
+  const _component_HomeMainHeader = __nuxt_component_2$1;
+  const _component_HomeAboutUs = __nuxt_component_1;
+  const _component_HomeServices = __nuxt_component_2;
+  const _component_HomeTest = __nuxt_component_2$1;
+  const _component_HomeTraining = __nuxt_component_2$2;
+  _push(`<div${ssrRenderAttrs(mergeProps({ class: "home-page" }, _attrs))} data-v-1a785ffa>`);
+  _push(ssrRenderComponent(_component_HomeMainHeader, null, null, _parent));
+  _push(ssrRenderComponent(_component_HomeAboutUs, null, null, _parent));
+  _push(ssrRenderComponent(_component_HomeServices, null, null, _parent));
+  _push(ssrRenderComponent(_component_HomeTest, null, null, _parent));
+  _push(ssrRenderComponent(_component_HomeTraining, null, null, _parent));
+  _push(`</div>`);
+}
+const _sfc_setup$1 = _sfc_main$1.setup;
+_sfc_main$1.setup = (props, ctx) => {
+  const ssrContext = useSSRContext();
+  (ssrContext.modules || (ssrContext.modules = /* @__PURE__ */ new Set())).add("components/Home/index.vue");
+  return _sfc_setup$1 ? _sfc_setup$1(props, ctx) : void 0;
+};
+const __nuxt_component_0 = /* @__PURE__ */ _export_sfc(_sfc_main$1, [["ssrRender", _sfc_ssrRender], ["__scopeId", "data-v-1a785ffa"]]);
+const _sfc_main = {
+  __name: "index",
+  __ssrInlineRender: true,
+  setup(__props) {
+    useHead({
+      title: useI18n().t("Home"),
+      meta: [
+        { name: "description", content: useI18n().t("Home") },
+        { name: "keywords", content: useI18n().t("Home") },
+        { property: "og:type", content: useI18n().t("ogType") },
+        { property: "og:locale", content: useI18n().t("ogLocale") },
+        { property: "og:site_name", content: useI18n().t("ogSiteName") },
+        { name: "robots", content: "index, follow" },
+        { name: "author", content: useI18n().t("ogSiteName") },
+        { name: "canonical", content: "https://orbit-eng.net" + useRoute$1().fullPath }
+      ]
+    });
+    return (_ctx, _push, _parent, _attrs) => {
+      const _component_Home = __nuxt_component_0;
+      _push(`<div${ssrRenderAttrs(_attrs)}>`);
+      _push(ssrRenderComponent(_component_Home, null, null, _parent));
+      _push(`</div>`);
+    };
+  }
+};
+const _sfc_setup = _sfc_main.setup;
+_sfc_main.setup = (props, ctx) => {
+  const ssrContext = useSSRContext();
+  (ssrContext.modules || (ssrContext.modules = /* @__PURE__ */ new Set())).add("pages/index.vue");
+  return _sfc_setup ? _sfc_setup(props, ctx) : void 0;
+};
+
+export { _sfc_main as default };
+//# sourceMappingURL=index-CU3aG8xy.mjs.map

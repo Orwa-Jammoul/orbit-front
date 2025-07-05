@@ -6,7 +6,7 @@
           <div class="logo-frame contain">
             <img
               class="logoLoader"
-              :src="`/logo/logo-01.png`"
+              :src="isAr()?`/logo/Orbit_company-logo-ar-blue-01.png`:`/logo/Orbit_company-logo-en-blue-01.png`"
               alt="logo"
             />
           </div>
@@ -143,7 +143,7 @@ onBeforeUnmount(() => clear);
     // background: linear-gradient(45deg, $primary1 0%, $primary1 30%, black 80%, black 100% );
     .preloader{
       .logoLoader {
-        width: 200px;
+        width: 220px;
       }
       .iconify{
         margin-top: 2rem;

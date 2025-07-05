@@ -41,9 +41,19 @@ const { data:servicesData } = await useGetSiteApi().GetAll(
 );
 services.value = servicesData.value.data
 
+
 useSeoMeta({
   // Basic SEO
   title: t('services'),
+  description: t('services'),
+  keywords: useI18n().t('services'),
+
+  ogType: t('ogType'),
+  ogLocale: t('ogLocale'),
+  ogSiteName: t('ogSiteName'),
+  robots: 'index, follow',
+  author: t('ogSiteName'),
+  canonical: 'https://orbit-eng.net'+ useRoute().fullPath,
 })
 // useHead({
 //   title: t('services')

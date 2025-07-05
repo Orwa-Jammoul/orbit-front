@@ -68,6 +68,9 @@ const { public: { api, apiBase } } = useRuntimeConfig();
 const { t } = useI18n()
 const route = useRoute()
 const id = route.query.id
+const serviceName = route.params.name
+
+// console.log(replaceDashes(serviceName));
 
 // const route = useRoute()
 // const { locale } = useI18n()
@@ -92,7 +95,8 @@ const dataResult = ref(null)
 const similarItems = ref(null)
 const isLoading = ref(true)
 
-const { data: serviceData } = await useGetSiteApi().GetAll(`${api.productsApi}/${id}`);
+// const { data: serviceData } = await useGetSiteApi().GetAll(`${api.productsApi}/${id}`);
+const { data: serviceData } = await useGetSiteApi().GetAll(`${api.productsApi}/GetByName/${serviceName}`);
 dataResult.value = serviceData.value.data
 // console.log(dataResult.value);
 // if (process.client) {
@@ -115,8 +119,8 @@ useSeoMeta({
   
   // Open Graph / Facebook
   ogTitle: useName(serviceData.value.data),
-  ogDescription: t('ogDescription'),
-  ogImage: 'https://orbit-eng.net/SEO/imgs/logo-01.png',
+  ogDescription: serviceData.value.data.seoDescription,
+  ogImage: 'https://orbit-eng.net/SEO/imgs/Orbit_company-logo-en-white-01.png',
   ogUrl: 'https://orbit-eng.net'+ route.fullPath,
   ogType: t('ogType'),
   ogLocale: t('ogLocale'),
@@ -126,14 +130,14 @@ useSeoMeta({
   twitterCard: 'summary_large_image',
   twitterTitle: useName(serviceData.value.data),
   twitterDescription: t('ogDescription'),
-  twitterImage: 'https://orbit-eng.net/SEO/imgs/logo-01.png',
+  twitterImage: 'https://orbit-eng.net/SEO/imgs/Orbit_company-logo-en-white-01.png',
   twitterSite: '@yourtwitterhandle',
   twitterCreator: '@contentcreator',
   
   // Additional SEO
   robots: 'index, follow',
-  keywords: '', // If you have keywords translation
-  author: 'Your Company Name',
+  keywords: serviceData.value.data.keywords, // If you have keywords translation
+  author: t('ogSiteName'),
   canonical: 'https://orbit-eng.net'+ route.fullPath,
   
   // Mobile & IE

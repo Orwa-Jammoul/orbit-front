@@ -12,7 +12,9 @@
       </video> -->
       
       <div class="logo-frame contain">
-        <img src="/logo/logo-02.png" alt="logo">
+        <img :src="isAr()?`/logo/Orbit_company-logo-ar-white-01.png`:`/logo/Orbit_company-logo-en-white-01.png`" 
+          alt="logo"
+        >
       </div>
       <div class="links-frame">
         <nuxt-link class="link-item" v-for="page in pages" :to="langPath(page.pageUrl)" :key="page.id">
@@ -31,7 +33,7 @@
       </div>
       <h5 class="Copyright">
         <span>
-          Copyright © {{ new Date().getFullYear() }} Orbit Engineering Office 
+          Copyright © {{ new Date().getFullYear() }} Orbit Technology and Design Company 
         </span>
       </h5>
     </div>
@@ -121,7 +123,7 @@ const pages = ref(useMenu().value.navbar);
     }
     .logo-frame{
       width: 100%;
-      height: 10rem;
+      height: 12rem;
     }
     .links-frame{
       position: relative;

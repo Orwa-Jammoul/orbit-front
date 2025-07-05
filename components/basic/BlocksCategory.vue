@@ -22,8 +22,8 @@
         <div v-for="item in items"  :key="item.id" class="col-12 col-lg-3 col-md-6">
           <a target="_blank" v-if="isUrl(item.pageUrl)" class="card" :href="item.pageUrl">
             <div class="image-container contain">
-              <img :src="item.image1?`${apiBase}/${item.image1}`:`/logo/logo-01.png`" class="img-fluid" alt="Page Photo">
-              <!-- <img :src="item.image1?`${apiBase}/${item.image1}`:`/logo/logo-01.png`" class="img-fluid bg" alt="Page Photo"> -->
+              <img :src="item.image1?`${apiBase}/${item.image1}`:`/logo/Orbit_company-logo-en-white-01.png`" class="img-fluid" alt="Page Photo">
+              <!-- <img :src="item.image1?`${apiBase}/${item.image1}`:`/logo/Orbit_company-logo-en-white-01.png`" class="img-fluid bg" alt="Page Photo"> -->
             </div>
             <div class="card-content">
               <h5 class="text-center pcc">
@@ -33,7 +33,7 @@
           </a>
           <nuxt-link v-else class="card" :to="`${baseUrl}/${item.id}`">
             <div class="image-container contain">
-              <img :src="item.image1?`${apiBase}/${item.image1}`:`/logo/logo-01.png`" class="img-fluid" alt="Page Photo">
+              <img :src="item.image1?`${apiBase}/${item.image1}`:`/logo/Orbit_company-logo-en-white-01.png`" class="img-fluid" alt="Page Photo">
             </div>
             <div class="card-content">
               <h5 class="text-center">

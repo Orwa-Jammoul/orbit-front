@@ -65,7 +65,7 @@
 
         </div> -->
         <div class="logo-frame contain">
-          <img src="/logo/logo-01.png" alt="logo">
+          <img src="/logo/Orbit_company-logo-en-white-01.png" alt="logo">
         </div>
 
       </div>
@@ -151,7 +151,7 @@ watchEffect( async ()=> {
     if(contactUsData.value) {
       contactUs.value = contactUsData.value
       // loading.value =false
-      console.log(contactUs.value);
+      // console.log(contactUs.value);
     }
   }
 })

@@ -1,1 +1,0 @@
-{"id":"4623169c-bc6b-41a4-ac35-b3c89feaf328","timestamp":1751564870162,"matcher":{"static":{"/sitemap.xml":{"redirect":"/sitemap_index.xml"}},"wildcard":{"/.well-known":{"redirect":"/"}},"dynamic":{}},"prerendered":[]}
