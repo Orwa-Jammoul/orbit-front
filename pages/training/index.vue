@@ -15,7 +15,7 @@
       </div>
     </div>
     <!-- <h1>{{$t('training')}}</h1> -->
-    <div class="container">
+    <div class="container" :dir="rtl()">
       <div class="row">
         <div class="col-12 col-lg-4 col-md-6" v-for="service in services" :key="service.id">
           <CardCourse :cardData="service" :num="0"/>

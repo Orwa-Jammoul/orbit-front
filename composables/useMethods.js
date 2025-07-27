@@ -89,6 +89,25 @@ export const useName = (data, firstCapital=false, allCapital=false, firsts=false
   return value;
 };
 
+export const useEndpoint = (data) => {
+  if(!data){
+    return dNotFound;
+  }
+  const { locale, locales } = useI18n()
+  const lang = locale.value;
+
+  let value;
+
+  if(lang==='en'){
+    value=  data.endpointEn ?? vNotFound;
+  }else if(lang==='de'){
+    value= data.endpointGe ?? vNotFound;
+  }else{
+    value= data.endpointAr ??  vNotFound;
+  }
+  return value;
+};
+
 
 
 export const useDes = (data, firstCapital=false, allCapital=false, firsts=false) => {

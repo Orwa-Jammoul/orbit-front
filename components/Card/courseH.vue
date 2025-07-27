@@ -1,11 +1,11 @@
 <template>
   <nuxt-link class="service-card" :dir="rtl()" 
-    :to="localePath(`/training/${useName(cardData)}`)" 
-    data-aos-duration="1000"
+    :to="localePath(`/training/${useEndpoint(cardData)}`)" 
+    >
+    <!-- data-aos-duration="1000"
     :data-aos-delay="`${100}`"
     data-aos="slide-up"
-    data-aos-once="true"
-  >
+    data-aos-once="true" -->
     <div class="gr-circle1"></div>
     <div class="service-card-frame">
       <div class="card-left">

@@ -1,4 +1,4 @@
-import { defineComponent as defineComponent$1, toRef, isRef, resolveDynamicComponent, h, inject as inject$1, computed, createElementBlock, getCurrentInstance as getCurrentInstance$1, hasInjectionContext, toValue, onServerPrefetch, reactive, watch, ref, unref, provide, readonly, shallowRef, nextTick, watchEffect, cloneVNode, defineAsyncComponent, createVNode, Transition, mergeProps, toRefs, useId, onScopeDispose, withDirectives, vShow, Fragment, toDisplayString as toDisplayString$1, resolveDirective, toRaw, createTextVNode, capitalize as capitalize$1, shallowReactive, Suspense, createApp, Text, TransitionGroup, camelize, markRaw, resolveComponent, render, onErrorCaptured, effectScope, isReadonly, isShallow, isReactive, warn as warn$1, getCurrentScope, withCtx, vModelText, Teleport, withModifiers, isVNode as isVNode$1, Comment, useSSRContext } from 'vue';
+import { defineComponent as defineComponent$1, toRef, isRef, resolveDynamicComponent, h, inject as inject$1, computed, getCurrentInstance as getCurrentInstance$1, hasInjectionContext, toValue, onServerPrefetch, createElementBlock, reactive, watch, ref, unref, provide, readonly, shallowRef, nextTick, watchEffect, cloneVNode, defineAsyncComponent, createVNode, Transition, mergeProps, toRefs, useId, onScopeDispose, withDirectives, vShow, Fragment, toDisplayString as toDisplayString$1, resolveDirective, toRaw, createTextVNode, capitalize as capitalize$1, shallowReactive, Suspense, createApp, Text, TransitionGroup, camelize, markRaw, resolveComponent, render, onErrorCaptured, effectScope, isReadonly, isShallow, isReactive, warn as warn$1, getCurrentScope, withCtx, vModelText, Teleport, withModifiers, isVNode as isVNode$1, Comment, useSSRContext } from 'vue';
 import { G as defu, f as createError$1, ab as useHead$1, ac as headSymbol, ad as klona$1, ae as defuFn, a4 as hash, af as sanitizeStatusCode, ag as getContext, ah as $fetch$1, ai as baseURL, p as publicAssetsURL, aj as createHooks, ak as executeAsync, al as titleCase, am as toRouteMatcher, an as createRouter$1, ao as camelCase, ap as useSeoMeta$1, aq as getRequestProtocol, d as destr, ar as getRequestHeaders, as as parse$3, at as getRequestHeader, au as isEqual$3, av as setCookie, aw as getCookie, ax as deleteCookie, ay as resolveUnrefHeadInput } from '../_/nitro.mjs';
 import { useRoute as useRoute$2, RouterView, createMemoryHistory, createRouter, START_LOCATION, isNavigationFailure } from 'vue-router';
 import { config, library } from '@fortawesome/fontawesome-svg-core';
@@ -1338,142 +1338,172 @@ const _routes = [
     name: "index___en",
     path: "/",
     meta: __nuxt_page_meta$2 || {},
-    component: () => import('./index-CU3aG8xy.mjs')
+    component: () => import('./index-DVharCHt.mjs')
   },
   {
     name: "index___ar",
     path: "/ar",
     meta: __nuxt_page_meta$2 || {},
-    component: () => import('./index-CU3aG8xy.mjs')
+    component: () => import('./index-DVharCHt.mjs')
   },
   {
     name: "index___de",
     path: "/de",
     meta: __nuxt_page_meta$2 || {},
-    component: () => import('./index-CU3aG8xy.mjs')
+    component: () => import('./index-DVharCHt.mjs')
+  },
+  {
+    name: "account-login___en",
+    path: "/account/login",
+    component: () => import('./login-BKjK8pfj.mjs')
+  },
+  {
+    name: "account-login___ar",
+    path: "/ar/%D8%AD%D8%B3%D8%A7%D8%A8/%D8%AA%D8%B3%D8%AC%D9%8A%D9%84-%D8%A7%D9%84%D8%AF%D8%AE%D9%88%D9%84",
+    component: () => import('./login-BKjK8pfj.mjs')
+  },
+  {
+    name: "account-login___de",
+    path: "/de/konto/anmelden",
+    component: () => import('./login-BKjK8pfj.mjs')
   },
   {
     name: "about-us___en",
     path: "/about-us",
     meta: __nuxt_page_meta$1 || {},
-    component: () => import('./index-a2wbr5fn.mjs')
+    component: () => import('./index-Doknt1fv.mjs')
   },
   {
     name: "about-us___ar",
     path: "/ar/%D9%85%D9%86-%D9%86%D8%AD%D9%86",
     meta: __nuxt_page_meta$1 || {},
-    component: () => import('./index-a2wbr5fn.mjs')
+    component: () => import('./index-Doknt1fv.mjs')
   },
   {
     name: "about-us___de",
     path: "/de/%C3%9Cber-Uns",
     meta: __nuxt_page_meta$1 || {},
-    component: () => import('./index-a2wbr5fn.mjs')
+    component: () => import('./index-Doknt1fv.mjs')
+  },
+  {
+    name: "account-signup___en",
+    path: "/account/signup",
+    component: () => import('./signup-DXsdbven.mjs')
+  },
+  {
+    name: "account-signup___ar",
+    path: "/ar/%D8%AD%D8%B3%D8%A7%D8%A8/%D8%AA%D8%B3%D8%AC%D9%8A%D9%84-%D8%AC%D8%AF%D9%8A%D8%AF",
+    component: () => import('./signup-DXsdbven.mjs')
+  },
+  {
+    name: "account-signup___de",
+    path: "/de/konto/registrieren",
+    component: () => import('./signup-DXsdbven.mjs')
   },
   {
     name: "privacy-policy___en",
     path: "/privacy-policy",
-    component: () => import('./privacy-policy-BdJPqqKy.mjs')
+    component: () => import('./privacy-policy-CrUjamOF.mjs')
   },
   {
     name: "privacy-policy___ar",
     path: "/ar/%D8%B3%D9%8A%D8%A7%D8%B3%D8%A9-%D8%A7%D9%84%D8%AE%D8%B5%D9%88%D8%B5%D9%8A%D8%A9",
-    component: () => import('./privacy-policy-BdJPqqKy.mjs')
+    component: () => import('./privacy-policy-CrUjamOF.mjs')
   },
   {
     name: "privacy-policy___de",
     path: "/de/Datenschutzrichtlinie",
-    component: () => import('./privacy-policy-BdJPqqKy.mjs')
+    component: () => import('./privacy-policy-CrUjamOF.mjs')
   },
   {
     name: "services___en",
     path: "/services",
-    component: () => import('./index-560ymV27.mjs')
+    component: () => import('./index--zTEDjS7.mjs')
   },
   {
     name: "services___ar",
     path: "/ar/%D8%A7%D9%84%D8%AE%D8%AF%D9%85%D8%A7%D8%AA",
-    component: () => import('./index-560ymV27.mjs')
+    component: () => import('./index--zTEDjS7.mjs')
   },
   {
     name: "services___de",
     path: "/de/Dienstleistungen",
-    component: () => import('./index-560ymV27.mjs')
+    component: () => import('./index--zTEDjS7.mjs')
   },
   {
     name: "training___en",
     path: "/training",
-    component: () => import('./index-Dk4YbYtV.mjs')
+    component: () => import('./index-UGQLhVlw.mjs')
   },
   {
     name: "training___ar",
     path: "/ar/%D8%AA%D8%AF%D8%B1%D9%8A%D8%A8",
-    component: () => import('./index-Dk4YbYtV.mjs')
+    component: () => import('./index-UGQLhVlw.mjs')
   },
   {
     name: "training___de",
     path: "/de/Ausbildung",
-    component: () => import('./index-Dk4YbYtV.mjs')
+    component: () => import('./index-UGQLhVlw.mjs')
   },
   {
     name: "services-name___en",
     path: "/services/:name()",
-    component: () => import('./_name_-DmDFlJtO.mjs')
+    component: () => import('./_name_-DTuh1J9h.mjs')
   },
   {
     name: "services-name___ar",
     path: "/ar/%D8%A7%D9%84%D8%AE%D8%AF%D9%85%D8%A7%D8%AA/:name()",
-    component: () => import('./_name_-DmDFlJtO.mjs')
+    component: () => import('./_name_-DTuh1J9h.mjs')
   },
   {
     name: "services-name___de",
     path: "/de/Dienstleistungen/:name()",
-    component: () => import('./_name_-DmDFlJtO.mjs')
+    component: () => import('./_name_-DTuh1J9h.mjs')
   },
   {
     name: "training-name___en",
     path: "/training/:name()",
-    component: () => import('./_name_-C4briEpj.mjs')
+    component: () => import('./_name_-DwyE9fO6.mjs')
   },
   {
     name: "training-name___ar",
     path: "/ar/%D8%AA%D8%AF%D8%B1%D9%8A%D8%A8/:name()",
-    component: () => import('./_name_-C4briEpj.mjs')
+    component: () => import('./_name_-DwyE9fO6.mjs')
   },
   {
     name: "training-name___de",
     path: "/de/Ausbildung/:name()",
-    component: () => import('./_name_-C4briEpj.mjs')
+    component: () => import('./_name_-DwyE9fO6.mjs')
   },
   {
     name: "contact-us___en",
     path: "/contact-us",
-    component: () => import('./index-DA67kJqh.mjs')
+    component: () => import('./index-C-gH3M0n.mjs')
   },
   {
     name: "contact-us___ar",
     path: "/ar/%D8%AA%D9%88%D8%A7%D8%B5%D9%84-%D9%85%D8%B9%D9%86%D8%A7",
-    component: () => import('./index-DA67kJqh.mjs')
+    component: () => import('./index-C-gH3M0n.mjs')
   },
   {
     name: "contact-us___de",
     path: "/de/Kontakt",
-    component: () => import('./index-DA67kJqh.mjs')
+    component: () => import('./index-C-gH3M0n.mjs')
   },
   {
     name: "terms-and-conditions___en",
     path: "/terms-and-conditions",
-    component: () => import('./terms-and-conditions-BNhnpWIV.mjs')
+    component: () => import('./terms-and-conditions-DT6jaCoJ.mjs')
   },
   {
     name: "terms-and-conditions___ar",
     path: "/ar/%D8%A7%D9%84%D8%B4%D8%B1%D9%88%D8%B7-%D9%88%D8%A7%D9%84%D8%A3%D8%AD%D9%83%D8%A7%D9%85",
-    component: () => import('./terms-and-conditions-BNhnpWIV.mjs')
+    component: () => import('./terms-and-conditions-DT6jaCoJ.mjs')
   },
   {
     name: "terms-and-conditions___de",
     path: "/de/Gesch%C3%A4ftsbedingungen",
-    component: () => import('./terms-and-conditions-BNhnpWIV.mjs')
+    component: () => import('./terms-and-conditions-DT6jaCoJ.mjs')
   },
   {
     name: void 0 ,
@@ -1635,11 +1665,11 @@ const globalMiddleware = [
   manifest_45route_45rule
 ];
 const namedMiddleware = {
-  "auth-product-exists": () => import('./auth-product-exists-CEeB4PDx.mjs'),
-  auth: () => import('./auth-DyVkDI7F.mjs'),
-  "not-authorize": () => import('./not-authorize-RcZZEUTM.mjs'),
-  "supplier-company": () => import('./supplierCompany-DdjSNWcA.mjs'),
-  "validate-id-digital": () => import('./validate-id-digital-mYdQL5uK.mjs')
+  "auth-product-exists": () => import('./auth-product-exists-D_zhlQYK.mjs'),
+  auth: () => import('./auth-D__oivK3.mjs'),
+  "not-authorize": () => import('./not-authorize-eixBnyBG.mjs'),
+  "supplier-company": () => import('./supplierCompany-B4WpD4M4.mjs'),
+  "validate-id-digital": () => import('./validate-id-digital-BUShP1Sh.mjs')
 };
 const plugin = /* @__PURE__ */ defineNuxtPlugin({
   name: "nuxt:router",
@@ -2682,6 +2712,8 @@ const resource$2 = {
   "ogType": { "t": 0, "b": { "t": 2, "i": [{ "t": 3 }], "s": "Technology services website" } },
   "ogLocale": { "t": 0, "b": { "t": 2, "i": [{ "t": 3 }], "s": "en_US" } },
   "ogSiteName": { "t": 0, "b": { "t": 2, "i": [{ "t": 3 }], "s": "Orbit Technology and Design Company" } },
+  "our-partners": { "t": 0, "b": { "t": 2, "i": [{ "t": 3 }], "s": "Our Partners" } },
+  "get-started": { "t": 0, "b": { "t": 2, "i": [{ "t": 3 }], "s": "Get Started" } },
   "more": { "t": 0, "b": { "t": 2, "i": [{ "t": 3 }], "s": "More" } },
   "scroll": { "t": 0, "b": { "t": 2, "i": [{ "t": 3 }], "s": "scroll" } },
   "terms-and-conditions": { "t": 0, "b": { "t": 2, "i": [{ "t": 3 }], "s": "Terms and Conditions" } },
@@ -2916,6 +2948,8 @@ const resource$1 = {
   "ogType": { "t": 0, "b": { "t": 2, "i": [{ "t": 3 }], "s": "موقع خدمات التكنولوجيا" } },
   "ogLocale": { "t": 0, "b": { "t": 2, "i": [{ "t": 3 }], "s": "ar_AE" } },
   "ogSiteName": { "t": 0, "b": { "t": 2, "i": [{ "t": 3 }], "s": "شركة أوربيت للتقانة والتصميم" } },
+  "our-partners": { "t": 0, "b": { "t": 2, "i": [{ "t": 3 }], "s": "شــــــركاؤنا" } },
+  "get-started": { "t": 0, "b": { "t": 2, "i": [{ "t": 3 }], "s": "ابـــــدأ " } },
   "more": { "t": 0, "b": { "t": 2, "i": [{ "t": 3 }], "s": "المزيد" } },
   "scroll": { "t": 0, "b": { "t": 2, "i": [{ "t": 3 }], "s": "مرر للأسفل" } },
   "terms-and-conditions": { "t": 0, "b": { "t": 2, "i": [{ "t": 3 }], "s": "الأحكام والشروط" } },
@@ -3150,6 +3184,8 @@ const resource = {
   "ogType": { "t": 0, "b": { "t": 2, "i": [{ "t": 3 }], "s": "Technology services website" } },
   "ogLocale": { "t": 0, "b": { "t": 2, "i": [{ "t": 3 }], "s": "de_DE" } },
   "ogSiteName": { "t": 0, "b": { "t": 2, "i": [{ "t": 3 }], "s": "Orbit Technologie und Design Firma" } },
+  "our-partners": { "t": 0, "b": { "t": 2, "i": [{ "t": 3 }], "s": "Unsere Partner" } },
+  "get-started": { "t": 0, "b": { "t": 2, "i": [{ "t": 3 }], "s": "Legen Sie los" } },
   "more": { "t": 0, "b": { "t": 2, "i": [{ "t": 3 }], "s": "Mehr" } },
   "scroll": { "t": 0, "b": { "t": 2, "i": [{ "t": 3 }], "s": "scrollen" } },
   "terms-and-conditions": { "t": 0, "b": { "t": 2, "i": [{ "t": 3 }], "s": "Geschäftsbedingungen" } },
@@ -8291,7 +8327,7 @@ const i18n_EI7LsD1KYQADczz5hrChviGQCdVM8yUkvFEZLJpmnvM = /* @__PURE__ */ defineN
     };
   }
 });
-const LazyIcon = defineAsyncComponent(() => import('./index-BTm6J6dD.mjs').then((r) => r["default"] || r.default || r));
+const LazyIcon = defineAsyncComponent(() => import('./index-BplWO78e.mjs').then((r) => r["default"] || r.default || r));
 const lazyGlobalComponents = [
   ["Icon", LazyIcon]
 ];
@@ -39041,8 +39077,8 @@ const plugins = [
   init_IycSiUTa0ooOjNElHE0EG94Rz0cZb4_bKuXwa_4z9aY
 ];
 const layouts = {
-  default: defineAsyncComponent(() => import('./default-BQVjzdy7.mjs').then((m) => m.default || m)),
-  home: defineAsyncComponent(() => import('./home-xvHL5saE.mjs').then((m) => m.default || m))
+  default: defineAsyncComponent(() => import('./default-m8Lgb7sJ.mjs').then((m) => m.default || m)),
+  home: defineAsyncComponent(() => import('./home-PVr-kDJZ.mjs').then((m) => m.default || m))
 };
 const LayoutLoader = defineComponent$1({
   name: "LayoutLoader",
@@ -39328,7 +39364,7 @@ const _sfc_main = {
   __name: "nuxt-root",
   __ssrInlineRender: true,
   setup(__props) {
-    const IslandRenderer = defineAsyncComponent(() => import('./island-renderer-CgT8IWsH.mjs').then((r) => r.default || r));
+    const IslandRenderer = defineAsyncComponent(() => import('./island-renderer-YDmtnHui.mjs').then((r) => r.default || r));
     const nuxtApp = useNuxtApp();
     nuxtApp.deferHydration();
     nuxtApp.ssrContext.url;
@@ -39393,5 +39429,5 @@ let entry;
 }
 const entry$1 = (ssrContext) => entry(ssrContext);
 
-export { useMainToken as A, configure as B, Form as C, useMenu as D, ErrorMessage as E, Field as F, useOgImageRuntimeConfig as G, useSiteConfig as H, parseURL as I, _export_sfc as _, useGetSiteApi as a, __nuxt_component_2$1 as b, createError as c, useHead as d, entry$1 as default, useI18n as e, useRoute$1 as f, useRouter$1 as g, useNuxtApp as h, injectHead as i, hasProtocol as j, joinURL as k, withoutTrailingSlash as l, nuxtLinkDefaults as m, navigateTo as n, useAppConfig as o, parseQuery as p, useAsyncData as q, resolveRouteObject$1 as r, useLang as s, useLocalePath as t, useRuntimeConfig as u, modalData as v, withTrailingSlash as w, showModal as x, defineNuxtRouteMiddleware as y, useFetch as z };
+export { useMainToken as A, configure as B, Form as C, useMenu as D, ErrorMessage as E, Field as F, useOgImageRuntimeConfig as G, useSiteConfig as H, parseURL as I, _export_sfc as _, useLocalePath as a, useGetSiteApi as b, createError as c, useHead as d, entry$1 as default, useI18n as e, useRoute$1 as f, useLang as g, useRouter$1 as h, injectHead as i, useNuxtApp as j, hasProtocol as k, joinURL as l, withoutTrailingSlash as m, navigateTo as n, nuxtLinkDefaults as o, parseQuery as p, useAppConfig as q, resolveRouteObject$1 as r, useAsyncData as s, modalData as t, useRuntimeConfig as u, showModal as v, withTrailingSlash as w, defineNuxtRouteMiddleware as x, __nuxt_component_2$1 as y, useFetch as z };
 //# sourceMappingURL=server.mjs.map

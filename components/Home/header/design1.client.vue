@@ -1,16 +1,16 @@
 <template>
   <div class="design-root">
-    <div class="bg-img">
+    <!-- <div class="bg-img">
       <img :class="rtl()" src="/png/dots-02.png" alt="">
-    </div>
+    </div> -->
     <!-- <div class="bg-img contain">
       <img :class="rtl()" src="/png/lines-01.png" alt="">
     </div> -->
-    <div class="main-img" :class="rtl()">
+    <!-- <div class="main-img" :class="rtl()">
       <div class="img-frame contain">
         <img :class="rtl()" src="/logo/logo-blue.svg" alt="">
       </div>
-    </div>
+    </div> -->
     <!-- <div class="header-content" :dir="rtl()">
       
       <div class="content-frame">
@@ -79,7 +79,7 @@
         </div>
       </div>
     </div> -->
-    <div class="gradient-bg">
+    <div class="gradient-bg" ref="element">
       <svg xmlns="http://www.w3.org/2000/svg">
         <defs>
           <filter id="goo">
@@ -105,6 +105,9 @@
 <script setup>
 
 const { public: {api, apiBase} } = useRuntimeConfig();
+
+const element = ref(null)
+
 // const langPath = useLocalePath()
 const sliders = ref([]);
 const isLoading = ref(true);
@@ -135,6 +138,8 @@ let curX = 0;
 let curY = 0;
 let tgX = 0;
 let tgY = 0;
+let topY = 0;
+
 
 function move() {
   curX += (tgX - curX) / 20;
@@ -150,10 +155,18 @@ function move() {
 onMounted(()=>{
   window.addEventListener('mousemove', (event) => {
       tgX = event.clientX;
-      tgY = event.clientY;
+      tgY = event.clientY - topY;
   });
+  window.addEventListener('scroll', ()=>{
+    if(element.value){
+      let rect = element.value.getBoundingClientRect();
+      topY = rect.top
+      // console.log(topY);
+    }
+  })
   move();
 })
+
 </script>
 
 <style lang="scss">
@@ -306,7 +319,8 @@ onMounted(()=>{
     width: 100vw;
     height: 100svh;
     overflow: hidden;
-    background: linear-gradient(40deg, var(--color-bg1), var(--color-bg2));
+    // background: linear-gradient(40deg, var(--color-bg1), var(--color-bg2));
+    background: black;
     top: 0;
     left: 0;
     // z-index: 1;

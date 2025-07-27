@@ -13,6 +13,7 @@
     "@resvg/resvg-js": "2.6.2",
     "@resvg/resvg-js-win32-x64-msvc": "2.6.2",
     "@shuding/opentype.js": "1.4.0-beta.0",
+    "@splidejs/splide-extension-auto-scroll": "0.5.3",
     "@unhead/addons": "2.0.10",
     "@unhead/schema-org": "2.0.10",
     "@unhead/vue": "2.0.10",

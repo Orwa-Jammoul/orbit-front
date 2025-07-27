@@ -4,23 +4,22 @@
       <!-- <div class="menu-item" v-for="lang,index in locales" :key="index" @click="switchLanguage(lang.code)">
         {{ siteLanguages().value[lang.code] }}
       </div> -->
-      <div class="menu-item" @click="switchLanguage('en')">
-        <Icon name="openmoji:flag-us-outlying-islands" size="20px"/>
-        <span>English</span>
-      </div>
-      <div class="menu-item" @click="switchLanguage('ar')">
-        <Icon name="openmoji:flag-united-arab-emirates" size="20px"/>
-        <span>عربي</span>
-      </div>
-      <div class="menu-item" @click="switchLanguage('de')">
-        <Icon name="openmoji:flag-germany" size="20px"/>
-        <span>Deutsch</span>
-      </div>
+      <nuxt-link v-if="!isAuth" class="menu-item" :to="localePath('account-login')">
+        <Icon name="hugeicons:login-method" size="20px"/>
+        <span>Login</span>
+      </nuxt-link>
+      <nuxt-link class="menu-item" :to="localePath('account-signup')">
+        <Icon name="material-symbols:person-add-rounded" size="20px"/>
+        <span>Signup</span>
+      </nuxt-link>
     </div>
   </div>
 </template>
 
 <script setup>
+
+const localePath = useLocalePath()
+const isAuth = useAuth().value.isAuthenticated 
 const emit = defineEmits(["selected"]);
 
 const {locales, locale, setLocale } = useI18n()

@@ -1,11 +1,11 @@
 <template>
   <nuxt-link class="service-card" :dir="rtl()" 
-    :to="localePath(`/training/${useName(cardData)}`)" 
-    data-aos-duration="1000"
+    :to="localePath(`/training/${useEndpoint(cardData)}`)" 
+    >
+    <!-- data-aos-duration="1000"
     :data-aos-delay="`${num*100}`"
     data-aos="slide-up"
-    data-aos-once="true"
-  >
+    data-aos-once="true" -->
     <div class="gr-circle1"></div>
     <div class="service-card-frame">
       <div class="card-top">
@@ -71,7 +71,12 @@ const localePath = useLocalePath()
       width: 100%;
       // height: 15rem;
       aspect-ratio: 1;
-
+      // .img-frame{
+      //   img{
+      //     transition: all 300ms ease-in-out;
+      //     filter: saturate(0);
+      //   }
+      // }
 
 
     }
@@ -120,11 +125,14 @@ const localePath = useLocalePath()
   }
 
   // &:hover{
-  //   box-shadow: 5px 5px 10px rgba(0, 0, 0, .3);
-  //   transform: translateY(-5px);
-  // }
-  // .bg-gr{
-  //   po
+  //   // box-shadow: 5px 5px 10px rgba(0, 0, 0, .3);
+  //   // transform: translateY(-5px);
+  //   .img-frame{
+  //     img{
+  //       // transform: all 300ms ease-in-out;
+  //       filter: saturate(1) !important;
+  //     }
+  //   }
   // }
 }
 </style>

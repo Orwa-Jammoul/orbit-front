@@ -1,12 +1,15 @@
 <template>
   <div class="home-page">
+    <!-- <HomeMainHeader/> -->
     <HomeMainHeader/>
+    <HomeTech/>
     <HomeAboutUs/>
     <HomeServices/> 
-    <HomeTest/>
+    <HomeTraining/>
+    <!-- <HomePartners/> -->
+    <!-- <HomeTest/> -->
     <!-- <HomeTest2/> -->
     <!-- <HomeExperiences/> -->
-    <HomeTraining/>
     <!-- <HomeContact/> -->
 
     <!-- <EffectAnimatedGrid2 /> -->
@@ -26,7 +29,7 @@
 <style lang="scss" scoped>
 .home-page{
   min-height: 100vh;
-  background-color: $br1;
+  // background-color: $br1;
   // padding-top: 2rem;
   // padding-bottom: 2rem;
   .group{

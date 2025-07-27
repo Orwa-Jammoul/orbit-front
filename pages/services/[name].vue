@@ -96,7 +96,7 @@ const similarItems = ref(null)
 const isLoading = ref(true)
 
 // const { data: serviceData } = await useGetSiteApi().GetAll(`${api.productsApi}/${id}`);
-const { data: serviceData } = await useGetSiteApi().GetAll(`${api.productsApi}/GetByName/${serviceName}`);
+const { data: serviceData } = await useGetSiteApi().GetAll(`${api.productsApi}/GetByEndpoint/${serviceName}`);
 dataResult.value = serviceData.value.data
 // console.log(dataResult.value);
 // if (process.client) {

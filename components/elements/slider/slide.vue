@@ -1,6 +1,6 @@
 <template>
   <div class="main-slide">
-    <div  class="img-frame contain" dir="auto">
+    <div  class="img-frame contain" :class="rtl()" dir="auto">
       <img  :src="`${apiBase}/${data.image}`" loading="lazy" :alt="`slide-img`">
       <!-- <div class="slider-info">
         <div v-if="data.isVisible" class="slider-info-frame d-flex">
@@ -14,12 +14,21 @@
         </div>
       </div> -->
     </div>
+    <div class="rect"></div>
+    <div class="content">
+      <div class="slider-title metal-text">
+        {{useName(data)}}
+      </div>
+      <div class="slider-des" v-html="useDes(data)"></div>
+      <nuxt-link class="main-btn" :to="localePath('services')">{{ $t('get-started') }}</nuxt-link>
+    </div>
   </div>
 </template>
 
 <script setup>
 const { public: {api, apiBase} } = useRuntimeConfig();
 const {data} = defineProps(["data"])
+const localePath = useLocalePath()
 // console.log(data);
 
 </script>
@@ -51,6 +60,7 @@ const {data} = defineProps(["data"])
   position: relative;
   height: 100%;
   width: 100%;
+  background-color: black;
 
   .img-frame{
     position: relative;
@@ -63,106 +73,77 @@ const {data} = defineProps(["data"])
       object-fit: cover;
       // filter: saturate(0);
     }
-    .slider-info{
-      display: flex;
-      justify-content: center;
-      align-items: flex-end;
-      // padding-top: 8rem;
-      z-index: 10;
-      position: absolute;
-      width: 100%;
-      height: 100%;
-      top: 0;
-      left: 0;
-      // padding: 0 3rem;
-      .slider-info-frame{
-        // position: relative;
-        width: 100%;
-        padding: 0 2rem;
-
+    &.ltr{
+      img{
+        transform: scaleX(-1);
       }
-      .block-info{
-        // display:inline-block;
-        width: auto;
-        padding: 1rem;
-        background-color: rgba(0, 0, 0, 0.4);
-        margin-bottom: 2rem;
-        
-        .slider-name,.slider-des{
-          // background-color: rgba(0, 0, 0, 0.5);
-          color: white;
-          max-width: 70%;
-          text-shadow: 0px 0px 4px #000000ff ;
-  
-        }
-      }
-      .location-name-frame{
-        position: absolute;
-        top: 9rem;
-        left: auto;
-        right: -2rem;
-        &.rtl{
-          left: -2rem;
-          right: auto;
-        }
-        .location-name{
-          // width: 50%;
-          // width: auto;
-          text-align: end;
-          padding: 0 4rem;
-          margin-bottom: 2rem;
-          // border-bottom: solid 2px white;
-          color: white;
-          text-shadow: 0px 0px 4px #000000ff ;
-        }
-        @media (max-width: 920px) {
-          top: 7rem;
-        }
-        @media (max-width: 425px) {
-          top: 6rem;
-        }
-      }
-      .sat-btn{
-        width: auto;
-        padding: 0 1rem;
-        color: #000000;
-        background-color: #eeeeee;
-        min-width: 10rem;
-        box-shadow: 0px 0px 8px 0px #000000aa ;
-        // cursor: pointer;
-        // max-width: 11rem;
-
-      }
-
     }
-    // &::after{
-    //   content: '';
-    //   position: absolute;
-    //   width: 100%;
-    //   height: 100%;
-    //   top: 0;
-    //   left: 0;
-    //   background: linear-gradient(180deg, #000000aa,#00000000,#00000000);
-
+    // @media (max-width: 768px) {
+    //   .slider-info{
+    //     .slider-info-frame{
+    //       padding: 0 1rem;
+    //     }
+    //     .slider-name{
+    //       font-size: max(4vw, 1.6rem);
+    //     }
+    //     .slider-des{
+    //       font-size: max(2vw, .8rem);
+    //       &.location-name{
+    //         max-width: 100%;
+    //         text-align: end;
+    //         padding: 0;
+    //         border: solid 2px black;
+    //       }
+    //     }
+    //   }
     // }
-    @media (max-width: 768px) {
-      .slider-info{
-        .slider-info-frame{
-          padding: 0 1rem;
-        }
-        .slider-name{
-          font-size: max(4vw, 1.6rem);
-        }
-        .slider-des{
-          font-size: max(2vw, .8rem);
-          &.location-name{
-            max-width: 100%;
-            text-align: end;
-            padding: 0;
-            border: solid 2px black;
-          }
-        }
-      }
+  }
+  .rect{
+    position: absolute;
+    inset-inline-start: 60%;
+    top: 0;
+    bottom: 0;
+    width: 15rem;
+    background: linear-gradient(rgba(255, 255, 255, 0.1), transparent);
+    // opacity: .08;
+    opacity: 1;
+    z-index: 4;
+    box-shadow: 0 0 10px 5px rgba(0, 0, 0, 0.5);
+    backdrop-filter: blur(3px);
+  }
+  .content{
+    position: absolute;
+    inset-inline-start: 60%;
+    top: 0;
+    bottom: 0;
+    inset-inline-end: 0;
+
+    padding-inline-start: 1rem;
+    padding-inline-end: 4rem;
+
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    color: white;
+    z-index: 6;
+    // direction: rtl;
+    .slider-title{
+      // direction: rtl !important;
+      font-weight: 700;
+      font-size: 3rem;
+      // letter-spacing: 5px;
+      line-height: 3rem;
+      margin-bottom: 1rem;
+      // text-shadow: 2px 2px 3px rgba(255, 255, 255, 0.3);
+    }
+    .slider-des{
+      font-size: 1rem;
+      line-height: 2rem;
+      color: rgb(200, 200, 200);
+    }
+    .main-btn{
+      margin: 2rem 0;
     }
   }
 

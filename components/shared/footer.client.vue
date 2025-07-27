@@ -11,13 +11,13 @@
         Your browser does not support the video tag.
       </video> -->
       
-      <div class="logo-frame contain">
+      <nuxt-link class="logo-frame contain" :to="localePath('/')">
         <img :src="isAr()?`/logo/Orbit_company-logo-ar-white-01.png`:`/logo/Orbit_company-logo-en-white-01.png`" 
           alt="logo"
         >
-      </div>
+      </nuxt-link>
       <div class="links-frame">
-        <nuxt-link class="link-item" v-for="page in pages" :to="langPath(page.pageUrl)" :key="page.id">
+        <nuxt-link class="link-item" v-for="page in pages" :to="localePath(page.pageUrl)" :key="page.id">
           {{ useName(page,0,0,1) }}
         </nuxt-link>
       </div>

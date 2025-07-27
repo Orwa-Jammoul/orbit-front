@@ -1,5 +1,5 @@
 <template>
-  <nuxt-link class="product-card" :dir="rtl()" :to="`/products/${cardData.id}`" data-aos-duration="1000"
+  <nuxt-link class="product-card" :dir="rtl()" :to="`/products/${useEndpoint(cardData)}`" data-aos-duration="1000"
   data-aos="fade-up">
 
     <div class="product-card-frame">

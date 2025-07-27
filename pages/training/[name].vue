@@ -75,7 +75,7 @@ const similarItems = ref(null)
 const isLoading = ref(true)
 
 // const { data: courseData } = await useGetSiteApi().GetAll(`${api.coursesApi}/${id}`);
-const { data: courseData } = await useGetSiteApi().GetAll(`${api.coursesApi}/GetByName/${courseName}`);
+const { data: courseData } = await useGetSiteApi().GetAll(`${api.coursesApi}/GetByEndpoint/${courseName}`);
 // console.log(courseData.value);
 // console.log(useMenu().value);
 // watchEffect(async () => {

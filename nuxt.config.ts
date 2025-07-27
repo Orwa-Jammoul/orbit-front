@@ -1,4 +1,6 @@
 // https://nuxt.com/docs/api/configuration/nuxt-config
+import { sitemapRoutes } from './composables/sitemap';
+
 export default defineNuxtConfig({
   ssr: true,
   modules: [
@@ -67,6 +69,16 @@ export default defineNuxtConfig({
         ar: '/سياسة-الخصوصية',
         de: '/Datenschutzrichtlinie'
       },
+      'account/login': {
+        en: '/account/login',
+        ar: '/حساب/تسجيل-الدخول',
+        de: '/konto/anmelden'
+      },
+      'account/signup': {
+        en: '/account/signup',
+        ar: '/حساب/تسجيل-جديد',
+        de: '/konto/registrieren'
+      },
       'terms-and-conditions': {
         en: '/terms-and-conditions',
         ar: '/الشروط-والأحكام',
@@ -80,6 +92,28 @@ export default defineNuxtConfig({
 
     }
   },
+  // Sitemap configuration
+  sitemap: {
+    strictNuxtContentPaths: true,
+    defaults: {
+      changefreq: 'daily',
+      priority: 0.3,
+      lastmod: new Date().toISOString(),
+    },
+    urls: async ()=>{
+      const { routes } = await sitemapRoutes()
+      return routes ;
+    }
+  },
+  
+  // Optional: SEO module configuration
+  site: {
+    url: 'https://orbit-eng.net',
+    name: 'Orbit Engineering',
+    description: 'Your site description',
+    defaultLocale: 'en',
+  },
+
   veeValidate: {
     // disable or enable auto imports
     autoImports: true,

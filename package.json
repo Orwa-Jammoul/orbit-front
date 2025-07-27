@@ -16,6 +16,8 @@
     "@nuxt/icon": "^1.13.0",
     "@nuxtjs/i18n": "^9.5.5",
     "@nuxtjs/seo": "^3.0.3",
+    "@splidejs/splide-extension-auto-scroll": "^0.5.3",
+    "@splidejs/vue-splide": "^0.6.12",
     "@types/three": "^0.177.0",
     "@vee-validate/nuxt": "^4.15.1",
     "@vee-validate/yup": "^4.15.1",

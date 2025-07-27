@@ -3,13 +3,14 @@
 
     <div class="nav-main-ribbon pcb rp">
       
-      <nuxt-link class="logo-frame contain" :class="rtl()" :to="langPath('/')" >
-        <img :src="!isAr()?`/logo/Orbit_company-logo-side-white-en.svg`:`/logo/Orbit_company-logo-side-white-ar.svg`" alt="logo">
+      <nuxt-link class="logo-frame contain" :class="rtl()" :to="localePath('/')" >
+        <img :src="!isAr()?`/logo/Orbit_company-logo-side-white-02.png`:`/logo/Orbit_company-logo-side-white-01.png`" alt="logo">
       </nuxt-link>
       <div class="nav-links-side pce">
         <MenuLanguage/>
         <!-- <MenuCart/>
-        <MenuAccount/> -->
+        -->
+        <!-- <MenuAccount/>  -->
         <div class="vertical-nav">
           <SharedNavVertical :pages="allPages"/>
         </div>
@@ -38,6 +39,7 @@
 
 const {locale} = useI18n()
 useLang().value = locale.value;
+const localePath = useLocalePath()
 
 const pages = ref(useMenu().value.navbar);
 // const contacts = ref(useContactsMenus().value.filter(item=>item.englishName.toLowerCase()!='whatsapp').sort((a,b)=>{a.order - b.order}));

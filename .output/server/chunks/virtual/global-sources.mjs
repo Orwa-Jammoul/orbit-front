@@ -4,7 +4,515 @@ const sources = [
             "name": "sitemap:urls",
             "description": "Set with the `sitemap.urls` config."
         },
-        "urls": [],
+        "urls": [
+            {
+                "loc": "/services/visual-identity-design",
+                "changefreq": "weekly",
+                "priority": 0.7,
+                "_i18n": {
+                    "languages": {
+                        "en": "/services/visual-identity-design",
+                        "ar": "ar/الخدمات/تصميم-هوية-بصرية",
+                        "de": "de/Dienstleistungen/umfassendes-Corporate-Design"
+                    }
+                },
+                "lastmod": "2025-07-27T09:57:37.374Z"
+            },
+            {
+                "loc": "/services/management-systems-development",
+                "changefreq": "weekly",
+                "priority": 0.7,
+                "_i18n": {
+                    "languages": {
+                        "en": "/services/management-systems-development",
+                        "ar": "ar/الخدمات/تطوير-أنظمة-الإدارة",
+                        "de": "de/Dienstleistungen/managementsysteme"
+                    }
+                },
+                "lastmod": "2025-07-27T09:57:37.374Z"
+            },
+            {
+                "loc": "/services/Search-engine-optimization-SEO",
+                "changefreq": "weekly",
+                "priority": 0.7,
+                "_i18n": {
+                    "languages": {
+                        "en": "/services/Search-engine-optimization-SEO",
+                        "ar": "ar/الخدمات/تحسين-محركات-البحث",
+                        "de": "de/Dienstleistungen/Suchmaschinenoptimierung-SEO"
+                    }
+                },
+                "lastmod": "2025-07-27T09:57:37.374Z"
+            },
+            {
+                "loc": "/services/website-development",
+                "changefreq": "weekly",
+                "priority": 0.7,
+                "_i18n": {
+                    "languages": {
+                        "en": "/services/website-development",
+                        "ar": "ar/الخدمات/تطوير-مواقع-الويب",
+                        "de": "de/Dienstleistungen/website-entwicklung"
+                    }
+                },
+                "lastmod": "2025-07-27T09:57:37.374Z"
+            },
+            {
+                "loc": "/services/mobile-application-development",
+                "changefreq": "weekly",
+                "priority": 0.7,
+                "_i18n": {
+                    "languages": {
+                        "en": "/services/mobile-application-development",
+                        "ar": "ar/الخدمات/تطوير-تطبيقات-الموبايل",
+                        "de": "de/Dienstleistungen/entwicklung-mobiler-anwendungen"
+                    }
+                },
+                "lastmod": "2025-07-27T09:57:37.374Z"
+            },
+            {
+                "loc": "/services/wordpress-website-design",
+                "changefreq": "weekly",
+                "priority": 0.7,
+                "_i18n": {
+                    "languages": {
+                        "en": "/services/wordpress-website-design",
+                        "ar": "ar/الخدمات/تصميم-موقع-wordpress",
+                        "de": "de/Dienstleistungen/wordPress-website-design"
+                    }
+                },
+                "lastmod": "2025-07-27T09:57:37.374Z"
+            },
+            {
+                "loc": "/services/recruitment-file-management",
+                "changefreq": "weekly",
+                "priority": 0.7,
+                "_i18n": {
+                    "languages": {
+                        "en": "/services/recruitment-file-management",
+                        "ar": "ar/الخدمات/إدارة-ملفات-التوظيف",
+                        "de": "de/Dienstleistungen/bewerbungsunterlagen-verwaltung"
+                    }
+                },
+                "lastmod": "2025-07-27T09:57:37.374Z"
+            },
+            {
+                "loc": "/training/artificial-intelligence-level-1",
+                "changefreq": "weekly",
+                "priority": 0.7,
+                "_i18n": {
+                    "languages": {
+                        "en": "/training/artificial-intelligence-level-1",
+                        "ar": "ar/تدريب/الذكاء-الاصطناعي-مستوى-أول",
+                        "de": "de/Ausbildung/künstliche-intelligenz-level-1"
+                    }
+                },
+                "lastmod": "2025-07-27T09:57:37.374Z"
+            },
+            {
+                "loc": "/training/artificial-intelligence-level-2",
+                "changefreq": "weekly",
+                "priority": 0.7,
+                "_i18n": {
+                    "languages": {
+                        "en": "/training/artificial-intelligence-level-2",
+                        "ar": "ar/تدريب/الذكاء-الاصطناعي-مستوى-ثاني",
+                        "de": "de/Ausbildung/künstliche-intelligenz-level-2"
+                    }
+                },
+                "lastmod": "2025-07-27T09:57:37.374Z"
+            },
+            {
+                "loc": "/training/web-interface-programming",
+                "changefreq": "weekly",
+                "priority": 0.7,
+                "_i18n": {
+                    "languages": {
+                        "en": "/training/web-interface-programming",
+                        "ar": "ar/تدريب/برمجة-واجهات-الويب",
+                        "de": "de/Ausbildung/webinterface-programmierung"
+                    }
+                },
+                "lastmod": "2025-07-27T09:57:37.374Z"
+            },
+            {
+                "loc": "/training/dynamic-interfaces",
+                "changefreq": "weekly",
+                "priority": 0.7,
+                "_i18n": {
+                    "languages": {
+                        "en": "/training/dynamic-interfaces",
+                        "ar": "ar/تدريب/الواجهات-الديناميكية",
+                        "de": "de/Ausbildung/dynamische-schnittstellen"
+                    }
+                },
+                "lastmod": "2025-07-27T09:57:37.374Z"
+            },
+            {
+                "loc": "/training/databases",
+                "changefreq": "weekly",
+                "priority": 0.7,
+                "_i18n": {
+                    "languages": {
+                        "en": "/training/databases",
+                        "ar": "ar/تدريب/قواعد-البيانات",
+                        "de": "de/Ausbildung/datenbanken"
+                    }
+                },
+                "lastmod": "2025-07-27T09:57:37.374Z"
+            },
+            {
+                "loc": "/training/photoshop",
+                "changefreq": "weekly",
+                "priority": 0.7,
+                "_i18n": {
+                    "languages": {
+                        "en": "/training/photoshop",
+                        "ar": "ar/تدريب/فوتوشوب",
+                        "de": "de/Ausbildung/photoshop"
+                    }
+                },
+                "lastmod": "2025-07-27T09:57:37.374Z"
+            },
+            {
+                "loc": "ar/الخدمات/تصميم-هوية-بصرية",
+                "changefreq": "weekly",
+                "priority": 0.7,
+                "_i18n": {
+                    "languages": {
+                        "en": "/services/visual-identity-design",
+                        "ar": "ar/الخدمات/تصميم-هوية-بصرية",
+                        "de": "de/Dienstleistungen/umfassendes-Corporate-Design"
+                    }
+                },
+                "lastmod": "2025-07-27T09:57:37.374Z"
+            },
+            {
+                "loc": "ar/الخدمات/تطوير-أنظمة-الإدارة",
+                "changefreq": "weekly",
+                "priority": 0.7,
+                "_i18n": {
+                    "languages": {
+                        "en": "/services/management-systems-development",
+                        "ar": "ar/الخدمات/تطوير-أنظمة-الإدارة",
+                        "de": "de/Dienstleistungen/managementsysteme"
+                    }
+                },
+                "lastmod": "2025-07-27T09:57:37.374Z"
+            },
+            {
+                "loc": "ar/الخدمات/تحسين-محركات-البحث",
+                "changefreq": "weekly",
+                "priority": 0.7,
+                "_i18n": {
+                    "languages": {
+                        "en": "/services/Search-engine-optimization-SEO",
+                        "ar": "ar/الخدمات/تحسين-محركات-البحث",
+                        "de": "de/Dienstleistungen/Suchmaschinenoptimierung-SEO"
+                    }
+                },
+                "lastmod": "2025-07-27T09:57:37.374Z"
+            },
+            {
+                "loc": "ar/الخدمات/تطوير-مواقع-الويب",
+                "changefreq": "weekly",
+                "priority": 0.7,
+                "_i18n": {
+                    "languages": {
+                        "en": "/services/website-development",
+                        "ar": "ar/الخدمات/تطوير-مواقع-الويب",
+                        "de": "de/Dienstleistungen/website-entwicklung"
+                    }
+                },
+                "lastmod": "2025-07-27T09:57:37.374Z"
+            },
+            {
+                "loc": "ar/الخدمات/تطوير-تطبيقات-الموبايل",
+                "changefreq": "weekly",
+                "priority": 0.7,
+                "_i18n": {
+                    "languages": {
+                        "en": "/services/mobile-application-development",
+                        "ar": "ar/الخدمات/تطوير-تطبيقات-الموبايل",
+                        "de": "de/Dienstleistungen/entwicklung-mobiler-anwendungen"
+                    }
+                },
+                "lastmod": "2025-07-27T09:57:37.374Z"
+            },
+            {
+                "loc": "ar/الخدمات/تصميم-موقع-wordpress",
+                "changefreq": "weekly",
+                "priority": 0.7,
+                "_i18n": {
+                    "languages": {
+                        "en": "/services/wordpress-website-design",
+                        "ar": "ar/الخدمات/تصميم-موقع-wordpress",
+                        "de": "de/Dienstleistungen/wordPress-website-design"
+                    }
+                },
+                "lastmod": "2025-07-27T09:57:37.374Z"
+            },
+            {
+                "loc": "ar/الخدمات/إدارة-ملفات-التوظيف",
+                "changefreq": "weekly",
+                "priority": 0.7,
+                "_i18n": {
+                    "languages": {
+                        "en": "/services/recruitment-file-management",
+                        "ar": "ar/الخدمات/إدارة-ملفات-التوظيف",
+                        "de": "de/Dienstleistungen/bewerbungsunterlagen-verwaltung"
+                    }
+                },
+                "lastmod": "2025-07-27T09:57:37.374Z"
+            },
+            {
+                "loc": "ar/تدريب/الذكاء-الاصطناعي-مستوى-أول",
+                "changefreq": "weekly",
+                "priority": 0.7,
+                "_i18n": {
+                    "languages": {
+                        "en": "/training/artificial-intelligence-level-1",
+                        "ar": "ar/تدريب/الذكاء-الاصطناعي-مستوى-أول",
+                        "de": "de/Ausbildung/künstliche-intelligenz-level-1"
+                    }
+                },
+                "lastmod": "2025-07-27T09:57:37.374Z"
+            },
+            {
+                "loc": "ar/تدريب/الذكاء-الاصطناعي-مستوى-ثاني",
+                "changefreq": "weekly",
+                "priority": 0.7,
+                "_i18n": {
+                    "languages": {
+                        "en": "/training/artificial-intelligence-level-2",
+                        "ar": "ar/تدريب/الذكاء-الاصطناعي-مستوى-ثاني",
+                        "de": "de/Ausbildung/künstliche-intelligenz-level-2"
+                    }
+                },
+                "lastmod": "2025-07-27T09:57:37.374Z"
+            },
+            {
+                "loc": "ar/تدريب/برمجة-واجهات-الويب",
+                "changefreq": "weekly",
+                "priority": 0.7,
+                "_i18n": {
+                    "languages": {
+                        "en": "/training/web-interface-programming",
+                        "ar": "ar/تدريب/برمجة-واجهات-الويب",
+                        "de": "de/Ausbildung/webinterface-programmierung"
+                    }
+                },
+                "lastmod": "2025-07-27T09:57:37.374Z"
+            },
+            {
+                "loc": "ar/تدريب/الواجهات-الديناميكية",
+                "changefreq": "weekly",
+                "priority": 0.7,
+                "_i18n": {
+                    "languages": {
+                        "en": "/training/dynamic-interfaces",
+                        "ar": "ar/تدريب/الواجهات-الديناميكية",
+                        "de": "de/Ausbildung/dynamische-schnittstellen"
+                    }
+                },
+                "lastmod": "2025-07-27T09:57:37.374Z"
+            },
+            {
+                "loc": "ar/تدريب/قواعد-البيانات",
+                "changefreq": "weekly",
+                "priority": 0.7,
+                "_i18n": {
+                    "languages": {
+                        "en": "/training/databases",
+                        "ar": "ar/تدريب/قواعد-البيانات",
+                        "de": "de/Ausbildung/datenbanken"
+                    }
+                },
+                "lastmod": "2025-07-27T09:57:37.374Z"
+            },
+            {
+                "loc": "ar/تدريب/فوتوشوب",
+                "changefreq": "weekly",
+                "priority": 0.7,
+                "_i18n": {
+                    "languages": {
+                        "en": "/training/photoshop",
+                        "ar": "ar/تدريب/فوتوشوب",
+                        "de": "de/Ausbildung/photoshop"
+                    }
+                },
+                "lastmod": "2025-07-27T09:57:37.374Z"
+            },
+            {
+                "loc": "de/Dienstleistungen/umfassendes-Corporate-Design",
+                "changefreq": "weekly",
+                "priority": 0.7,
+                "_i18n": {
+                    "languages": {
+                        "en": "/services/visual-identity-design",
+                        "ar": "ar/الخدمات/تصميم-هوية-بصرية",
+                        "de": "de/Dienstleistungen/umfassendes-Corporate-Design"
+                    }
+                },
+                "lastmod": "2025-07-27T09:57:37.374Z"
+            },
+            {
+                "loc": "de/Dienstleistungen/managementsysteme",
+                "changefreq": "weekly",
+                "priority": 0.7,
+                "_i18n": {
+                    "languages": {
+                        "en": "/services/management-systems-development",
+                        "ar": "ar/الخدمات/تطوير-أنظمة-الإدارة",
+                        "de": "de/Dienstleistungen/managementsysteme"
+                    }
+                },
+                "lastmod": "2025-07-27T09:57:37.374Z"
+            },
+            {
+                "loc": "de/Dienstleistungen/Suchmaschinenoptimierung-SEO",
+                "changefreq": "weekly",
+                "priority": 0.7,
+                "_i18n": {
+                    "languages": {
+                        "en": "/services/Search-engine-optimization-SEO",
+                        "ar": "ar/الخدمات/تحسين-محركات-البحث",
+                        "de": "de/Dienstleistungen/Suchmaschinenoptimierung-SEO"
+                    }
+                },
+                "lastmod": "2025-07-27T09:57:37.374Z"
+            },
+            {
+                "loc": "de/Dienstleistungen/website-entwicklung",
+                "changefreq": "weekly",
+                "priority": 0.7,
+                "_i18n": {
+                    "languages": {
+                        "en": "/services/website-development",
+                        "ar": "ar/الخدمات/تطوير-مواقع-الويب",
+                        "de": "de/Dienstleistungen/website-entwicklung"
+                    }
+                },
+                "lastmod": "2025-07-27T09:57:37.374Z"
+            },
+            {
+                "loc": "de/Dienstleistungen/entwicklung-mobiler-anwendungen",
+                "changefreq": "weekly",
+                "priority": 0.7,
+                "_i18n": {
+                    "languages": {
+                        "en": "/services/mobile-application-development",
+                        "ar": "ar/الخدمات/تطوير-تطبيقات-الموبايل",
+                        "de": "de/Dienstleistungen/entwicklung-mobiler-anwendungen"
+                    }
+                },
+                "lastmod": "2025-07-27T09:57:37.374Z"
+            },
+            {
+                "loc": "de/Dienstleistungen/wordPress-website-design",
+                "changefreq": "weekly",
+                "priority": 0.7,
+                "_i18n": {
+                    "languages": {
+                        "en": "/services/wordpress-website-design",
+                        "ar": "ar/الخدمات/تصميم-موقع-wordpress",
+                        "de": "de/Dienstleistungen/wordPress-website-design"
+                    }
+                },
+                "lastmod": "2025-07-27T09:57:37.374Z"
+            },
+            {
+                "loc": "de/Dienstleistungen/bewerbungsunterlagen-verwaltung",
+                "changefreq": "weekly",
+                "priority": 0.7,
+                "_i18n": {
+                    "languages": {
+                        "en": "/services/recruitment-file-management",
+                        "ar": "ar/الخدمات/إدارة-ملفات-التوظيف",
+                        "de": "de/Dienstleistungen/bewerbungsunterlagen-verwaltung"
+                    }
+                },
+                "lastmod": "2025-07-27T09:57:37.374Z"
+            },
+            {
+                "loc": "de/Ausbildung/künstliche-intelligenz-level-1",
+                "changefreq": "weekly",
+                "priority": 0.7,
+                "_i18n": {
+                    "languages": {
+                        "en": "/training/artificial-intelligence-level-1",
+                        "ar": "ar/تدريب/الذكاء-الاصطناعي-مستوى-أول",
+                        "de": "de/Ausbildung/künstliche-intelligenz-level-1"
+                    }
+                },
+                "lastmod": "2025-07-27T09:57:37.374Z"
+            },
+            {
+                "loc": "de/Ausbildung/künstliche-intelligenz-level-2",
+                "changefreq": "weekly",
+                "priority": 0.7,
+                "_i18n": {
+                    "languages": {
+                        "en": "/training/artificial-intelligence-level-2",
+                        "ar": "ar/تدريب/الذكاء-الاصطناعي-مستوى-ثاني",
+                        "de": "de/Ausbildung/künstliche-intelligenz-level-2"
+                    }
+                },
+                "lastmod": "2025-07-27T09:57:37.374Z"
+            },
+            {
+                "loc": "de/Ausbildung/webinterface-programmierung",
+                "changefreq": "weekly",
+                "priority": 0.7,
+                "_i18n": {
+                    "languages": {
+                        "en": "/training/web-interface-programming",
+                        "ar": "ar/تدريب/برمجة-واجهات-الويب",
+                        "de": "de/Ausbildung/webinterface-programmierung"
+                    }
+                },
+                "lastmod": "2025-07-27T09:57:37.374Z"
+            },
+            {
+                "loc": "de/Ausbildung/dynamische-schnittstellen",
+                "changefreq": "weekly",
+                "priority": 0.7,
+                "_i18n": {
+                    "languages": {
+                        "en": "/training/dynamic-interfaces",
+                        "ar": "ar/تدريب/الواجهات-الديناميكية",
+                        "de": "de/Ausbildung/dynamische-schnittstellen"
+                    }
+                },
+                "lastmod": "2025-07-27T09:57:37.374Z"
+            },
+            {
+                "loc": "de/Ausbildung/datenbanken",
+                "changefreq": "weekly",
+                "priority": 0.7,
+                "_i18n": {
+                    "languages": {
+                        "en": "/training/databases",
+                        "ar": "ar/تدريب/قواعد-البيانات",
+                        "de": "de/Ausbildung/datenbanken"
+                    }
+                },
+                "lastmod": "2025-07-27T09:57:37.374Z"
+            },
+            {
+                "loc": "de/Ausbildung/photoshop",
+                "changefreq": "weekly",
+                "priority": 0.7,
+                "_i18n": {
+                    "languages": {
+                        "en": "/training/photoshop",
+                        "ar": "ar/تدريب/فوتوشوب",
+                        "de": "de/Ausbildung/photoshop"
+                    }
+                },
+                "lastmod": "2025-07-27T09:57:37.374Z"
+            }
+        ],
         "sourceType": "user"
     },
     {
@@ -409,6 +917,138 @@ const sources = [
                     {
                         "hreflang": "x-default",
                         "href": "/privacy-policy"
+                    }
+                ]
+            },
+            {
+                "_sitemap": "en-US",
+                "loc": "/account/login",
+                "alternatives": [
+                    {
+                        "hreflang": "en-US",
+                        "href": "/account/login"
+                    },
+                    {
+                        "hreflang": "ar-AE",
+                        "href": "ar/حساب/تسجيل-الدخول"
+                    },
+                    {
+                        "hreflang": "de-DE",
+                        "href": "de/konto/anmelden"
+                    },
+                    {
+                        "hreflang": "x-default",
+                        "href": "/account/login"
+                    }
+                ]
+            },
+            {
+                "_sitemap": "ar-AE",
+                "loc": "ar/حساب/تسجيل-الدخول",
+                "alternatives": [
+                    {
+                        "hreflang": "en-US",
+                        "href": "/account/login"
+                    },
+                    {
+                        "hreflang": "ar-AE",
+                        "href": "ar/حساب/تسجيل-الدخول"
+                    },
+                    {
+                        "hreflang": "de-DE",
+                        "href": "de/konto/anmelden"
+                    },
+                    {
+                        "hreflang": "x-default",
+                        "href": "/account/login"
+                    }
+                ]
+            },
+            {
+                "_sitemap": "de-DE",
+                "loc": "de/konto/anmelden",
+                "alternatives": [
+                    {
+                        "hreflang": "en-US",
+                        "href": "/account/login"
+                    },
+                    {
+                        "hreflang": "ar-AE",
+                        "href": "ar/حساب/تسجيل-الدخول"
+                    },
+                    {
+                        "hreflang": "de-DE",
+                        "href": "de/konto/anmelden"
+                    },
+                    {
+                        "hreflang": "x-default",
+                        "href": "/account/login"
+                    }
+                ]
+            },
+            {
+                "_sitemap": "en-US",
+                "loc": "/account/signup",
+                "alternatives": [
+                    {
+                        "hreflang": "en-US",
+                        "href": "/account/signup"
+                    },
+                    {
+                        "hreflang": "ar-AE",
+                        "href": "ar/حساب/تسجيل-جديد"
+                    },
+                    {
+                        "hreflang": "de-DE",
+                        "href": "de/konto/registrieren"
+                    },
+                    {
+                        "hreflang": "x-default",
+                        "href": "/account/signup"
+                    }
+                ]
+            },
+            {
+                "_sitemap": "ar-AE",
+                "loc": "ar/حساب/تسجيل-جديد",
+                "alternatives": [
+                    {
+                        "hreflang": "en-US",
+                        "href": "/account/signup"
+                    },
+                    {
+                        "hreflang": "ar-AE",
+                        "href": "ar/حساب/تسجيل-جديد"
+                    },
+                    {
+                        "hreflang": "de-DE",
+                        "href": "de/konto/registrieren"
+                    },
+                    {
+                        "hreflang": "x-default",
+                        "href": "/account/signup"
+                    }
+                ]
+            },
+            {
+                "_sitemap": "de-DE",
+                "loc": "de/konto/registrieren",
+                "alternatives": [
+                    {
+                        "hreflang": "en-US",
+                        "href": "/account/signup"
+                    },
+                    {
+                        "hreflang": "ar-AE",
+                        "href": "ar/حساب/تسجيل-جديد"
+                    },
+                    {
+                        "hreflang": "de-DE",
+                        "href": "de/konto/registrieren"
+                    },
+                    {
+                        "hreflang": "x-default",
+                        "href": "/account/signup"
                     }
                 ]
             },
