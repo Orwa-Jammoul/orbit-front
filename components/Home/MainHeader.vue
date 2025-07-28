@@ -46,10 +46,15 @@ sliders.value = data.value.items;
 
 <style lang="scss">
 .header-main{
+  height: 100lvh;
   background-color: black;
   .splide{
+    height: 100%;
     background: black;
     padding-bottom: 1rem;
+    .splide__track{
+      height: 100%;
+    }
     .splide__arrows{
       display: none;
       .splide__arrow{

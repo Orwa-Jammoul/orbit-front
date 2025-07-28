@@ -1,89 +1,135 @@
 export const useGetUserApi = () => {
-    const { public: { apiBase, api, cachedTime } } = useRuntimeConfig();
-    const nuxtApp = useNuxtApp();
-    const { $awn } = useNuxtApp();
+  const { public: { apiBase, api, cachedTime } } = useRuntimeConfig();
+  const nuxtApp = useNuxtApp();
+  const { $awn } = useNuxtApp();
+  const token = useToken();
 
-    // Get All Data (Get All)
-    const GetAll = async (endpoint, isServer = true, isLazy = false, isCached=true) => {
-        const data = await useFetch(() => `${endpoint}`, {
-            key: `${endpoint}`,
-            baseURL: apiBase ?? 'https://adminpanel.orbit-eng.net',
-            server: isServer,
-            lazy: isLazy,
-            headers: {
-                'Accept-Language': 'en-US',
-                'Authorization': `Bearer ${useToken().value}`
-            },
-            transform(input) {
-                return {
-                    ...input,
-                    fetchedAt: new Date()
-                }
-            },
-            getCachedData(key) {
-                return isCached?handleCachingDataTime(key):null;
-            }
-        })
-        // console.log(data);
-        if(data.error.value){
-            if(data.error.value.statusCode == 401 || data.error.value.statusCode == 403){
-                $awn.alert(errorMessage.value[0], {
-                    durations: { global: 5000 },
-                });
-                useLogout()
-                return navigateTo('/');
-            }
-        }
-        return data
+  // Common error handler
+  const handleApiError = (error) => {
+    console.error('API Error:', error);
+
+    if (error?.statusCode === 401 || error?.statusCode === 403) {
+      $awn.alert(error.message || 'Session expired. Please log in again.', {
+        durations: { global: 5000 },
+      });
+      useLogout();
+      navigateTo('/');
+      return true; // Indicates auth error was handled
     }
 
-    // Get Add Data By Id (Get Details)
-    const GetById = async (endpointWithoutId, id, isServer = true, isLazy = false) => {
-        const data = useFetch(() => `${endpointWithoutId}${id}`, {
-            key: `${endpointWithoutId}${id}`,
-            baseURL: apiBase ?? 'https://adminpanel.orbit-eng.net',
-            server: isServer,
-            lazy: isLazy,
-            headers: {
-                'Accept-Language': 'en-US',
-                'Authorization': `Bearer ${useToken().value}`
-            },
-            transform(input) {
-                return {
-                    ...input,
-                    fetchedAt: new Date()
-                }
-            },
-            getCachedData(key) {
-                return handleCachingDataTime(key);
-            }
-        })
-        if(data.error.value){
-            if(data.error.value.statusCode == 401 || data.error.value.statusCode == 403){
-                $awn.alert(errorMessage.value[0], {
-                    durations: { global: 5000 },
-                });
-                useLogout()
-                return navigateTo('/');
-            }
-        }
-        return data
-    }
+    // Show generic error to user
+    $awn.alert(error.message || 'An error occurred. Please try again.', {
+      durations: { global: 5000 },
+    });
 
-    const handleCachingDataTime = (key) => {
-        const data = nuxtApp.payload.data[key] || nuxtApp.static.data[key]
-        if (!data) return;
+    return false;
+  };
 
-        // Is te data too old ? cache data for some period of time
-        const expirationDate = new Date(data.fetchedAt);
-        expirationDate.setTime(expirationDate.getTime() + cachedTime);
-        const isExpired = expirationDate.getTime() < Date.now();
-        if (isExpired) return;
-        return data;
+  // Common fetch configuration
+  const getFetchConfig = (key, isServer, isLazy, isCached) => ({
+    key,
+    baseURL: apiBase ?? 'https://adminpanel.orbit-eng.net',
+    server: isServer,
+    lazy: isLazy,
+    headers: {
+      'Accept-Language': 'en-US',
+      'Authorization': `Bearer ${token.value}`
+    },
+    transform(input) {
+      if (!input) {
+        throw new Error('Empty response from server');
+      }
+      return {
+        ...input,
+        fetchedAt: new Date()
+      };
+    },
+    getCachedData(key) {
+      try {
+        return isCached ? handleCachingDataTime(key) : null;
+      } catch (error) {
+        console.error('Cache error:', error);
+        return null;
+      }
+    },
+    onRequestError({error}) {
+      throw error;
+    },
+    onResponseError({error}) {
+      throw error;
     }
+  });
 
-    return {
-        GetAll,
-        GetById
+  // Get All Data (Get All)
+  const GetAll = async (endpoint, isServer = true, isLazy = false, isCached = true) => {
+    try {
+      const { data, error } = await useFetch(() => endpoint,
+        getFetchConfig(endpoint, isServer, isLazy, isCached)
+      );
+
+      if (error.value) {
+        const wasAuthError = handleApiError(error.value);
+        if (wasAuthError) return { data, error };
+      }
+
+      return { data, error };
+    } catch (error) {
+      handleApiError(error);
+      return {
+        data: ref(null),
+        error: ref(error)
+      };
     }
-}
+  };
+
+  // Get Data By Id (Get Details)
+  const GetById = async (endpointWithoutId, id, isServer = true, isLazy = false, isCached = true) => {
+    try {
+      if (!id) throw new Error('ID parameter is required');
+
+      const endpoint = `${endpointWithoutId}${id}`;
+      const { data, error } = await useFetch(() => endpoint,
+        getFetchConfig(endpoint, isServer, isLazy, isCached)
+      );
+
+      if (error.value) {
+        const wasAuthError = handleApiError(error.value);
+        if (wasAuthError) return { data, error };
+      }
+
+      return { data, error };
+    } catch (error) {
+      handleApiError(error);
+      return {
+        data: ref(null),
+        error: ref(error)
+      };
+    }
+  };
+
+  const handleCachingDataTime = (key) => {
+    try {
+      const data = nuxtApp.payload.data?.[key] || nuxtApp.static.data?.[key];
+      if (!data) return null;
+
+      if (!data.fetchedAt) {
+        console.warn('Cached data missing fetchedAt timestamp');
+        return null;
+      }
+
+      const expirationDate = new Date(data.fetchedAt);
+      expirationDate.setTime(expirationDate.getTime() + cachedTime);
+      const isExpired = expirationDate.getTime() < Date.now();
+
+      return isExpired ? null : data;
+    } catch (error) {
+      console.error('Cache handling error:', error);
+      return null;
+    }
+  };
+
+  return {
+    GetAll,
+    GetById
+  };
+};

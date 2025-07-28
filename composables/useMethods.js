@@ -108,6 +108,25 @@ export const useEndpoint = (data) => {
   return value;
 };
 
+export const useAlt = (data, num = 1) => {
+  if(!data){
+    return dNotFound;
+  }
+  const { locale } = useI18n()
+  const lang = locale.value;
+
+  let value;
+
+  if(lang==='en'){
+    value=  data[`imageAlt${num}En`];
+  }else if(lang==='de'){
+    value= data[`imageAlt${num}Ge`];
+  }else{
+    value= data[`imageAlt${num}Ar`];
+  }
+  return value ?? 'image';
+};
+
 
 
 export const useDes = (data, firstCapital=false, allCapital=false, firsts=false) => {

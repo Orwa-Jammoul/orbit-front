@@ -39,6 +39,18 @@
     autoScroll: {
       speed: 1,
     },
+    breakpoints: {
+      1024: {
+        perPage: 4,
+      },
+      768: {
+        perPage: 3,
+      },
+      480: {
+        perPage: 2,
+        gap: '0.5rem',
+      }
+    }
   }
   const extensions = { AutoScroll };
 

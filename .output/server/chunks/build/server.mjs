@@ -1,5 +1,5 @@
-import { defineComponent as defineComponent$1, toRef, isRef, resolveDynamicComponent, h, inject as inject$1, computed, getCurrentInstance as getCurrentInstance$1, hasInjectionContext, toValue, onServerPrefetch, createElementBlock, reactive, watch, ref, unref, provide, readonly, shallowRef, nextTick, watchEffect, cloneVNode, defineAsyncComponent, createVNode, Transition, mergeProps, toRefs, useId, onScopeDispose, withDirectives, vShow, Fragment, toDisplayString as toDisplayString$1, resolveDirective, toRaw, createTextVNode, capitalize as capitalize$1, shallowReactive, Suspense, createApp, Text, TransitionGroup, camelize, markRaw, resolveComponent, render, onErrorCaptured, effectScope, isReadonly, isShallow, isReactive, warn as warn$1, getCurrentScope, withCtx, vModelText, Teleport, withModifiers, isVNode as isVNode$1, Comment, useSSRContext } from 'vue';
-import { G as defu, f as createError$1, ab as useHead$1, ac as headSymbol, ad as klona$1, ae as defuFn, a4 as hash, af as sanitizeStatusCode, ag as getContext, ah as $fetch$1, ai as baseURL, p as publicAssetsURL, aj as createHooks, ak as executeAsync, al as titleCase, am as toRouteMatcher, an as createRouter$1, ao as camelCase, ap as useSeoMeta$1, aq as getRequestProtocol, d as destr, ar as getRequestHeaders, as as parse$3, at as getRequestHeader, au as isEqual$3, av as setCookie, aw as getCookie, ax as deleteCookie, ay as resolveUnrefHeadInput } from '../_/nitro.mjs';
+import { defineComponent as defineComponent$1, computed, toValue, reactive, watch, toRef, resolveDynamicComponent, h, isRef, inject as inject$1, getCurrentInstance as getCurrentInstance$1, hasInjectionContext, onServerPrefetch, createElementBlock, ref, unref, provide, readonly, shallowRef, nextTick, watchEffect, cloneVNode, defineAsyncComponent, createVNode, Transition, mergeProps, toRefs, useId, onScopeDispose, withDirectives, vShow, Fragment, toDisplayString as toDisplayString$1, resolveDirective, toRaw, createTextVNode, capitalize as capitalize$1, shallowReactive, Suspense, createApp, Text, TransitionGroup, camelize, markRaw, resolveComponent, render, onErrorCaptured, effectScope, isReadonly, isShallow, isReactive, warn as warn$1, getCurrentScope, withCtx, vModelText, Teleport, withModifiers, isVNode as isVNode$1, Comment, useSSRContext } from 'vue';
+import { a4 as hash, G as defu, f as createError$1, ab as useHead$1, ac as headSymbol, ad as klona$1, ae as defuFn, af as sanitizeStatusCode, ag as getContext, ah as $fetch$1, ai as baseURL, p as publicAssetsURL, aj as createHooks, ak as executeAsync, al as titleCase, am as toRouteMatcher, an as createRouter$1, ao as camelCase, ap as useSeoMeta$1, aq as getRequestProtocol, d as destr, ar as getRequestHeaders, as as parse$3, at as getRequestHeader, au as isEqual$3, av as setCookie, aw as getCookie, ax as deleteCookie, ay as resolveUnrefHeadInput } from '../_/nitro.mjs';
 import { useRoute as useRoute$2, RouterView, createMemoryHistory, createRouter, START_LOCATION, isNavigationFailure } from 'vue-router';
 import { config, library } from '@fortawesome/fontawesome-svg-core';
 import { faSearch, faUser, faHome } from '@fortawesome/free-solid-svg-icons';
@@ -1338,19 +1338,19 @@ const _routes = [
     name: "index___en",
     path: "/",
     meta: __nuxt_page_meta$2 || {},
-    component: () => import('./index-DVharCHt.mjs')
+    component: () => import('./index-wOMSjROo.mjs')
   },
   {
     name: "index___ar",
     path: "/ar",
     meta: __nuxt_page_meta$2 || {},
-    component: () => import('./index-DVharCHt.mjs')
+    component: () => import('./index-wOMSjROo.mjs')
   },
   {
     name: "index___de",
     path: "/de",
     meta: __nuxt_page_meta$2 || {},
-    component: () => import('./index-DVharCHt.mjs')
+    component: () => import('./index-wOMSjROo.mjs')
   },
   {
     name: "account-login___en",
@@ -1371,19 +1371,19 @@ const _routes = [
     name: "about-us___en",
     path: "/about-us",
     meta: __nuxt_page_meta$1 || {},
-    component: () => import('./index-Doknt1fv.mjs')
+    component: () => import('./index-BZnaIyZU.mjs')
   },
   {
     name: "about-us___ar",
     path: "/ar/%D9%85%D9%86-%D9%86%D8%AD%D9%86",
     meta: __nuxt_page_meta$1 || {},
-    component: () => import('./index-Doknt1fv.mjs')
+    component: () => import('./index-BZnaIyZU.mjs')
   },
   {
     name: "about-us___de",
     path: "/de/%C3%9Cber-Uns",
     meta: __nuxt_page_meta$1 || {},
-    component: () => import('./index-Doknt1fv.mjs')
+    component: () => import('./index-BZnaIyZU.mjs')
   },
   {
     name: "account-signup___en",
@@ -1403,107 +1403,107 @@ const _routes = [
   {
     name: "privacy-policy___en",
     path: "/privacy-policy",
-    component: () => import('./privacy-policy-CrUjamOF.mjs')
+    component: () => import('./privacy-policy-iVrwtZXj.mjs')
   },
   {
     name: "privacy-policy___ar",
     path: "/ar/%D8%B3%D9%8A%D8%A7%D8%B3%D8%A9-%D8%A7%D9%84%D8%AE%D8%B5%D9%88%D8%B5%D9%8A%D8%A9",
-    component: () => import('./privacy-policy-CrUjamOF.mjs')
+    component: () => import('./privacy-policy-iVrwtZXj.mjs')
   },
   {
     name: "privacy-policy___de",
     path: "/de/Datenschutzrichtlinie",
-    component: () => import('./privacy-policy-CrUjamOF.mjs')
+    component: () => import('./privacy-policy-iVrwtZXj.mjs')
   },
   {
     name: "services___en",
     path: "/services",
-    component: () => import('./index--zTEDjS7.mjs')
+    component: () => import('./index-D6nw87Ye.mjs')
   },
   {
     name: "services___ar",
     path: "/ar/%D8%A7%D9%84%D8%AE%D8%AF%D9%85%D8%A7%D8%AA",
-    component: () => import('./index--zTEDjS7.mjs')
+    component: () => import('./index-D6nw87Ye.mjs')
   },
   {
     name: "services___de",
     path: "/de/Dienstleistungen",
-    component: () => import('./index--zTEDjS7.mjs')
+    component: () => import('./index-D6nw87Ye.mjs')
   },
   {
     name: "training___en",
     path: "/training",
-    component: () => import('./index-UGQLhVlw.mjs')
+    component: () => import('./index-DDrDCxIN.mjs')
   },
   {
     name: "training___ar",
     path: "/ar/%D8%AA%D8%AF%D8%B1%D9%8A%D8%A8",
-    component: () => import('./index-UGQLhVlw.mjs')
+    component: () => import('./index-DDrDCxIN.mjs')
   },
   {
     name: "training___de",
     path: "/de/Ausbildung",
-    component: () => import('./index-UGQLhVlw.mjs')
+    component: () => import('./index-DDrDCxIN.mjs')
   },
   {
     name: "services-name___en",
     path: "/services/:name()",
-    component: () => import('./_name_-DTuh1J9h.mjs')
+    component: () => import('./_name_-17q8k8b-.mjs')
   },
   {
     name: "services-name___ar",
     path: "/ar/%D8%A7%D9%84%D8%AE%D8%AF%D9%85%D8%A7%D8%AA/:name()",
-    component: () => import('./_name_-DTuh1J9h.mjs')
+    component: () => import('./_name_-17q8k8b-.mjs')
   },
   {
     name: "services-name___de",
     path: "/de/Dienstleistungen/:name()",
-    component: () => import('./_name_-DTuh1J9h.mjs')
+    component: () => import('./_name_-17q8k8b-.mjs')
   },
   {
     name: "training-name___en",
     path: "/training/:name()",
-    component: () => import('./_name_-DwyE9fO6.mjs')
+    component: () => import('./_name_-BhJswdUM.mjs')
   },
   {
     name: "training-name___ar",
     path: "/ar/%D8%AA%D8%AF%D8%B1%D9%8A%D8%A8/:name()",
-    component: () => import('./_name_-DwyE9fO6.mjs')
+    component: () => import('./_name_-BhJswdUM.mjs')
   },
   {
     name: "training-name___de",
     path: "/de/Ausbildung/:name()",
-    component: () => import('./_name_-DwyE9fO6.mjs')
+    component: () => import('./_name_-BhJswdUM.mjs')
   },
   {
     name: "contact-us___en",
     path: "/contact-us",
-    component: () => import('./index-C-gH3M0n.mjs')
+    component: () => import('./index-BpUE8UQK.mjs')
   },
   {
     name: "contact-us___ar",
     path: "/ar/%D8%AA%D9%88%D8%A7%D8%B5%D9%84-%D9%85%D8%B9%D9%86%D8%A7",
-    component: () => import('./index-C-gH3M0n.mjs')
+    component: () => import('./index-BpUE8UQK.mjs')
   },
   {
     name: "contact-us___de",
     path: "/de/Kontakt",
-    component: () => import('./index-C-gH3M0n.mjs')
+    component: () => import('./index-BpUE8UQK.mjs')
   },
   {
     name: "terms-and-conditions___en",
     path: "/terms-and-conditions",
-    component: () => import('./terms-and-conditions-DT6jaCoJ.mjs')
+    component: () => import('./terms-and-conditions-CDyjV7Dq.mjs')
   },
   {
     name: "terms-and-conditions___ar",
     path: "/ar/%D8%A7%D9%84%D8%B4%D8%B1%D9%88%D8%B7-%D9%88%D8%A7%D9%84%D8%A3%D8%AD%D9%83%D8%A7%D9%85",
-    component: () => import('./terms-and-conditions-DT6jaCoJ.mjs')
+    component: () => import('./terms-and-conditions-CDyjV7Dq.mjs')
   },
   {
     name: "terms-and-conditions___de",
     path: "/de/Gesch%C3%A4ftsbedingungen",
-    component: () => import('./terms-and-conditions-DT6jaCoJ.mjs')
+    component: () => import('./terms-and-conditions-CDyjV7Dq.mjs')
   },
   {
     name: void 0 ,
@@ -9227,58 +9227,111 @@ const _01_fetch_main_token_server_bzLPtp8eUJdNuC13fDj_FKSwif_y__FKXBm_zoHWUfU = 
   }
 });
 const useGetSiteApi = () => {
-  const { public: { apiBase, api, cachedTime } } = /* @__PURE__ */ useRuntimeConfig();
+  const { public: { apiBase, cachedTime } } = /* @__PURE__ */ useRuntimeConfig();
   const nuxtApp = useNuxtApp();
-  const GetAll = async (endpoint, isServer = true, isLazy = false, isCached = true) => {
-    return useFetch(() => `${endpoint}`, {
-      key: `${endpoint}`,
-      baseURL: apiBase ?? "https://adminpanel.orbit-eng.net",
-      server: isServer,
-      lazy: isLazy,
-      headers: {
-        "Accept-Language": "en-US",
-        "Authorization": `Bearer ${useMainToken().value}`
-      },
-      transform(input) {
-        return {
-          ...input,
-          fetchedAt: /* @__PURE__ */ new Date()
-        };
-      },
-      getCachedData(key) {
-        return isCached ? handleCachingDataTime(key) : null;
-      }
-    }, "$zFH_d_SCWu");
+  const token = useMainToken();
+  const handleError = (error, context = "") => {
+    console.error(`API Error${context ? ` in ${context}` : ""}:`, error);
+    if ((error == null ? void 0 : error.statusCode) === 401 || (error == null ? void 0 : error.statusCode) === 403) {
+      error.message = "Session expired. Please login again.";
+    } else if ((error == null ? void 0 : error.statusCode) === 404) {
+      error.message = "Requested resource not found";
+    }
+    return {
+      value: error,
+      message: error.message || "An error occurred",
+      statusCode: error.statusCode || 500
+    };
   };
-  const GetById = async (endpointWithoutId, id, isServer = true, isLazy = false) => {
-    return useFetch(() => `${endpointWithoutId}${id}`, {
-      key: `${endpointWithoutId}${id}`,
-      baseURL: apiBase ?? "https://adminpanel.orbit-eng.net",
-      server: isServer,
-      lazy: isLazy,
-      headers: {
-        "Accept-Language": "en-US",
-        "Authorization": `Bearer ${useMainToken().value}`
-      },
-      transform(input) {
-        return {
-          ...input,
-          fetchedAt: /* @__PURE__ */ new Date()
-        };
-      },
-      getCachedData(key) {
-        return handleCachingDataTime(key);
-      }
-    }, "$9vdyPYgcX_");
-  };
+  const getFetchConfig = (key, isServer, isLazy, isCached) => ({
+    key,
+    baseURL: apiBase ?? "https://adminpanel.orbit-eng.net",
+    server: isServer,
+    lazy: isLazy,
+    headers: {
+      "Accept-Language": "en-US",
+      "Authorization": `Bearer ${token.value}`
+    },
+    transform(input) {
+      if (!input) throw new Error("Empty server response");
+      return {
+        ...input,
+        fetchedAt: /* @__PURE__ */ new Date()
+      };
+    },
+    getCachedData(key2) {
+      return isCached ? handleCachingDataTime(key2) : null;
+    },
+    onRequestError({ error }) {
+      throw error;
+    },
+    onResponseError({ response, error }) {
+      if (response.status === 401) ;
+      throw error;
+    }
+  });
   const handleCachingDataTime = (key) => {
-    const data = nuxtApp.payload.data[key] || nuxtApp.static.data[key];
-    if (!data) return;
-    const expirationDate = new Date(data.fetchedAt);
-    expirationDate.setTime(expirationDate.getTime() + cachedTime);
-    const isExpired = expirationDate.getTime() < Date.now();
-    if (isExpired) return;
-    return data;
+    var _a2, _b;
+    try {
+      if (!key) return null;
+      const data = ((_a2 = nuxtApp.payload.data) == null ? void 0 : _a2[key]) || ((_b = nuxtApp.static.data) == null ? void 0 : _b[key]);
+      if (!data || !data.fetchedAt) return null;
+      const expirationDate = new Date(data.fetchedAt);
+      expirationDate.setTime(expirationDate.getTime() + cachedTime);
+      return expirationDate.getTime() > Date.now() ? data : null;
+    } catch (error) {
+      console.error("Cache error:", error);
+      return null;
+    }
+  };
+  const GetAll = async (endpoint, isServer = true, isLazy = false, isCached = true) => {
+    try {
+      const response = await useFetch(
+        () => endpoint,
+        getFetchConfig(endpoint, isServer, isLazy, isCached),
+        "$zFH_d_SCWu"
+      );
+      if (response.error.value) {
+        response.error.value = handleError(response.error.value, "GetAll");
+      }
+      return response;
+    } catch (error) {
+      return {
+        data: ref(null),
+        error: ref(handleError(error, "GetAll")),
+        pending: ref(false)
+      };
+    }
+  };
+  const GetById = async (endpointWithoutId, id, isServer = true, isLazy = false, isCached = true) => {
+    try {
+      if (!endpointWithoutId || !id) {
+        throw new Error("Missing endpoint or ID parameter");
+      }
+      const endpoint = `${endpointWithoutId}${id}`;
+      const response = await useFetch(
+        () => endpoint,
+        getFetchConfig(endpoint, isServer, isLazy, isCached),
+        "$9vdyPYgcX_"
+      );
+      if (response.error.value) {
+        response.error.value = handleError(response.error.value, "GetById");
+      } else if (!response.data.value) {
+        throw new Error("Empty data response");
+      }
+      return response;
+    } catch (error) {
+      return {
+        data: ref(null),
+        error: ref(handleError(error, "GetById")),
+        pending: ref(false),
+        refresh: () => Promise.resolve({
+          data: ref(null),
+          error: ref(handleError(error, "GetById refresh")),
+          pending: ref(false)
+        })
+      };
+    }
   };
   return {
     GetAll,
@@ -39077,8 +39130,8 @@ const plugins = [
   init_IycSiUTa0ooOjNElHE0EG94Rz0cZb4_bKuXwa_4z9aY
 ];
 const layouts = {
-  default: defineAsyncComponent(() => import('./default-m8Lgb7sJ.mjs').then((m) => m.default || m)),
-  home: defineAsyncComponent(() => import('./home-PVr-kDJZ.mjs').then((m) => m.default || m))
+  default: defineAsyncComponent(() => import('./default-CgBcCpRs.mjs').then((m) => m.default || m)),
+  home: defineAsyncComponent(() => import('./home-DgyYwDO6.mjs').then((m) => m.default || m))
 };
 const LayoutLoader = defineComponent$1({
   name: "LayoutLoader",
@@ -39429,5 +39482,5 @@ let entry;
 }
 const entry$1 = (ssrContext) => entry(ssrContext);
 
-export { useMainToken as A, configure as B, Form as C, useMenu as D, ErrorMessage as E, Field as F, useOgImageRuntimeConfig as G, useSiteConfig as H, parseURL as I, _export_sfc as _, useLocalePath as a, useGetSiteApi as b, createError as c, useHead as d, entry$1 as default, useI18n as e, useRoute$1 as f, useLang as g, useRouter$1 as h, injectHead as i, useNuxtApp as j, hasProtocol as k, joinURL as l, withoutTrailingSlash as m, navigateTo as n, nuxtLinkDefaults as o, parseQuery as p, useAppConfig as q, resolveRouteObject$1 as r, useAsyncData as s, modalData as t, useRuntimeConfig as u, showModal as v, withTrailingSlash as w, defineNuxtRouteMiddleware as x, __nuxt_component_2$1 as y, useFetch as z };
+export { useFetch as A, configure as B, Form as C, useMenu as D, ErrorMessage as E, Field as F, useOgImageRuntimeConfig as G, useSiteConfig as H, parseURL as I, _export_sfc as _, useLocalePath as a, useGetSiteApi as b, createError as c, useHead as d, entry$1 as default, useI18n as e, useRoute$1 as f, useLang as g, useRouter$1 as h, injectHead as i, useNuxtApp as j, hasProtocol as k, joinURL as l, withoutTrailingSlash as m, navigateTo as n, nuxtLinkDefaults as o, parseQuery as p, useAppConfig as q, resolveRouteObject$1 as r, useAsyncData as s, modalData as t, useRuntimeConfig as u, showModal as v, withTrailingSlash as w, defineNuxtRouteMiddleware as x, __nuxt_component_2$1 as y, useMainToken as z };
 //# sourceMappingURL=server.mjs.map

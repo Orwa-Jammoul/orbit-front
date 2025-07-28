@@ -5,6 +5,9 @@
     <HomeTech/>
     <HomeAboutUs/>
     <HomeServices/> 
+    <!-- <div class="banner cover">
+      <img src="/imgs/moon-01.jpg" alt="">
+    </div> -->
     <HomeTraining/>
     <!-- <HomePartners/> -->
     <!-- <HomeTest/> -->
@@ -73,8 +76,12 @@
       overflow: hidden;
     }
   }
-  img{
-    opacity: .2;
+  .banner{
+    width: 100%;
+    img{
+      opacity: .8;
+    }
   }
+
 }
 </style>

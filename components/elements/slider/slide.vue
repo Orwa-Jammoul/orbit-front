@@ -110,6 +110,7 @@ const localePath = useLocalePath()
     z-index: 4;
     box-shadow: 0 0 10px 5px rgba(0, 0, 0, 0.5);
     backdrop-filter: blur(3px);
+    transition: all 500ms ease-in-out;
   }
   .content{
     position: absolute;
@@ -131,19 +132,48 @@ const localePath = useLocalePath()
     .slider-title{
       // direction: rtl !important;
       font-weight: 700;
-      font-size: 3rem;
+      font-size: 4rem;
       // letter-spacing: 5px;
-      line-height: 3rem;
+      line-height: 4rem;
       margin-bottom: 1rem;
       // text-shadow: 2px 2px 3px rgba(255, 255, 255, 0.3);
     }
     .slider-des{
-      font-size: 1rem;
-      line-height: 2rem;
+      font-size: .8rem;
+      // line-height: 2rem;
       color: rgb(200, 200, 200);
     }
     .main-btn{
-      margin: 2rem 0;
+      margin: 0;
+      margin-top: 2rem;
+    }
+  }
+  @media (max-width: 1024px) {
+    .content{
+      .slider-title{
+        font-size: 3rem;
+        line-height: 3rem;
+      }
+    }
+  }
+  @media (max-width: 768px) {
+    .rect{
+      inset-inline-start: 0;
+      top: 50%;
+      width: 100%;
+    }
+    .content{
+      inset-inline-start: 0;
+      justify-content: flex-end;
+      padding-inline-start: 4rem;
+      padding-inline-end: 4rem;
+      .slider-title{
+        font-size: 3rem;
+        line-height: 3rem;
+      }
+      .main-btn{
+        margin: .5rem 0;
+      }
     }
   }
 
