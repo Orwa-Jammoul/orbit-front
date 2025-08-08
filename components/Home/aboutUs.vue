@@ -13,7 +13,7 @@
           <p class="m-0">
             {{ $t('read-more') }}
           </p>
-          <nuxt-link class="icon-frame pcc mx-0 ms-2" :to="localePath('/about-us')">
+          <nuxt-link class="icon-frame pcc mx-0 ms-2" :to="localePath('about-us')">
             <icon v-if="!isAr()" name="material-symbols:arrow-forward-rounded" size="20px"/>
             <icon v-else name="material-symbols:arrow-back-rounded" size="20px"/>
           </nuxt-link>
@@ -30,7 +30,7 @@
           <p class="m-0">
             {{ $t('read-more') }}
           </p>
-          <nuxt-link class="icon-frame pcc mx-0 ms-2" :to="localePath('/about-us')">
+          <nuxt-link class="icon-frame pcc mx-0 ms-2" :to="localePath('about-us')">
             <icon v-if="!isAr()" name="material-symbols:arrow-forward-rounded" size="20px"/>
             <icon v-else name="material-symbols:arrow-back-rounded" size="20px"/>
           </nuxt-link>

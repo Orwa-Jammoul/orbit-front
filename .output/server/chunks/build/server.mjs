@@ -1338,19 +1338,19 @@ const _routes = [
     name: "index___en",
     path: "/",
     meta: __nuxt_page_meta$2 || {},
-    component: () => import('./index-wOMSjROo.mjs')
+    component: () => import('./index-OPd8ydqY.mjs')
   },
   {
     name: "index___ar",
     path: "/ar",
     meta: __nuxt_page_meta$2 || {},
-    component: () => import('./index-wOMSjROo.mjs')
+    component: () => import('./index-OPd8ydqY.mjs')
   },
   {
     name: "index___de",
     path: "/de",
     meta: __nuxt_page_meta$2 || {},
-    component: () => import('./index-wOMSjROo.mjs')
+    component: () => import('./index-OPd8ydqY.mjs')
   },
   {
     name: "account-login___en",
@@ -1891,7 +1891,7 @@ function useSeoMeta(input, options = {}) {
     return useSeoMeta$1(input, { head, ...options });
   }
 }
-const __nuxt_component_2$1 = defineComponent$1({
+const __nuxt_component_3 = defineComponent$1({
   name: "ServerPlaceholder",
   render() {
     return createElementBlock("div");
@@ -39130,8 +39130,8 @@ const plugins = [
   init_IycSiUTa0ooOjNElHE0EG94Rz0cZb4_bKuXwa_4z9aY
 ];
 const layouts = {
-  default: defineAsyncComponent(() => import('./default-CgBcCpRs.mjs').then((m) => m.default || m)),
-  home: defineAsyncComponent(() => import('./home-D6kr_SqG.mjs').then((m) => m.default || m))
+  default: defineAsyncComponent(() => import('./default-BJLcCUhW.mjs').then((m) => m.default || m)),
+  home: defineAsyncComponent(() => import('./home-DEUCFBx2.mjs').then((m) => m.default || m))
 };
 const LayoutLoader = defineComponent$1({
   name: "LayoutLoader",
@@ -39353,7 +39353,7 @@ const _export_sfc = (sfc, props) => {
 };
 const _sfc_main$2 = {};
 function _sfc_ssrRender(_ctx, _push, _parent, _attrs) {
-  const _component_ElementsLoader = __nuxt_component_2$1;
+  const _component_ElementsLoader = __nuxt_component_3;
   const _component_NuxtLayout = __nuxt_component_1;
   const _component_NuxtPage = __nuxt_component_2;
   _push(`<div${ssrRenderAttrs(_attrs)}>`);
@@ -39482,5 +39482,5 @@ let entry;
 }
 const entry$1 = (ssrContext) => entry(ssrContext);
 
-export { useFetch as A, configure as B, Form as C, useMenu as D, ErrorMessage as E, Field as F, useOgImageRuntimeConfig as G, useSiteConfig as H, parseURL as I, _export_sfc as _, useLocalePath as a, useGetSiteApi as b, createError as c, useHead as d, entry$1 as default, useI18n as e, useRoute$1 as f, useLang as g, useRouter$1 as h, injectHead as i, useNuxtApp as j, hasProtocol as k, joinURL as l, withoutTrailingSlash as m, navigateTo as n, nuxtLinkDefaults as o, parseQuery as p, useAppConfig as q, resolveRouteObject$1 as r, useAsyncData as s, modalData as t, useRuntimeConfig as u, showModal as v, withTrailingSlash as w, defineNuxtRouteMiddleware as x, __nuxt_component_2$1 as y, useMainToken as z };
+export { useFetch as A, configure as B, Form as C, useMenu as D, ErrorMessage as E, Field as F, useOgImageRuntimeConfig as G, useSiteConfig as H, parseURL as I, _export_sfc as _, useLocalePath as a, useGetSiteApi as b, createError as c, useHead as d, entry$1 as default, useI18n as e, useRoute$1 as f, useLang as g, useRouter$1 as h, injectHead as i, useNuxtApp as j, hasProtocol as k, joinURL as l, withoutTrailingSlash as m, navigateTo as n, nuxtLinkDefaults as o, parseQuery as p, useAppConfig as q, resolveRouteObject$1 as r, useAsyncData as s, modalData as t, useRuntimeConfig as u, showModal as v, withTrailingSlash as w, defineNuxtRouteMiddleware as x, __nuxt_component_3 as y, useMainToken as z };
 //# sourceMappingURL=server.mjs.map

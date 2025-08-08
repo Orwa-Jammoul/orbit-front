@@ -1,1 +1,0 @@
-import{S as a,T as s,U as u,V as o,J as i}from"./tiupsHvS.js";const n=a(()=>{{const e=s(),t=u().value;if(!e.value.isAuthenticated)return o("/newsite/auth/login",{});if(!t.items.length&&t.totalQty<0||t.totalQty==0)return i().back()}});export{n as default};

@@ -16,7 +16,7 @@ const sources = [
                         "de": "de/Dienstleistungen/umfassendes-Corporate-Design"
                     }
                 },
-                "lastmod": "2025-08-08T16:09:43.714Z"
+                "lastmod": "2025-08-08T16:28:02.373Z"
             },
             {
                 "loc": "/services/management-systems-development",
@@ -29,7 +29,7 @@ const sources = [
                         "de": "de/Dienstleistungen/managementsysteme"
                     }
                 },
-                "lastmod": "2025-08-08T16:09:43.714Z"
+                "lastmod": "2025-08-08T16:28:02.373Z"
             },
             {
                 "loc": "/services/Search-engine-optimization-SEO",
@@ -42,7 +42,7 @@ const sources = [
                         "de": "de/Dienstleistungen/Suchmaschinenoptimierung-SEO"
                     }
                 },
-                "lastmod": "2025-08-08T16:09:43.714Z"
+                "lastmod": "2025-08-08T16:28:02.373Z"
             },
             {
                 "loc": "/services/website-development",
@@ -55,7 +55,7 @@ const sources = [
                         "de": "de/Dienstleistungen/website-entwicklung"
                     }
                 },
-                "lastmod": "2025-08-08T16:09:43.714Z"
+                "lastmod": "2025-08-08T16:28:02.373Z"
             },
             {
                 "loc": "/services/mobile-application-development",
@@ -68,7 +68,7 @@ const sources = [
                         "de": "de/Dienstleistungen/entwicklung-mobiler-anwendungen"
                     }
                 },
-                "lastmod": "2025-08-08T16:09:43.714Z"
+                "lastmod": "2025-08-08T16:28:02.373Z"
             },
             {
                 "loc": "/services/wordpress-website-design",
@@ -81,7 +81,7 @@ const sources = [
                         "de": "de/Dienstleistungen/wordPress-website-design"
                     }
                 },
-                "lastmod": "2025-08-08T16:09:43.714Z"
+                "lastmod": "2025-08-08T16:28:02.373Z"
             },
             {
                 "loc": "/services/recruitment-file-management",
@@ -94,7 +94,7 @@ const sources = [
                         "de": "de/Dienstleistungen/bewerbungsunterlagen-verwaltung"
                     }
                 },
-                "lastmod": "2025-08-08T16:09:43.714Z"
+                "lastmod": "2025-08-08T16:28:02.373Z"
             },
             {
                 "loc": "/training/artificial-intelligence-level-1",
@@ -107,7 +107,7 @@ const sources = [
                         "de": "de/Ausbildung/künstliche-intelligenz-level-1"
                     }
                 },
-                "lastmod": "2025-08-08T16:09:43.714Z"
+                "lastmod": "2025-08-08T16:28:02.373Z"
             },
             {
                 "loc": "/training/artificial-intelligence-level-2",
@@ -120,7 +120,7 @@ const sources = [
                         "de": "de/Ausbildung/künstliche-intelligenz-level-2"
                     }
                 },
-                "lastmod": "2025-08-08T16:09:43.714Z"
+                "lastmod": "2025-08-08T16:28:02.373Z"
             },
             {
                 "loc": "/training/web-interface-programming",
@@ -133,7 +133,7 @@ const sources = [
                         "de": "de/Ausbildung/webinterface-programmierung"
                     }
                 },
-                "lastmod": "2025-08-08T16:09:43.714Z"
+                "lastmod": "2025-08-08T16:28:02.373Z"
             },
             {
                 "loc": "/training/dynamic-interfaces",
@@ -146,7 +146,7 @@ const sources = [
                         "de": "de/Ausbildung/dynamische-schnittstellen"
                     }
                 },
-                "lastmod": "2025-08-08T16:09:43.714Z"
+                "lastmod": "2025-08-08T16:28:02.373Z"
             },
             {
                 "loc": "/training/databases",
@@ -159,7 +159,7 @@ const sources = [
                         "de": "de/Ausbildung/datenbanken"
                     }
                 },
-                "lastmod": "2025-08-08T16:09:43.714Z"
+                "lastmod": "2025-08-08T16:28:02.373Z"
             },
             {
                 "loc": "/training/photoshop",
@@ -172,7 +172,7 @@ const sources = [
                         "de": "de/Ausbildung/photoshop"
                     }
                 },
-                "lastmod": "2025-08-08T16:09:43.714Z"
+                "lastmod": "2025-08-08T16:28:02.373Z"
             },
             {
                 "loc": "ar/الخدمات/تصميم-هوية-بصرية",
@@ -185,7 +185,7 @@ const sources = [
                         "de": "de/Dienstleistungen/umfassendes-Corporate-Design"
                     }
                 },
-                "lastmod": "2025-08-08T16:09:43.714Z"
+                "lastmod": "2025-08-08T16:28:02.373Z"
             },
             {
                 "loc": "ar/الخدمات/تطوير-أنظمة-الإدارة",
@@ -198,7 +198,7 @@ const sources = [
                         "de": "de/Dienstleistungen/managementsysteme"
                     }
                 },
-                "lastmod": "2025-08-08T16:09:43.714Z"
+                "lastmod": "2025-08-08T16:28:02.373Z"
             },
             {
                 "loc": "ar/الخدمات/تحسين-محركات-البحث",
@@ -211,7 +211,7 @@ const sources = [
                         "de": "de/Dienstleistungen/Suchmaschinenoptimierung-SEO"
                     }
                 },
-                "lastmod": "2025-08-08T16:09:43.714Z"
+                "lastmod": "2025-08-08T16:28:02.373Z"
             },
             {
                 "loc": "ar/الخدمات/تطوير-مواقع-الويب",
@@ -224,7 +224,7 @@ const sources = [
                         "de": "de/Dienstleistungen/website-entwicklung"
                     }
                 },
-                "lastmod": "2025-08-08T16:09:43.714Z"
+                "lastmod": "2025-08-08T16:28:02.373Z"
             },
             {
                 "loc": "ar/الخدمات/تطوير-تطبيقات-الموبايل",
@@ -237,7 +237,7 @@ const sources = [
                         "de": "de/Dienstleistungen/entwicklung-mobiler-anwendungen"
                     }
                 },
-                "lastmod": "2025-08-08T16:09:43.714Z"
+                "lastmod": "2025-08-08T16:28:02.373Z"
             },
             {
                 "loc": "ar/الخدمات/تصميم-موقع-wordpress",
@@ -250,7 +250,7 @@ const sources = [
                         "de": "de/Dienstleistungen/wordPress-website-design"
                     }
                 },
-                "lastmod": "2025-08-08T16:09:43.714Z"
+                "lastmod": "2025-08-08T16:28:02.373Z"
             },
             {
                 "loc": "ar/الخدمات/إدارة-ملفات-التوظيف",
@@ -263,7 +263,7 @@ const sources = [
                         "de": "de/Dienstleistungen/bewerbungsunterlagen-verwaltung"
                     }
                 },
-                "lastmod": "2025-08-08T16:09:43.714Z"
+                "lastmod": "2025-08-08T16:28:02.373Z"
             },
             {
                 "loc": "ar/تدريب/الذكاء-الاصطناعي-مستوى-أول",
@@ -276,7 +276,7 @@ const sources = [
                         "de": "de/Ausbildung/künstliche-intelligenz-level-1"
                     }
                 },
-                "lastmod": "2025-08-08T16:09:43.714Z"
+                "lastmod": "2025-08-08T16:28:02.373Z"
             },
             {
                 "loc": "ar/تدريب/الذكاء-الاصطناعي-مستوى-ثاني",
@@ -289,7 +289,7 @@ const sources = [
                         "de": "de/Ausbildung/künstliche-intelligenz-level-2"
                     }
                 },
-                "lastmod": "2025-08-08T16:09:43.714Z"
+                "lastmod": "2025-08-08T16:28:02.373Z"
             },
             {
                 "loc": "ar/تدريب/برمجة-واجهات-الويب",
@@ -302,7 +302,7 @@ const sources = [
                         "de": "de/Ausbildung/webinterface-programmierung"
                     }
                 },
-                "lastmod": "2025-08-08T16:09:43.714Z"
+                "lastmod": "2025-08-08T16:28:02.373Z"
             },
             {
                 "loc": "ar/تدريب/الواجهات-الديناميكية",
@@ -315,7 +315,7 @@ const sources = [
                         "de": "de/Ausbildung/dynamische-schnittstellen"
                     }
                 },
-                "lastmod": "2025-08-08T16:09:43.714Z"
+                "lastmod": "2025-08-08T16:28:02.373Z"
             },
             {
                 "loc": "ar/تدريب/قواعد-البيانات",
@@ -328,7 +328,7 @@ const sources = [
                         "de": "de/Ausbildung/datenbanken"
                     }
                 },
-                "lastmod": "2025-08-08T16:09:43.714Z"
+                "lastmod": "2025-08-08T16:28:02.373Z"
             },
             {
                 "loc": "ar/تدريب/فوتوشوب",
@@ -341,7 +341,7 @@ const sources = [
                         "de": "de/Ausbildung/photoshop"
                     }
                 },
-                "lastmod": "2025-08-08T16:09:43.714Z"
+                "lastmod": "2025-08-08T16:28:02.373Z"
             },
             {
                 "loc": "de/Dienstleistungen/umfassendes-Corporate-Design",
@@ -354,7 +354,7 @@ const sources = [
                         "de": "de/Dienstleistungen/umfassendes-Corporate-Design"
                     }
                 },
-                "lastmod": "2025-08-08T16:09:43.714Z"
+                "lastmod": "2025-08-08T16:28:02.373Z"
             },
             {
                 "loc": "de/Dienstleistungen/managementsysteme",
@@ -367,7 +367,7 @@ const sources = [
                         "de": "de/Dienstleistungen/managementsysteme"
                     }
                 },
-                "lastmod": "2025-08-08T16:09:43.714Z"
+                "lastmod": "2025-08-08T16:28:02.373Z"
             },
             {
                 "loc": "de/Dienstleistungen/Suchmaschinenoptimierung-SEO",
@@ -380,7 +380,7 @@ const sources = [
                         "de": "de/Dienstleistungen/Suchmaschinenoptimierung-SEO"
                     }
                 },
-                "lastmod": "2025-08-08T16:09:43.714Z"
+                "lastmod": "2025-08-08T16:28:02.373Z"
             },
             {
                 "loc": "de/Dienstleistungen/website-entwicklung",
@@ -393,7 +393,7 @@ const sources = [
                         "de": "de/Dienstleistungen/website-entwicklung"
                     }
                 },
-                "lastmod": "2025-08-08T16:09:43.714Z"
+                "lastmod": "2025-08-08T16:28:02.373Z"
             },
             {
                 "loc": "de/Dienstleistungen/entwicklung-mobiler-anwendungen",
@@ -406,7 +406,7 @@ const sources = [
                         "de": "de/Dienstleistungen/entwicklung-mobiler-anwendungen"
                     }
                 },
-                "lastmod": "2025-08-08T16:09:43.714Z"
+                "lastmod": "2025-08-08T16:28:02.373Z"
             },
             {
                 "loc": "de/Dienstleistungen/wordPress-website-design",
@@ -419,7 +419,7 @@ const sources = [
                         "de": "de/Dienstleistungen/wordPress-website-design"
                     }
                 },
-                "lastmod": "2025-08-08T16:09:43.714Z"
+                "lastmod": "2025-08-08T16:28:02.373Z"
             },
             {
                 "loc": "de/Dienstleistungen/bewerbungsunterlagen-verwaltung",
@@ -432,7 +432,7 @@ const sources = [
                         "de": "de/Dienstleistungen/bewerbungsunterlagen-verwaltung"
                     }
                 },
-                "lastmod": "2025-08-08T16:09:43.714Z"
+                "lastmod": "2025-08-08T16:28:02.373Z"
             },
             {
                 "loc": "de/Ausbildung/künstliche-intelligenz-level-1",
@@ -445,7 +445,7 @@ const sources = [
                         "de": "de/Ausbildung/künstliche-intelligenz-level-1"
                     }
                 },
-                "lastmod": "2025-08-08T16:09:43.714Z"
+                "lastmod": "2025-08-08T16:28:02.373Z"
             },
             {
                 "loc": "de/Ausbildung/künstliche-intelligenz-level-2",
@@ -458,7 +458,7 @@ const sources = [
                         "de": "de/Ausbildung/künstliche-intelligenz-level-2"
                     }
                 },
-                "lastmod": "2025-08-08T16:09:43.714Z"
+                "lastmod": "2025-08-08T16:28:02.373Z"
             },
             {
                 "loc": "de/Ausbildung/webinterface-programmierung",
@@ -471,7 +471,7 @@ const sources = [
                         "de": "de/Ausbildung/webinterface-programmierung"
                     }
                 },
-                "lastmod": "2025-08-08T16:09:43.714Z"
+                "lastmod": "2025-08-08T16:28:02.373Z"
             },
             {
                 "loc": "de/Ausbildung/dynamische-schnittstellen",
@@ -484,7 +484,7 @@ const sources = [
                         "de": "de/Ausbildung/dynamische-schnittstellen"
                     }
                 },
-                "lastmod": "2025-08-08T16:09:43.714Z"
+                "lastmod": "2025-08-08T16:28:02.373Z"
             },
             {
                 "loc": "de/Ausbildung/datenbanken",
@@ -497,7 +497,7 @@ const sources = [
                         "de": "de/Ausbildung/datenbanken"
                     }
                 },
-                "lastmod": "2025-08-08T16:09:43.714Z"
+                "lastmod": "2025-08-08T16:28:02.373Z"
             },
             {
                 "loc": "de/Ausbildung/photoshop",
@@ -510,7 +510,7 @@ const sources = [
                         "de": "de/Ausbildung/photoshop"
                     }
                 },
-                "lastmod": "2025-08-08T16:09:43.714Z"
+                "lastmod": "2025-08-08T16:28:02.373Z"
             }
         ],
         "sourceType": "user"
