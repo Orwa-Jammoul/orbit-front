@@ -7,6 +7,7 @@
         <slot />
       </div>
       <SharedFooter />
+      <HomeLaunching/>
     </div>
   </div>
 </template>

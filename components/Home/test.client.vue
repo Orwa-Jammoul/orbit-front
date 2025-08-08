@@ -2,7 +2,7 @@
 
   <div class="globe-container">
     <div class="globe">
-      <canvas ref="canvasRef" />
+      <canvas class="globe-canvas" ref="canvasRef" />
     </div>
   </div>
 </template>
@@ -16,7 +16,8 @@ onMounted(async () => {
   if (process.client) {
     const { default: createGlobe } = await import('cobe')
     const canvas = canvasRef.value
-    const size = Math.min(600, window.innerWidth - 40)
+    // const size = Math.min(600, window.innerWidth -40)
+    const size = 400
     
     canvas.width = size * 2
     canvas.height = size * 2
@@ -58,6 +59,7 @@ onMounted(async () => {
       baseColor: [1, 1, 1],
       markerColor: [1, 0.5, 1],
       glowColor: [1, 1, 1],
+      // offset: [0, 0],
       offset: [0, 0],
       markers: [
         { location: [40.7128, -74.006], size: 0.1, color: [0.3, 0.3, 0.8] },  // New York
@@ -89,14 +91,28 @@ onBeforeUnmount(() => {
   width: 100%;
   background-color: black;
   .globe{
+    // width: 100%;
+    // max-width: 600px;
+    // aspect-ratio: 1;
+    // margin: 0 auto;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
     width: 100%;
-    max-width: 600px;
-    aspect-ratio: 1;
-    margin: 0 auto;
-    canvas {
-      width: 100%;
-      height: 100%;
+    height: 100vh; /* or whatever height you prefer */
+    // overflow: hidden;
+    .globe-canvas {
+      // width: 100%;
+      // height: 100%;
+      // display: block;
+      // width: 100%;
+      width: 400px;
+      aspect-ratio: 1;
+      // max-width: 600px; /* adjust as needed */
+      // height: auto;
       display: block;
+      margin: 0 auto;
     }
   }
 }

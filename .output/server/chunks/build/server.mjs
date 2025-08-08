@@ -1371,19 +1371,19 @@ const _routes = [
     name: "about-us___en",
     path: "/about-us",
     meta: __nuxt_page_meta$1 || {},
-    component: () => import('./index-BZnaIyZU.mjs')
+    component: () => import('./index-Yt3Pmaxq.mjs')
   },
   {
     name: "about-us___ar",
     path: "/ar/%D9%85%D9%86-%D9%86%D8%AD%D9%86",
     meta: __nuxt_page_meta$1 || {},
-    component: () => import('./index-BZnaIyZU.mjs')
+    component: () => import('./index-Yt3Pmaxq.mjs')
   },
   {
     name: "about-us___de",
     path: "/de/%C3%9Cber-Uns",
     meta: __nuxt_page_meta$1 || {},
-    component: () => import('./index-BZnaIyZU.mjs')
+    component: () => import('./index-Yt3Pmaxq.mjs')
   },
   {
     name: "account-signup___en",
@@ -39131,7 +39131,7 @@ const plugins = [
 ];
 const layouts = {
   default: defineAsyncComponent(() => import('./default-CgBcCpRs.mjs').then((m) => m.default || m)),
-  home: defineAsyncComponent(() => import('./home-DgyYwDO6.mjs').then((m) => m.default || m))
+  home: defineAsyncComponent(() => import('./home-D6kr_SqG.mjs').then((m) => m.default || m))
 };
 const LayoutLoader = defineComponent$1({
   name: "LayoutLoader",

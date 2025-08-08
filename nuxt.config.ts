@@ -26,6 +26,8 @@ export default defineNuxtConfig({
       optimizeTranslationDirective: false
     },
     strategy: 'prefix_except_default', //prefix
+    detectBrowserLanguage: false,
+    // dynamicRouteParams: true,
     customRoutes: 'config',
     pages: {
       // sitemap: false, // explicitly disable i18n for sitemap
@@ -104,6 +106,7 @@ export default defineNuxtConfig({
       const { routes } = await sitemapRoutes()
       return routes ;
     }
+    // trailingSlash: true
   },
   
   // Optional: SEO module configuration
@@ -293,4 +296,14 @@ export default defineNuxtConfig({
   routeRules: {
     "/.well-known/**": { redirect: "/" }, // Redirects all /.well-known paths to home
   },
+  // nitro: {
+  //   prerender: {
+  //     routes: [
+  //       '/sitemap.xml',
+  //       '/sitemap-en-US.xml',
+  //       '/sitemap-de-DE.xml',
+  //       '/sitemap-ar-AE.xml'
+  //     ]
+  //   }
+  // }
 });
