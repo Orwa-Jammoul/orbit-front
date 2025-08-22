@@ -79,7 +79,7 @@
         </aside>
       </div>
     </div>
-    <div class="container">
+    <div class="container pt-5">
       <HomeServices />
     </div>
   </div>
@@ -232,6 +232,8 @@ try {
 
 <style lang="scss" scoped>
 .page-root {
+  padding-top: 1.5rem;
+  padding-bottom: 4rem;
   .page-body {
     .main-content {
       display: flex;

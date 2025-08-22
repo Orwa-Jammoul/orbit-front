@@ -470,6 +470,7 @@ export const cImg = (imgUrl,useDefault=true) => {
 
 export const getInnerText = (strHtmlElement) => {
   return strHtmlElement.replace(/<[^>]*>/g, '');
+
   // if (process.client) {
   //   const htmlElement = document.createElement('div');
   //   htmlElement.innerHTML = strHtmlElement;
@@ -491,6 +492,41 @@ export const getInnerText = (strHtmlElement) => {
   // const htmlElement = window.document.createElement('div');
   // htmlElement.innerHTML = strHtmlElement;
   // return htmlElement.textContent || '';
+
+
+    // const textarea = document.createElement('div')
+    // textarea.innerHTML = strHtmlElement
+    // return textarea.value
+  
+  // if (typeof window === 'undefined') {
+    // Server-side decoding
+  //   return strHtmlElement.replace(/&([a-z0-9]+|#[0-9]{1,6}|#x[0-9a-f]{1,6});/gi, (match, entity) => {
+  //     const entities = {
+  //       'szlig': 'ß',
+  //       'ouml': 'ö',
+  //       'uuml': 'ü',
+  //       'auml': 'ä',
+  //       'nbsp': ' ',
+  //       'amp': '&',
+  //       'lt': '<',
+  //       'gt': '>',
+  //       'quot': '"',
+  //       'apos': "'"
+  //     }
+  //     // textarea.innerHTML = entities[entity] || match
+  //     // return textarea.value
+  //     return entities[entity] || match
+  //   })
+  // }
+  //  else {
+  //   // Client-side decoding
+  //   // const textarea = document.createElement('textarea')
+  //   // textarea.innerHTML = strHtmlElement
+  //   // return textarea.value
+
+  //   return strHtmlElement.replace(/<[^>]*>/g, '');
+  // }
+
 }
 export const openAlbum = (album, defaultId=-1) => {
   // console.log(album);

@@ -94,3 +94,6 @@ export const dataManagerModal = () => useState(() => {});
 // export const hallModalData = () => useState(() => null);
 // export const allowNewLoan = () => useState(() => true);
 
+
+export const useLaunch = () => useState(() => null);
+

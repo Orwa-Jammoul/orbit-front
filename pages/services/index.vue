@@ -1,6 +1,6 @@
 <template>
   <div >
-    <div class="container" dir="auto">
+    <div class="container pt-5" dir="auto">
       <div class="row path-links text-start pt-4">
         <h5 class="links-frame" dir="auto" >
           <nuxt-link class="path-link" :to="localePath('/')">{{ $t("Home") }}</nuxt-link>
@@ -14,7 +14,7 @@
         </h1>
       </div>
     </div>
-    <div class="container" :dir="rtl()">
+    <div class="container pb-5" :dir="rtl()">
       <div class="row">
         <div class="col-12 col-lg-4 col-md-6" v-for="service in services" :key="service.id">
           <CardService :cardData="service" :num="0"/>

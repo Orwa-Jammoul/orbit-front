@@ -4,24 +4,32 @@
     <HomeMainHeader/>
     <HomeTech/>
     <HomeAboutUs/>
-    <HomeServices/> 
-    <!-- <div class="banner cover">
-      <img src="/imgs/moon-01.jpg" alt="">
+    <!-- <HomeExperiences/> -->
+    <HomeHowDoWeWork/>
+    <HomeServices class="my-10"/> 
+    <div class="logo-frame pcc">
+      <img class="logo" src="/logo/Orbit_company-logo-side-both-blue.svg" alt="logo" >
+    </div>
+    <div class="banner cover">
+      <img src="/imgs/moon-01.jpg" alt="on the moon image">
+    </div>
+    <HomeTraining class="mt-10"/>
+    <HomeQuotes/>
+
+    <!-- <div class="rp">
+      <FormMessage/>
     </div> -->
-    <HomeTraining/>
+
+    <!-- <ThreeSphere1/> -->
+    <!-- <ThreeSphereLines/> -->
+
     <!-- <HomePartners/> -->
     <!-- <HomeTest/> -->
     <!-- <HomeTest2/> -->
-    <!-- <HomeExperiences/> -->
     <!-- <HomeContact/> -->
-
-    <!-- <EffectAnimatedGrid2 /> -->
-    <!-- <EffectAnimatedGrid /> -->
-    <!-- <EffectAnimatedGrid4 :size="15" :cellSize="15"/> -->
 
     <!-- <EffectSphere/> -->
     
-    <!-- <CanvasCircles/> -->
   </div>
 </template>
 
@@ -74,6 +82,12 @@
       bottom: -20%;
       left: 0;
       overflow: hidden;
+    }
+  }
+  .logo-frame{
+    margin-top: 5rem;
+    img{
+      width: max(40%, 10rem)  !important;
     }
   }
   .banner{

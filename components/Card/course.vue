@@ -20,7 +20,7 @@
           {{ useName(cardData) }}
         </h5>
         <p class="card-cat">{{ useTr(cardData.courseParentCategoryNameEn, cardData.courseParentCategoryNameAr, cardData.courseParentCategoryNameGe) }}</p>
-        <p class="card-cat">{{ useName(cardData.courseDefaultCategory) }}</p>
+        <!-- <p class="card-cat">{{ useName(cardData.courseDefaultCategory) }}</p> -->
       </div>
       <div class="buttons pcc">
         <button class="details-btn">{{ $t('details') }}</button>
@@ -71,12 +71,12 @@ const localePath = useLocalePath()
       width: 100%;
       // height: 15rem;
       aspect-ratio: 1;
-      // .img-frame{
-      //   img{
-      //     transition: all 300ms ease-in-out;
-      //     filter: saturate(0);
-      //   }
-      // }
+      .img-frame{
+        img{
+          transition: all 300ms ease-in-out;
+          filter: saturate(0);
+        }
+      }
 
 
     }
@@ -98,8 +98,18 @@ const localePath = useLocalePath()
         height: 2rem;
       }
       .card-cat{
+        display: inline-block;
         color: rgb(218, 218, 218);
         margin-bottom: 0;
+        border: solid 1px rgba(255, 255, 255, 0.5);
+        border-radius: 12px;
+        padding: 2px 10px;
+        font-size: 14px;
+        background-color: rgba(255, 255, 255, 0.1);
+        &:not(:last-child){
+          margin-inline-end: 8px;
+          margin-bottom: 8px;
+        }
       }
     }
     .buttons{
@@ -124,15 +134,15 @@ const localePath = useLocalePath()
     }
   }
 
-  // &:hover{
-  //   // box-shadow: 5px 5px 10px rgba(0, 0, 0, .3);
-  //   // transform: translateY(-5px);
-  //   .img-frame{
-  //     img{
-  //       // transform: all 300ms ease-in-out;
-  //       filter: saturate(1) !important;
-  //     }
-  //   }
-  // }
+  &:hover{
+    // box-shadow: 5px 5px 10px rgba(0, 0, 0, .3);
+    // transform: translateY(-5px);
+    .img-frame{
+      img{
+        // transform: all 300ms ease-in-out;
+        filter: saturate(1) !important;
+      }
+    }
+  }
 }
 </style>

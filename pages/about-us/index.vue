@@ -2,13 +2,14 @@
   <div class="page-root">
     <!-- <HomeHeaderDesign1/>     -->
     <ElementsHeaderImage
+      
       title=""
       :imgUrl="cImg(dataResult.image)"
       imgAlt="Orbit Technology and Design Company - header"
       contain
     />
     <!-- <ThreeSphere1/> -->
-    <div class="container">
+    <div class="container pt-5">
       <div class="path-links text-start pt-4">
         <h5 class="links-frame" dir="auto">
           <nuxt-link class="path-link" :to="localePath('/')">{{
@@ -122,6 +123,7 @@ useSeoMeta({
 
 <style lang="scss" scoped>
 .page-root {
+  padding-bottom: 4rem;
   .page-body {
     .main-content {
       display: flex;
@@ -132,7 +134,7 @@ useSeoMeta({
         padding-inline-start: 0.5rem;
       }
       .content-body {
-        width: 70%;
+        width: 100%;
         // padding-top: 1rem;
         .description {
           width: 100%;

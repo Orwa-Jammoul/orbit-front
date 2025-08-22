@@ -1,5 +1,5 @@
-import { defineComponent as defineComponent$1, computed, toValue, reactive, watch, toRef, resolveDynamicComponent, h, isRef, inject as inject$1, getCurrentInstance as getCurrentInstance$1, hasInjectionContext, onServerPrefetch, createElementBlock, ref, unref, provide, readonly, shallowRef, nextTick, watchEffect, cloneVNode, defineAsyncComponent, createVNode, Transition, mergeProps, toRefs, useId, onScopeDispose, withDirectives, vShow, Fragment, toDisplayString as toDisplayString$1, resolveDirective, toRaw, createTextVNode, capitalize as capitalize$1, shallowReactive, Suspense, createApp, Text, TransitionGroup, camelize, markRaw, resolveComponent, render, onErrorCaptured, effectScope, isReadonly, isShallow, isReactive, warn as warn$1, getCurrentScope, withCtx, vModelText, Teleport, withModifiers, isVNode as isVNode$1, Comment, useSSRContext } from 'vue';
-import { a4 as hash, G as defu, f as createError$1, ab as useHead$1, ac as headSymbol, ad as klona$1, ae as defuFn, af as sanitizeStatusCode, ag as getContext, ah as $fetch$1, ai as baseURL, p as publicAssetsURL, aj as createHooks, ak as executeAsync, al as titleCase, am as toRouteMatcher, an as createRouter$1, ao as camelCase, ap as useSeoMeta$1, aq as getRequestProtocol, d as destr, ar as getRequestHeaders, as as parse$3, at as getRequestHeader, au as isEqual$3, av as setCookie, aw as getCookie, ax as deleteCookie, ay as resolveUnrefHeadInput } from '../_/nitro.mjs';
+import { defineComponent as defineComponent$1, inject as inject$1, computed, resolveDynamicComponent, h, toRef, shallowRef, resolveComponent, getCurrentInstance as getCurrentInstance$1, provide, cloneVNode, createElementBlock, hasInjectionContext, isRef, toValue, onServerPrefetch, reactive, watch, ref, nextTick, unref, readonly, watchEffect, defineAsyncComponent, createVNode, Transition, mergeProps, toRefs, useId, onScopeDispose, withDirectives, vShow, Fragment, toDisplayString as toDisplayString$1, resolveDirective, toRaw, createTextVNode, capitalize as capitalize$1, shallowReactive, Suspense, createApp, Text, TransitionGroup, camelize, markRaw, render, onErrorCaptured, effectScope, isReadonly, isShallow, isReactive, warn as warn$1, getCurrentScope, withCtx, vModelText, Teleport, withModifiers, isVNode as isVNode$1, Comment, useSSRContext } from 'vue';
+import { G as defu, f as createError$1, ab as useHead$1, ac as headSymbol, ad as klona$1, ae as defuFn, a4 as hash, af as sanitizeStatusCode, ag as getContext, ah as $fetch$1, ai as baseURL, p as publicAssetsURL, aj as createHooks, ak as executeAsync, al as titleCase, am as toRouteMatcher, an as createRouter$1, ao as camelCase, ap as useSeoMeta$1, aq as getRequestProtocol, d as destr, ar as getRequestHeaders, as as parse$3, at as getRequestHeader, au as isEqual$3, av as setCookie, aw as getCookie, ax as deleteCookie, ay as resolveUnrefHeadInput } from '../_/nitro.mjs';
 import { useRoute as useRoute$2, RouterView, createMemoryHistory, createRouter, START_LOCATION, isNavigationFailure } from 'vue-router';
 import { config, library } from '@fortawesome/fontawesome-svg-core';
 import { faSearch, faUser, faHome } from '@fortawesome/free-solid-svg-icons';
@@ -1338,19 +1338,19 @@ const _routes = [
     name: "index___en",
     path: "/",
     meta: __nuxt_page_meta$2 || {},
-    component: () => import('./index-OPd8ydqY.mjs')
+    component: () => import('./index-BLNupqSX.mjs')
   },
   {
     name: "index___ar",
     path: "/ar",
     meta: __nuxt_page_meta$2 || {},
-    component: () => import('./index-OPd8ydqY.mjs')
+    component: () => import('./index-BLNupqSX.mjs')
   },
   {
     name: "index___de",
     path: "/de",
     meta: __nuxt_page_meta$2 || {},
-    component: () => import('./index-OPd8ydqY.mjs')
+    component: () => import('./index-BLNupqSX.mjs')
   },
   {
     name: "account-login___en",
@@ -1371,19 +1371,19 @@ const _routes = [
     name: "about-us___en",
     path: "/about-us",
     meta: __nuxt_page_meta$1 || {},
-    component: () => import('./index-Yt3Pmaxq.mjs')
+    component: () => import('./index-CQckYyS9.mjs')
   },
   {
     name: "about-us___ar",
     path: "/ar/%D9%85%D9%86-%D9%86%D8%AD%D9%86",
     meta: __nuxt_page_meta$1 || {},
-    component: () => import('./index-Yt3Pmaxq.mjs')
+    component: () => import('./index-CQckYyS9.mjs')
   },
   {
     name: "about-us___de",
     path: "/de/%C3%9Cber-Uns",
     meta: __nuxt_page_meta$1 || {},
-    component: () => import('./index-Yt3Pmaxq.mjs')
+    component: () => import('./index-CQckYyS9.mjs')
   },
   {
     name: "account-signup___en",
@@ -1403,107 +1403,107 @@ const _routes = [
   {
     name: "privacy-policy___en",
     path: "/privacy-policy",
-    component: () => import('./privacy-policy-iVrwtZXj.mjs')
+    component: () => import('./privacy-policy-D1IJNyRd.mjs')
   },
   {
     name: "privacy-policy___ar",
     path: "/ar/%D8%B3%D9%8A%D8%A7%D8%B3%D8%A9-%D8%A7%D9%84%D8%AE%D8%B5%D9%88%D8%B5%D9%8A%D8%A9",
-    component: () => import('./privacy-policy-iVrwtZXj.mjs')
+    component: () => import('./privacy-policy-D1IJNyRd.mjs')
   },
   {
     name: "privacy-policy___de",
     path: "/de/Datenschutzrichtlinie",
-    component: () => import('./privacy-policy-iVrwtZXj.mjs')
+    component: () => import('./privacy-policy-D1IJNyRd.mjs')
   },
   {
     name: "services___en",
     path: "/services",
-    component: () => import('./index-D6nw87Ye.mjs')
+    component: () => import('./index-CsCpQW8K.mjs')
   },
   {
     name: "services___ar",
     path: "/ar/%D8%A7%D9%84%D8%AE%D8%AF%D9%85%D8%A7%D8%AA",
-    component: () => import('./index-D6nw87Ye.mjs')
+    component: () => import('./index-CsCpQW8K.mjs')
   },
   {
     name: "services___de",
     path: "/de/Dienstleistungen",
-    component: () => import('./index-D6nw87Ye.mjs')
+    component: () => import('./index-CsCpQW8K.mjs')
   },
   {
     name: "training___en",
     path: "/training",
-    component: () => import('./index-DDrDCxIN.mjs')
+    component: () => import('./index-ARCHFWn1.mjs')
   },
   {
     name: "training___ar",
     path: "/ar/%D8%AA%D8%AF%D8%B1%D9%8A%D8%A8",
-    component: () => import('./index-DDrDCxIN.mjs')
+    component: () => import('./index-ARCHFWn1.mjs')
   },
   {
     name: "training___de",
     path: "/de/Ausbildung",
-    component: () => import('./index-DDrDCxIN.mjs')
+    component: () => import('./index-ARCHFWn1.mjs')
   },
   {
     name: "services-name___en",
     path: "/services/:name()",
-    component: () => import('./_name_-17q8k8b-.mjs')
+    component: () => import('./_name_-vc38U9q2.mjs')
   },
   {
     name: "services-name___ar",
     path: "/ar/%D8%A7%D9%84%D8%AE%D8%AF%D9%85%D8%A7%D8%AA/:name()",
-    component: () => import('./_name_-17q8k8b-.mjs')
+    component: () => import('./_name_-vc38U9q2.mjs')
   },
   {
     name: "services-name___de",
     path: "/de/Dienstleistungen/:name()",
-    component: () => import('./_name_-17q8k8b-.mjs')
+    component: () => import('./_name_-vc38U9q2.mjs')
   },
   {
     name: "training-name___en",
     path: "/training/:name()",
-    component: () => import('./_name_-BhJswdUM.mjs')
+    component: () => import('./_name_-ss8WYQlg.mjs')
   },
   {
     name: "training-name___ar",
     path: "/ar/%D8%AA%D8%AF%D8%B1%D9%8A%D8%A8/:name()",
-    component: () => import('./_name_-BhJswdUM.mjs')
+    component: () => import('./_name_-ss8WYQlg.mjs')
   },
   {
     name: "training-name___de",
     path: "/de/Ausbildung/:name()",
-    component: () => import('./_name_-BhJswdUM.mjs')
+    component: () => import('./_name_-ss8WYQlg.mjs')
   },
   {
     name: "contact-us___en",
     path: "/contact-us",
-    component: () => import('./index-BpUE8UQK.mjs')
+    component: () => import('./index-DZ9DDjjL.mjs')
   },
   {
     name: "contact-us___ar",
     path: "/ar/%D8%AA%D9%88%D8%A7%D8%B5%D9%84-%D9%85%D8%B9%D9%86%D8%A7",
-    component: () => import('./index-BpUE8UQK.mjs')
+    component: () => import('./index-DZ9DDjjL.mjs')
   },
   {
     name: "contact-us___de",
     path: "/de/Kontakt",
-    component: () => import('./index-BpUE8UQK.mjs')
+    component: () => import('./index-DZ9DDjjL.mjs')
   },
   {
     name: "terms-and-conditions___en",
     path: "/terms-and-conditions",
-    component: () => import('./terms-and-conditions-CDyjV7Dq.mjs')
+    component: () => import('./terms-and-conditions-B34kxY--.mjs')
   },
   {
     name: "terms-and-conditions___ar",
     path: "/ar/%D8%A7%D9%84%D8%B4%D8%B1%D9%88%D8%B7-%D9%88%D8%A7%D9%84%D8%A3%D8%AD%D9%83%D8%A7%D9%85",
-    component: () => import('./terms-and-conditions-CDyjV7Dq.mjs')
+    component: () => import('./terms-and-conditions-B34kxY--.mjs')
   },
   {
     name: "terms-and-conditions___de",
     path: "/de/Gesch%C3%A4ftsbedingungen",
-    component: () => import('./terms-and-conditions-CDyjV7Dq.mjs')
+    component: () => import('./terms-and-conditions-B34kxY--.mjs')
   },
   {
     name: void 0 ,
@@ -1665,11 +1665,11 @@ const globalMiddleware = [
   manifest_45route_45rule
 ];
 const namedMiddleware = {
-  "auth-product-exists": () => import('./auth-product-exists-D_zhlQYK.mjs'),
-  auth: () => import('./auth-D__oivK3.mjs'),
-  "not-authorize": () => import('./not-authorize-eixBnyBG.mjs'),
-  "supplier-company": () => import('./supplierCompany-B4WpD4M4.mjs'),
-  "validate-id-digital": () => import('./validate-id-digital-BUShP1Sh.mjs')
+  "auth-product-exists": () => import('./auth-product-exists-CstZWMrY.mjs'),
+  auth: () => import('./auth-CZSWK2Cz.mjs'),
+  "not-authorize": () => import('./not-authorize-BV42Fqg8.mjs'),
+  "supplier-company": () => import('./supplierCompany-ypvJPkKw.mjs'),
+  "validate-id-digital": () => import('./validate-id-digital-DluRX3F8.mjs')
 };
 const plugin = /* @__PURE__ */ defineNuxtPlugin({
   name: "nuxt:router",
@@ -1898,7 +1898,7 @@ const __nuxt_component_3 = defineComponent$1({
   }
 });
 const clientOnlySymbol = Symbol.for("nuxt:client-only");
-defineComponent$1({
+const __nuxt_component_0$1 = defineComponent$1({
   name: "ClientOnly",
   inheritAttrs: false,
   props: ["fallback", "placeholder", "placeholderTag", "fallbackTag"],
@@ -2393,6 +2393,275 @@ function definePayloadReducer(name, reduce) {
     useNuxtApp().ssrContext._payloadReducers[name] = reduce;
   }
 }
+const firstNonUndefined = (...args) => args.find((arg) => arg !== void 0);
+// @__NO_SIDE_EFFECTS__
+function defineNuxtLink(options) {
+  const componentName = options.componentName || "NuxtLink";
+  function isHashLinkWithoutHashMode(link) {
+    return typeof link === "string" && link.startsWith("#");
+  }
+  function resolveTrailingSlashBehavior(to, resolve2, trailingSlash) {
+    const effectiveTrailingSlash = trailingSlash ?? options.trailingSlash;
+    if (!to || effectiveTrailingSlash !== "append" && effectiveTrailingSlash !== "remove") {
+      return to;
+    }
+    if (typeof to === "string") {
+      return applyTrailingSlashBehavior(to, effectiveTrailingSlash);
+    }
+    const path = "path" in to && to.path !== void 0 ? to.path : resolve2(to).path;
+    const resolvedPath = {
+      ...to,
+      name: void 0,
+      // named routes would otherwise always override trailing slash behavior
+      path: applyTrailingSlashBehavior(path, effectiveTrailingSlash)
+    };
+    return resolvedPath;
+  }
+  function useNuxtLink(props) {
+    const router = useRouter$1();
+    const config2 = /* @__PURE__ */ useRuntimeConfig();
+    const hasTarget = computed(() => !!props.target && props.target !== "_self");
+    const isAbsoluteUrl = computed(() => {
+      const path = props.to || props.href || "";
+      return typeof path === "string" && hasProtocol(path, { acceptRelative: true });
+    });
+    const builtinRouterLink = resolveComponent("RouterLink");
+    const useBuiltinLink = builtinRouterLink && typeof builtinRouterLink !== "string" ? builtinRouterLink.useLink : void 0;
+    const isExternal = computed(() => {
+      if (props.external) {
+        return true;
+      }
+      const path = props.to || props.href || "";
+      if (typeof path === "object") {
+        return false;
+      }
+      return path === "" || isAbsoluteUrl.value;
+    });
+    const to = computed(() => {
+      const path = props.to || props.href || "";
+      if (isExternal.value) {
+        return path;
+      }
+      return resolveTrailingSlashBehavior(path, router.resolve, props.trailingSlash);
+    });
+    const link = isExternal.value ? void 0 : useBuiltinLink == null ? void 0 : useBuiltinLink({ ...props, to });
+    const href = computed(() => {
+      var _a2;
+      const effectiveTrailingSlash = props.trailingSlash ?? options.trailingSlash;
+      if (!to.value || isAbsoluteUrl.value || isHashLinkWithoutHashMode(to.value)) {
+        return to.value;
+      }
+      if (isExternal.value) {
+        const path = typeof to.value === "object" && "path" in to.value ? resolveRouteObject$1(to.value) : to.value;
+        const href2 = typeof path === "object" ? router.resolve(path).href : path;
+        return applyTrailingSlashBehavior(href2, effectiveTrailingSlash);
+      }
+      if (typeof to.value === "object") {
+        return ((_a2 = router.resolve(to.value)) == null ? void 0 : _a2.href) ?? null;
+      }
+      return applyTrailingSlashBehavior(joinURL(config2.app.baseURL, to.value), effectiveTrailingSlash);
+    });
+    return {
+      to,
+      hasTarget,
+      isAbsoluteUrl,
+      isExternal,
+      //
+      href,
+      isActive: (link == null ? void 0 : link.isActive) ?? computed(() => to.value === router.currentRoute.value.path),
+      isExactActive: (link == null ? void 0 : link.isExactActive) ?? computed(() => to.value === router.currentRoute.value.path),
+      route: (link == null ? void 0 : link.route) ?? computed(() => router.resolve(to.value)),
+      async navigate(_e) {
+        await navigateTo(href.value, { replace: props.replace, external: isExternal.value || hasTarget.value });
+      }
+    };
+  }
+  return defineComponent$1({
+    name: componentName,
+    props: {
+      // Routing
+      to: {
+        type: [String, Object],
+        default: void 0,
+        required: false
+      },
+      href: {
+        type: [String, Object],
+        default: void 0,
+        required: false
+      },
+      // Attributes
+      target: {
+        type: String,
+        default: void 0,
+        required: false
+      },
+      rel: {
+        type: String,
+        default: void 0,
+        required: false
+      },
+      noRel: {
+        type: Boolean,
+        default: void 0,
+        required: false
+      },
+      // Prefetching
+      prefetch: {
+        type: Boolean,
+        default: void 0,
+        required: false
+      },
+      prefetchOn: {
+        type: [String, Object],
+        default: void 0,
+        required: false
+      },
+      noPrefetch: {
+        type: Boolean,
+        default: void 0,
+        required: false
+      },
+      // Styling
+      activeClass: {
+        type: String,
+        default: void 0,
+        required: false
+      },
+      exactActiveClass: {
+        type: String,
+        default: void 0,
+        required: false
+      },
+      prefetchedClass: {
+        type: String,
+        default: void 0,
+        required: false
+      },
+      // Vue Router's `<RouterLink>` additional props
+      replace: {
+        type: Boolean,
+        default: void 0,
+        required: false
+      },
+      ariaCurrentValue: {
+        type: String,
+        default: void 0,
+        required: false
+      },
+      // Edge cases handling
+      external: {
+        type: Boolean,
+        default: void 0,
+        required: false
+      },
+      // Slot API
+      custom: {
+        type: Boolean,
+        default: void 0,
+        required: false
+      },
+      // Behavior
+      trailingSlash: {
+        type: String,
+        default: void 0,
+        required: false
+      }
+    },
+    useLink: useNuxtLink,
+    setup(props, { slots }) {
+      useRouter$1();
+      const { to, href, navigate: navigate2, isExternal, hasTarget, isAbsoluteUrl } = useNuxtLink(props);
+      shallowRef(false);
+      const el = void 0;
+      const elRef = void 0;
+      async function prefetch(nuxtApp = useNuxtApp()) {
+        {
+          return;
+        }
+      }
+      return () => {
+        var _a2;
+        if (!isExternal.value && !hasTarget.value && !isHashLinkWithoutHashMode(to.value)) {
+          const routerLinkProps = {
+            ref: elRef,
+            to: to.value,
+            activeClass: props.activeClass || options.activeClass,
+            exactActiveClass: props.exactActiveClass || options.exactActiveClass,
+            replace: props.replace,
+            ariaCurrentValue: props.ariaCurrentValue,
+            custom: props.custom
+          };
+          if (!props.custom) {
+            routerLinkProps.rel = props.rel || void 0;
+          }
+          return h(
+            resolveComponent("RouterLink"),
+            routerLinkProps,
+            slots.default
+          );
+        }
+        const target = props.target || null;
+        const rel = firstNonUndefined(
+          // converts `""` to `null` to prevent the attribute from being added as empty (`rel=""`)
+          props.noRel ? "" : props.rel,
+          options.externalRelAttribute,
+          /*
+          * A fallback rel of `noopener noreferrer` is applied for external links or links that open in a new tab.
+          * This solves a reverse tabnapping security flaw in browsers pre-2021 as well as improving privacy.
+          */
+          isAbsoluteUrl.value || hasTarget.value ? "noopener noreferrer" : ""
+        ) || null;
+        if (props.custom) {
+          if (!slots.default) {
+            return null;
+          }
+          return slots.default({
+            href: href.value,
+            navigate: navigate2,
+            prefetch,
+            get route() {
+              if (!href.value) {
+                return void 0;
+              }
+              const url = new URL(href.value, "http://localhost");
+              return {
+                path: url.pathname,
+                fullPath: url.pathname,
+                get query() {
+                  return parseQuery(url.search);
+                },
+                hash: url.hash,
+                params: {},
+                name: void 0,
+                matched: [],
+                redirectedFrom: void 0,
+                meta: {},
+                href: href.value
+              };
+            },
+            rel,
+            target,
+            isExternal: isExternal.value || hasTarget.value,
+            isActive: false,
+            isExactActive: false
+          });
+        }
+        return h("a", { ref: el, href: href.value || null, rel, target }, (_a2 = slots.default) == null ? void 0 : _a2.call(slots));
+      };
+    }
+    // }) as unknown as DefineComponent<NuxtLinkProps, object, object, ComputedOptions, MethodOptions, object, object, EmitsOptions, string, object, NuxtLinkProps, object, SlotsType<NuxtLinkSlots>>
+  });
+}
+const __nuxt_component_0 = /* @__PURE__ */ defineNuxtLink(nuxtLinkDefaults);
+function applyTrailingSlashBehavior(to, trailingSlash) {
+  const normalizeFn = trailingSlash === "append" ? withTrailingSlash : withoutTrailingSlash;
+  const hasProtocolDifferentFromHttp = hasProtocol(to) && !to.startsWith("http");
+  if (hasProtocolDifferentFromHttp) {
+    return to;
+  }
+  return normalizeFn(to, true);
+}
 const inlineConfig = {
   "nuxt": {},
   "icon": {
@@ -2712,6 +2981,9 @@ const resource$2 = {
   "ogType": { "t": 0, "b": { "t": 2, "i": [{ "t": 3 }], "s": "Technology services website" } },
   "ogLocale": { "t": 0, "b": { "t": 2, "i": [{ "t": 3 }], "s": "en_US" } },
   "ogSiteName": { "t": 0, "b": { "t": 2, "i": [{ "t": 3 }], "s": "Orbit Technology and Design Company" } },
+  "how-do-we-work": { "t": 0, "b": { "t": 2, "i": [{ "t": 3 }], "s": "How do we work?" } },
+  "countdown": { "t": 0, "b": { "t": 2, "i": [{ "t": 3 }], "s": "Run countdown" } },
+  "four-customer-service": { "t": 0, "b": { "t": 2, "i": [{ "t": 3 }], "s": "Four customer service points around the world" } },
   "our-partners": { "t": 0, "b": { "t": 2, "i": [{ "t": 3 }], "s": "Our Partners" } },
   "get-started": { "t": 0, "b": { "t": 2, "i": [{ "t": 3 }], "s": "Get Started" } },
   "more": { "t": 0, "b": { "t": 2, "i": [{ "t": 3 }], "s": "More" } },
@@ -2948,6 +3220,9 @@ const resource$1 = {
   "ogType": { "t": 0, "b": { "t": 2, "i": [{ "t": 3 }], "s": "موقع خدمات التكنولوجيا" } },
   "ogLocale": { "t": 0, "b": { "t": 2, "i": [{ "t": 3 }], "s": "ar_AE" } },
   "ogSiteName": { "t": 0, "b": { "t": 2, "i": [{ "t": 3 }], "s": "شركة أوربيت للتقانة والتصميم" } },
+  "how-do-we-work": { "t": 0, "b": { "t": 2, "i": [{ "t": 3 }], "s": "كيف نعمل؟" } },
+  "countdown": { "t": 0, "b": { "t": 2, "i": [{ "t": 3 }], "s": "تشغيل العد التنازلي" } },
+  "four-customer-service": { "t": 0, "b": { "t": 2, "i": [{ "t": 3 }], "s": "أربع نقاط خدمة العملاء حول العالم" } },
   "our-partners": { "t": 0, "b": { "t": 2, "i": [{ "t": 3 }], "s": "شــــــركاؤنا" } },
   "get-started": { "t": 0, "b": { "t": 2, "i": [{ "t": 3 }], "s": "ابـــــدأ " } },
   "more": { "t": 0, "b": { "t": 2, "i": [{ "t": 3 }], "s": "المزيد" } },
@@ -3184,6 +3459,9 @@ const resource = {
   "ogType": { "t": 0, "b": { "t": 2, "i": [{ "t": 3 }], "s": "Technology services website" } },
   "ogLocale": { "t": 0, "b": { "t": 2, "i": [{ "t": 3 }], "s": "de_DE" } },
   "ogSiteName": { "t": 0, "b": { "t": 2, "i": [{ "t": 3 }], "s": "Orbit Technologie und Design Firma" } },
+  "how-do-we-work": { "t": 0, "b": { "t": 2, "i": [{ "t": 3 }], "s": "Wie arbeiten wir?" } },
+  "countdown": { "t": 0, "b": { "t": 2, "i": [{ "t": 3 }], "s": "Countdown ausführen" } },
+  "four-customer-service": { "t": 0, "b": { "t": 2, "i": [{ "t": 3 }], "s": "Vier Kundendienststellen weltweit" } },
   "our-partners": { "t": 0, "b": { "t": 2, "i": [{ "t": 3 }], "s": "Unsere Partner" } },
   "get-started": { "t": 0, "b": { "t": 2, "i": [{ "t": 3 }], "s": "Legen Sie los" } },
   "more": { "t": 0, "b": { "t": 2, "i": [{ "t": 3 }], "s": "Mehr" } },
@@ -8327,7 +8605,7 @@ const i18n_EI7LsD1KYQADczz5hrChviGQCdVM8yUkvFEZLJpmnvM = /* @__PURE__ */ defineN
     };
   }
 });
-const LazyIcon = defineAsyncComponent(() => import('./index-BplWO78e.mjs').then((r) => r["default"] || r.default || r));
+const LazyIcon = defineAsyncComponent(() => import('./index-lD4fRCLv.mjs').then((r) => r["default"] || r.default || r));
 const lazyGlobalComponents = [
   ["Icon", LazyIcon]
 ];
@@ -9216,6 +9494,7 @@ const showModal = () => useState(() => false, "$KkzQhPK_iW");
 const modalData = () => useState(() => [
   { id: 0, info: "", image: "" }
 ], "$Z1SMBJ9BL_");
+const useLaunch = () => useState(() => null, "$xoGl3J4O7Z");
 const _01_fetch_main_token_server_bzLPtp8eUJdNuC13fDj_FKSwif_y__FKXBm_zoHWUfU = /* @__PURE__ */ defineNuxtPlugin(async (nuxtApp) => {
   var _a2;
   let __temp, __restore;
@@ -9380,11 +9659,14 @@ const fetch_all_menus_gDLFYrwHD_U0C7CYd32aGa6SskyvXLa6yT4czM7tgRk = /* @__PURE__
   const { data: menuData1, error: menuError1 } = ([__temp, __restore] = executeAsync(() => useGetSiteApi().GetAll(menuQuery1)), __temp = await __temp, __restore(), __temp);
   const { data: socialMenuData, error: socialMenuError } = ([__temp, __restore] = executeAsync(() => useGetSiteApi().GetAll(socialMenuQuery)), __temp = await __temp, __restore(), __temp);
   const { data: contactsData, error: contactsError } = ([__temp, __restore] = executeAsync(() => useGetSiteApi().GetAll(contactsQuery)), __temp = await __temp, __restore(), __temp);
-  if (!menuError1.value && !socialMenuError.value && !contactsError.value) {
+  const { data: messagData, error: messagError } = ([__temp, __restore] = executeAsync(() => useGetSiteApi().GetAll(`${api.MessagingApi}/20`)), __temp = await __temp, __restore(), __temp);
+  if (!menuError1.value && !socialMenuError.value && !contactsError.value && !messagError.value) {
     useDataAllMenu().value = menuData1.value.items;
     useSocialMenu().value = socialMenuData.value.items;
     useContactsMenus().value = contactsData.value.items;
     useMenu().value = arrangeMenus(menuData1.value.items);
+    useLaunch().value = messagData.value.data;
+    console.log(useLaunch().value);
   } else {
     console.log("error menus");
   }
@@ -39130,8 +39412,8 @@ const plugins = [
   init_IycSiUTa0ooOjNElHE0EG94Rz0cZb4_bKuXwa_4z9aY
 ];
 const layouts = {
-  default: defineAsyncComponent(() => import('./default-BJLcCUhW.mjs').then((m) => m.default || m)),
-  home: defineAsyncComponent(() => import('./home-DEUCFBx2.mjs').then((m) => m.default || m))
+  default: defineAsyncComponent(() => import('./default-Bz93REhv.mjs').then((m) => m.default || m)),
+  home: defineAsyncComponent(() => import('./home-B66ru84g.mjs').then((m) => m.default || m))
 };
 const LayoutLoader = defineComponent$1({
   name: "LayoutLoader",
@@ -39387,6 +39669,7 @@ const _sfc_main$1 = {
     const error = useError();
     console.log(error.value);
     const i18e = useI18n();
+    const localePath2 = useLocalePath();
     const heading = computed(() => {
       var _a2;
       return ((_a2 = error.value) == null ? void 0 : _a2.statusCode) == "404" ? i18e.t("page-not-found") : i18e.t("server-error");
@@ -39399,10 +39682,27 @@ const _sfc_main$1 = {
     );
     return (_ctx, _push, _parent, _attrs) => {
       var _a2;
+      const _component_nuxt_link = __nuxt_component_0;
       _push(`<section${ssrRenderAttrs(mergeProps({
         id: "wrapper",
         class: "error-page"
-      }, _attrs))} data-v-20155806><div class="img-frame" data-v-20155806><img${ssrRenderAttr("src", _imports_0)} alt="error image" data-v-20155806></div><div class="error-box" data-v-20155806><div class="error-body text-center" data-v-20155806><h1 class="error-code mb-2 mb-dmd-3 mb-xl-5" data-v-20155806>${ssrInterpolate((_a2 = unref(error)) == null ? void 0 : _a2.statusCode)}</h1><h3 class="text-uppercase" data-v-20155806>${ssrInterpolate(unref(heading))}</h3><p class="m-t-30 m-b-30" data-v-20155806>${ssrInterpolate(unref(description))}</p><button class="btn background text-white px-15 btn-rounded waves-effect waves-light" data-v-20155806>${ssrInterpolate(unref(i18e).t("back-to-home"))}</button></div><footer class="footer text-center" data-v-20155806>Copyright @ ${ssrInterpolate((/* @__PURE__ */ new Date()).getFullYear())} <span class="fw-bold" data-v-20155806>Orbit Technology and Design Company</span></footer></div></section>`);
+      }, _attrs))} data-v-6f641f0a><div class="img-frame" data-v-6f641f0a><img${ssrRenderAttr("src", _imports_0)} alt="error image" data-v-6f641f0a></div><div class="error-box" data-v-6f641f0a><div class="error-body text-center" data-v-6f641f0a><h1 class="error-code mb-2 mb-dmd-3 mb-xl-5" data-v-6f641f0a>${ssrInterpolate((_a2 = unref(error)) == null ? void 0 : _a2.statusCode)}</h1><h3 class="text-uppercase" data-v-6f641f0a>${ssrInterpolate(unref(heading))}</h3><p class="m-t-30 m-b-30" data-v-6f641f0a>${ssrInterpolate(unref(description))}</p>`);
+      _push(ssrRenderComponent(_component_nuxt_link, {
+        onClick: ($event) => unref(localePath2)("/"),
+        class: "btn-main"
+      }, {
+        default: withCtx((_, _push2, _parent2, _scopeId) => {
+          if (_push2) {
+            _push2(`${ssrInterpolate(unref(i18e).t("back-to-home"))}`);
+          } else {
+            return [
+              createTextVNode(toDisplayString$1(unref(i18e).t("back-to-home")), 1)
+            ];
+          }
+        }),
+        _: 1
+      }, _parent));
+      _push(`</div><footer class="footer text-center" data-v-6f641f0a>Copyright @ ${ssrInterpolate((/* @__PURE__ */ new Date()).getFullYear())} <span class="fw-bold" data-v-6f641f0a>Orbit Technology and Design Company</span></footer></div></section>`);
     };
   }
 };
@@ -39412,12 +39712,12 @@ _sfc_main$1.setup = (props, ctx) => {
   (ssrContext.modules || (ssrContext.modules = /* @__PURE__ */ new Set())).add("error.vue");
   return _sfc_setup$1 ? _sfc_setup$1(props, ctx) : void 0;
 };
-const ErrorComponent = /* @__PURE__ */ _export_sfc(_sfc_main$1, [["__scopeId", "data-v-20155806"]]);
+const ErrorComponent = /* @__PURE__ */ _export_sfc(_sfc_main$1, [["__scopeId", "data-v-6f641f0a"]]);
 const _sfc_main = {
   __name: "nuxt-root",
   __ssrInlineRender: true,
   setup(__props) {
-    const IslandRenderer = defineAsyncComponent(() => import('./island-renderer-YDmtnHui.mjs').then((r) => r.default || r));
+    const IslandRenderer = defineAsyncComponent(() => import('./island-renderer-D0LUOJpn.mjs').then((r) => r.default || r));
     const nuxtApp = useNuxtApp();
     nuxtApp.deferHydration();
     nuxtApp.ssrContext.url;
@@ -39482,5 +39782,5 @@ let entry;
 }
 const entry$1 = (ssrContext) => entry(ssrContext);
 
-export { useFetch as A, configure as B, Form as C, useMenu as D, ErrorMessage as E, Field as F, useOgImageRuntimeConfig as G, useSiteConfig as H, parseURL as I, _export_sfc as _, useLocalePath as a, useGetSiteApi as b, createError as c, useHead as d, entry$1 as default, useI18n as e, useRoute$1 as f, useLang as g, useRouter$1 as h, injectHead as i, useNuxtApp as j, hasProtocol as k, joinURL as l, withoutTrailingSlash as m, navigateTo as n, nuxtLinkDefaults as o, parseQuery as p, useAppConfig as q, resolveRouteObject$1 as r, useAsyncData as s, modalData as t, useRuntimeConfig as u, showModal as v, withTrailingSlash as w, defineNuxtRouteMiddleware as x, __nuxt_component_3 as y, useMainToken as z };
+export { useSiteConfig as A, parseURL as B, ErrorMessage as E, Field as F, _export_sfc as _, useLocalePath as a, __nuxt_component_0 as b, createError as c, useGetSiteApi as d, entry$1 as default, __nuxt_component_0$1 as e, useHead as f, useI18n as g, useRoute$1 as h, injectHead as i, useLang as j, useAppConfig as k, useNuxtApp as l, useAsyncData as m, modalData as n, useRouter$1 as o, __nuxt_component_3 as p, defineNuxtRouteMiddleware as q, navigateTo as r, showModal as s, useMainToken as t, useRuntimeConfig as u, useFetch as v, configure as w, Form as x, useMenu as y, useOgImageRuntimeConfig as z };
 //# sourceMappingURL=server.mjs.map

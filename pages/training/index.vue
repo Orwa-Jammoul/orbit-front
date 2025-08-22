@@ -1,5 +1,5 @@
 <template>
-  <div >
+  <div class="page-root">
     <div class="container">
       <div class="row path-links text-start pt-4">
         <h5 class="links-frame" dir="auto" >
@@ -63,5 +63,8 @@ useSeoMeta({
 </script>
 
 <style lang="scss" scoped>
-
+.page-root{
+  padding-top: 1.5rem;
+  padding-bottom: 4rem;
+}
 </style>

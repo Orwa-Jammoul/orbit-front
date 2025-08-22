@@ -1,0 +1,1 @@
+import{Z as a,a3 as e,$ as t,a2 as s,a1 as u}from"./DT04g7dc.js";const{$awn:o}=s(),p=a((n,r)=>{if(e().value,t().value.isAuthenticated&&e().value.client.type!="Person"&&e().value.client.status!="Accepted")return o.alert("Your Company has been successfully registered, please wait for the administration's approval",{durations:{global:5e3}}),u("/",{})});export{p as default};

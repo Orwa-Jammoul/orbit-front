@@ -27,6 +27,7 @@
         <nuxt-link class="footer-link" :to="localePath('/privacy-policy')">
           {{ $t('privacy-policy') }}
         </nuxt-link>
+        <span class="mx-0 me-3">|</span>
         <nuxt-link class="footer-link" :to="localePath('/terms-and-conditions')">
           {{ $t('terms-and-conditions') }}
         </nuxt-link>
@@ -56,7 +57,7 @@ const pages = ref(useMenu().value.navbar);
   background-color: rgba($color: $primary2, $alpha: .3) ;
   .top-section{
     position: relative;
-    height: 40rem;
+    height: 25rem;
     padding-top: 2rem;
     // background-color: rgba(0, 0, 0, 0.8);
     // background-color: rgb(51, 51, 51);
@@ -133,7 +134,11 @@ const pages = ref(useMenu().value.navbar);
       align-items: center;
       padding: 2rem 0;
       margin-top: 2rem;
+      flex-wrap: wrap;
       .link-item{
+        // background-color: burlywood;
+        flex-shrink: 1;
+        // flex-basis: 7rem;
         color: white;
         margin-inline-end: 1rem;
         transition: all 200ms ease-in-out;
@@ -149,7 +154,7 @@ const pages = ref(useMenu().value.navbar);
     justify-content: space-between;
     align-items: center;
     background-color: $primary1;
-    
+    overflow: hidden;
     // margin-top: 2rem;
     // background: none;
     // background-color: black;
@@ -157,9 +162,9 @@ const pages = ref(useMenu().value.navbar);
       .footer-link{
         color: white;
         font-size: .9rem;
-        text-decoration: underline !important;
+        // text-decoration: underline !important;
         &:not(:last-child){
-          margin-inline-end: 1rem;
+          margin-inline-end: 12px;
         }
       }
     }
@@ -168,7 +173,7 @@ const pages = ref(useMenu().value.navbar);
       margin: 0;
       color: white !important;
       font-weight: 400;
-      font-size: 13px;
+      font-size: 12px;
       text-align: center;
       padding-inline-end: 3rem;
     }

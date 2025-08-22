@@ -1,0 +1,1 @@
+import{Z as e,$ as s,a0 as u,a1 as o,N as i}from"./DT04g7dc.js";const n=e(()=>{{const a=s(),t=u().value;if(!a.value.isAuthenticated)return o("/newsite/auth/login",{});if(!t.items.length&&t.totalQty<0||t.totalQty==0)return i().back()}});export{n as default};

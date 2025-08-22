@@ -31,22 +31,29 @@
     <div class="clock">
       <ElementsCountdownClock :event-date="eventDate"/>
     </div>
+    <div class="launch-btn-frame">
+      <FormLaunchBtn/>
+    </div>
+    
   </div>
 </template>
 
 <script setup>
-const eventDate = '2025-08-22T21:00:00';
+// const eventDate = '2025-08-22T21:00:00';
+const eventDate = '2025-08-22T20:50:00';
 const passed = ref(false);
 let intervalId = null;
 
 const checkEventDate = () => {
   const currentDate = new Date();
   const targetDate = new Date(eventDate);
-  passed.value = currentDate > targetDate;
+  passed.value = currentDate > targetDate || useLaunch().value.userName=='launched';
+  // passed.value = currentDate > targetDate;
 };
 
 // Start checking every second when component mounts
 onMounted(() => {
+  console.log(useLaunch().value.userName=='launched');
   checkEventDate(); // Initial check
   intervalId = setInterval(checkEventDate, 1000); // Update every second
 });
@@ -258,6 +265,14 @@ const techs = [
     bottom: 5%;
 
     transform: translate(-50%, 0);
+  }
+  .launch-btn-frame{
+    position: absolute;
+    left: 50%;
+    top: 5%;
+  
+    transform: translate(-50%, 0);
+
   }
 }
 </style>

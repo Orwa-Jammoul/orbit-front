@@ -8,9 +8,9 @@
                 <h1 class="error-code mb-2 mb-dmd-3 mb-xl-5">{{ error?.statusCode }}</h1>
                 <h3 class="text-uppercase">{{ heading }}</h3>
                 <p class="m-t-30 m-b-30 ">{{ description }}</p>
-                <button @click="handleError" class="btn background text-white px-15 btn-rounded waves-effect waves-light ">
+                <nuxt-link @click="localePath('/')" class="btn-main">
                     {{ i18e.t('back-to-home') }}
-                </button>
+                </nuxt-link>
             </div>
             <footer class="footer text-center">Copyright @ {{ new Date().getFullYear() }} 
             <span class="fw-bold">Orbit Technology and Design Company</span>
@@ -24,13 +24,14 @@
     const error = useError()
     console.log(error.value);
     const i18e = useI18n()
+    const localePath = useLocalePath()
     // console.log('error : ', error.value.message, error.value.stack)
     const heading = computed(() => error.value?.statusCode == '404' ? i18e.t('page-not-found') : i18e.t('server-error'))
     const description = computed(() => error.value?.statusCode === '404'
         ? i18e.t('could-not-find-page-msg')
         : i18e.t('error-occurred-msg')
     )    
-    const handleError = () => clearError({ redirect: langPath('/') })
+    // const handleError = () => clearError({ redirect: langPath('/') })
 </script>
 
 <style lang="scss" scoped>

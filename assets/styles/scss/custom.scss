@@ -201,6 +201,7 @@ a {
 }
 
 .btn-main {
+  cursor: pointer;
   background-color: $primary;
   // background: linear-gradient(to right, $primary2 0%, $primary2 30%, $primary2b 80%, $primary2c 100% );
   // background-color: $gold;
@@ -220,7 +221,8 @@ a {
     background-color: white;
   }
   &:disabled{
-    color: #484848 !important;
+    color: white !important;
+    background-color: #484848;
   }
 }
 .btn-main2 {

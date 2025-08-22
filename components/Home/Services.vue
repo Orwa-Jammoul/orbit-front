@@ -1,7 +1,7 @@
 <template>
   <div class="container">
     <div class="row section-title" :class="rtl()">
-      <h2 class="metal-text" >
+      <h2 class="metal-text mb-5" >
         {{ $t("services") }}
       </h2>
       <!-- <p>

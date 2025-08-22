@@ -81,14 +81,14 @@
       <button
         type="submit"
         value="Login"
-        class="btn btn-main btn-block mx-2"
+        class="btn-main btn-block mx-2"
         :class="{ 'btn-success': formMeta.valid }"
         :disabled="!formMeta.valid || isLoading"
       >
         <span v-if="!isLoading">{{ $t("send") }}</span>
         <span v-else>{{ $t("loading...") }}</span>
       </button>
-      <div class="btn btn-main btn-block mx-2" @click="emit('cancel')">
+      <div class="btn-main btn-block mx-2" @click="emit('cancel')">
         <span >{{ $t('cancel') }}</span>
       </div>
     </div>
@@ -107,7 +107,7 @@ const emit = defineEmits(["cancel"]);
 const i18n = useI18n()
 
 // console.log(countries)
-const { $awn } = useNuxtApp();
+// const { $awn } = useNuxtApp();
 const { public: {api, apiBase} } = useRuntimeConfig();
 const isLoading = ref(false);
 
@@ -192,22 +192,22 @@ const handleSubmit = async (values, actions) => {
   } else if (error.value && error.value.statusCode != 401) {
     isLoading.value = false;
     // console.log(error.value);
-    $awn.alert(
-      i18n.t("submitError"),
-      { durations: { global: 6000 } }
-    );
+    // $awn.alert(
+    //   i18n.t("submitError"),
+    //   { durations: { global: 6000 } }
+    // );
   } else if (data.value) {
     if (data.value.hasErrors) {
       isLoading.value = false;
-      $awn.alert(
-        data.value.validationErrors[0],
-        { durations: { global: 6000 } }
-      );
+      // $awn.alert(
+      //   data.value.validationErrors[0],
+      //   { durations: { global: 6000 } }
+      // );
     } else {
       
-      $awn.success(i18n.t("messageSentSuccess"), {
-        durations: { global: 5000 },
-      });
+      // $awn.success(i18n.t("messageSentSuccess"), {
+      //   durations: { global: 5000 },
+      // });
       isLoading.value = false;
       emit("cancel");
     }
@@ -303,6 +303,7 @@ const initialValues = {
       flex: 1;
       text-align: center;
       cursor: pointer;
+      font-size: 12px;
       // border: solid 1px rgba(255, 0, 0, 0.5);
       transition: all 200ms ease-in-out;
       &.active{
