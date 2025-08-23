@@ -16,7 +16,7 @@
         </div>
         <nuxt-link class="logo-frame" :to="localePath('/')">
           <img class="logo" 
-            :src="!isAr()?`/logo/Orbit-logo-side-01-left.svg`:`/logo/Orbit-logo-side-01-s.svg`"
+            :src="!isAr()?`/logo/Orbit_company-logo-side-white-02.png`:`/logo/Orbit_company-logo-side-white-01.png`"
             alt="logo"
           >
         </nuxt-link>

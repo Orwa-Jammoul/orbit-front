@@ -28,7 +28,7 @@
 <script setup>
 const { public: {api, apiBase} } = useRuntimeConfig();
 const {cardData, num} = defineProps(["cardData", "num"])
-console.log(cardData);
+// console.log(cardData);
 
 </script>
 

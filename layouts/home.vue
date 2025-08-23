@@ -8,7 +8,6 @@
       </div>
       <SharedFooter />
     </div>
-    <HomeLaunching/>
   </div>
 </template>
 

@@ -19,9 +19,9 @@ export default defineNuxtPlugin(async (nuxtApp) => {
   const { data: socialMenuData , error: socialMenuError } = await useGetSiteApi().GetAll(socialMenuQuery);
   const { data: contactsData , error: contactsError } = await useGetSiteApi().GetAll(contactsQuery);
   
-  const { data: messagData , error: messagError } = await useGetSiteApi().GetAll(`${api.MessagingApi}/20`);
+  // const { data: messagData , error: messagError } = await useGetSiteApi().GetAll(`${api.MessagingApi}/20`);
   
-  if(!menuError1.value && !socialMenuError.value && !contactsError.value && !messagError.value){
+  if(!menuError1.value && !socialMenuError.value && !contactsError.value){
     // all menu
     // useDataAllMenu().value = [...menuData1.value.items, ...menuData2.value.items]
     useDataAllMenu().value = menuData1.value.items
@@ -34,9 +34,9 @@ export default defineNuxtPlugin(async (nuxtApp) => {
 
 
     useMenu().value = arrangeMenus(menuData1.value.items);
-    useLaunch().value = messagData.value.data
+    // useLaunch().value = messagData.value.data
     // console.log(useMenu().value);
-    console.log(useLaunch().value);
+    // console.log(useLaunch().value);
 
   }else{
     console.log("error menus");

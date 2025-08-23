@@ -1,0 +1,1 @@
+import{a4 as a,a9 as e,a5 as t,a8 as s,a7 as u}from"./C28oHHhZ.js";const{$awn:o}=s(),p=a((n,r)=>{if(e().value,t().value.isAuthenticated&&e().value.client.type!="Person"&&e().value.client.status!="Accepted")return o.alert("Your Company has been successfully registered, please wait for the administration's approval",{durations:{global:5e3}}),u("/",{})});export{p as default};

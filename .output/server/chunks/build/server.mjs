@@ -1338,19 +1338,19 @@ const _routes = [
     name: "index___en",
     path: "/",
     meta: __nuxt_page_meta$2 || {},
-    component: () => import('./index-BLNupqSX.mjs')
+    component: () => import('./index-CUIpGIWt.mjs')
   },
   {
     name: "index___ar",
     path: "/ar",
     meta: __nuxt_page_meta$2 || {},
-    component: () => import('./index-BLNupqSX.mjs')
+    component: () => import('./index-CUIpGIWt.mjs')
   },
   {
     name: "index___de",
     path: "/de",
     meta: __nuxt_page_meta$2 || {},
-    component: () => import('./index-BLNupqSX.mjs')
+    component: () => import('./index-CUIpGIWt.mjs')
   },
   {
     name: "account-login___en",
@@ -1478,17 +1478,17 @@ const _routes = [
   {
     name: "contact-us___en",
     path: "/contact-us",
-    component: () => import('./index-DZ9DDjjL.mjs')
+    component: () => import('./index-CbMPb84y.mjs')
   },
   {
     name: "contact-us___ar",
     path: "/ar/%D8%AA%D9%88%D8%A7%D8%B5%D9%84-%D9%85%D8%B9%D9%86%D8%A7",
-    component: () => import('./index-DZ9DDjjL.mjs')
+    component: () => import('./index-CbMPb84y.mjs')
   },
   {
     name: "contact-us___de",
     path: "/de/Kontakt",
-    component: () => import('./index-DZ9DDjjL.mjs')
+    component: () => import('./index-CbMPb84y.mjs')
   },
   {
     name: "terms-and-conditions___en",
@@ -1891,7 +1891,7 @@ function useSeoMeta(input, options = {}) {
     return useSeoMeta$1(input, { head, ...options });
   }
 }
-const __nuxt_component_3 = defineComponent$1({
+const __nuxt_component_2$1 = defineComponent$1({
   name: "ServerPlaceholder",
   render() {
     return createElementBlock("div");
@@ -9494,7 +9494,6 @@ const showModal = () => useState(() => false, "$KkzQhPK_iW");
 const modalData = () => useState(() => [
   { id: 0, info: "", image: "" }
 ], "$Z1SMBJ9BL_");
-const useLaunch = () => useState(() => null, "$xoGl3J4O7Z");
 const _01_fetch_main_token_server_bzLPtp8eUJdNuC13fDj_FKSwif_y__FKXBm_zoHWUfU = /* @__PURE__ */ defineNuxtPlugin(async (nuxtApp) => {
   var _a2;
   let __temp, __restore;
@@ -9521,6 +9520,24 @@ const useGetSiteApi = () => {
       message: error.message || "An error occurred",
       statusCode: error.statusCode || 500
     };
+  };
+  const reAuthorization = async () => {
+    var _a2;
+    try {
+      const { data: response, error } = await useFetch("/api/main-token", "$zFH_d_SCWu");
+      if (error.value) {
+        throw error.value;
+      }
+      if ((_a2 = response.value) == null ? void 0 : _a2.succeeded) {
+        token.value = response.value.data.token;
+        console.log("Token refreshed:", token.value);
+        return true;
+      }
+      throw new Error("Re-authorization failed");
+    } catch (error) {
+      console.error("Re-authorization error:", error);
+      return false;
+    }
   };
   const getFetchConfig = (key, isServer, isLazy, isCached) => ({
     key,
@@ -9563,58 +9580,62 @@ const useGetSiteApi = () => {
       return null;
     }
   };
-  const GetAll = async (endpoint, isServer = true, isLazy = false, isCached = true) => {
-    try {
-      const response = await useFetch(
-        () => endpoint,
-        getFetchConfig(endpoint, isServer, isLazy, isCached),
-        "$zFH_d_SCWu"
-      );
-      if (response.error.value) {
-        response.error.value = handleError(response.error.value, "GetAll");
+  const fetchWithRetry = async (endpoint, fetchFunction, context, maxRetries = 1) => {
+    let retryCount = 0;
+    while (retryCount <= maxRetries) {
+      try {
+        const response = await fetchFunction();
+        if (response.error.value && (response.error.value.statusCode === 401 || response.error.value.statusCode === 403) && retryCount < maxRetries) {
+          console.log(`Authentication error detected, attempting re-authorization (attempt ${retryCount + 1})`);
+          const reAuthSuccess = await reAuthorization();
+          if (reAuthSuccess) {
+            retryCount++;
+            continue;
+          }
+        }
+        return response;
+      } catch (error) {
+        if (retryCount >= maxRetries) {
+          return {
+            data: ref(null),
+            error: ref(handleError(error, context)),
+            pending: ref(false)
+          };
+        }
+        retryCount++;
+        console.log(`Retrying ${context} (attempt ${retryCount})`);
       }
-      return response;
-    } catch (error) {
+    }
+  };
+  const GetAll = async (endpoint, isServer = true, isLazy = false, isCached = true, maxRetries = 1) => {
+    const fetchFunction = () => useFetch(
+      () => endpoint,
+      getFetchConfig(endpoint, isServer, isLazy, isCached),
+      "$9vdyPYgcX_"
+    );
+    return fetchWithRetry(endpoint, fetchFunction, "GetAll", maxRetries);
+  };
+  const GetById = async (endpointWithoutId, id, isServer = true, isLazy = false, isCached = true, maxRetries = 1) => {
+    if (!endpointWithoutId || !id) {
       return {
         data: ref(null),
-        error: ref(handleError(error, "GetAll")),
+        error: ref(handleError(new Error("Missing endpoint or ID parameter"), "GetById")),
         pending: ref(false)
       };
     }
-  };
-  const GetById = async (endpointWithoutId, id, isServer = true, isLazy = false, isCached = true) => {
-    try {
-      if (!endpointWithoutId || !id) {
-        throw new Error("Missing endpoint or ID parameter");
-      }
-      const endpoint = `${endpointWithoutId}${id}`;
-      const response = await useFetch(
-        () => endpoint,
-        getFetchConfig(endpoint, isServer, isLazy, isCached),
-        "$9vdyPYgcX_"
-      );
-      if (response.error.value) {
-        response.error.value = handleError(response.error.value, "GetById");
-      } else if (!response.data.value) {
-        throw new Error("Empty data response");
-      }
-      return response;
-    } catch (error) {
-      return {
-        data: ref(null),
-        error: ref(handleError(error, "GetById")),
-        pending: ref(false),
-        refresh: () => Promise.resolve({
-          data: ref(null),
-          error: ref(handleError(error, "GetById refresh")),
-          pending: ref(false)
-        })
-      };
-    }
+    const endpoint = `${endpointWithoutId}/${id}`;
+    const fetchFunction = () => useFetch(
+      () => endpoint,
+      getFetchConfig(endpoint, isServer, isLazy, isCached),
+      "$EXUcVvcfcB"
+    );
+    return fetchWithRetry(endpoint, fetchFunction, "GetById", maxRetries);
   };
   return {
     GetAll,
-    GetById
+    GetById,
+    reAuthorization
+    // Export if you want to use it separately
   };
 };
 const useDataAllMenu = () => useState(() => "", "$KdHtcjX0YO");
@@ -9659,14 +9680,11 @@ const fetch_all_menus_gDLFYrwHD_U0C7CYd32aGa6SskyvXLa6yT4czM7tgRk = /* @__PURE__
   const { data: menuData1, error: menuError1 } = ([__temp, __restore] = executeAsync(() => useGetSiteApi().GetAll(menuQuery1)), __temp = await __temp, __restore(), __temp);
   const { data: socialMenuData, error: socialMenuError } = ([__temp, __restore] = executeAsync(() => useGetSiteApi().GetAll(socialMenuQuery)), __temp = await __temp, __restore(), __temp);
   const { data: contactsData, error: contactsError } = ([__temp, __restore] = executeAsync(() => useGetSiteApi().GetAll(contactsQuery)), __temp = await __temp, __restore(), __temp);
-  const { data: messagData, error: messagError } = ([__temp, __restore] = executeAsync(() => useGetSiteApi().GetAll(`${api.MessagingApi}/20`)), __temp = await __temp, __restore(), __temp);
-  if (!menuError1.value && !socialMenuError.value && !contactsError.value && !messagError.value) {
+  if (!menuError1.value && !socialMenuError.value && !contactsError.value) {
     useDataAllMenu().value = menuData1.value.items;
     useSocialMenu().value = socialMenuData.value.items;
     useContactsMenus().value = contactsData.value.items;
     useMenu().value = arrangeMenus(menuData1.value.items);
-    useLaunch().value = messagData.value.data;
-    console.log(useLaunch().value);
   } else {
     console.log("error menus");
   }
@@ -39412,8 +39430,8 @@ const plugins = [
   init_IycSiUTa0ooOjNElHE0EG94Rz0cZb4_bKuXwa_4z9aY
 ];
 const layouts = {
-  default: defineAsyncComponent(() => import('./default-Bz93REhv.mjs').then((m) => m.default || m)),
-  home: defineAsyncComponent(() => import('./home-B66ru84g.mjs').then((m) => m.default || m))
+  default: defineAsyncComponent(() => import('./default-BidJE5Di.mjs').then((m) => m.default || m)),
+  home: defineAsyncComponent(() => import('./home-YhrHCDEA.mjs').then((m) => m.default || m))
 };
 const LayoutLoader = defineComponent$1({
   name: "LayoutLoader",
@@ -39635,7 +39653,7 @@ const _export_sfc = (sfc, props) => {
 };
 const _sfc_main$2 = {};
 function _sfc_ssrRender(_ctx, _push, _parent, _attrs) {
-  const _component_ElementsLoader = __nuxt_component_3;
+  const _component_ElementsLoader = __nuxt_component_2$1;
   const _component_NuxtLayout = __nuxt_component_1;
   const _component_NuxtPage = __nuxt_component_2;
   _push(`<div${ssrRenderAttrs(_attrs)}>`);
@@ -39782,5 +39800,5 @@ let entry;
 }
 const entry$1 = (ssrContext) => entry(ssrContext);
 
-export { useSiteConfig as A, parseURL as B, ErrorMessage as E, Field as F, _export_sfc as _, useLocalePath as a, __nuxt_component_0 as b, createError as c, useGetSiteApi as d, entry$1 as default, __nuxt_component_0$1 as e, useHead as f, useI18n as g, useRoute$1 as h, injectHead as i, useLang as j, useAppConfig as k, useNuxtApp as l, useAsyncData as m, modalData as n, useRouter$1 as o, __nuxt_component_3 as p, defineNuxtRouteMiddleware as q, navigateTo as r, showModal as s, useMainToken as t, useRuntimeConfig as u, useFetch as v, configure as w, Form as x, useMenu as y, useOgImageRuntimeConfig as z };
+export { useSiteConfig as A, parseURL as B, ErrorMessage as E, Field as F, _export_sfc as _, useLocalePath as a, __nuxt_component_0 as b, createError as c, useGetSiteApi as d, entry$1 as default, __nuxt_component_0$1 as e, useHead as f, useI18n as g, useRoute$1 as h, injectHead as i, useLang as j, useAppConfig as k, useNuxtApp as l, useAsyncData as m, modalData as n, useRouter$1 as o, __nuxt_component_2$1 as p, defineNuxtRouteMiddleware as q, navigateTo as r, showModal as s, useMainToken as t, useRuntimeConfig as u, useFetch as v, configure as w, Form as x, useMenu as y, useOgImageRuntimeConfig as z };
 //# sourceMappingURL=server.mjs.map
