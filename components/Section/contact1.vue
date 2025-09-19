@@ -172,7 +172,7 @@ watchEffect( async ()=> {
 
 import { ref } from "vue";
 import { useField, useForm } from "vee-validate";
-const { $awn } = useNuxtApp();
+// const { $awn } = useNuxtApp();
 
 const { handleSubmit, handleReset } = useForm({
   validationSchema: {
@@ -213,7 +213,7 @@ const message = useField("message");
 const submit = handleSubmit((values) => {
   // alert(JSON.stringify(values, null, 2));
   if(values.name){
-    $awn.success(isEn()?`Your message was sent successfully.`:`تم إرسال رسالتك بنجاح. `, { durations: { global: 5000 } })
+    // $awn.success(isEn()?`Your message was sent successfully.`:`تم إرسال رسالتك بنجاح. `, { durations: { global: 5000 } })
     handleReset()
   }
 });

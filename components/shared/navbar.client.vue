@@ -6,14 +6,14 @@
 
 <script setup>
 
-const userInfo = ref(localStorage.getItem("userInfo"))
-const token = ref(localStorage.getItem("token"))
-const UserId = ref(localStorage.getItem("UserId"))
-useUserInfo().value = JSON.parse(userInfo.value) 
-useToken().value = token.value
-useUserId().value = UserId.value
+// const userInfo = ref(localStorage.getItem("userInfo"))
+// const token = ref(localStorage.getItem("token"))
+// const UserId = ref(localStorage.getItem("UserId"))
+// useUserInfo().value = JSON.parse(userInfo.value) 
+// useToken().value = token.value
+// useUserId().value = UserId.value
 
-useAuth().value.isAuthenticated = !!token.value
+// useAuth().value.isAuthenticated = !!token.value
 
 // console.log(userInfo.value);
 

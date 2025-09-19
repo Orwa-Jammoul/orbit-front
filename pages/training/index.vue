@@ -16,9 +16,9 @@
     </div>
     <!-- <h1>{{$t('training')}}</h1> -->
     <div class="container" :dir="rtl()">
-      <div class="row">
-        <div class="col-12 col-lg-4 col-md-6" v-for="service in services" :key="service.id">
-          <CardCourse :cardData="service" :num="0"/>
+      <div v-if="trainings && trainings.length > 0" class="row">
+        <div class="col-12 col-lg-4 col-md-6" v-for="training in trainings" :key="training.id">
+          <CardCourse :cardData="training" :num="0"/>
         </div>
       </div>
     </div>
@@ -28,14 +28,17 @@
 <script setup>
 
 const { public: {api, apiBase} } = useRuntimeConfig();
-const services = ref([]);
+const trainings = ref([]);
 // const isLoading = ref(true);
 const { t } = useI18n()
 const localePath = useLocalePath()
-const { data:servicesData } = await useGetSiteApi().GetAll(
+const { data:trainingsData } = await useGetSiteApi().GetAll(
   `${api.coursesApi}/GetAllPagedSearchCourse?Coursename=&propductcategoryid=0&propductSubcategoryid=0&propductSubSubcategoryid=0&propductSubSubSubcategoryid=0&fromprice=0&toprice=0&pageNumber=0&pageSize=12`
 );
-services.value = servicesData.value.data
+
+if(trainingsData.value){
+  trainings.value = trainingsData.value.data
+}
 
 useSeoMeta({
   // Basic SEO

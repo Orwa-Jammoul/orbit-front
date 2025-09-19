@@ -20,7 +20,7 @@
         {{useName(data)}}
       </div>
       <div class="slider-des" v-html="useDes(data)"></div>
-      <nuxt-link class="main-btn" :to="localePath('services')">{{ $t('get-started') }}</nuxt-link>
+      <nuxt-link class="btn-main" :to="localePath(data.url1)">{{ $t('get-started') }}</nuxt-link>
     </div>
   </div>
 </template>
@@ -133,8 +133,9 @@ const localePath = useLocalePath()
       // direction: rtl !important;
       font-weight: 700;
       font-size: 4rem;
+      padding: 20px 0;
       // letter-spacing: 5px;
-      line-height: 4rem;
+      // line-height: 4rem;
       margin-bottom: 1rem;
       // text-shadow: 2px 2px 3px rgba(255, 255, 255, 0.3);
     }
@@ -143,7 +144,7 @@ const localePath = useLocalePath()
       // line-height: 2rem;
       color: rgb(200, 200, 200);
     }
-    .main-btn{
+    .btn-main{
       margin: 0;
       margin-top: 2rem;
     }

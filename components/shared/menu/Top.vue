@@ -10,13 +10,13 @@
         <MenuLanguage/>
         <!-- <MenuCart/>
         -->
-        <!-- <MenuAccount/>  -->
-        <div class="vertical-nav">
-          <SharedNavVertical :pages="allPages"/>
+        <MenuAccount/> 
+        <div class="vertical-nav" v-if="pages && pages?.length>0">
+          <SharedNavVertical :pages="pages"/>
         </div>
       </div>
       <div class="center">
-        <div class="center-inside-frame">
+        <div class="center-inside-frame" v-if="pages && pages?.length>0">
           <!-- <div class="spark"></div> -->
           <div class="h-100" v-for="page,index in pages" :key="page.id" >
             <SharedNavItemUp
@@ -36,19 +36,46 @@
 </template>
 
 <script setup>
+const { public: {api, apiBase} } = useRuntimeConfig();
 
 const {locale} = useI18n()
 useLang().value = locale.value;
 const localePath = useLocalePath()
+// console.log(useMenu().value);
+// const {navbar} = await fetchMenus()
+// const { menu, fetchMenu, getMenuItems } = useMenu();
+// if (!menu.value) {
+//   // loading.value = true;
+//   await fetchMenu();
+//   // loading.value = false;
+// }
+// console.log(menu.value);
+// const pages = ref(useMenu().value.navbar);
 
-const pages = ref(useMenu().value.navbar);
+
 // const contacts = ref(useContactsMenus().value.filter(item=>item.englishName.toLowerCase()!='whatsapp').sort((a,b)=>{a.order - b.order}));
 // const whatsapp = useContactsMenus().value.find(item=>item.englishName.toLowerCase()!='whatsapp')
 // console.log(contacts.value);
 // console.log(pages.value);
 // console.log(useMenu().value);
-const allPages = ref(pages);
+// const allPages = ref(pages);
 // const allPages = useMenu().value.home
+
+
+const pages = ref([]);
+
+const { data: menuData , error: menuError } = await useGetSiteApi().GetAll(
+  `${api.MenusApi}?pageNumber=0&pageSize=100&categoryId=1`
+);
+
+watchEffect(()=>{
+  if(menuData.value){
+    useDataAllMenu().value = menuData.value.items
+    pages.value = arrangeMenus(menuData.value.items).navbar;
+  }
+})
+
+
 const isAuth =  ref(useAuth().value.isAuthenticated)
 
 watch(useAuth().value,()=>{

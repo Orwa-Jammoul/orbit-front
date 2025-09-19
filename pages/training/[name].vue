@@ -68,13 +68,15 @@
           </div>
         </div>
         <aside class="side-nav">
-          <p class="px-0 ps-2">{{ $t("more") }}</p>
-          <div
-            class="mb-3"
-            v-for="(similar, index) in similarItems"
-            :key="similar.id"
-          >
-            <CardCourseH :cardData="similar" />
+          <div class="side-nav-inside">
+            <p class="px-0 ps-2">{{ $t("more") }}</p>
+            <div
+              class="mb-3"
+              v-for="(similar, index) in similarItems"
+              :key="similar.id"
+            >
+              <CardCourseH :cardData="similar" />
+            </div>
           </div>
         </aside>
       </div>
@@ -163,10 +165,9 @@ try {
     // Open Graph / Facebook
     ogTitle: useName(courseData.value.data),
     ogDescription: courseData.value.data.seoDescription,
-    ogImage:
-      "https://orbit-eng.net/SEO/imgs/Orbit_company-logo-en-white-01.png",
+    ogImage: courseData.value.data.productImageUrl ? `${apiBase}/${courseData.value.data.productImageUrl}` : "https://adminpanel.orbit-eng.net/logohero.png",
     ogUrl: "https://orbit-eng.net" + route.fullPath,
-    ogType: t("ogType"),
+    ogType: t("training"),
     ogLocale: t("ogLocale"),
     ogSiteName: t("ogSiteName"),
 
@@ -174,10 +175,9 @@ try {
     twitterCard: "summary_large_image",
     twitterTitle: useName(courseData.value.data),
     twitterDescription: t("ogDescription"),
-    twitterImage:
-      "https://orbit-eng.net/SEO/imgs/Orbit_company-logo-en-white-01.png",
-    twitterSite: "@yourtwitterhandle",
-    twitterCreator: "@contentcreator",
+    twitterImage: courseData.value.data.productImageUrl ? `${apiBase}/${courseData.value.data.productImageUrl}` : "https://adminpanel.orbit-eng.net/logohero.png",
+    twitterSite: t("ogSiteName"),
+    twitterCreator: t("ogSiteName"),
 
     // Additional SEO
     robots: "index, follow",
@@ -192,22 +192,22 @@ try {
 
     // App Links
     appleMobileWebAppTitle: useName(courseData.value.data),
-    applicationName: t("ogTitle"),
+    applicationName: t("ogSiteName"),
 
-    // FB App Links
-    fbAppId: "your-facebook-app-id",
+    // // FB App Links
+    // fbAppId: "your-facebook-app-id",
 
-    // iOS
-    appleTouchIcon: "/icons/apple-touch-icon.png",
-    appleTouchStartupImage: "/splash/launch-640x1136.png",
+    // // iOS
+    // appleTouchIcon: "/icons/apple-touch-icon.png",
+    // appleTouchStartupImage: "/splash/launch-640x1136.png",
 
-    // Windows
-    msapplicationTileImage: "/icons/mstile-150x150.png",
-    msapplicationTileColor: "#ffffff",
-    msapplicationConfig: "/browserconfig.xml",
+    // // Windows
+    // msapplicationTileImage: "/icons/mstile-150x150.png",
+    // msapplicationTileColor: "#ffffff",
+    // msapplicationConfig: "/browserconfig.xml",
 
-    // PWA
-    manifest: "/manifest.webmanifest",
+    // // PWA
+    // manifest: "/manifest.webmanifest",
   });
 } catch (err) {
   error.value = err.message || t("errors.generic");
@@ -242,6 +242,13 @@ try {
         width: 30%;
         border-inline-start: solid 1px rgba(255, 255, 255, 0.1);
         padding-inline-start: 0.5rem;
+
+        position: relative;
+        .side-nav-inside{
+          position: sticky;
+          top: 5rem;
+          inset-inline-end: 0;
+        }
       }
       .content-body {
         width: 70%;

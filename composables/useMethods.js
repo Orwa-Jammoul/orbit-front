@@ -253,30 +253,30 @@ export const numD=(num,digitsNum=2)=>{
 }
 export const t = ((key, firstCapital=false, allCapital=false, firsts=false) => {
   const lang = useLang().value ? useLang().value : 'en';
-  let value;
-  if(lang==='en'){
-    value= useEn().value[key] ?? key ;
-    if(allCapital){
-      value = value.toUpperCase();
-    }else if(firsts){
-      value = capitalizeFirsts(value);
-    }else if(firstCapital){
-      value = value.charAt(0).toUpperCase() + value.slice(1);
-    }
-  }else if(lang==='ar'){
-    value= useAr().value[key] ?? key ;
-  }else{
-    value= useDe().value[key] ?? key ;
-    if(allCapital){
-      value = value.toUpperCase();
-    }else if(firsts){
-      value = capitalizeFirsts(value);
-    }else if(firstCapital){
-      value = value.charAt(0).toUpperCase() + value.slice(1);
-    }
-  }
+  // let value;
+  // if(lang==='en'){
+  //   value= useEn().value[key] ?? key ;
+  //   if(allCapital){
+  //     value = value.toUpperCase();
+  //   }else if(firsts){
+  //     value = capitalizeFirsts(value);
+  //   }else if(firstCapital){
+  //     value = value.charAt(0).toUpperCase() + value.slice(1);
+  //   }
+  // }else if(lang==='ar'){
+  //   value= useAr().value[key] ?? key ;
+  // }else{
+  //   value= useDe().value[key] ?? key ;
+  //   if(allCapital){
+  //     value = value.toUpperCase();
+  //   }else if(firsts){
+  //     value = capitalizeFirsts(value);
+  //   }else if(firstCapital){
+  //     value = value.charAt(0).toUpperCase() + value.slice(1);
+  //   }
+  // }
 
-  return value;
+  return key;
 });
 export const useClasses = (enClasses,arClasses) => {
   const lang = useLang().value ? useLang().value : 'en';
@@ -605,4 +605,22 @@ export const replaceDashes = (input)=>{
   
   // Step 3: Replace '@' back to a dash
   return withSpaces.replace(/@@@/g, '-');
+}
+
+
+export const showNotify = (options)=>{
+  const temp = {
+    ...options,
+    id: Math.random().toString(36).substring(2, 9),
+    currentTime: Date.now(),
+  }
+
+  // for (let i = 0; i < useNotify().value.length; i++) {
+  //   const notification = useNotify().value[i];
+  //   if (notification.duration && notification.duration > 0) {
+
+  //   }
+  // }
+  useNotify().value.push(temp)
+  notifyTrigger().value += 1
 }

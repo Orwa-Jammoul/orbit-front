@@ -1,9 +1,9 @@
 
 export const useLang = () => useState(() => []);
 
-export const useMainToken = () => useState(() => []);
+export const useMainToken = () => useState(() => "");
 export const useRefreshMainToken = () => useState(() => []);
-export const useToken = () => useState(() => []);
+export const useToken = () => useState(() => "");
 export const useUserInfo = () => useState(() => []);
 export const useUserId = () => useState(() => null);
 export const useClientId = () => useState(() => []);
@@ -12,7 +12,6 @@ export const useAuth = () => useState(() => ({
 }));
 
 export const useActive = () => useState(() => false);
-export const useSocialMenus = () => useState(() => []);
 export const useContactsMenus = () => useState(() => []);
 export const useMainMenus = () => useState(() => []);
 export const useMenusFooter = () => useState(() => []);
@@ -41,6 +40,24 @@ export const siteLanguages = () => useState(() => new Object({
   ar:'عربي',
   de:'Deutsch',
 })); 
+
+
+export const notifyTrigger = () => useState(() => 0);
+export const useNotify = () => useState(() => [
+  // {
+  //   id: "erte334",
+  //   title:"notify title",
+  //   titleEn: "",
+  //   titleAr: "",
+  //   titleGe: "",
+  //   message:"notify message",
+  //   messageEn:"notify message",
+  //   messageAr:"notify message",
+  //   messageGe:"notify message",
+  //   type: "info" , //'success' | 'error' | 'warn' | 'info'
+  //   duration: 3000,
+  // }
+]);
 
 export const fileReset = () => useState(() => false);
 export const fileResetCount = () => useState(() => -1);

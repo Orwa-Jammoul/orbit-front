@@ -86,7 +86,7 @@ sliders.value = data.value.items;
           right: -2rem;
         }
         svg{
-          fill: red;
+          fill: $primary;
         }
       }
     }
@@ -96,7 +96,7 @@ sliders.value = data.value.items;
         width: 2px;
         border-radius: 0;
         &.is-active{
-          background-color: #29abe2 !important;
+          background-color: $primary !important;
         }
       }
     }

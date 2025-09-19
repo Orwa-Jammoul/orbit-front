@@ -85,7 +85,7 @@ steps.value = stepsData.value.items
           inset-inline-end: -2rem;
         }
         svg{
-          fill: red;
+          fill: $primary;
         }
       }
     }
@@ -94,10 +94,10 @@ steps.value = stepsData.value.items
       bottom: -2rem !important;
       
       .splide__pagination__page{
-        width: 3px;
-        height: 3px;
+        width: 2px;
+        border-radius: 0;
         &.is-active{
-          background-color: red !important;
+          background-color: $primary !important;
         }
       }
     }

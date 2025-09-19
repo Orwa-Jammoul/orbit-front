@@ -119,7 +119,8 @@ const localePath = useLocalePath()
       .details-btn{
         flex: 1;
         color: white;
-        background-color: $primary1;
+        background: $lg1;
+        // background-color: $primary1;
         padding: 5px 1rem;
         border-radius: 5px;
         // margin-inline-end: 1rem;

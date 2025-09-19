@@ -61,9 +61,11 @@ const services = ref(null);
 
 
 const { data: servicesData, pending } = await useGetSiteApi().GetAll(
-  `${api.productsSearchApi}?pageNumber=1&pageSize=12`
+  `${api.productsSearchApi}?pageNumber=0&pageSize=12`
 );
-services.value = servicesData.value.data;
+if(servicesData.value){
+  services.value = servicesData.value.data;
+}
 
 </script>
 <style lang="scss">
@@ -86,15 +88,17 @@ services.value = servicesData.value.data;
           inset-inline-end: -2rem;
         }
         svg{
-          fill: red;
+          fill: $primary;
         }
       }
     }
     .splide__pagination{
       bottom: 0;
       .splide__pagination__page{
+        width: 2px;
+        border-radius: 0;
         &.is-active{
-          background-color: red !important;
+          background-color: $primary !important;
         }
       }
     }

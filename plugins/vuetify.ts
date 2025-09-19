@@ -2,6 +2,7 @@ import 'vuetify/styles'
 import { createVuetify } from "vuetify";
 // import { ThemeDefinition } from "vuetify";
 // import { VTextField } from 'vuetify/components/VTextField'
+// import { VTextField } from 'vuetify/directives/VTextField'
 // import { VCard } from 'vuetify/components';
 import * as components from "vuetify/components";
 import * as directives from "vuetify/directives";
@@ -15,7 +16,7 @@ import * as directives from "vuetify/directives";
 export default defineNuxtPlugin((nuxtApp)=>{
   const vuetify = createVuetify({
     // components: {
-    //   VCard,
+    //   // VCard,
     //   VTextField,
     // },
     components,

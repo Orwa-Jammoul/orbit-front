@@ -60,8 +60,27 @@
 </template>
 
 <script setup>
-const socialPages = ref(useMenu().value.social);
-const contacts = ref(useMenu().value.contact);
+const { public: {api, apiBase} } = useRuntimeConfig();
+const socialPages = ref([]);
+const contacts = ref([]);
+
+
+const { data: socialMenuData } = await useGetSiteApi().GetAll(
+  `${api.MenusApi}?pageNumber=0&pageSize=100&categoryId=2`
+);
+const { data: contactsMenuData } = await useGetSiteApi().GetAll(
+  `${api.MenusApi}?pageNumber=0&pageSize=100&categoryId=3`
+);
+
+watchEffect(()=>{
+  if(socialMenuData.value && contactsMenuData.value){
+    socialPages.value = socialMenuData.value.items;
+    contacts.value = contactsMenuData.value.items;
+    useSocialMenu().value = socialMenuData.value.items
+    useContactsMenus().value = contactsMenuData.value.items
+  }
+})
+
 // console.log(contacts);
 
 const showContacts= ref(false)

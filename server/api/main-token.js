@@ -17,6 +17,7 @@ export default defineEventHandler(async () => {
                 password: adminPassword,
             }
         });
+        // console.log("storage mainToken");
         await storage.setItem('mainToken', response)
         // console.log('response,', response)
         return response

@@ -2,7 +2,8 @@ export const useGetSiteApi = () => {
   const { public: { apiBase, cachedTime } } = useRuntimeConfig();
   const nuxtApp = useNuxtApp();
   const token = useMainToken(); // Get token once
-  // const token = {value: "abcd"}
+  // const token = {value: ""}
+  // const token = useToken();
 
   // Common error handler
   const handleError = (error, context = '') => {
@@ -24,24 +25,43 @@ export const useGetSiteApi = () => {
 
   // Re-authorization function
   const reAuthorization = async () => {
-    try {
-      const { data: response, error } = await useFetch('/api/main-token');
+    token.value = await useReAuthorization().reAuthorization();
+    return true;
+    // try {
+    //   const response = await $fetch('/api/main-token');
       
-      if (error.value) {
-        throw error.value;
-      }
+    //   if (response?.succeeded) {
+    //     token.value = response.value.data.token;
+    //     console.log('Token refreshed:', token.value);
+    //     return true;
+    //   }
       
-      if (response.value?.succeeded) {
-        token.value = response.value.data.token;
-        console.log('Token refreshed:', token.value);
-        return true;
-      }
+    //   throw new Error('Re-authorization failed');
+    // } catch (error) {
+    //   console.error('Re-authorization error:', error);
+    //   return false;
+    // }
+
+    //===================
+
+    // try {
+    //   const { data: response, error } = await useFetch('/api/main-token');
       
-      throw new Error('Re-authorization failed');
-    } catch (error) {
-      console.error('Re-authorization error:', error);
-      return false;
-    }
+    //   if (error.value) {
+    //     throw error.value;
+    //   }
+      
+    //   if (response.value?.succeeded) {
+    //     token.value = response.value.data.token;
+    //     console.log('Token refreshed:', token.value);
+    //     return true;
+    //   }
+      
+    //   throw new Error('Re-authorization failed');
+    // } catch (error) {
+    //   console.error('Re-authorization error:', error);
+    //   return false;
+    // }
   };
 
   // Common fetch configuration
@@ -98,39 +118,34 @@ export const useGetSiteApi = () => {
     let retryCount = 0;
     
     while (retryCount <= maxRetries) {
+      // console.log(endpoint);
       try {
         const response = await fetchFunction();
-        
+        // console.log("response:", response);
         // Check if we got an authentication error
-        if (response.error.value && 
-            (response.error.value.statusCode === 401 || response.error.value.statusCode === 403) &&
-            retryCount < maxRetries) {
-          
-          console.log(`Authentication error detected, attempting re-authorization (attempt ${retryCount + 1})`);
-          
-          // Try to re-authorize
-          const reAuthSuccess = await reAuthorization();
-          
-          if (reAuthSuccess) {
-            retryCount++;
-            continue; // Retry the request with new token
-          }
+        if (response.error.value && (response.error.value.statusCode === 401 || response.error.value.statusCode === 403)) {
+          throw new Error('Not authorized!');
         }
         
         return response;
         
       } catch (error) {
-        if (retryCount >= maxRetries) {
+        console.log(`Retrying ${context} (attempt ${retryCount + 1})`);
+        console.log(`Authentication error detected, attempting re-authorization (attempt ${retryCount + 1})`);
+        
+        // Try to re-authorize
+        const reAuthSuccess = await reAuthorization();
+        
+        if (reAuthSuccess) {
+          console.log(`re-authorization completed`)
+          retryCount++;
+        }else if(!reAuthSuccess && retryCount == maxRetries){
           return {
             data: ref(null),
             error: ref(handleError(error, context)),
             pending: ref(false)
           };
         }
-        
-        // For non-authentication errors, we might still want to retry
-        retryCount++;
-        console.log(`Retrying ${context} (attempt ${retryCount})`);
       }
     }
   };

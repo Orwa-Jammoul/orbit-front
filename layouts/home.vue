@@ -8,6 +8,9 @@
       </div>
       <SharedFooter />
     </div>
+    <ClientOnly>
+      <ElementsNotify/>
+    </ClientOnly>
   </div>
 </template>
 

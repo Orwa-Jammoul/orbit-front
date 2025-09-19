@@ -16,7 +16,7 @@ const fetchServices = async (apiBase, endpoint) => {
     // console.log(data);
     return data;
   } catch (error) {
-    console.error('Error fetching services:', error);
+    console.error(`Error fetching services: ${endpoint}`, error);
     throw error;
   }
 };

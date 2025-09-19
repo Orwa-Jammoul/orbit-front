@@ -6,11 +6,11 @@
       </div> -->
       <nuxt-link v-if="!isAuth" class="menu-item" :to="localePath('account-login')">
         <Icon name="hugeicons:login-method" size="20px"/>
-        <span>Login</span>
+        <span>{{ $t('login') }}</span>
       </nuxt-link>
       <nuxt-link class="menu-item" :to="localePath('account-signup')">
         <Icon name="material-symbols:person-add-rounded" size="20px"/>
-        <span>Signup</span>
+        <span>{{ $t('sign-up') }}</span>
       </nuxt-link>
     </div>
   </div>

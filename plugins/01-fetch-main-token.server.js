@@ -3,7 +3,7 @@ export default defineNuxtPlugin(async (nuxtApp) => {
     // console.log(response.value)
     if (response.value) {
         if (response.value?.succeeded) {
-            useMainToken().value = response.value.data.token
+            useToken().value = response.value.data.token
         }
     }
 

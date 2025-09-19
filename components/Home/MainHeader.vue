@@ -39,7 +39,7 @@ const { data } = await useGetSiteApi().GetAll(
   `${api.Blocks}?categoryId=2&pageNumber=0&pageSize=100`
 );
 // sliders.value = [...data.value.items, ...data.value.items];
-sliders.value = data.value.items;
+sliders.value = data.value?.items;
 
 
 </script>
@@ -70,7 +70,7 @@ sliders.value = data.value.items;
           right: -2rem;
         }
         svg{
-          fill: red;
+          fill: $primary;
         }
       }
     }
@@ -80,7 +80,7 @@ sliders.value = data.value.items;
         width: 2px;
         border-radius: 0;
         &.is-active{
-          background-color: #29abe2 !important;
+          background-color: $primary !important;
         }
       }
     }

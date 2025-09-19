@@ -110,6 +110,14 @@ body {
   // font-family: 'Roboto', 'Baloo', sans-serif ;
 }
 
+input:-webkit-autofill,
+input:-webkit-autofill:hover, 
+input:-webkit-autofill:focus, 
+input:-webkit-autofill:active{
+    -webkit-box-shadow: 0 0 0 30px #e0e0e0 inset !important;
+    -webkit-text-fill-color: black !important;
+}
+
 
 // ====== modal start =======
 .v-overlay__scrim{
@@ -202,7 +210,8 @@ a {
 
 .btn-main {
   cursor: pointer;
-  background-color: $primary;
+  background: $lg1;
+  // background-color: $primary;
   // background: linear-gradient(to right, $primary2 0%, $primary2 30%, $primary2b 80%, $primary2c 100% );
   // background-color: $gold;
   color: #fff;
@@ -212,8 +221,14 @@ a {
   // border-radius: 3px;
   transition: $transition;
   font-weight: bold;
-  border: 2px solid $gold;
   border-radius: 7px;
+
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+    -khtml-user-select: none;
+      -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
   &:hover {
     opacity: 0.9;
     color: $primary;
@@ -223,6 +238,38 @@ a {
   &:disabled{
     color: white !important;
     background-color: #484848;
+  }
+}
+.btn-main-outline {
+  cursor: pointer;
+  background-color: transparent;
+  // background: linear-gradient(to right, $primary2 0%, $primary2 30%, $primary2b 80%, $primary2c 100% );
+  // background-color: $gold;
+  color: #fff;
+  padding: 8px 30px;
+  text-align: center;
+  border: solid 1px $primary;
+  // border-radius: 3px;
+  transition: $transition;
+  font-weight: bold;
+  border-radius: 7px;
+
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+    -khtml-user-select: none;
+      -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+
+  &:hover {
+    opacity: 0.9;
+    color: white;
+    // border-color: $green;
+    background-color: rgba($color: $primary, $alpha: .5);
+  }
+  &:disabled{
+    color: #484848 !important;
+    border: 2px solid #484848;
   }
 }
 .btn-main2 {
@@ -550,27 +597,27 @@ a {
 //     }
 //   }
 // }
-.main-btn{
-  width: auto !important;
-  margin: 2rem;
-  padding: .5rem 2rem;
-  color: white;
-  background-color: $primary1;
-  border-radius: 5px;
-  transition: all 200ms ease-out;
-  &:hover:not(.disabled){
-    color: white;
-    box-shadow: 0 2px 5px 0 rgb(0, 0, 0,0.3);
-  }
-  &.disabled{
-    background-color: color-mix(in srgb, $primary2 50%, white 50%) ;
-    box-shadow: none !important;
-  }
-  &:disabled{
-    background-color: color-mix(in srgb, $primary2 50%, white 50%) ;
-    box-shadow: none !important;
-  }
-}
+// .main-btn{
+//   width: auto !important;
+//   margin: 2rem;
+//   padding: .5rem 2rem;
+//   color: white;
+//   background-color: $primary1;
+//   border-radius: 5px;
+//   transition: all 200ms ease-out;
+//   &:hover:not(.disabled){
+//     color: white;
+//     box-shadow: 0 2px 5px 0 rgb(0, 0, 0,0.3);
+//   }
+//   &.disabled{
+//     background-color: color-mix(in srgb, $primary2 50%, white 50%) ;
+//     box-shadow: none !important;
+//   }
+//   &:disabled{
+//     background-color: color-mix(in srgb, $primary2 50%, white 50%) ;
+//     box-shadow: none !important;
+//   }
+// }
 .top-class{
   margin-top: 6%;
   @media (max-width: 700px) { margin-top: 40% !important}
@@ -753,18 +800,37 @@ a {
 .metal-text {
   font-size: 48px;
   font-weight: bold;
-  background: linear-gradient(
+  // background: repeating-linear-gradient(
+  //   to bottom,
+  //   #e4e4e4 0%,
+  //   #e4e4e4 25%,
+  //   #b7b7b7 50%,
+  //   #8f8f8f 75%,
+  //   #717171 87%,
+  //   #e4e4e4 100%
+  // );
+  background: repeating-linear-gradient(
+      45deg,
+      rgba(255, 255, 255, 0.1) 0px 2px,
+      transparent 1px 4px
+    ),
+    repeating-linear-gradient(
     to bottom,
-    #e4e4e4 0%,
-    #e4e4e4 25%,
-    #b7b7b7 50%,
-    #8f8f8f 75%,
-    #717171 100%
+    #e7e7e7 0%,
+    #dedede 8.33%,
+    #cccccc 25%,
+    #999999 41.67%,
+    #666666 58.33%,
+    #999999 75%,
+    #cccccc 91.67%,
+    #e7e7e7 100%
   );
+  background-size: 100% 4rem; /* Adjust based on your line-height */
   -webkit-background-clip: text;
   background-clip: text;
   color: transparent;
-  line-height: normal;
+  line-height: 4rem; /* Explicit line-height helps with background-size calculation */
+  
 }
 .grid-bg1{
   background-image: url('/svg/grid-vector.svg');
@@ -823,3 +889,4 @@ a {
   pointer-events: none;
   z-index: 0;
 }
+

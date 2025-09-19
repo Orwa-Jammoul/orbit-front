@@ -15,7 +15,7 @@
       </div>
     </div>
     <div class="container pb-5" :dir="rtl()">
-      <div class="row">
+      <div v-if="services && services.length > 0" class="row">
         <div class="col-12 col-lg-4 col-md-6" v-for="service in services" :key="service.id">
           <CardService :cardData="service" :num="0"/>
         </div>
@@ -37,9 +37,11 @@ const isLoading = ref(true);
 
 //?productname=&propductcategoryid=0&propductSubcategoryid=0&propductSubSubcategoryid=0&propductSubSubSubcategoryid=0&fromprice=0&toprice=0&pageNumber=1&pageSize=100&searchString=&orderBy=
 const { data:servicesData } = await useGetSiteApi().GetAll(
-  `${api.productsSearchApi}?pageNumber=1&pageSize=1000`
+  `${api.productsSearchApi}?pageNumber=0&pageSize=100`
 );
-services.value = servicesData.value.data
+if(servicesData.value){
+  services.value = servicesData.value.data
+}
 
 
 useSeoMeta({

@@ -62,7 +62,9 @@ const trainings = ref(null);
 const { data:trainingsData, pending } = await useGetSiteApi().GetAll(
   `${api.coursesApi}/GetAllPagedSearchCourse?Coursename=&propductcategoryid=0&propductSubcategoryid=0&propductSubSubcategoryid=0&propductSubSubSubcategoryid=0&fromprice=0&toprice=0&pageNumber=0&pageSize=12`
 );
-trainings.value = trainingsData.value.data
+if(trainingsData.value){
+  trainings.value = trainingsData.value.data
+}
 
 
 </script>
@@ -86,15 +88,17 @@ trainings.value = trainingsData.value.data
           inset-inline-end: -2rem;
         }
         svg{
-          fill: red;
+          fill: $primary;
         }
       }
     }
     .splide__pagination{
       bottom: 0;
       .splide__pagination__page{
+        width: 2px;
+        border-radius: 0;
         &.is-active{
-          background-color: red !important;
+          background-color: $primary !important;
         }
       }
     }

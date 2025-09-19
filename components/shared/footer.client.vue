@@ -16,7 +16,7 @@
           alt="logo"
         >
       </nuxt-link>
-      <div class="links-frame">
+      <div class="links-frame" v-if="pages && pages?.length>0">
         <nuxt-link class="link-item" v-for="page in pages" :to="localePath(page.pageUrl)" :key="page.id">
           {{ useName(page,0,0,1) }}
         </nuxt-link>
@@ -42,8 +42,19 @@
 </template>
 
 <script setup>
+const { public: {api, apiBase} } = useRuntimeConfig();
 const localePath = useLocalePath()
-const pages = ref(useMenu().value.navbar);
+const pages = ref([]);
+
+const { data: menuData , error: menuError } = await useGetSiteApi().GetAll(
+  `${api.MenusApi}?pageNumber=0&pageSize=100&categoryId=1`
+);
+
+watchEffect(()=>{
+  if(menuData.value){
+    pages.value = arrangeMenus(menuData.value.items).navbar;
+  }
+})
 // const pages = ref(useMenu().value.footer);
 // const allSocialMedia = ref(useMenu().value.social);
 // console.log(useMenu().value);
@@ -132,13 +143,14 @@ const pages = ref(useMenu().value.navbar);
       display: flex;
       justify-content: center;
       align-items: center;
-      padding: 2rem 0;
+      padding: 2rem 3rem;
       margin-top: 2rem;
       flex-wrap: wrap;
       .link-item{
         // background-color: burlywood;
         flex-shrink: 1;
-        // flex-basis: 7rem;
+        // flex: 1 0 5rem;
+        // flex-basis: 5rem;
         color: white;
         margin-inline-end: 1rem;
         transition: all 200ms ease-in-out;

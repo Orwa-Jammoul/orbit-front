@@ -216,13 +216,14 @@ export default defineNuxtConfig({
 
         PersonClientsApi : "/api/v1/Persons",
         CompanyClientsApi : "/api/v1/Companies",
+        ClientsClassificationsApi : "/api/v1/Classifications/GetAll",
 
         // Guest
         activityTypesApi: "/api/v1/activityTypes",
 
 
         // Menus
-        MenusApi: "/api/v1/menus",
+        MenusApi: "/api/v1/Menus",
         MenusGetAllApi: "/api/v1/menus/All",
         
         //pages
@@ -236,7 +237,7 @@ export default defineNuxtConfig({
         // Countries
         NationsApi: "/api/v1/nations",
         CitiesApi: "/api/Cities",
-        CountriesGetAllApi: "/api/v1/Countries",
+        CountriesGetAllApi: "/api/v1/Countries/GetAll",
         princedomsApi:'/api/v1/Princedoms',
         FeesApi:'/api/v1/Fees',
         

@@ -85,7 +85,7 @@ ourPartners.value = ourPartnersData.value.items;
           right: -2rem;
         }
         svg{
-          fill: red;
+          fill: $primary;
         }
       }
     }
@@ -93,8 +93,10 @@ ourPartners.value = ourPartnersData.value.items;
       display: none;
       bottom: 0;
       .splide__pagination__page{
+        width: 2px;
+        border-radius: 0;
         &.is-active{
-          background-color: red !important;
+          background-color: $primary !important;
         }
       }
     }

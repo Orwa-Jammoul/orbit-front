@@ -6,16 +6,14 @@
         v-bind="field"
         :label="`${label} ${astricts?`*`:``}`"
         :placeholder="placeholder"
-        :type=" type!='password' ? type : show1? 'text' : 'password'"
+        :type="type"
         :hint="hint"
-        :append-inner-icon=" type!='password' ? '' : show1? 'mdi-eye' : 'mdi-eye-off'"
         color="primary"
         hide-details="auto"
         bg-color="grey-lighten-2"
-        @click:append-inner="show1 = !show1"
         @change="handleInputChange" 
         ></v-text-field>
-      </Field>
+    </Field>
     <ErrorMessage :name="name" as="div" class="mb-2 help w-100 text-start is-invalid" />
   </div>
 </template>
@@ -26,8 +24,7 @@ import { Field, ErrorMessage } from 'vee-validate';
 const props = defineProps({
   type: {
     type: String,
-    default: "text",
-    required: false,
+    required: true,
   },
   name: {
     type: String,
@@ -35,7 +32,6 @@ const props = defineProps({
   },
   id: {
     type: String,
-    default: "text",
     required: true,
   },
   label: {
@@ -58,7 +54,6 @@ const props = defineProps({
     type: Boolean,
     default: false,
   },
-  
 });
 
 const inputField = ref(null);
@@ -67,15 +62,12 @@ const inputField = ref(null);
   
 // })
 
-const show1 = ref(false);
+// const inputData = ref(null);
 
-const inputData = ref(null);
-
-
-const handleInputChange = (event) => {
-  // console.log(event.target.value);
-  inputData.value = event.target.value
-};
+// const handleInputChange = (event) => {
+//   // console.log(event.target.value);
+//   inputData.value = event.target.value
+// };
 
 </script>
 
@@ -84,11 +76,6 @@ const handleInputChange = (event) => {
   // .v-input__details{
   //   display: none !important;
   // }
-  .v-icon--clickable{
-    color: red;
-    z-index: 10;
-    // background-color: black;
-  }
   input[type="date"], input[type="time"], input[type="datetime-local"]{
     &::-webkit-calendar-picker-indicator {
       position: absolute;
@@ -102,20 +89,13 @@ const handleInputChange = (event) => {
       // border-width: thin;
     }
   }
-  // .v-field-label{
-  //   &:not(.v-field-label--floating){
-  //     font-size: 14px !important;
-  //     // font-size: 12px !important;
-      
-  //   }
-  // }
-  // input{
-  //   font-size: 14px !important;
-
-  // }
 }
 </style>
-
+<style>
+input[type="date"]::-webkit-calendar-picker-indicator {
+  display: none;
+}
+</style>
 <style lang="scss" scoped>
 @use "~/assets/styles/scss/theme/theme";
 
